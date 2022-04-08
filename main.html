@@ -8,23 +8,42 @@
     <body>
     
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <img src="ymlogo.png" alt="Website logo" width="150" height="150" style="margin-top: -250px; padding:40px">
+        <a href="#">Home</a>
+        <a href="#">Announcements</a>
+        <a href="#">Calander</a>
+        <a href="#">Scheduale</a>
+        <a href="#">Resources</a>
+        <a href="#">Guidance Website</a>
+        <a href="#">Student Council Website</a>
+        <a href="#">Ym Highlights</a>
+        <a href="#">About the site</a>
+        <a href="#">Feedback</a>
     </div>
     
     <div id="main">
-        <div id="navbar">
-        <!-- Button for navbar -->
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        </div>
-        <!-- Below is body content that will move with the screen-->
-        <div id="webcontentt">
-            <h1>Text</h1>
-        </div>
+        <h1>Announcements</h1>
     </div>
+
+    <div id="contentweb">
+        <div id="btnContainer">
+            <button class="btn active" onclick="filterSelection('all')">All Announcements</button>
+            <button class="btn" onclick="filterSelection('sports')"> Sports</button>
+            <button class="btn" onclick="filterSelection('clubs')"> Clubs</button>
+            <button class="btn" onclick="filterSelection('events')"> Events</button>
+            <button class="btn" onclick="filterSelection('faculty')"> Faculty</button>
+          </div>
+          
+          <div class="container">
+            <div class="filterDiv sports">Basketball Announcements</div>
+            <div class="filterDiv clubs events">Programming Club competition</div>
+            <div class="filterDiv sports">Badminton Announcements</div>
+            <div class="filterDiv faculty">Guidance Announcements</div>
+            <div class="filterDiv events">Blue hat day</div>
+            <div class="filterDiv sports">Volleyball team</div>
+          </div>
+    </div>
+
 
     <script src="jscript.js"></script>
 
