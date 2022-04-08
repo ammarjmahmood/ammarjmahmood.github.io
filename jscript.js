@@ -40,3 +40,11 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+// overlay read more button
+function on() {
+    document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
