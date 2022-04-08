@@ -48,8 +48,7 @@ body {
     background-color: #2196F3;
     color: #ffffff;
     width: 1000px;
-    line-height: 400px;
-    text-align: center;
+    height: 400px;
     margin: 2px;
     display: none;
   }
@@ -59,8 +58,10 @@ body {
   }
   
   .container {
-    margin-top: 20px;
     overflow: hidden;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0;
   }
   
   /* Style the buttons */
