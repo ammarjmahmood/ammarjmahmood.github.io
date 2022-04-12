@@ -1,3 +1,46 @@
+       
+fetch("https://api.apispreadsheets.com/data/OitWufH3T4ChiwFy/").then(res=>{
+  if (res.status === 200){
+      res.json().then(data=>{
+          const yourData = data["data"]
+          for(let i = 0; i < yourData.length; i++){
+              let rowInfo = yourData[i]
+              let rowInfoDiv = document.createElement("div")
+              rowInfoDiv.classList.add("message-info")
+              
+              let rowName = document.createElement("h4")
+              let rowNameNode = document.createTextNode(rowInfo["clubname"])
+              rowName.appendChild(rowNameNode)
+              rowName.classList.add("clubname")
+              
+              let rowWritten = document.createElement("p")
+              let rowWrittenNode = document.createTextNode(rowInfo["message"])
+              rowWritten.appendChild(rowWrittenNode)
+              rowWritten.classList.add("message")
+
+              
+              rowInfoDiv.appendChild(rowName)
+              rowInfoDiv.appendChild(rowWritten)
+              
+              allNamesElm.appendChild(rowInfoDiv)
+          }
+          
+          loaderElm.style.display = "none"
+          allNamesElm.style.display = "block"
+          errorMessageElm.style.display = "none"
+
+      }).catch(err => {
+          setErrorDisplay()
+      })
+  }
+  else{
+      setErrorDisplay()
+      }
+  }).catch(err =>{
+      setErrorDisplay()
+  })
+
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
