@@ -1,4 +1,6 @@
-let allNamesElm = document.getElementById("annoucementmessage")
+// https://developer.mozilla.org/en-US/docs/Web/API/Document
+
+let announcemessageElm = document.getElementById("annoucementmessage")
         
 fetch("https://api.apispreadsheets.com/data/OitWufH3T4ChiwFy/").then(res=>{
     if (res.status === 200){
@@ -23,7 +25,7 @@ fetch("https://api.apispreadsheets.com/data/OitWufH3T4ChiwFy/").then(res=>{
                 rowInfoDiv.appendChild(rowClubname)
                 rowInfoDiv.appendChild(rowMessage)
                 
-                allNamesElm.appendChild(rowInfoDiv)
+                announcemessageElm.appendChild(rowInfoDiv)
             }
 
         }).catch(err => {
