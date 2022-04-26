@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SiteName</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+    <div id="mySidenav" class="sidenav">
+        <img src="ymlogo.png" alt="Website logo" width="150" height="150" style="margin-top: -250px; padding:40px">
+        <a href="#">Home</a>
+        <a href="#">Announcements</a>
+        <a href="#">Calander</a>
+        <a href="#">Scheduale</a>
+        <a href="#">Resources</a>
+        <a href="#">Guidance Website</a>
+        <a href="#">Student Council Website</a>
+        <a href="#">Ym Highlights</a>
+        <a href="#">About the site</a>
+        <a href="#">Feedback</a>
+    </div>
+    
+    <div id="main">
+        <h1>Announcements</h1>
+    </div>
+
+    <div id="contentweb">
+        <div id="btnContainer">
+            <button class="btn active" onclick="filterSelection('all')">All Announcements</button>
+            <button class="btn" onclick="filterSelection('sports')"> Sports</button>
+            <button class="btn" onclick="filterSelection('clubs')"> Clubs</button>
+            <button class="btn" onclick="filterSelection('events')"> Events</button>
+            <button class="btn" onclick="filterSelection('faculty')"> Faculty</button>
+          </div>
+          
+          <div class="container">
+            <div id="display">
+            <div class="filterDiv sports">
+                <h1>Basketball Announcements</h1>
+                <div id="annoucementmessage">
+                    <p>Loading Announcements..........</p>
+                </div>
+            </div>
+            <!--<button onclick="on()">Turn on overlay effect</button>
+            <div id="overlay" onclick="off()">
+                <div id="text">Bombay</div>
+            </div> -->
+            <div class="filterDiv clubs events">
+                <h1>Programming Club competition</h1>
+                <p>text</p>
+            </div>
+            <div class="filterDiv sports">
+                <h1>Badminton Announcements</h1>
+            </div>
+            <div class="filterDiv faculty">
+                <h1>Guidance Announcements</h1>
+            </div>
+            <div class="filterDiv events">
+                <h1>Blue hat day</h1>
+            </div>
+            <div class="filterDiv sports">
+                <h1>Volleyball team</h1>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="jscript.js"></script>
+
+    </body>
+</html>
