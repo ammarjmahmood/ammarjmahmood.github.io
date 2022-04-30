@@ -51,15 +51,19 @@ function off() {
 }
 
 function startTime() {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const today = new Date();
-    const d = new Date();
-    document.getElementById("demo").innerHTML = d.getDate();
+    let y = today.getFullYear()
+    let mn = months[today.getMonth()];
+    let dn = days[today.getDay()];
+    let d = today.getDate()
     let h = today.getHours();
     let m = today.getMinutes();
     let s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('txt').innerHTML = d.getDate + h + ":" + m + ":" + s;
+    document.getElementById('txt').innerHTML = dn + " " + mn + " " + d + " " + y + " " + "-" + " " + h + ":" + m + ":" + s;
     setTimeout(startTime, 1000);
 }
 
