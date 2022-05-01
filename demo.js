@@ -2,47 +2,6 @@ var defaultTheme = "Orange Coral";
 
 var today = new Date();
 
-var events = [ {
-    id: "imwyx6S",
-    name: "Event #3",
-    description: "Lorem ipsum dolor sit amet.",
-    date: today.getMonth() + 1 + "/18/" + today.getFullYear(),
-    type: "event"
-}, {
-    id: "9jU6g6f",
-    name: "Holiday #1",
-    description: "Lorem ipsum dolor sit amet.",
-    date: today.getMonth() + 1 + "/10/" + today.getFullYear(),
-    type: "holiday"
-}, {
-    id: "0g5G6ja",
-    name: "Event #1",
-    description: "Lorem ipsum dolor sit amet.",
-    date: [ today.getMonth() + 1 + "/2/" + today.getFullYear(), today.getMonth() + 1 + "/5/" + today.getFullYear() ],
-    type: "event",
-    everyYear: !0
-}, {
-    id: "y2u7UaF",
-    name: "Holiday #3",
-    description: "Lorem ipsum dolor sit amet.",
-    date: today.getMonth() + 1 + "/23/" + today.getFullYear(),
-    type: "holiday"
-}, {
-    id: "dsu7HUc",
-    name: "Birthday #1",
-    description: "Lorem ipsum dolor sit amet.",
-    date: new Date(),
-    type: "birthday"
-}, {
-    id: "dsu7HUc",
-    name: "Birthday #2",
-    description: "Lorem ipsum dolor sit amet.",
-    date: today.getMonth() + 1 + "/27/" + today.getFullYear(),
-    type: "birthday"
-} ];
-
-var active_events = [];
-
 var week_date = [];
 
 var curAdd, curRmv;
@@ -71,35 +30,54 @@ week_date = getWeeksInMonth(today.getMonth(), today.getFullYear())[2];
 
 $(document).ready(function() {
     $("#calendarEvent").evoCalendar({
+      //
         format: "MM dd, yyyy",
         titleFormat: "MM",
         calendarEvents: [{
-            id: "d8jai7s",
-            name: "Author's Birthday",
-            description: "Author's note: Thank you for using EvoCalendar! :)",
-            date: "February/15/1999",
+            name: "My Birthday",
+            description: "Today is the developers birthday!!",
+            date: "March/5/2005",
             type: "birthday",
             everyYear: !0
         }, {
-            id: "sKn89hi",
-            name: "1-Week Coding Bootcamp",
-            description: "Lorem ipsum dolor sit amet.",
-            badge: "5-day event",
-            date: [ today.getMonth() + 1 + "/" + week_date.start + "/" + today.getFullYear(), today.getMonth() + 1 + "/" + week_date.end + "/" + today.getFullYear() ],
-            type: "event",
-            everyYear: !0
-        }, {
-            id: "in8bha4",
-            name: "Holiday #2",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            date: today,
-            type: "holiday"
-        }, {
-            id: "in8bha4",
-            name: "Event #2",
-            date: today,
+            // name: "1-Week Coding Bootcamp",
+            // description: "Lorem ipsum dolor sit amet.",
+            // badge: "5-day event",
+            // date: [ today.getMonth() + 1 + "/" + week_date.start + "/" + today.getFullYear(), today.getMonth() + 1 + "/" + week_date.end + "/" + today.getFullYear() ],
+            // type: "event",
+            // everyYear: !0
+            name: "Thank You Teachers",
+            description: "Student Council Thank you Teachers event",
+            date: "April/29/2022",
             type: "event"
+        }, {
+            name: "Varsity Soccer Game",
+            description: "York Mills Varsity Soccer game against Earl Haig",
+            date: "April/29/2022",
+            type: "event"
+        }, {
+            name: "Biology Zoo trip",
+            date: "May/5/2022",
+            type: "event"
+        }, {
+          name: "Meeting With Ms.Gage",
+          date: "May/4/2022",
+          type: "event"
+        }, {
+          name: "Mothers Day",
+          date: "May/8/2022",
+          type: "Holiday"
+        }, {
+          name: "Victoria Day",
+          date: "May/23/2022",
+          type: "Holiday"
+        }, {
+          name: "Varsity Volleyball Game",
+          description: "Varsity Volleyball Game all Day", 
+          date: "May/5/2022",
+          type: "Holiday"
         }]
+
     });
     $("[data-set-theme]").click(function(b) {
         a(b.target);

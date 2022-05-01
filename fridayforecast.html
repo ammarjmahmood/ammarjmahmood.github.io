@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Titans Hub - Resources</title>
+    <title>Titans Hub - Friday Forecast</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
 
@@ -35,7 +35,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
+    <link href="cssother.css" rel="stylesheet">
 </head>
 
 <body onload="startTime()">
@@ -85,40 +85,30 @@
 
         <div class="row g-5">
             <div class="col-md-8">
-                <h3 class="pb-4 mb-4 fst-italic border-bottom">Side Notes</h3>
-                <div id="calendar"></div>
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">Friday Forecasts</h3>
                 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-                <article class="blog-post">
-                    <h2 class="blog-post-title">Sample post</h2>
-                    <p class="blog-post-meta">January 1, 2021</p>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for date.." title="Type in a date">
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-                        Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. </p>
-                    <hr>
-                    <h3>Example lists</h3>
-                    <p>ThiLorem ipsum dolor sit amet, consectetur adipiscing elitst:</p>
-                    <ul>
-                        <li>First list item</li>
-                        <li>Second list item with a longer description</li>
-                        <li>Third list item to close it out</li>
+                    <ul id="myUL">
+                    <li><a href="#">Friday April 29 2022</a></li>
+                    <li><a href="#">Friday April 22 2022</a></li>
+                    <li><a href="#">Friday April 15 2022</a></li>
+                    <li><a href="#">Friday April 8 2022</a></li>
+                    <li><a href="#">Friday April 1 2022</a></li>
+                    <li><a href="#">Friday March 25 2022</a></li>
+                    <li><a href="#">Friday March 18 2022</a></li>
+                    <li><a href="#">Friday March 11 2022</a></li>
+                    <li><a href="#">Friday March 4 2022</a></li>
+                    <li><a href="#">Friday February 25 2022</a></li>
+                    <li><a href="#">Friday February 18 2022</a></li>
+                    <li><a href="#">Friday February 11 2022</a></li>
+                    <li><a href="#">Friday February 4 2022</a></li>
+
+
                     </ul>
-                    <p>And this is an ordered list:</p>
-                    <ol>
-                        <li>First list item</li>
-                        <li>Second list item with a longer description</li>
-                        <li>Third list item to close it out</li>
-                    </ol>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <h2>Heading</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-                    <h3>Sub-heading</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Integer nec odio.</p>
-                    <pre><code>Example code block</code></pre>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-                </article>
 
-
+                    <br>
+                    <br>
                 <article class="blog-post">
                     <nav class="blog-pagination" aria-label="Pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
@@ -129,11 +119,6 @@
 
             <div class="col-md-4">
                 <div class="position-sticky" style="top: 2rem;">
-                    <div class="p-4 mb-3 bg-light rounded">
-                        <h4 class="fst-italic">About</h4>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                        </p>
-                    </div>
 
                     <div class="p-4">
                         <h4 class="fst-italic">Old Announcement</h4>
@@ -153,18 +138,6 @@
                         </ol>
                     </div>
 
-                    <div class="p-4">
-                        <h4 class="fst-italic">Elsewhere</h4>
-                        <ol class="list-unstyled">
-                            <li><a href="https://sites.google.com/tdsb.on.ca/ymstuco/" target="_blank">Student Council Website</a></li>
-                            <li><a href="https://sites.google.com/tdsb.on.ca/yorkmillsathletics/ymac-athletic-council" target="_blank">Athletic Council Website</a></li>
-                            <li><a href="https://sites.google.com/tdsb.on.ca/ymci-guidance/home?authuser=0" target="_blank">Guidance Website</a></li>
-                            <li><a href="fridayforecast.html">Friday Forecasts</a></li>
-                            <li><a href="https://ymhighlights.home.blog/" target="_blank">Ym Highlights Website</a></li>
-                            <li><a href="https://forms.gle/NgY94vdHokik9DYm6" target="_blank">Submit an annoucement</a></li>
-                            <li><a href="https://forms.gle/d565XLGtRBBRaGSB6" target="_blank">Submit a song request</a></li>
-                        </ol>
-                    </div>
                 </div>
             </div>
         </div>
@@ -179,7 +152,7 @@
     </footer>
 
 
-    <script src="jscriptblog.js"></script>
+    <script src="jsother.js"></script>
 </body>
 
 </html>
