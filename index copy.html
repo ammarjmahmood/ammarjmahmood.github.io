@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Titans Hub - Announcement</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+</head>
+
+<body onload="startTime()">
+
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    <p></p>
+                    <img src="ymlogo.png" alt="Website logo" width="50" height="50">
+                </div>
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#">Titans Hub</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="link-secondary" href="#" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="home.html">Home</a>
+                <a class="p-2 link-secondary" href="index.html">Announcement</a>
+                <a class="p-2 link-secondary" href="calander.html">Calander</a>
+                <a class="p-2 link-secondary" href="https://sites.google.com/tdsb.on.ca/ymci-guidance/home?authuser=0" target="_blank" >Guidance</a>
+                <a class="p-2 link-secondary" href="https://sites.google.com/tdsb.on.ca/ymstuco/" target="_blank">STUCO</a>
+                <a class="p-2 link-secondary" href="https://sites.google.com/tdsb.on.ca/yorkmillsathletics/ymac-athletic-council" target="_blank">YMAC</a>
+                <a class="p-2 link-secondary" href="https://ymhighlights.home.blog/" target="_blank">YM Highlights</a>
+                <a class="p-2 link-secondary" href="resources.html">Resources</a>
+                <a class="p-2 link-secondary" href="other.html">Other Links</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic"><b class="fw-bold">Day 2</b></h1>
+                <p class="lead my-3" style="margin-bottom: 0px;" id="txt">Monday May 2st 2022 </p>
+                <div id="txt"></div>
+                <p class="lead my-3" style="margin-top: 0px;">Eid Mubarak!! - York Mills you stay classy ;)</p>
+            </div>
+        </div>
+        <div id="contentweb">
+            <div id="btnContainer">
+                <button class="btn active" onclick="filterSelection('all')">All Announcements</button>
+                <button class="btn" onclick="filterSelection('sports')"> Sports</button>
+                <button class="btn" onclick="filterSelection('clubs')"> Clubs</button>
+                <button class="btn" onclick="filterSelection('events')"> Events</button>
+                <button class="btn" onclick="filterSelection('faculty')"> Faculty</button>
+            </div>
+            <br>
+            <div class="container">
+                <div id="display">
+                    <div class="filterDiv sports">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary">Sports</strong>
+                                <h3 class="mb-0">Basketball Announcements</h3>
+                                <div class="mb-1 text-muted">Nov 12</div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv clubs events">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary">Events</strong>
+                                <h3 class="mb-0">Programming Club competition</h3>
+                                <div class="mb-1 text-muted">Nov 12</div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv sports">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary">Sports</strong>
+                                <h3 class="mb-0">Badminton Announcement</h3>
+                                <div class="mb-1 text-muted">Nov 12</div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv faculty">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary">Faculty</strong>
+                                <h3 class="mb-0">Guidance Announcements</h3>
+                                <div class="mb-1 text-muted">Nov 12</div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv events">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary">Events</strong>
+                                <h3 class="mb-0">Blue hat day</h3>
+                                <div class="mb-1 text-muted">Nov 12</div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv sports">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary">Sports</strong>
+                                <h3 class="mb-0">Golf Announcement</h3>
+                                <div class="mb-1 text-muted">Nov 12</div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">Side Notes</h3>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">How it works?</h2>
+                    <p class="blog-post-meta">January 1, 2021</p>
+
+                    <p>The Announcements page will only hold annoucement for up to two weeks long depending on the annoucement and the purpose of it.</p>
+                    <p>Important annoucement will be pinned to the top in addition to being displayed on the home page of the website</p>
+                    <hr>
+                    <h3>Archives</h3>
+                    <p>Navigate to the archive links to find the annoucement from the past based off the month the annoucement was made public</p>
+                    <p>To access the friday forecast, please visit your student email or click on the link to the friday forecast. 
+                        It will be orginized as a searchable database with only friday forecast from September to June</p>
+                    <p>It will be ordered from most recent to oldest.Please let us know if there are any corrupted links</p>
+                </article>
+
+
+                <article class="blog-post">
+                    <nav class="blog-pagination" aria-label="Pagination">
+                        <a class="btn btn-outline-primary" href="#">Older</a>
+                        <a class="btn btn-outline-secondary disabled">Newer</a>
+                    </nav>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Old Announcement</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">March 2021</a></li>
+                            <li><a href="#">February 2021</a></li>
+                            <li><a href="#">January 2021</a></li>
+                            <li><a href="#">December 2020</a></li>
+                            <li><a href="#">November 2020</a></li>
+                            <li><a href="#">October 2020</a></li>
+                            <li><a href="#">September 2020</a></li>
+                            <li><a href="#">August 2020</a></li>
+                            <li><a href="#">July 2020</a></li>
+                            <li><a href="#">June 2020</a></li>
+                            <li><a href="#">May 2020</a></li>
+                            <li><a href="#">April 2020</a></li>
+                        </ol>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://sites.google.com/tdsb.on.ca/ymstuco/" target="_blank">Student Council Website</a></li>
+                            <li><a href="https://sites.google.com/tdsb.on.ca/yorkmillsathletics/ymac-athletic-council" target="_blank">Athletic Council Website</a></li>
+                            <li><a href="https://sites.google.com/tdsb.on.ca/ymci-guidance/home?authuser=0" target="_blank">Guidance Website</a></li>
+                            <li><a href="fridayforecast.html">Friday Forecasts</a></li>
+                            <li><a href="https://ymhighlights.home.blog/">Ym Highlights Website</a></li>
+                            <li><a href="https://forms.gle/NgY94vdHokik9DYm6" target="_blank">Submit an annoucement</a></li>
+                            <li><a href="https://forms.gle/d565XLGtRBBRaGSB6" target="_blank">Submit a song request</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="blog-footer">
+        <p>COPYWRITE CREDITS</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+
+
+    <script src="jscriptblog.js"></script>
+</body>
+
+</html>
