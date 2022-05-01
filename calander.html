@@ -10,7 +10,8 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
 
-
+    <link rel="stylesheet" type="text/css" href="evo-calendar.min.css">
+    <link rel="stylesheet" type="text/css" href="evo-calendar.orange-coral.min.css">
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -85,39 +86,21 @@
 
         <div class="row g-5">
             <div class="col-md-8">
-                <h3 class="pb-4 mb-4 fst-italic border-bottom">Side Notes</h3>
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">Calander Below</h3>
                 <div id="calendar"></div>
                 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
                 <article class="blog-post">
-                    <h2 class="blog-post-title">Sample post</h2>
-                    <p class="blog-post-meta">January 1, 2021</p>
+                    
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-                        Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. </p>
-                    <hr>
-                    <h3>Example lists</h3>
-                    <p>ThiLorem ipsum dolor sit amet, consectetur adipiscing elitst:</p>
-                    <ul>
-                        <li>First list item</li>
-                        <li>Second list item with a longer description</li>
-                        <li>Third list item to close it out</li>
-                    </ul>
-                    <p>And this is an ordered list:</p>
-                    <ol>
-                        <li>First list item</li>
-                        <li>Second list item with a longer description</li>
-                        <li>Third list item to close it out</li>
-                    </ol>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <h2>Heading</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-                    <h3>Sub-heading</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Integer nec odio.</p>
-                    <pre><code>Example code block</code></pre>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-                </article>
 
+
+                    <div id="calendarEvent"></div>
+
+                    <br>
+                    <br>
+
+
+                    
 
                 <article class="blog-post">
                     <nav class="blog-pagination" aria-label="Pagination">
@@ -178,7 +161,9 @@
         </p>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="evo-calendar.min.js"></script>
+    <script src="demo.js"></script>
     <script src="jscriptblog.js"></script>
 </body>
 
