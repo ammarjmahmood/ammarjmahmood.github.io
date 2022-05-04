@@ -112,8 +112,9 @@ function checkTime(i) {
 }
 
 function dayontimetable() {
-    const todayDate = getDate();
-    const timetableday = todayDate % 2
+    const todayDate = new Date();
+    let dayy = todayDate.getDay();
+    let timetableday = dayy % 2
     if (timetableday == 0) {
         document.getElementById('timetabledayprint').innerHTML = "Day 1";
       } else {
@@ -121,4 +122,3 @@ function dayontimetable() {
       }
          
 }
-
