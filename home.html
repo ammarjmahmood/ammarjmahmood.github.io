@@ -85,7 +85,7 @@
     <link href="blog.css" rel="stylesheet">
 </head>
 
-<body onload="startTime()">
+<body onload="startTime(), dayontimetable()">
 
     <div class="container">
         <header class="blog-header py-3">
@@ -95,7 +95,7 @@
                     <img src="ymlogo.png" alt="Website logo" width="50" height="50">
                 </div>
                 <div class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="#">Titans Hub</a>
+                    <a class="blog-header-logo text-dark" href="index.html">Titans Hub</a>
                 </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
                     <a class="link-secondary" href="#" aria-label="Search">
@@ -123,8 +123,8 @@
     <main class="container">
         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
             <div class="col-md-6 px-0">
-                <h1 class="display-4 fst-italic"><b class="fw-bold">Day 2</b></h1>
-                <p class="lead my-3" style="margin-bottom: 0px;" id="txt">Monday May 2st 2022 </p>
+                <h1 class="display-4 fst-italic" id="timetabledayprint"><b class="fw-bold"></b></h1>
+                <p class="lead my-3" style="margin-bottom: 0px;" id="txt"></p>
                 <div id="txt"></div>
                 <p class="lead my-3" style="margin-top: 0px;">Eid Mubarak!! - York Mills you stay classy ;)</p>
             </div>
