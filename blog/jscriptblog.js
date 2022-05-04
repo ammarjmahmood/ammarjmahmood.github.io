@@ -56,7 +56,7 @@ function on() {
     if (timetableday == 0) {
         document.getElementById('timetabledayprint').innerHTML = "Day 1";
       } else {
-        document.getElementById('timetabledayprint').innerHTML = "Day 2";
+        document.getElementById('timetabledayprint').innerHTML = "Day 2lala";
       }
          
 }

@@ -376,12 +376,12 @@ function checkTime(i) {
 
 function dayontimetable() {
     const todayDate = new Date();
-    let dayy = todayDate.getDay();
-    let timetableday = dayy % 2
+    const timetableday = todayDate % 2
     if (timetableday == 0) {
         document.getElementById('timetabledayprint').innerHTML = "Day 1";
-      } else {
-        document.getElementById('timetabledayprint').innerHTML = "Day 2";
+      } 
+    if (timetableday != 0) {
+        document.getElementById('timetabledayprint').innerHTML = "Day 2lal";
       }
          
 }
