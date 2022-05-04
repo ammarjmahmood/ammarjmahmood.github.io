@@ -382,7 +382,7 @@ function dayontimetable() {
         document.getElementById('timetabledayprint').innerHTML = "Day 1";
       } 
     if (timetableday != 0) {
-        document.getElementById('timetabledayprint').innerHTML = "Day 2lal";
+        document.getElementById('timetabledayprint').innerHTML = "Day 2";
       }
          
 }
