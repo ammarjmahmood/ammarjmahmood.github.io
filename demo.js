@@ -68,10 +68,40 @@ $(document).ready(function() {
           date: "May/8/2022",
           type: "Holiday"
         }, {
+          name: "Mental Health Week",
+          date: "May/2/2022",
+          type: "event"
+        },{
+          name: "Mental Health Week",
+          date: "May/6/2022",
+          type: "event"
+        },{
+          name: "Mental Health Week",
+          date: "May/3/2022",
+          type: "event"
+        },{
+          name: "Mental Health Week",
+          date: "May/4/2022",
+          type: "event"
+        },{
+          name: "Mental Health Week",
+          date: "May/5/2022",
+          type: "event"
+        },{
           name: "Victoria Day",
           date: "May/23/2022",
-          type: "Holiday"
-        }, {
+          type: "event"
+        },{
+          name: "Peer Tutoring",
+          description: "Grade 9 Math Homework Help Sessions",
+          date: "May/4/2022",
+          type: "event"
+        },{
+          name: "STUCO Event",
+          description: "Ym candy craze front foyer @ lunch",
+          date: "May/9/2022",
+          type: "event"
+        },{
           name: "Varsity Volleyball Game",
           description: "Varsity Volleyball Game all Day", 
           date: "May/5/2022",
