@@ -5,23 +5,71 @@ body, html {
     font-family: 'Arial', sans-serif;
 }
 
-.navbar {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.nav-item.btn {
+.sidebar ul {
+    list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
-.nav-item .nav-link {
-    color: white;
-    padding: 0.5rem 1rem;
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar .nav-link {
+    width: 40px; /* Fixed width for consistent icon size */
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    white-space: nowrap;
+    overflow: visible;
+    color: rgba(255, 255, 255, 0.8); /* Set default text color */
+}
+
+.sidebar .nav-link i {
+    color: rgba(255, 255, 255, 0.8); /* Icon color */
+    font-size: 24px; /* Consistent icon size */
+}
+
+.sidebar .nav-link span {
+    display: none; /* Hidden when not hovered */
+    color: rgba(255, 255, 255, 0.8); /* Ensure text remains white on hover */
+}
+
+.sidebar:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar:hover .nav-link {
+    width: auto;
+}
+
+.sidebar:hover .nav-link span {
+    display: inline;
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.8); /* Text color on hover */
+}
+
+.sidebar:hover .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: rgba(255, 255, 255, 1); /* Keep the text white when hovered or active */
+    font-weight: bold;
 }
 
 .horizontal-scroll {
@@ -31,6 +79,7 @@ body, html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     height: 100vh;
+    padding-left: 60px; /* Add space for the sidebar */
 }
 
 .scroll-section {
@@ -40,37 +89,50 @@ body, html {
     scroll-snap-align: start;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align content to the top */
     padding: 2rem;
 }
 
 .content {
     max-width: 1200px;
     width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px; /* Adjust this value to position the content correctly */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text-about-me {
+    text-align: left;
 }
 
 #home {
-    background: url('Ammar Portfolio vision.png') no-repeat center center;
+    background: url('033F47DF-4A17-4AC0-A9C3-07A040A0A2AA.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
-    height: 100vh;
 }
 
 #about {
     background-color: #f8f9fa;
+    color: white;
 }
 
 #projects {
     background-color: #e9ecef;
+    color: white;
 }
 
 #skills {
     background-color: #dee2e6;
+    color: white;
 }
 
 #contact {
     background-color: #ced4da;
+    color: white;
 }
 
 .project-carousel {
@@ -102,7 +164,7 @@ body, html {
 }
 
 .skill-item {
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 1rem;
     border-radius: 5px;
