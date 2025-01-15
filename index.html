@@ -345,7 +345,7 @@
         <div class="contact-content">
             <h2 class="section-title">Get In Touch</h2>
             <p>Feel free to reach out for collaborations or just a friendly hello</p>
-            <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" class="contact-btn">Contact Me on LinkedIn</a>
+            <a href="https://linkedin.com/in/ammar-mahmood-5324a5291" target="_blank" class="contact-btn">Contact Me on LinkedIn</a>
         </div>
     </section>
 
@@ -467,33 +467,41 @@
                 id: 1,
                 title: "EcoSnap",
                 description: "AI-powered sustainable lifestyle solution | 1st Place Overall Hackathon",
-                image: "/api/placeholder/400/300",
+                image: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/976/121/datas/gallery.jpg",
                 category: "software",
                 link: "#"
             },
-            {
-                id: 2,
-                title: "Discerning",
-                description: "Discord API | UI/UX Hackathon Winner",
-                image: "/api/placeholder/400/300",
-                category: "web",
-                link: "#"
-            },
+                {
+                    id: 2,
+                    title: "Discerning",
+                    description: "Discord API | UI/UX Hackathon Winner",
+                    image: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/001/579/225/datas/gallery.jpg",
+                    category: "web",
+                    link: "#"
+                },
             {
                 id: 3,
                 title: "Flash PDF",
                 description: "PDF to Flashcards Converter",
-                image: "/api/placeholder/400/300",
+                image: "https://i.postimg.cc/TPV2SrqS/Screenshot-2024-09-06-at-10-18-48-AM.png",
                 category: "web",
                 link: "#"
             },
             {
                 id: 4,
-                title: "Automatic Cat Feeder",
-                description: "IoT-based pet care solution",
-                image: "/api/placeholder/400/300",
-                category: "hardware",
+                title: "Full Stack App - 6000$ 1st Place Kasa AI",
+                description: "AI-powered sustainable lifestyle solution | 1st Place Overall Hackathon",
+                image: "https://media.licdn.com/dms/image/v2/D562DAQEb5xH4GIosnA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1733335779522?e=1737572400&v=beta&t=s7lb2IzTxqzrVxi7ocTi5auHkeiDJI07m5xZbSsEGMI",
+                category: "software",
                 link: "#"
+            },
+            {
+                id: 5,
+                title: "ML AI Robotic Hand",
+                description: "ML AI Robotic Hand",
+                image: "https://img.youtube.com/vi/ToPGLrrCLG0/maxresdefault.jpg",
+                category: "hardware",
+                link: "https://www.youtube.com/watch?v=ToPGLrrCLG0&ab_channel=newbotics"
             }
         ];
 
@@ -502,8 +510,8 @@
             const projectsGrid = document.querySelector('.projects-grid');
             projectsGrid.innerHTML = '';
 
-            const filteredProjects = category === 'all' 
-                ? projects 
+            const filteredProjects = category === 'all'
+                ? projects
                 : projects.filter(project => project.category === category);
 
             filteredProjects.forEach(project => {
