@@ -37,8 +37,9 @@
             }
         }
 
-        // Create nodes
-        const nodes = Array.from({ length: 100 }, () => new Node());
+        // Create nodes - reduce count for mobile devices
+        const nodeCount = window.innerWidth < 768 ? 50 : 100;
+        const nodes = Array.from({ length: nodeCount }, () => new Node());
 
         // Animation loop
         function animate() {
@@ -50,15 +51,17 @@
                 node.draw();
             });
 
-            // Draw connections
+            // Draw connections - reduce connection distance for mobile
+            const connectionDistance = window.innerWidth < 768 ? 80 : 100;
+            
             nodes.forEach((nodeA, i) => {
                 nodes.slice(i + 1).forEach(nodeB => {
                     const distance = Math.hypot(nodeA.x - nodeB.x, nodeA.y - nodeB.y);
-                    if (distance < 100) {
+                    if (distance < connectionDistance) {
                         ctx.beginPath();
                         ctx.moveTo(nodeA.x, nodeA.y);
                         ctx.lineTo(nodeB.x, nodeB.y);
-                        ctx.strokeStyle = `rgba(74, 144, 226, ${1 - distance / 100})`;
+                        ctx.strokeStyle = `rgba(74, 144, 226, ${1 - distance / connectionDistance})`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
@@ -102,6 +105,20 @@
 
             setTimeout(typeText, isDeleting ? erasingDelay : typingDelay);
         }
+
+        // Handle window resize - update node count
+        window.addEventListener('resize', () => {
+            // Adjust node count based on screen size
+            const newNodeCount = window.innerWidth < 768 ? 50 : 100;
+            
+            // Only recreate nodes if count changed
+            if (nodes.length !== newNodeCount) {
+                nodes.length = 0; // Clear existing nodes
+                for (let i = 0; i < newNodeCount; i++) {
+                    nodes.push(new Node());
+                }
+            }
+        });
 
         // Initialize animations
         document.addEventListener('DOMContentLoaded', () => {
