@@ -129,6 +129,22 @@
         // Projects Data
         const projects = [
             {
+                id: 5,
+                title: "ML AI Robotic Hand",
+                description: "ML AI Robotic Hand",
+                image: "https://img.youtube.com/vi/ToPGLrrCLG0/maxresdefault.jpg",
+                category: "hardware",
+                link: "https://www.youtube.com/watch?v=ToPGLrrCLG0&ab_channel=newbotics"
+            },
+            {
+                id: 4,
+                title: "Full Stack App - 6000$ 1st Place Kasa AI",
+                description: "AI-powered immigration support application with seamless integration for document processing and status tracking",
+                image: "https://www.torontomu.ca/content/dam/bridging-divides/images/news-events/news/bab-awards-web-banner.jpg",
+                category: "software",
+                link: "#"
+            },
+            {
                 id: 1,
                 title: "EcoSnap",
                 description: "AI-powered sustainable lifestyle solution | 1st Place Overall Hackathon",
@@ -147,26 +163,10 @@
             {
                 id: 3,
                 title: "Flash PDF",
-                description: "PDF to Flashcards Converter",
+                description: "Revolutionary study technique that converts PDFs to flashcards, increasing reading speed by 700%",
                 image: "https://i.postimg.cc/TPV2SrqS/Screenshot-2024-09-06-at-10-18-48-AM.png",
                 category: "web",
                 link: "#"
-            },
-            {
-                id: 4,
-                title: "Full Stack App - 6000$ 1st Place Kasa AI",
-                description: "AI-powered sustainable lifestyle solution | 1st Place Overall Hackathon",
-                image: "https://www.torontomu.ca/content/dam/bridging-divides/images/news-events/news/bab-awards-web-banner.jpg",
-                category: "software",
-                link: "#"
-            },
-            {
-                id: 5,
-                title: "ML AI Robotic Hand",
-                description: "ML AI Robotic Hand",
-                image: "https://img.youtube.com/vi/ToPGLrrCLG0/maxresdefault.jpg",
-                category: "hardware",
-                link: "https://www.youtube.com/watch?v=ToPGLrrCLG0&ab_channel=newbotics"
             },
             {
                 id: 6,
