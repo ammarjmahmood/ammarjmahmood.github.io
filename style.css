@@ -354,3 +354,9 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Special styling for Kasa AI image */
+        img[src="src/kasa.png"] {
+            object-fit: contain;
+            background-color: var(--dark-bg);
+        }
