@@ -140,7 +140,7 @@
                 id: 4,
                 title: "Full Stack App - 6000$ 1st Place Kasa AI",
                 description: "AI-powered immigration support application with seamless integration for document processing and status tracking",
-                image: "https://www.torontomu.ca/content/dam/bridging-divides/images/news-events/news/bab-awards-web-banner.jpg",
+                image: "kasa.png",
                 category: "software",
                 link: "#"
             },
