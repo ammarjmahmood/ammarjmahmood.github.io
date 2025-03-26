@@ -140,7 +140,7 @@
                 id: 4,
                 title: "Full Stack App - 6000$ 1st Place Kasa AI",
                 description: "AI-powered immigration support application with seamless integration for document processing and status tracking",
-                image: "kasa.png",
+                image: "src/kasa.png",
                 category: "software",
                 link: "#"
             },
