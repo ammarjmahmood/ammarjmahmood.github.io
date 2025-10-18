@@ -99,9 +99,12 @@ export default function ResumePage() {
                 <Badge variant="secondary">C++</Badge>
                 <Badge variant="secondary">React</Badge>
                 <Badge variant="secondary">Node.js</Badge>
+                <Badge variant="secondary">Issac Lab</Badge>
+                <Badge variant="secondary">Pybullet</Badge>
                 <Badge variant="secondary">3D Printing</Badge>
                 <Badge variant="secondary">IoT</Badge>
-                <Badge variant="secondary">ESP32</Badge>
+                <Badge variant="secondary">Pytorch</Badge>
+                <Badge variant="secondary">Matlab</Badge>
               </div>
             </div>
 
