@@ -47,7 +47,7 @@ export default function ResumePage() {
             </a>
 
             {/* About */}
-            <div>
+            <div className="mt-6">
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">About</h2>
               <p className="text-sm leading-relaxed text-foreground">
                 Mechatronics Engineering student passionate about Robotics, AI, and Embedded Systems. 
