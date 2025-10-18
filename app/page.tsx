@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
@@ -6,7 +7,7 @@ import {
   LinkedinIcon,
   GithubIcon,
   YoutubeIcon,
-  TikTokIcon,
+  FontAwesomeTikTokIcon,
   XIcon,
   InstructablesIcon,
 } from "@/components/icons"
@@ -27,14 +28,13 @@ export default function ResumePage() {
             <a href="https://www.linkedin.com/in/ammarjmahmood" target="_blank" rel="noopener noreferrer">
               <Card className="p-6">
                 <div className="flex items-start gap-4">
-                  <Avatar className="h-16 w-16">
-                    <AvatarImage
-                      src="/professional-headshot.png"
-                      alt="Ammar J Mahmood"
-                      className="object-cover"
-                    />
-                    <AvatarFallback>AM</AvatarFallback>
-                  </Avatar>
+                  <Image
+                    src="/professional-headshot.png"
+                    alt="Ammar J Mahmood"
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 rounded-full object-cover"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <h1 className="text-xl font-semibold">Ammar J Mahmood</h1>
@@ -64,7 +64,7 @@ export default function ResumePage() {
                   className="flex items-center gap-2 text-sm text-foreground hover:text-primary"
                 >
                   <Globe className="h-4 w-4" />
-                  <span>ammarjmahmood</span>
+                  <span>Email</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/ammarjmahmood"
@@ -74,7 +74,7 @@ export default function ResumePage() {
                   <span>LinkedIn</span>
                 </a>
                 <a
-                  href="https://ammarjmahmood.github.io"
+                  href="https://github.com/ammarjmahmood"
                   className="flex items-center gap-2 text-sm text-foreground hover:text-primary"
                 >
                   <GithubIcon className="h-4 w-4" />
@@ -152,7 +152,7 @@ export default function ResumePage() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
               >
-                <TikTokIcon className="h-5 w-5" />
+                <FontAwesomeTikTokIcon className="h-5 w-5" />
               </a>
               <a
                 href="https://x.com/aamarsbarr"
@@ -201,7 +201,13 @@ export default function ResumePage() {
               </h2>
               <div className="grid gap-4 md:grid-cols-2">
                 <Card className="overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-blue-400 to-blue-500" />
+                  <Image
+                    src="/ml-arm.png"
+                    alt="ML Arm"
+                    width={500}
+                    height={300}
+                    className="aspect-video object-cover"
+                  />
                   <div className="p-4">
                     <div className="mb-2 flex items-start gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900">
@@ -233,39 +239,13 @@ export default function ResumePage() {
                 </Card>
 
                 <Card className="overflow-hidden">
-                  <img src="/ml-arm.png" alt="ML Arm" className="aspect-video object-cover" />
-                  <div className="p-4">
-                    <div className="mb-2 flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900">
-                        <span className="text-xl">🦾</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">3D Printed Robotic Arm</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Award className="h-3 w-3" />
-                            Robotics • Raspberry Pi
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-muted-foreground">
-                      DIY desktop robotic arm with Raspberry Pi control, custom end effector, and precision 3D-printed
-                      parts with servo-controlled articulation.
-                    </p>
-                    <a
-                      href="https://github.com/ammarjmahmood/3dPrintedRoboticArm"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
-                    >
-                      View on GitHub <ExternalLink className="h-3 w-3" />
-                    </a>
-                  </div>
-                </Card>
-
-                <Card className="overflow-hidden">
-                  <img src="/RidgeClone.png" alt="Ridge Wallet Clone" className="aspect-video object-cover" />
+                  <Image
+                    src="/RidgeClone.png"
+                    alt="Ridge Wallet Clone"
+                    width={500}
+                    height={300}
+                    className="aspect-video object-cover"
+                  />
                   <div className="p-4">
                     <div className="mb-2 flex items-start gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-900">
@@ -336,29 +316,6 @@ export default function ResumePage() {
                   </div>
                 </Card>
 
-                <Card className="overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-orange-400 to-orange-500" />
-                  <div className="p-4">
-                    <div className="mb-2 flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 dark:bg-orange-900">
-                        <span className="text-xl">🔒</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">ESP32 Remote Door Lock</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Award className="h-3 w-3" />
-                            IoT • Security
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-muted-foreground">
-                      Custom-designed security system with RFID/NFC access control, featuring web-based remote controls
-                      for enhanced home security.
-                    </p>
-                  </div>
-                </Card>
 
                 <Card className="overflow-hidden">
                   <div className="aspect-video bg-gradient-to-br from-yellow-400 to-yellow-500" />
@@ -397,7 +354,7 @@ export default function ResumePage() {
                     </div>
                     <div className="flex-1">
                       <div className="mb-3">
-                        <h3 className="font-semibold">Robotics Research Assistant</h3>
+                        <h3 className="font-semibold">Machine Learning and Robotics Engineer</h3>
                         <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
                           <span className="flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
@@ -405,7 +362,7 @@ export default function ResumePage() {
                           </span>
                           <span className="flex items-center gap-1">
                             <Building2 className="h-3 w-3" />
-                            University Research Lab
+                            Elixer Labs
                           </span>
                         </div>
                       </div>
@@ -429,6 +386,10 @@ export default function ResumePage() {
                           <span className="flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
                             Present
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Building2 className="h-3 w-3" />
+                            Anomaily (startup)
                           </span>
                         </div>
                       </div>
@@ -463,36 +424,6 @@ export default function ResumePage() {
                         Leading the university robotics team and avionics division. Coordinating competition
                         preparations, mentoring team members, and developing innovative robotic systems for
                         competitions.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </section>
-
-            {/* Education */}
-            <section>
-              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Education</h2>
-              <div className="space-y-4">
-                <Card className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-100 dark:bg-yellow-900">
-                      <GraduationCap className="h-6 w-6 text-yellow-700 dark:text-yellow-300" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="mb-3">
-                        <h3 className="font-semibold">Bachelor of Science in Mechatronics Engineering</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="h-3 w-3" />
-                            In Progress
-                          </span>
-                        </div>
-                      </div>
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        Specializing in Robotics, AI, and Embedded Systems. Active leadership in robotics clubs,
-                        competitions, and research initiatives. Focus on autonomous systems, machine learning, and
-                        mechatronic design.
                       </p>
                     </div>
                   </div>
@@ -561,6 +492,36 @@ export default function ResumePage() {
                       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                         Recognition for excellence in full-stack development and battle robot design in competitive
                         environments.
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </section>
+
+            {/* Education */}
+            <section>
+              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Education</h2>
+              <div className="space-y-4">
+                <Card className="p-6">
+                  <div className="flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-100 dark:bg-yellow-900">
+                      <GraduationCap className="h-6 w-6 text-yellow-700 dark:text-yellow-300" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="mb-3">
+                        <h3 className="font-semibold">Bachelor of Science in Mechatronics Engineering</h3>
+                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Calendar className="h-3 w-3" />
+                            In Progress
+                          </span>
+                        </div>
+                      </div>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        Specializing in Robotics, AI, and Embedded Systems. Active leadership in robotics clubs,
+                        competitions, and research initiatives. Focus on autonomous systems, machine learning, and
+                        mechatronic design.
                       </p>
                     </div>
                   </div>
