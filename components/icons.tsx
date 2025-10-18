@@ -1,4 +1,7 @@
 import type React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTiktok } from "@fortawesome/free-brands-svg-icons"
+
 export function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -47,12 +50,8 @@ export function YoutubeIcon(props: React.SVGProps<SVGSVGElement>) {
   )
 }
 
-export function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.43.05-4.86-.95-6.43-2.88-1.57-1.92-2.24-4.59-1.96-7.12.28-2.53 1.82-4.76 3.9-6.01.62-.37 1.3-.64 2.02-.79.04 3.44.02 6.88.02 10.32.01 1.22-.53 2.35-1.38 3.21-1.04 1.06-2.74 1.48-4.2 1.13.39-2.26.04-4.77-1.22-6.56-1.2-1.72-3.06-2.85-5.1-3.02v-3.49c2.16.1 4.15.95 5.63 2.32.13.12.24.25.36.39.01-3.42.01-6.84.02-10.26.01-1.3.56-2.59 1.5-3.66 1.02-1.14 2.54-1.78 4.1-1.78l.12.02z" />
-    </svg>
-  )
+export function FontAwesomeTikTokIcon(props: { className?: string }) {
+  return <FontAwesomeIcon icon={faTiktok} className={props.className} />
 }
 
 export function InstructablesIcon(props: React.SVGProps<SVGSVGElement>) {
