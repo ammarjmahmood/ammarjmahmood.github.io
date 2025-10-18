@@ -50,8 +50,8 @@ export default function ResumePage() {
             <div>
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">About</h2>
               <p className="text-sm leading-relaxed text-foreground">
-                Mechatronics Engineering student passionate about Robotics, AI, and Embedded Systems. Award-winning
-                full-stack developer, battle robot designer, and private & glider pilot.
+                Mechatronics Engineering student passionate about Robotics, AI, and Embedded Systems. 
+                Full-stack developer, battle robot designer, and private & glider pilot.
               </p>
             </div>
 
@@ -441,7 +441,7 @@ export default function ResumePage() {
                         </div>
                       </div>
                       <p className="text-sm leading-relaxed text-muted-foreground">
-                        Award-winning developer specializing in web applications, IoT integrations, and embedded
+                        Developer specializing in web applications, IoT integrations, and embedded
                         systems. Building full-stack solutions with modern frameworks and technologies.
                       </p>
                     </div>
@@ -529,20 +529,7 @@ export default function ResumePage() {
                   </div>
                 </Card>
 
-                <Card className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-100 dark:bg-orange-900">
-                      <Award className="h-6 w-6 text-orange-700 dark:text-orange-300" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold">Award-Winning Developer & Robot Designer</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                        Recognition for excellence in full-stack development and battle robot design in competitive
-                        environments.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
+               
               </div>
             </section>
 
