@@ -240,6 +240,35 @@ export default function ResumePage() {
 
                 <Card className="overflow-hidden">
                   <Image
+                    src="/NemaRobotArm.png"
+                    alt="Custom Robot"
+                    width={500}
+                    height={300}
+                    className="aspect-video object-cover"
+                  />
+                  <div className="p-4">
+                    <div className="mb-2 flex items-start gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-900">
+                        <span className="text-xl">🤖</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold">Custom Robot Trained in Isaac Sim/Lab</h3>
+                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Award className="h-3 w-3" />
+                            Isaac Sim • Python
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="mb-3 text-sm text-muted-foreground">
+                      A custom robot designed and trained in NVIDIA's Isaac Sim for advanced robotics and AI research.
+                    </p>
+                  </div>
+                </Card>
+
+                <Card className="overflow-hidden">
+                  <Image
                     src="/RidgeClone.png"
                     alt="Ridge Wallet Clone"
                     width={500}
@@ -268,7 +297,13 @@ export default function ResumePage() {
                 </Card>
 
                 <Card className="overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-red-400 to-red-500" />
+                  <Image
+                    src="/lebotjames.png"
+                    alt="Ridge Wallet Clone"
+                    width={500}
+                    height={300}
+                    className="aspect-video object-cover"
+                  />
                   <div className="p-4">
                     <div className="mb-2 flex items-start gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900">
@@ -293,7 +328,13 @@ export default function ResumePage() {
                 </Card>
 
                 <Card className="overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-green-400 to-green-500" />
+                  <Image
+                    src="/fpvdrone.png"
+                    alt="Ridge Wallet Clone"
+                    width={500}
+                    height={300}
+                    className="aspect-video object-cover"
+                  />
                   <div className="p-4">
                     <div className="mb-2 flex items-start gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
@@ -318,7 +359,13 @@ export default function ResumePage() {
 
 
                 <Card className="overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-yellow-400 to-yellow-500" />
+                  <Image
+                    src="/skadis.png"
+                    alt="Ridge Wallet Clone"
+                    width={500}
+                    height={300}
+                    className="aspect-video object-cover"
+                  />
                   <div className="p-4">
                     <div className="mb-2 flex items-start gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-yellow-100 dark:bg-yellow-900">
