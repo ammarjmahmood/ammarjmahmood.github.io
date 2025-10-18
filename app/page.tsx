@@ -2,8 +2,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Globe, CheckCircle2, Calendar, Building2, GraduationCap, Award, ExternalLink } from "lucide-react"
-import { LinkedinIcon, GithubIcon } from "@/components/icons"
-import { ThemeToggle } from "@/components/theme-toggle"
+import {
+  LinkedinIcon,
+  GithubIcon,
+  YoutubeIcon,
+  TikTokIcon,
+  XIcon,
+  InstructablesIcon,
+} from "@/components/icons"
+import { ThemeToggle } from "@/components/theme-provider"
 
 export default function ResumePage() {
   return (
@@ -17,21 +24,27 @@ export default function ResumePage() {
           {/* Left Sidebar */}
           <aside className="space-y-6">
             {/* Profile Card */}
-            <Card className="p-6">
-              <div className="flex items-start gap-4">
-                <Avatar className="h-16 w-16">
-                  <AvatarImage src="/professional-headshot.png" alt="Ammar J Mahmood" />
-                  <AvatarFallback>AM</AvatarFallback>
-                </Avatar>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2">
-                    <h1 className="text-xl font-semibold">Ammar J Mahmood</h1>
-                    <CheckCircle2 className="h-5 w-5 text-blue-500" />
+            <a href="https://www.linkedin.com/in/ammarjmahmood" target="_blank" rel="noopener noreferrer">
+              <Card className="p-6">
+                <div className="flex items-start gap-4">
+                  <Avatar className="h-16 w-16">
+                    <AvatarImage
+                      src="/professional-headshot.png"
+                      alt="Ammar J Mahmood"
+                      className="object-cover"
+                    />
+                    <AvatarFallback>AM</AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <h1 className="text-xl font-semibold">Ammar J Mahmood</h1>
+                      <CheckCircle2 className="h-5 w-5 text-blue-500" />
+                    </div>
+                    <p className="text-sm text-muted-foreground">he/him</p>
                   </div>
-                  <p className="text-sm text-muted-foreground">he/him</p>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </a>
 
             {/* About */}
             <div>
@@ -51,21 +64,21 @@ export default function ResumePage() {
                   className="flex items-center gap-2 text-sm text-foreground hover:text-primary"
                 >
                   <Globe className="h-4 w-4" />
-                  <span>ammarjmahmood@gmail.com</span>
+                  <span>ammarjmahmood</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/ammar-mahmood-5324a5291"
+                  href="https://www.linkedin.com/in/ammarjmahmood"
                   className="flex items-center gap-2 text-sm text-foreground hover:text-primary"
                 >
                   <LinkedinIcon className="h-4 w-4" />
-                  <span>LinkedIn Profile</span>
+                  <span>LinkedIn</span>
                 </a>
                 <a
                   href="https://ammarjmahmood.github.io"
                   className="flex items-center gap-2 text-sm text-foreground hover:text-primary"
                 >
-                  <Globe className="h-4 w-4" />
-                  <span>ammarjmahmood.github.io</span>
+                  <GithubIcon className="h-4 w-4" />
+                  <span>GitHub</span>
                 </a>
               </div>
             </div>
@@ -97,7 +110,7 @@ export default function ResumePage() {
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Languages</h2>
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-sm">
-                  <span className="text-xl">🇬🇧</span>
+                  <span className="text-xl">🇨🇦</span>
                   <span>English - Native</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
@@ -110,13 +123,52 @@ export default function ResumePage() {
             {/* Social Links */}
             <div className="flex gap-3">
               <a
-                href="https://linkedin.com/in/ammar-mahmood-5324a5291"
+                href="https://www.linkedin.com/in/ammarjmahmood"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
               >
                 <LinkedinIcon className="h-5 w-5" />
               </a>
-              <a href="https://github.com/ammarjmahmood" className="text-muted-foreground hover:text-foreground">
+              <a
+                href="https://github.com/ammarjmahmood"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
                 <GithubIcon className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.youtube.com/@newboticsYT/videos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <YoutubeIcon className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@newbotics"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <TikTokIcon className="h-5 w-5" />
+              </a>
+              <a
+                href="https://x.com/aamarsbarr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <XIcon className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instructables.com/member/amarsbar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <InstructablesIcon className="h-5 w-5" />
               </a>
             </div>
           </aside>
@@ -181,7 +233,7 @@ export default function ResumePage() {
                 </Card>
 
                 <Card className="overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-purple-400 to-purple-500" />
+                  <img src="/ml-arm.png" alt="ML Arm" className="aspect-video object-cover" />
                   <div className="p-4">
                     <div className="mb-2 flex items-start gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900">
@@ -209,6 +261,29 @@ export default function ResumePage() {
                     >
                       View on GitHub <ExternalLink className="h-3 w-3" />
                     </a>
+                  </div>
+                </Card>
+
+                <Card className="overflow-hidden">
+                  <img src="/RidgeClone.png" alt="Ridge Wallet Clone" className="aspect-video object-cover" />
+                  <div className="p-4">
+                    <div className="mb-2 flex items-start gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-900">
+                        <span className="text-xl">💳</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold">Ridge Wallet Clone</h3>
+                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Award className="h-3 w-3" />
+                            3D Printing • CAD
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="mb-3 text-sm text-muted-foreground">
+                      A 3D-printed clone of the popular Ridge Wallet, designed for durability and minimalism.
+                    </p>
                   </div>
                 </Card>
 
@@ -242,21 +317,21 @@ export default function ResumePage() {
                   <div className="p-4">
                     <div className="mb-2 flex items-start gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
-                        <span className="text-xl">🎸</span>
+                        <span className="text-xl">✈️</span>
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold">3D Printed Ukulele</h3>
+                        <h3 className="font-semibold">FPV Drone</h3>
                         <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                           <span className="flex items-center gap-1">
                             <Award className="h-3 w-3" />
-                            3D Printing • IoT
+                            Sponsored by PCB Way
                           </span>
                         </div>
                       </div>
                     </div>
                     <p className="mb-3 text-sm text-muted-foreground">
-                      Fully functional 3D-printed ukulele, soon to feature LEDs, amp connectivity, and interactive
-                      learning technology for enhanced musical experience.
+                      High-performance FPV drone with custom-designed parts and advanced features for an immersive
+                      flying experience.
                     </p>
                   </div>
                 </Card>
