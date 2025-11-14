@@ -142,7 +142,7 @@ export default function ResumePage() {
                 <GithubIcon className="h-5 w-5" />
               </a>
               <a
-                href="https://www.youtube.com/@newboticsYT/videos"
+                href="https://www.youtube.com/@amarssbarr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
