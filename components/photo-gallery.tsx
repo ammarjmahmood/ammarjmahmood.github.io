@@ -1,8 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Autoplay from "embla-carousel-autoplay"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const photos = [
     { src: '/gallery/bramhacks.png', alt: 'BramHacks Event' },
@@ -33,6 +41,9 @@ const photos = [
 
 export function PhotoGallery() {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+    const plugin = useRef(
+        Autoplay({ delay: 2000, stopOnInteraction: true })
+    )
 
     const openLightbox = (index: number) => {
         setSelectedIndex(index);
@@ -62,28 +73,44 @@ export function PhotoGallery() {
 
     return (
         <>
-            <section>
+            <section className="w-full">
                 <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     Photo Gallery
                 </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                    {photos.map((photo, index) => (
-                        <button
-                            key={index}
-                            onClick={() => openLightbox(index)}
-                            className="relative aspect-square overflow-hidden rounded-lg bg-secondary/50 hover:scale-105 transition-transform duration-300 group"
-                        >
-                            <Image
-                                src={photo.src}
-                                alt={photo.alt}
-                                fill
-                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                                className="object-cover group-hover:opacity-90 transition-opacity"
-                            />
-                        </button>
-                    ))}
-                </div>
+                <Carousel
+                    plugins={[plugin.current as any]}
+                    className="w-full"
+                    onMouseEnter={plugin.current.stop}
+                    onMouseLeave={plugin.current.reset}
+                    opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                >
+                    <CarouselContent className="-ml-2 md:-ml-4">
+                        {photos.map((photo, index) => (
+                            <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                                <button
+                                    onClick={() => openLightbox(index)}
+                                    className="relative aspect-square w-full overflow-hidden rounded-lg bg-secondary/50 hover:scale-105 transition-transform duration-300 group"
+                                >
+                                    <Image
+                                        src={photo.src}
+                                        alt={photo.alt}
+                                        fill
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                        className="object-cover group-hover:opacity-90 transition-opacity"
+                                    />
+                                </button>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <div className="flex justify-end gap-2 mt-4">
+                        <CarouselPrevious className="static translate-y-0" />
+                        <CarouselNext className="static translate-y-0" />
+                    </div>
+                </Carousel>
             </section>
 
             {/* Lightbox Modal */}
