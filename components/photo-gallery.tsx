@@ -37,6 +37,8 @@ const photos = [
     { src: '/gallery/Loudness detector.png', alt: 'Circut' },
     { src: '/Featured Instructables.png', alt: 'Featured on Instructables' },
     { src: '/gallery/robotgripper.png', alt: 'Robotics Team' },
+    { src: '/gallery/kneebracedesign.png', alt: 'Knee Brace Design' },
+    { src: '/gallery/gpsSchematic.png', alt: 'GPS Schematic' },
 ];
 
 export function PhotoGallery() {
