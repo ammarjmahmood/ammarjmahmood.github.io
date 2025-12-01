@@ -34,7 +34,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-        {
+    {
         id: '14',
         slug: 'hacked-roomba',
         title: 'Hacked Roomba Autonomous Robot',
@@ -68,7 +68,7 @@ The software communicates with a host computer via serial connection, allowing f
 The platform has been used for testing various navigation algorithms and serves as an educational tool for learning robotics fundamentals. Future improvements could include SLAM integration, camera-based navigation, and ROS compatibility.`
         }
     },
-        {
+    {
         id: '1',
         slug: 'asl-robotic-hand',
         title: '3D Printed ASL Robotic Hand',
@@ -107,7 +107,7 @@ The ML model was trained on 10,000+ labeled hand gesture images, achieving 95% a
 Future improvements include expanding the gesture vocabulary, implementing bilateral hand design, and developing a standalone embedded system without requiring a computer for ML inference.`
         }
     },
-        {
+    {
         id: '4',
         slug: 'battle-bot',
         title: '1lb Battle Bot',
@@ -142,7 +142,7 @@ Protection circuitry includes battery monitoring and current limiting. The radio
 Key learnings include the importance of armor geometry and the effectiveness of active weapons versus wedge-based defenses.`
         }
     },
-        {
+    {
         id: '5',
         slug: 'fpv-drone',
         title: 'FPV Drone',
@@ -152,7 +152,7 @@ Key learnings include the importance of armor geometry and the effectiveness of 
 The drone features a custom frame designed for durability and optimal flight characteristics, integrated with high-performance motors, ESCs, and FPV camera system for immersive flying.`,
         thumbnail: '/fpvdrone.png',
         previewMedia: '/fpvdrone.png',
-        detailImages: ['/fpvdrone.png', '/gallery/FPVDrone.png', '/gallery/FPVDrone2.png'],
+        detailImages: ['/fpvdrone.png', '/gallery/FPVDrone.png', '/gallery/FPVDrone2.png', '/gallery/gpsSchematic.png'],
         type: ['Electrical', 'Mechanical'],
         tags: ['Sponsored by PCB Way', 'FPV', 'Drones', '3D Printing', 'Electronics'],
         date: '2023',
@@ -177,7 +177,7 @@ FPV system includes a 600mW VTX and CMOS camera with 2.5mm lens. GPS module enab
 The PCB Way sponsorship enabled professional-quality PCB fabrication for custom power distribution. Future improvements include adding HD recording capability.`
         }
     },
-        {
+    {
         id: '6',
         slug: 'ikea-skadis',
         title: 'IKEA Skadis CAD Attachments',
@@ -208,7 +208,7 @@ The collection includes tool holders, electronics organizers, spool holders, and
 The project demonstrates how 3D printing enables custom storage solutions tailored to individual needs, extending the functionality of commercial products.`
         }
     },
-        {
+    {
         id: '8',
         slug: 'job-tracker-extension',
         title: 'Job Application Tracker - Chrome Extension',
@@ -242,7 +242,7 @@ The resume management feature uses the FileReader API for local file handling, s
 Future improvements include integration with more job boards, automated follow-up reminders, and advanced analytics on optimal application timing.`
         }
     },
-        {
+    {
         id: '9',
         slug: 'autism-communication-tool',
         title: 'Non-Verbal Autism Communication Tool',
@@ -276,7 +276,7 @@ Accessibility features include high-contrast modes, large touch targets (minimum
 Future development could include symbol libraries (PECS-style), user profile management, and offline functionality for use in all environments.`
         }
     },
-        {
+    {
         id: '10',
         slug: 'robot-pouring-demo',
         title: 'Robotic Arm Pouring Demonstration',
@@ -309,7 +309,7 @@ The system runs in a closed-loop configuration with visual servoing allowing rea
 The project validates visual servoing techniques for dynamic manipulation tasks and demonstrates the maturity of open-source robotics frameworks like ROS and MoveIt.`
         }
     },
-        {
+    {
         id: '11',
         slug: 'voice-command-robot',
         title: 'Voice-Controlled UFactory xArm 850',
@@ -342,7 +342,7 @@ Predefined position labels allow users to reference locations by name ("home pos
 Future improvements include custom wake word activation, noise-robust recognition, and multi-robot coordination through voice commands.`
         }
     },
-        {
+    {
         id: '12',
         slug: 'vr-minecraft-webxr',
         title: 'VR Minecraft using WebXR',
@@ -375,7 +375,7 @@ The rendering pipeline uses instanced rendering for efficient drawing of thousan
 The project validates WebXR as a viable platform for VR gaming and demonstrates how web technologies can deliver experiences previously requiring native development. Future improvements include multiplayer support, more block types, and crafting systems.`
         }
     },
-        {
+    {
         id: '13',
         slug: 'imu-positioning-system',
         title: 'Offline Positioning System using IMU',
@@ -409,7 +409,7 @@ The Python processing pipeline reads sensor data over serial connection, applies
 Future enhancements include integrating visual odometry for drift correction and implementing zero-velocity updates (ZUPT) for stationary detection.`
         }
     },
-        {
+    {
         id: '15',
         slug: 'nba-game-predictor',
         title: 'NBA Game Outcome Predictor',
@@ -445,7 +445,7 @@ Feature importance analysis revealed that recent team form (last 10 games), offe
 The model successfully predicted 72% of playoff game outcomes, demonstrating robust performance on high-stakes matchups. Future improvements include integrating player injury data, lineup-specific statistics, and betting market odds as features.`,
         }
     },
-        {
+    {
         id: '16',
         slug: 'candy-classifier',
         title: 'Candy Type Classifier using Computer Vision',
@@ -481,7 +481,7 @@ Confusion matrix analysis revealed that errors primarily occurred between candy 
 Processing time averages 150ms per image on CPU, making it suitable for real-time mobile applications. The model size (23MB) is optimized for deployment on resource-constrained devices. Future improvements include expanding to 30+ candy types and implementing fine-grained classification for flavors within brands.`
         }
     },
-        {
+    {
         id: '17',
         slug: 'two-finger-robot-gripper',
         title: 'Two-Finger Parallel Robot Gripper',
@@ -517,7 +517,7 @@ The gripper successfully handled diverse object geometries including cylindrical
 Integration with a UFactory xArm required minimal modification, using standard ISO mounting. The gripper has been reliably used for 500+ hours of operation without mechanical failures. Future enhancements include electrically actuated fingers and integrated object detection sensors.`
         }
     },
-        {
+    {
         id: '18',
         slug: '30lb-battle-bot',
         title: '30lb Combat Robot',
@@ -563,7 +563,7 @@ The weapon motor ESC experienced overheating during one extended match, leading 
 Key lessons included the importance of redundant weapon mount fasteners and the effectiveness of titanium for impact resistance. The bot has since received upgrades including enhanced weapon teeth geometry and improved ground clearance based on competition feedback.`
         }
     },
-        {
+    {
         id: '19',
         slug: 'smart-safe',
         title: 'Smart Safe with Biometric & Voice Control',
@@ -616,7 +616,7 @@ The project demonstrates practical IoT security applications and received positi
 **Secondary video** showcasing the 3D design and assembly: https://youtu.be/1QEjZAZJ12g`
         }
     },
-        {
+    {
         id: '20',
         slug: 'youth-flight-canada',
         title: 'Youth Flight Canada Website',
@@ -663,7 +663,7 @@ AWS infrastructure scales automatically during traffic spikes, maintaining 99.9%
 Ongoing maintenance includes content updates, security patches, and feature enhancements based on user feedback. The site handles 10,000+ monthly visitors with consistent performance. Future improvements include membership portal integration and event registration system.`
         }
     },
-        {
+    {
         id: '21',
         slug: 'uss-website',
         title: 'University Student Society Website',
@@ -723,7 +723,7 @@ Positive feedback from both designers and end-users validated the collaborative 
 Site uptime maintains 99.95%+ availability. Security audits confirmed robust protection against common web vulnerabilities. The platform continues to evolve with new features driven by student needs and feedback.`
         }
     },
-        {
+    {
         id: '22',
         slug: 'ifast-roadside',
         title: 'iFast Roadside Assistance Website',
@@ -791,7 +791,7 @@ The success of this project led to additional community website projects, establ
 Ongoing maintenance includes content updates for seasonal services, adding customer testimonials, and refining SEO strategies based on search performance data. The website continues to effectively serve the business's digital marketing needs.`
         }
     },
-        {
+    {
         id: '2',
         slug: 'isaac-sim-robot',
         title: 'Custom Robot Trained in Isaac Sim/Lab',
@@ -822,7 +822,7 @@ Training uses Proximal Policy Optimization (PPO) implemented in PyTorch, with cu
 Next steps include physical robot construction and validation of sim-to-real transfer performance.`
         }
     },
-        {
+    {
         id: '3',
         slug: 'ridge-wallet-clone',
         title: 'Ridge Wallet Clone',
@@ -853,7 +853,7 @@ Critical design considerations included layer orientation for strength, living h
 Print time is approximately 4 hours. The project demonstrated that functional product clones are achievable with consumer 3D printing when design principles are properly adapted.`
         }
     },
-        {
+    {
         id: '7',
         slug: 'cibo-restaurant-app',
         title: 'CIBO - Restaurant Ordering Platform',
