@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Github, ExternalLink, Calendar, User, Clock, Target } from 'lucide-react';
 import { projects } from '@/lib/projects-data';
 
+// Generate static params for all projects
 export async function generateStaticParams() {
     return projects.map((project) => ({
         slug: project.slug,
