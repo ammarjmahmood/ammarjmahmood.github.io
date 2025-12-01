@@ -892,7 +892,7 @@ The platform demonstrates scalability potential for multi-restaurant deployment.
     },
 
     {
-        id: '17',
+        id: '23',
         slug: 'knee-brace-recovery',
         title: 'Knee Brace Recovery Device',
         shortDescription: 'Mechanical recovery device designed to aid post-surgery knee rehabilitation, developed in collaboration with a startup.',
@@ -921,7 +921,7 @@ A key innovation in this iteration is the folding mechanism, designed to make th
     },
 
     {
-        id: '18',
+        id: '24',
         slug: 'mars-rocket-avionics',
         title: 'MARS Rocket Avionics',
         shortDescription: 'Custom flight controller and avionics system for high-powered rocketry, developed with the TMU MARS Rocket Team.',

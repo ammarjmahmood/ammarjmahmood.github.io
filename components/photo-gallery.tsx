@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Autoplay from "embla-carousel-autoplay"
@@ -44,8 +44,22 @@ const photos = [
 export function PhotoGallery() {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const plugin = useRef(
-        Autoplay({ delay: 1000, stopOnInteraction: true })
+        Autoplay({ delay: 1000, stopOnInteraction: false })
     )
+
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            if (document.visibilityState === 'visible') {
+                plugin.current.reset();
+            }
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, []);
 
     const openLightbox = (index: number) => {
         setSelectedIndex(index);

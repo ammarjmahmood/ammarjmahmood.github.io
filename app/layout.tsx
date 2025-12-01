@@ -11,9 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: 'Ammar J Mahmood - Portfolio',
   description: 'Full-stack developer and robotics engineer specializing in AI, embedded systems, and innovative solutions.',
-  icons: {
-    icon: '/icon.png',
-  },
+
 };
 
 export default function RootLayout({
