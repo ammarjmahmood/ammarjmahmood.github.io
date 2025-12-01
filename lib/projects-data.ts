@@ -34,7 +34,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-    {
+        {
         id: '14',
         slug: 'hacked-roomba',
         title: 'Hacked Roomba Autonomous Robot',
@@ -67,8 +67,8 @@ The software communicates with a host computer via serial connection, allowing f
 
 The platform has been used for testing various navigation algorithms and serves as an educational tool for learning robotics fundamentals. Future improvements could include SLAM integration, camera-based navigation, and ROS compatibility.`
         }
-    },
-    {
+    },,
+        {
         id: '1',
         slug: 'asl-robotic-hand',
         title: '3D Printed ASL Robotic Hand',
@@ -106,70 +106,8 @@ The ML model was trained on 10,000+ labeled hand gesture images, achieving 95% a
 
 Future improvements include expanding the gesture vocabulary, implementing bilateral hand design, and developing a standalone embedded system without requiring a computer for ML inference.`
         }
-    },
-    {
-        id: '2',
-        slug: 'isaac-sim-robot',
-        title: 'Custom Robot Trained in Isaac Sim/Lab',
-        shortDescription: 'A custom robot designed and trained in NVIDIA\'s Isaac Sim for advanced robotics and AI research.',
-        fullDescription: `Designed and implemented a custom robotic system using NVIDIA's Isaac Sim platform for simulation and training. The project involved creating a detailed robot model, implementing reinforcement learning algorithms, and training the robot in various scenarios.
-
-This work demonstrates the power of simulation-based training for robotics, allowing rapid iteration and testing without the need for physical prototypes during the development phase.`,
-        thumbnail: '/NemaRobotArm.png',
-        previewMedia: '/NemaRobotArm.png', // TODO: Replace with GIF/video
-        detailImages: ['/NemaRobotArm.png'], // TODO: Add more project images
-        type: ['Software'],
-        tags: ['Isaac Sim', 'Python', 'Reinforcement Learning', 'Robotics', 'AI'],
-        date: '2024',
-        technicalStack: ['Python', 'Isaac Sim', 'Isaac Lab', 'PyTorch', 'ROS'],
-        role: 'AI Researcher & Developer',
-        duration: '2024',
-        scope: 'Simulation + Reinforcement Learning + Robot Design',
-        relatedProjects: ['1', '14'],
-        sections: {
-            overview: `This project explores the cutting edge of sim-to-real robotics transfer using NVIDIA's Isaac Sim platform. By designing and training a custom robot entirely in simulation, the project demonstrates how virtual environments can accelerate robotics development and enable rapid experimentation with different designs and algorithms.
-
-The work focuses on creating a photorealistic robot model, implementing domain randomization techniques, and training reinforcement learning policies that can potentially transfer to real hardware.`,
-            softwareArchitecture: `The software stack leverages NVIDIA Isaac Sim's USD-based simulation environment with Isaac Lab for reinforcement learning training. The robot model is defined using URDF and imported into the simulator with accurate physics properties.
-
-Training uses Proximal Policy Optimization (PPO) implemented in PyTorch, with custom reward shaping for task-specific behaviors. The system includes ROS integration for potential hardware deployment and teleoperation capabilities. Domain randomization is applied to textures, lighting, and dynamics parameters to improve sim-to-real transfer.`,
-            results: `Successfully trained policies for navigation and manipulation tasks, achieving convergence within reasonable training times. The simulation environment allows for 10x faster iteration compared to physical robot testing. The learned behaviors demonstrate robust performance across varied environmental conditions within the simulation.
-
-Next steps include physical robot construction and validation of sim-to-real transfer performance.`
-        }
-    },
-    {
-        id: '3',
-        slug: 'ridge-wallet-clone',
-        title: 'Ridge Wallet Clone',
-        shortDescription: 'A 3D-printed clone of the popular Ridge Wallet, designed for durability and minimalism.',
-        fullDescription: `Reverse-engineered and redesigned the popular Ridge Wallet using CAD software and 3D printing technology. The project focused on understanding the mechanical design principles that make the original wallet functional while optimizing for 3D printing manufacturing.
-
-The design incorporates precision tolerances for the sliding mechanism and material selection for durability. This project showcases CAD design skills and understanding of manufacturing constraints.`,
-        thumbnail: '/RidgeClone.png',
-        previewMedia: '/RidgeClone.png', // TODO: Replace with GIF/video
-        detailImages: ['/RidgeClone.png'], // TODO: Add more project images
-        type: ['Mechanical'],
-        tags: ['3D Printing', 'CAD', 'Product Design'],
-        date: '2023',
-        technicalStack: ['SolidWorks', 'Fusion 360', '3D Printing'],
-        role: 'Product Designer',
-        duration: '2023',
-        scope: 'CAD Design + 3D Printing + Product Engineering',
-        relatedProjects: ['4', '6'],
-        sections: {
-            overview: `This reverse-engineering project deconstructs the popular Ridge Wallet to understand its clever mechanical design and recreate it using 3D printing technology. The challenge lies in achieving the same slim profile, smooth sliding action, and robust construction using additive manufacturing instead of the original machined aluminum.
-
-The project demonstrates product design thinking, tolerance analysis, and material science considerations specific to 3D printing.`,
-            mechanicalDesign: `The wallet design features a clever sliding mechanism with precision tolerance requirements. Key mechanisms include card retention clips, money clip integration, and the primary sliding plate mechanism. Each component was redesigned in SolidWorks with 3D printing constraints in mind.
-
-Critical design considerations included layer orientation for strength, living hinge design for the clip, and tolerance compensation for FDM printing (typically +0.2mm clearances). The design uses minimal support structures and can be printed on standard FDM printers. Material choice settled on PLA+ for its strength and smooth surface finish.`,
-            results: `The final 3D-printed wallet successfully replicates the core functionality of the Ridge Wallet at a fraction of the cost. The sliding mechanism operates smoothly, and card retention is secure. Weight is comparable to the aluminum original.
-
-Print time is approximately 4 hours. The project demonstrated that functional product clones are achievable with consumer 3D printing when design principles are properly adapted.`
-        }
-    },
-    {
+    },,
+        {
         id: '4',
         slug: 'battle-bot',
         title: '1lb Battle Bot',
@@ -203,8 +141,8 @@ Protection circuitry includes battery monitoring and current limiting. The radio
 
 Key learnings include the importance of armor geometry and the effectiveness of active weapons versus wedge-based defenses.`
         }
-    },
-    {
+    },,
+        {
         id: '5',
         slug: 'fpv-drone',
         title: 'FPV Drone',
@@ -238,8 +176,8 @@ FPV system includes a 600mW VTX and CMOS camera with 2.5mm lens. GPS module enab
 
 The PCB Way sponsorship enabled professional-quality PCB fabrication for custom power distribution. Future improvements include adding HD recording capability.`
         }
-    },
-    {
+    },,
+        {
         id: '6',
         slug: 'ikea-skadis',
         title: 'IKEA Skadis CAD Attachments',
@@ -269,42 +207,8 @@ The collection includes tool holders, electronics organizers, spool holders, and
 
 The project demonstrates how 3D printing enables custom storage solutions tailored to individual needs, extending the functionality of commercial products.`
         }
-    },
-    {
-        id: '7',
-        slug: 'cibo-restaurant-app',
-        title: 'CIBO - Restaurant Ordering Platform',
-        shortDescription: 'Full-stack restaurant ordering platform with mobile app, web interface, and backend API for seamless food ordering experience.',
-        fullDescription: `Developed CIBO, a comprehensive restaurant ordering platform that bridges the gap between customers and restaurant services. The system features a React Native mobile app for customers, a web-based admin panel for restaurant staff, and a robust Node.js backend API.
-
-The platform enables customers to browse menus, place orders, track their order status in real-time, and make payments. Restaurant staff can manage menus, process orders, and handle table reservations through an intuitive dashboard.`,
-        thumbnail: '/cibo-app.png',
-        videoUrl: 'https://www.youtube.com/watch?v=ehJRiRirNdg',
-        detailImages: ['/cibo-app.png'],
-        type: ['Software'],
-        tags: ['Full-Stack', 'React Native', 'Node.js', 'Restaurant Tech', 'Mobile App'],
-        date: '2024',
-        githubUrl: 'https://github.com/ammarjmahmood/CIBO',
-        technicalStack: ['React Native', 'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'Expo'],
-        role: 'Full-Stack Developer',
-        duration: '2024',
-        scope: 'Mobile Development + Backend API + Web Dashboard',
-        relatedProjects: ['8', '9'],
-        sections: {
-            overview: `CIBO is a comprehensive restaurant technology platform addressing the disconnect between customer ordering and restaurant operations. The project originated from identifying inefficiencies at Eataly (Eaton Center) and evolved into a full-featured ordering and management system.
-
-The platform serves dual purposes: customer-facing mobile app for browsing menus and placing orders, and restaurant-facing web dashboard for order management and analytics. Real-time synchronization ensures seamless communication between customers and kitchen staff.`,
-            softwareArchitecture: `The architecture follows a microservices approach with three main components: (1) React Native mobile app built with Expo for cross-platform deployment, (2) Node.js/Express backend API handling business logic and database operations, and (3) React web dashboard for restaurant staff.
-
-The backend uses PostgreSQL for relational data (menus, orders, users) hosted on Supabase, providing real-time subscriptions for live order updates. Authentication uses JWT tokens with refresh token rotation. The API implements RESTful endpoints with comprehensive error handling and validation.
-
-The mobile app features Redux state management, optimistic updates for responsiveness, and offline-first architecture for menu browsing. Push notifications alert customers of order status changes.`,
-            results: `Successfully deployed to test pilot at a local restaurant with positive feedback on ease of use. The system handles concurrent orders efficiently, with real-time updates appearing within 500ms. Average order placement time reduced from 3 minutes (traditional) to under 60 seconds.
-
-The platform demonstrates scalability potential for multi-restaurant deployment. Future enhancements include payment integration, delivery tracking, and customer loyalty programs.`
-        }
-    },
-    {
+    },,
+        {
         id: '8',
         slug: 'job-tracker-extension',
         title: 'Job Application Tracker - Chrome Extension',
@@ -337,8 +241,8 @@ The resume management feature uses the FileReader API for local file handling, s
 
 Future improvements include integration with more job boards, automated follow-up reminders, and advanced analytics on optimal application timing.`
         }
-    },
-    {
+    },,
+        {
         id: '9',
         slug: 'autism-communication-tool',
         title: 'Non-Verbal Autism Communication Tool',
@@ -371,8 +275,8 @@ Accessibility features include high-contrast modes, large touch targets (minimum
 
 Future development could include symbol libraries (PECS-style), user profile management, and offline functionality for use in all environments.`
         }
-    },
-    {
+    },,
+        {
         id: '10',
         slug: 'robot-pouring-demo',
         title: 'Robotic Arm Pouring Demonstration',
@@ -404,8 +308,8 @@ The system runs in a closed-loop configuration with visual servoing allowing rea
 
 The project validates visual servoing techniques for dynamic manipulation tasks and demonstrates the maturity of open-source robotics frameworks like ROS and MoveIt.`
         }
-    },
-    {
+    },,
+        {
         id: '11',
         slug: 'voice-command-robot',
         title: 'Voice-Controlled UFactory xArm 850',
@@ -437,8 +341,8 @@ Predefined position labels allow users to reference locations by name ("home pos
 
 Future improvements include custom wake word activation, noise-robust recognition, and multi-robot coordination through voice commands.`
         }
-    },
-    {
+    },,
+        {
         id: '12',
         slug: 'vr-minecraft-webxr',
         title: 'VR Minecraft using WebXR',
@@ -470,8 +374,8 @@ The rendering pipeline uses instanced rendering for efficient drawing of thousan
 
 The project validates WebXR as a viable platform for VR gaming and demonstrates how web technologies can deliver experiences previously requiring native development. Future improvements include multiplayer support, more block types, and crafting systems.`
         }
-    },
-    {
+    },,
+        {
         id: '13',
         slug: 'imu-positioning-system',
         title: 'Offline Positioning System using IMU',
@@ -504,8 +408,8 @@ The Python processing pipeline reads sensor data over serial connection, applies
 
 Future enhancements include integrating visual odometry for drift correction and implementing zero-velocity updates (ZUPT) for stationary detection.`
         }
-    },
-    {
+    },,
+        {
         id: '15',
         slug: 'nba-game-predictor',
         title: 'NBA Game Outcome Predictor',
@@ -540,8 +444,8 @@ Feature importance analysis revealed that recent team form (last 10 games), offe
 
 The model successfully predicted 72% of playoff game outcomes, demonstrating robust performance on high-stakes matchups. Future improvements include integrating player injury data, lineup-specific statistics, and betting market odds as features.`,
         }
-    },
-    {
+    },,
+        {
         id: '16',
         slug: 'candy-classifier',
         title: 'Candy Type Classifier using Computer Vision',
@@ -576,8 +480,8 @@ Confusion matrix analysis revealed that errors primarily occurred between candy 
 
 Processing time averages 150ms per image on CPU, making it suitable for real-time mobile applications. The model size (23MB) is optimized for deployment on resource-constrained devices. Future improvements include expanding to 30+ candy types and implementing fine-grained classification for flavors within brands.`
         }
-    },
-    {
+    },,
+        {
         id: '17',
         slug: 'two-finger-robot-gripper',
         title: 'Two-Finger Parallel Robot Gripper',
@@ -612,8 +516,8 @@ The gripper successfully handled diverse object geometries including cylindrical
 
 Integration with a UFactory xArm required minimal modification, using standard ISO mounting. The gripper has been reliably used for 500+ hours of operation without mechanical failures. Future enhancements include electrically actuated fingers and integrated object detection sensors.`
         }
-    },
-    {
+    },,
+        {
         id: '18',
         slug: '30lb-battle-bot',
         title: '30lb Combat Robot',
@@ -658,8 +562,8 @@ The weapon motor ESC experienced overheating during one extended match, leading 
 
 Key lessons included the importance of redundant weapon mount fasteners and the effectiveness of titanium for impact resistance. The bot has since received upgrades including enhanced weapon teeth geometry and improved ground clearance based on competition feedback.`
         }
-    },
-    {
+    },,
+        {
         id: '19',
         slug: 'smart-safe',
         title: 'Smart Safe with Biometric & Voice Control',
@@ -711,8 +615,8 @@ The project demonstrates practical IoT security applications and received positi
 
 **Secondary video** showcasing the 3D design and assembly: https://youtu.be/1QEjZAZJ12g`
         }
-    },
-    {
+    },,
+        {
         id: '20',
         slug: 'youth-flight-canada',
         title: 'Youth Flight Canada Website',
@@ -758,8 +662,8 @@ AWS infrastructure scales automatically during traffic spikes, maintaining 99.9%
 
 Ongoing maintenance includes content updates, security patches, and feature enhancements based on user feedback. The site handles 10,000+ monthly visitors with consistent performance. Future improvements include membership portal integration and event registration system.`
         }
-    },
-    {
+    },,
+        {
         id: '21',
         slug: 'uss-website',
         title: 'University Student Society Website',
@@ -818,8 +722,8 @@ Positive feedback from both designers and end-users validated the collaborative 
 
 Site uptime maintains 99.95%+ availability. Security audits confirmed robust protection against common web vulnerabilities. The platform continues to evolve with new features driven by student needs and feedback.`
         }
-    },
-    {
+    },,
+        {
         id: '22',
         slug: 'ifast-roadside',
         title: 'iFast Roadside Assistance Website',
@@ -885,6 +789,102 @@ Page load times consistently under 2 seconds provide positive user experience ev
 The success of this project led to additional community website projects, establishing a portfolio of small business web development work. The experience demonstrates technical skills applied to real-world business problems while providing valuable community service.
 
 Ongoing maintenance includes content updates for seasonal services, adding customer testimonials, and refining SEO strategies based on search performance data. The website continues to effectively serve the business's digital marketing needs.`
+        }
+    },,
+        {
+        id: '2',
+        slug: 'isaac-sim-robot',
+        title: 'Custom Robot Trained in Isaac Sim/Lab',
+        shortDescription: 'A custom robot designed and trained in NVIDIA\'s Isaac Sim for advanced robotics and AI research.',
+        fullDescription: `Designed and implemented a custom robotic system using NVIDIA's Isaac Sim platform for simulation and training. The project involved creating a detailed robot model, implementing reinforcement learning algorithms, and training the robot in various scenarios.
+
+This work demonstrates the power of simulation-based training for robotics, allowing rapid iteration and testing without the need for physical prototypes during the development phase.`,
+        thumbnail: '/NemaRobotArm.png',
+        previewMedia: '/NemaRobotArm.png', // TODO: Replace with GIF/video
+        detailImages: ['/NemaRobotArm.png'], // TODO: Add more project images
+        type: ['Software'],
+        tags: ['Isaac Sim', 'Python', 'Reinforcement Learning', 'Robotics', 'AI'],
+        date: '2024',
+        technicalStack: ['Python', 'Isaac Sim', 'Isaac Lab', 'PyTorch', 'ROS'],
+        role: 'AI Researcher & Developer',
+        duration: '2024',
+        scope: 'Simulation + Reinforcement Learning + Robot Design',
+        relatedProjects: ['1', '14'],
+        sections: {
+            overview: `This project explores the cutting edge of sim-to-real robotics transfer using NVIDIA's Isaac Sim platform. By designing and training a custom robot entirely in simulation, the project demonstrates how virtual environments can accelerate robotics development and enable rapid experimentation with different designs and algorithms.
+
+The work focuses on creating a photorealistic robot model, implementing domain randomization techniques, and training reinforcement learning policies that can potentially transfer to real hardware.`,
+            softwareArchitecture: `The software stack leverages NVIDIA Isaac Sim's USD-based simulation environment with Isaac Lab for reinforcement learning training. The robot model is defined using URDF and imported into the simulator with accurate physics properties.
+
+Training uses Proximal Policy Optimization (PPO) implemented in PyTorch, with custom reward shaping for task-specific behaviors. The system includes ROS integration for potential hardware deployment and teleoperation capabilities. Domain randomization is applied to textures, lighting, and dynamics parameters to improve sim-to-real transfer.`,
+            results: `Successfully trained policies for navigation and manipulation tasks, achieving convergence within reasonable training times. The simulation environment allows for 10x faster iteration compared to physical robot testing. The learned behaviors demonstrate robust performance across varied environmental conditions within the simulation.
+
+Next steps include physical robot construction and validation of sim-to-real transfer performance.`
+        }
+    },,
+        {
+        id: '3',
+        slug: 'ridge-wallet-clone',
+        title: 'Ridge Wallet Clone',
+        shortDescription: 'A 3D-printed clone of the popular Ridge Wallet, designed for durability and minimalism.',
+        fullDescription: `Reverse-engineered and redesigned the popular Ridge Wallet using CAD software and 3D printing technology. The project focused on understanding the mechanical design principles that make the original wallet functional while optimizing for 3D printing manufacturing.
+
+The design incorporates precision tolerances for the sliding mechanism and material selection for durability. This project showcases CAD design skills and understanding of manufacturing constraints.`,
+        thumbnail: '/RidgeClone.png',
+        previewMedia: '/RidgeClone.png', // TODO: Replace with GIF/video
+        detailImages: ['/RidgeClone.png'], // TODO: Add more project images
+        type: ['Mechanical'],
+        tags: ['3D Printing', 'CAD', 'Product Design'],
+        date: '2023',
+        technicalStack: ['SolidWorks', 'Fusion 360', '3D Printing'],
+        role: 'Product Designer',
+        duration: '2023',
+        scope: 'CAD Design + 3D Printing + Product Engineering',
+        relatedProjects: ['4', '6'],
+        sections: {
+            overview: `This reverse-engineering project deconstructs the popular Ridge Wallet to understand its clever mechanical design and recreate it using 3D printing technology. The challenge lies in achieving the same slim profile, smooth sliding action, and robust construction using additive manufacturing instead of the original machined aluminum.
+
+The project demonstrates product design thinking, tolerance analysis, and material science considerations specific to 3D printing.`,
+            mechanicalDesign: `The wallet design features a clever sliding mechanism with precision tolerance requirements. Key mechanisms include card retention clips, money clip integration, and the primary sliding plate mechanism. Each component was redesigned in SolidWorks with 3D printing constraints in mind.
+
+Critical design considerations included layer orientation for strength, living hinge design for the clip, and tolerance compensation for FDM printing (typically +0.2mm clearances). The design uses minimal support structures and can be printed on standard FDM printers. Material choice settled on PLA+ for its strength and smooth surface finish.`,
+            results: `The final 3D-printed wallet successfully replicates the core functionality of the Ridge Wallet at a fraction of the cost. The sliding mechanism operates smoothly, and card retention is secure. Weight is comparable to the aluminum original.
+
+Print time is approximately 4 hours. The project demonstrated that functional product clones are achievable with consumer 3D printing when design principles are properly adapted.`
+        }
+    },,
+        {
+        id: '7',
+        slug: 'cibo-restaurant-app',
+        title: 'CIBO - Restaurant Ordering Platform',
+        shortDescription: 'Full-stack restaurant ordering platform with mobile app, web interface, and backend API for seamless food ordering experience.',
+        fullDescription: `Developed CIBO, a comprehensive restaurant ordering platform that bridges the gap between customers and restaurant services. The system features a React Native mobile app for customers, a web-based admin panel for restaurant staff, and a robust Node.js backend API.
+
+The platform enables customers to browse menus, place orders, track their order status in real-time, and make payments. Restaurant staff can manage menus, process orders, and handle table reservations through an intuitive dashboard.`,
+        thumbnail: '/cibo-app.png',
+        videoUrl: 'https://www.youtube.com/watch?v=ehJRiRirNdg',
+        detailImages: ['/cibo-app.png'],
+        type: ['Software'],
+        tags: ['Full-Stack', 'React Native', 'Node.js', 'Restaurant Tech', 'Mobile App'],
+        date: '2024',
+        githubUrl: 'https://github.com/ammarjmahmood/CIBO',
+        technicalStack: ['React Native', 'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'Expo'],
+        role: 'Full-Stack Developer',
+        duration: '2024',
+        scope: 'Mobile Development + Backend API + Web Dashboard',
+        relatedProjects: ['8', '9'],
+        sections: {
+            overview: `CIBO is a comprehensive restaurant technology platform addressing the disconnect between customer ordering and restaurant operations. The project originated from identifying inefficiencies at Eataly (Eaton Center) and evolved into a full-featured ordering and management system.
+
+The platform serves dual purposes: customer-facing mobile app for browsing menus and placing orders, and restaurant-facing web dashboard for order management and analytics. Real-time synchronization ensures seamless communication between customers and kitchen staff.`,
+            softwareArchitecture: `The architecture follows a microservices approach with three main components: (1) React Native mobile app built with Expo for cross-platform deployment, (2) Node.js/Express backend API handling business logic and database operations, and (3) React web dashboard for restaurant staff.
+
+The backend uses PostgreSQL for relational data (menus, orders, users) hosted on Supabase, providing real-time subscriptions for live order updates. Authentication uses JWT tokens with refresh token rotation. The API implements RESTful endpoints with comprehensive error handling and validation.
+
+The mobile app features Redux state management, optimistic updates for responsiveness, and offline-first architecture for menu browsing. Push notifications alert customers of order status changes.`,
+            results: `Successfully deployed to test pilot at a local restaurant with positive feedback on ease of use. The system handles concurrent orders efficiently, with real-time updates appearing within 500ms. Average order placement time reduced from 3 minutes (traditional) to under 60 seconds.
+
+The platform demonstrates scalability potential for multi-restaurant deployment. Future enhancements include payment integration, delivery tracking, and customer loyalty programs.`
         }
     },
 ];
