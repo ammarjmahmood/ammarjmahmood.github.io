@@ -97,8 +97,6 @@ export function PhotoGallery() {
                 <Carousel
                     plugins={[plugin.current as any]}
                     className="w-full"
-                    onMouseEnter={plugin.current.stop}
-                    onMouseLeave={plugin.current.reset}
                     opts={{
                         align: "start",
                         loop: true,
