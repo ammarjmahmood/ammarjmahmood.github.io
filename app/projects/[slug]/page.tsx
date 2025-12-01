@@ -114,7 +114,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                         <Button variant="outline" className="gap-2">
                                             <ExternalLink className="h-4 w-4" />
-                                            Live Demo
+                                            {project.liveUrl.includes('docs.google.com') ? 'Detailed Report' : 'Live Demo'}
                                         </Button>
                                     </a>
                                 )}
