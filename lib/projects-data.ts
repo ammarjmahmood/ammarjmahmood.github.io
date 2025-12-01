@@ -896,9 +896,10 @@ The platform demonstrates scalability potential for multi-restaurant deployment.
         shortDescription: 'Mechanical recovery device designed to aid post-surgery knee rehabilitation, developed in collaboration with a startup.',
         fullDescription: `Designed and prototyped a mechanical knee brace to assist patients recovering from knee surgery. This project was driven by a personal connection to a close friend's recovery journey, aiming to improve upon existing rehabilitation tools. This is the second iteration (V2) of the design, focusing on enhanced comfort, adjustable tension, and ease of use.
         
-The device was developed in collaboration with a startup to address specific pain points in current recovery methods.`,
+The device was developed in collaboration with a startup to address specific pain points in current recovery methods. The design includes a novel folding mechanism (demonstrated in the "Knee 3" prototype) allowing the brace to fit compactly into suitcases for travel.`,
         thumbnail: '/gallery/kneebracedesign.png',
-        detailImages: ['/gallery/kneebracedesign.png'],
+        liveUrl: 'https://docs.google.com/document/d/1Kafr3DGXgkPG0eHfMQrDlj_wAlwApKt7SJ6aq1e55r8/edit?usp=sharing',
+        detailImages: ['/gallery/kneebracedesign.png', '/gallery/knee2.png', '/gallery/knee3.png', '/gallery/knee5.png'],
         type: ['Mechanical'],
         tags: ['Medical Device', 'SolidWorks', 'Product Design', 'Startup', 'Prototyping'],
         date: '2024',
@@ -910,42 +911,42 @@ The device was developed in collaboration with a startup to address specific pai
         sections: {
             overview: `This project focuses on the development of a specialized knee brace for post-surgery rehabilitation. The initiative began as a challenge with a startup to create a more effective recovery device.
             
-The project holds deep personal significance as it was inspired by my best friend's experience undergoing two knee surgeries and struggling with multiple existing recovery tools. This drove the design philosophy to prioritize patient comfort and practical usability alongside clinical efficacy. This model represents Version 2 of the design, incorporating feedback from initial prototypes.`,
+The project holds deep personal significance as it was inspired by my best friend's experience undergoing two knee surgeries and struggling with multiple existing recovery tools. This drove the design philosophy to prioritize patient comfort and practical usability alongside clinical efficacy.`,
             mechanicalDesign: `The design features a custom hinge mechanism that allows for controlled range of motion, essential for progressive rehabilitation. The brace structure was modeled in SolidWorks with a focus on ergonomics and structural integrity.
             
-Key design challenges included creating a lightweight yet durable frame and implementing an adjustable tension system to accommodate different stages of recovery. 3D printing was used extensively for rapid prototyping to test fit and function.`
+A key innovation in this iteration is the folding mechanism, designed to make the device portable for patients who need to travel. The "Knee 3" prototype demonstrates this capability, folding down to a compact size suitable for standard luggage. 3D printing was used extensively for rapid prototyping to test fit and function.`
         }
     },
-    },
-{
-    id: '18',
+
+    {
+        id: '18',
         slug: 'mars-rocket-avionics',
-            title: 'MARS Rocket Avionics',
-                shortDescription: 'Custom flight controller and avionics system for high-powered rocketry, developed with the TMU MARS Rocket Team.',
-                    fullDescription: `As a member of the Avionics Team at the TMU MARS Rocket Team, I worked on the design, programming, and testing of custom flight controllers for high-powered rocketry. The system was deployed in over 30 rocket launches in 2025.
+        title: 'MARS Rocket Avionics',
+        shortDescription: 'Custom flight controller and avionics system for high-powered rocketry, developed with the TMU MARS Rocket Team.',
+        fullDescription: `As a member of the Avionics Team at the TMU MARS Rocket Team, I worked on the design, programming, and testing of custom flight controllers for high-powered rocketry. The system was deployed in over 30 rocket launches in 2025.
 
 The project involved developing a robust avionics package capable of recording flight data, handling recovery deployment, and maintaining telemetry links over long distances.`,
-                        thumbnail: '/gallery/rocket3.png',
-                            detailImages: ['/gallery/rocket3.png', '/gallery/AmoungUSboard.png', '/gallery/rocket1.png'],
-                                type: ['Electrical', 'Software'],
-                                    tags: ['Avionics', 'Embedded Systems', 'Rocketry', 'PCB Design', 'C++'],
-                                        date: '2025',
-                                            technicalStack: ['STM32', 'C++', 'KiCad', 'LoRa Telemetry', 'Sensors'],
-                                                role: 'Avionics Team Member',
-                                                    duration: '2025',
-                                                        scope: 'Flight Controller + Telemetry + Testing',
-                                                            relatedProjects: ['5', '13'],
-                                                                sections: {
-        overview: `Designed and implemented the avionics system for the university rocketry team. The core component was a custom flight controller (affectionately named the "Among Us" board) responsible for state estimation, data logging, and parachute deployment.`,
+        thumbnail: '/gallery/rocket3.png',
+        detailImages: ['/gallery/rocket3.png', '/gallery/AmoungUSboard.png', '/gallery/rocket1.png'],
+        type: ['Electrical', 'Software'],
+        tags: ['Avionics', 'Embedded Systems', 'Rocketry', 'PCB Design', 'C++'],
+        date: '2025',
+        technicalStack: ['STM32', 'C++', 'KiCad', 'LoRa Telemetry', 'Sensors'],
+        role: 'Avionics Team Member',
+        duration: '2025',
+        scope: 'Flight Controller + Telemetry + Testing',
+        relatedProjects: ['5', '13'],
+        sections: {
+            overview: `Designed and implemented the avionics system for the university rocketry team. The core component was a custom flight controller (affectionately named the "Among Us" board) responsible for state estimation, data logging, and parachute deployment.`,
             electricalDesign: `The flight controller featured a custom PCB design integrating a microcontroller, IMU sensors, GPS module, and telemetry transceiver.
             
 Key challenges included power management—specifically preventing board damage when LiPo batteries were plugged in while shorted—and ensuring signal integrity for the GPS and telemetry modules. We iterated on the design to improve robustness against electrical faults.`,
-                softwareArchitecture: `The firmware was developed to handle high-speed sensor polling and real-time state estimation. It included drivers for the IMU and GPS, as well as a robust state machine for detecting launch, apogee, and landing events.
+            softwareArchitecture: `The firmware was developed to handle high-speed sensor polling and real-time state estimation. It included drivers for the IMU and GPS, as well as a robust state machine for detecting launch, apogee, and landing events.
             
 We faced and overcame issues with IMU accuracy and GPS reliability through advanced filtering and sensor fusion algorithms.`,
-                    results: `The system was successfully flown in over 30 launches. We overcame significant challenges including telemetry packet drops in hilly terrain and initial hardware failures. Through iterative testing and software filtering, we achieved reliable recovery deployment and data recovery.`
-    }
-},
+            results: `The system was successfully flown in over 30 launches. We overcame significant challenges including telemetry packet drops in hilly terrain and initial hardware failures. Through iterative testing and software filtering, we achieved reliable recovery deployment and data recovery.`
+        }
+    },
 ];
 
 
