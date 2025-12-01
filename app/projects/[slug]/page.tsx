@@ -208,12 +208,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                             key={index}
                                             className="relative aspect-video overflow-hidden rounded-lg bg-muted"
                                         >
-                                            <Image
-                                                src={image}
-                                                alt={`${project.title} - Image ${index + 2}`}
-                                                fill
-                                                className="object-cover"
-                                            />
+                                            {image.includes('youtube.com') || image.includes('youtu.be') ? (
+                                                <iframe
+                                                    className="absolute inset-0 h-full w-full"
+                                                    src={image.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
+                                                    title={`${project.title} - Video ${index + 1}`}
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen
+                                                />
+                                            ) : (
+                                                <Image
+                                                    src={image}
+                                                    alt={`${project.title} - Image ${index + 2}`}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            )}
                                         </div>
                                     ))}
                                 </div>
