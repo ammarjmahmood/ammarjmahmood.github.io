@@ -42,7 +42,7 @@ const photos = [
 export function PhotoGallery() {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const plugin = useRef(
-        Autoplay({ delay: 2000, stopOnInteraction: true })
+        Autoplay({ delay: 1000, stopOnInteraction: true })
     )
 
     const openLightbox = (index: number) => {

@@ -75,8 +75,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     });
 
     return (
-        <div className="min-h-screen bg-background">
-            <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 lg:px-12">
+        <div className="min-h-screen bg-background overflow-x-hidden">
+            <div className="mx-auto max-w-7xl px-6 py-8 md:px-8 lg:px-12">
                 {/* Back Button */}
                 <Link href="/#projects">
                     <Button variant="ghost" className="mb-8 gap-2">
