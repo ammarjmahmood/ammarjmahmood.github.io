@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Globe, CheckCircle2, Award, GraduationCap } from "lucide-react"
+import { Globe, CheckCircle2, Award, GraduationCap, FileText } from "lucide-react"
 import {
   LinkedinIcon,
   GithubIcon,
@@ -93,6 +93,15 @@ export default function ResumePage() {
                 >
                   <Globe className="h-4 w-4" />
                   <span>Email</span>
+                </a>
+                <a
+                  href="https://drive.google.com/drive/folders/16xlTKYRTrhAqe2WoXbv4He_-s8YwiVaI?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-foreground hover:text-primary"
+                >
+                  <FileText className="h-4 w-4" />
+                  <span>Resume</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/ammarjmahmood"
