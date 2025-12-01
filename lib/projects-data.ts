@@ -916,6 +916,36 @@ The project holds deep personal significance as it was inspired by my best frien
 Key design challenges included creating a lightweight yet durable frame and implementing an adjustable tension system to accommodate different stages of recovery. 3D printing was used extensively for rapid prototyping to test fit and function.`
         }
     },
+    },
+{
+    id: '18',
+        slug: 'mars-rocket-avionics',
+            title: 'MARS Rocket Avionics',
+                shortDescription: 'Custom flight controller and avionics system for high-powered rocketry, developed with the TMU MARS Rocket Team.',
+                    fullDescription: `As a member of the Avionics Team at the TMU MARS Rocket Team, I worked on the design, programming, and testing of custom flight controllers for high-powered rocketry. The system was deployed in over 30 rocket launches in 2025.
+
+The project involved developing a robust avionics package capable of recording flight data, handling recovery deployment, and maintaining telemetry links over long distances.`,
+                        thumbnail: '/gallery/rocket3.png',
+                            detailImages: ['/gallery/rocket3.png', '/gallery/AmoungUSboard.png', '/gallery/rocket1.png'],
+                                type: ['Electrical', 'Software'],
+                                    tags: ['Avionics', 'Embedded Systems', 'Rocketry', 'PCB Design', 'C++'],
+                                        date: '2025',
+                                            technicalStack: ['STM32', 'C++', 'KiCad', 'LoRa Telemetry', 'Sensors'],
+                                                role: 'Avionics Team Member',
+                                                    duration: '2025',
+                                                        scope: 'Flight Controller + Telemetry + Testing',
+                                                            relatedProjects: ['5', '13'],
+                                                                sections: {
+        overview: `Designed and implemented the avionics system for the university rocketry team. The core component was a custom flight controller (affectionately named the "Among Us" board) responsible for state estimation, data logging, and parachute deployment.`,
+            electricalDesign: `The flight controller featured a custom PCB design integrating a microcontroller, IMU sensors, GPS module, and telemetry transceiver.
+            
+Key challenges included power management—specifically preventing board damage when LiPo batteries were plugged in while shorted—and ensuring signal integrity for the GPS and telemetry modules. We iterated on the design to improve robustness against electrical faults.`,
+                softwareArchitecture: `The firmware was developed to handle high-speed sensor polling and real-time state estimation. It included drivers for the IMU and GPS, as well as a robust state machine for detecting launch, apogee, and landing events.
+            
+We faced and overcame issues with IMU accuracy and GPS reliability through advanced filtering and sensor fusion algorithms.`,
+                    results: `The system was successfully flown in over 30 launches. We overcame significant challenges including telemetry packet drops in hilly terrain and initial hardware failures. Through iterative testing and software filtering, we achieved reliable recovery deployment and data recovery.`
+    }
+},
 ];
 
 
