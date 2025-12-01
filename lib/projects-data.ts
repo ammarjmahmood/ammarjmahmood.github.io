@@ -888,6 +888,34 @@ The mobile app features Redux state management, optimistic updates for responsiv
 The platform demonstrates scalability potential for multi-restaurant deployment. Future enhancements include payment integration, delivery tracking, and customer loyalty programs.`
         }
     },
+    },
+{
+    id: '17',
+        slug: 'knee-brace-recovery',
+            title: 'Knee Brace Recovery Device',
+                shortDescription: 'Mechanical recovery device designed to aid post-surgery knee rehabilitation, developed in collaboration with a startup.',
+                    fullDescription: `Designed and prototyped a mechanical knee brace to assist patients recovering from knee surgery. This project was driven by a personal connection to a close friend's recovery journey, aiming to improve upon existing rehabilitation tools. This is the second iteration (V2) of the design, focusing on enhanced comfort, adjustable tension, and ease of use.
+        
+The device was developed in collaboration with a startup to address specific pain points in current recovery methods.`,
+                        thumbnail: '/gallery/kneebracedesign.png',
+                            detailImages: ['/gallery/kneebracedesign.png'],
+                                type: ['Mechanical'],
+                                    tags: ['Medical Device', 'SolidWorks', 'Product Design', 'Startup', 'Prototyping'],
+                                        date: '2024',
+                                            technicalStack: ['SolidWorks', '3D Printing', 'Mechanical Analysis', 'Prototyping'],
+                                                role: 'Mechanical Designer',
+                                                    duration: '2024',
+                                                        scope: 'Product Design + Prototyping',
+                                                            relatedProjects: ['5', '1'],
+                                                                sections: {
+        overview: `This project focuses on the development of a specialized knee brace for post-surgery rehabilitation. The initiative began as a challenge with a startup to create a more effective recovery device.
+            
+The project holds deep personal significance as it was inspired by my best friend's experience undergoing two knee surgeries and struggling with multiple existing recovery tools. This drove the design philosophy to prioritize patient comfort and practical usability alongside clinical efficacy. This model represents Version 2 of the design, incorporating feedback from initial prototypes.`,
+            mechanicalDesign: `The design features a custom hinge mechanism that allows for controlled range of motion, essential for progressive rehabilitation. The brace structure was modeled in SolidWorks with a focus on ergonomics and structural integrity.
+            
+Key design challenges included creating a lightweight yet durable frame and implementing an adjustable tension system to accommodate different stages of recovery. 3D printing was used extensively for rapid prototyping to test fit and function.`
+    }
+},
 ];
 
 
