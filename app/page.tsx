@@ -1,8 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Globe, CheckCircle2, Calendar, Building2, GraduationCap, Award, ExternalLink } from "lucide-react"
+import { Globe, CheckCircle2, Award, GraduationCap } from "lucide-react"
 import {
   LinkedinIcon,
   GithubIcon,
@@ -12,11 +15,23 @@ import {
   InstructablesIcon,
 } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-provider"
+import { ProjectFilter } from "@/components/project-filter"
+import { ProjectCard } from "@/components/project-card"
+import { CertificationModal } from "@/components/certification-modal"
+import { PhotoGallery } from "@/components/photo-gallery"
+import { projects, certifications, type ProjectType } from "@/lib/projects-data"
 
 export default function ResumePage() {
+  const [activeFilter, setActiveFilter] = useState<ProjectType>('All');
+  const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
+
+  const filteredProjects = activeFilter === 'All'
+    ? projects
+    : projects.filter(project => project.type.includes(activeFilter));
+
   return (
-    <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 lg:px-12">
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 lg:px-12 overflow-x-hidden">
         <div className="mb-6 flex justify-end">
           <ThemeToggle />
         </div>
@@ -46,11 +61,24 @@ export default function ResumePage() {
               </Card>
             </a>
 
+            {/* 25+ Hackathons Badge */}
+            <Card className="p-4 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border-yellow-500/20">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-500/20">
+                  <Award className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
+                </div>
+                <div>
+                  <p className="font-semibold text-sm">25+ Hackathons</p>
+                  <p className="text-xs text-muted-foreground">Competition Excellence</p>
+                </div>
+              </div>
+            </Card>
+
             {/* About */}
             <div className="mt-6">
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">About</h2>
               <p className="text-sm leading-relaxed text-foreground">
-                Mechatronics Engineering student passionate about Robotics, AI, and Embedded Systems. 
+                Mechatronics Engineering student passionate about Robotics, AI, and Embedded Systems.
                 Full-stack developer, battle robot designer, and private & glider pilot.
               </p>
             </div>
@@ -99,12 +127,37 @@ export default function ResumePage() {
                 <Badge variant="secondary">C++</Badge>
                 <Badge variant="secondary">React</Badge>
                 <Badge variant="secondary">Node.js</Badge>
-                <Badge variant="secondary">Issac Lab</Badge>
+                <Badge variant="secondary">Isaac Lab</Badge>
                 <Badge variant="secondary">Pybullet</Badge>
                 <Badge variant="secondary">3D Printing</Badge>
                 <Badge variant="secondary">IoT</Badge>
                 <Badge variant="secondary">Pytorch</Badge>
                 <Badge variant="secondary">Matlab</Badge>
+              </div>
+            </div>
+
+            {/* Certifications */}
+            <div>
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Certifications
+              </h2>
+              <div className="space-y-2">
+                {certifications.map((cert) => (
+                  <button
+                    key={cert.id}
+                    onClick={() => setSelectedCert(cert)}
+                    className="w-full text-left p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
+                  >
+                    <div className="flex items-start gap-2">
+                      <Award className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
+                          {cert.title}
+                        </p>
+                      </div>
+                    </div>
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -118,7 +171,7 @@ export default function ResumePage() {
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-xl">🇫🇷</span>
-                  <span>French - Fluent (DELF - Diplôme d'Études en Langue Française)</span>
+                  <span>French - Fluent (DELF)</span>
                 </div>
               </div>
             </div>
@@ -188,351 +241,26 @@ export default function ResumePage() {
                   or flying above the clouds, I'm always exploring new frontiers.
                 </p>
                 <p className="leading-relaxed">
-                  I constantly experiment with AI, 3D Printing, and IoT. I serve as a Project Lead @ Elixer Labs for Autonomous Robotic Research, Freelance Full-Stack Developer, and University
-                  Robotics Captain. When I'm not engineering, you'll find me piloting aircraft or just trying to build something to make life easy and fun.
-                </p>
-                <p className="leading-relaxed">
                   <em>"Engineering is about pushing boundaries—one line of code and one circuit at a time."</em>
                 </p>
               </div>
             </section>
+
+            {/* Photo Gallery */}
+            <PhotoGallery />
 
             {/* Projects */}
             <section>
               <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Featured Projects
               </h2>
+
+              <ProjectFilter activeFilter={activeFilter} onFilterChange={setActiveFilter} />
+
               <div className="grid gap-4 md:grid-cols-2">
-                <Card className="overflow-hidden">
-                  <Image
-                    src="/ml-arm.png"
-                    alt="ML Arm"
-                    width={500}
-                    height={300}
-                    className="aspect-video object-cover"
-                  />
-                  <div className="p-4">
-                    <div className="mb-2 flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900">
-                        <span className="text-xl">🤖</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">3D Printed ASL Robotic Hand</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Award className="h-3 w-3" />
-                            Robotics • Python
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-muted-foreground">
-                      Machine-learning-powered robotic hand with precision 3D-printed parts and servo-controlled
-                      articulation for American Sign Language gestures.
-                    </p>
-                    <a
-                      href="https://github.com/ammarjmahmood/ASLRoboticHand"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
-                    >
-                      View on GitHub <ExternalLink className="h-3 w-3" />
-                    </a>
-                  </div>
-                </Card>
-
-                <Card className="overflow-hidden">
-                  <Image
-                    src="/NemaRobotArm.png"
-                    alt="Custom Robot"
-                    width={500}
-                    height={300}
-                    className="aspect-video object-cover"
-                  />
-                  <div className="p-4">
-                    <div className="mb-2 flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-900">
-                        <span className="text-xl">🤖</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">Custom Robot Trained in Isaac Sim/Lab</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Award className="h-3 w-3" />
-                            Isaac Sim • Python
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-muted-foreground">
-                      A custom robot designed and trained in NVIDIA's Isaac Sim for advanced robotics and AI research.
-                    </p>
-                  </div>
-                </Card>
-
-                <Card className="overflow-hidden">
-                  <Image
-                    src="/RidgeClone.png"
-                    alt="Ridge Wallet Clone"
-                    width={500}
-                    height={300}
-                    className="aspect-video object-cover"
-                  />
-                  <div className="p-4">
-                    <div className="mb-2 flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-900">
-                        <span className="text-xl">💳</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">Ridge Wallet Clone</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Award className="h-3 w-3" />
-                            3D Printing • CAD
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-muted-foreground">
-                      A 3D-printed clone of the popular Ridge Wallet, designed for durability and minimalism.
-                    </p>
-                  </div>
-                </Card>
-
-                <Card className="overflow-hidden">
-                  <Image
-                    src="/lebotjames.png"
-                    alt="Ridge Wallet Clone"
-                    width={500}
-                    height={300}
-                    className="aspect-video object-cover"
-                  />
-                  <div className="p-4">
-                    <div className="mb-2 flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900">
-                        <span className="text-xl">⚔️</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">1lb Battle Bot</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Award className="h-3 w-3" />
-                            Competition Robot
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-muted-foreground">
-                      Competition-ready combat robot featuring an optimized weapon system and reinforced chassis for
-                      maximum impact in battle competitions.
-                    </p>
-                    <span className="text-xs text-muted-foreground italic">Private Repository</span>
-                  </div>
-                </Card>
-
-                <Card className="overflow-hidden">
-                  <Image
-                    src="/fpvdrone.png"
-                    alt="Ridge Wallet Clone"
-                    width={500}
-                    height={300}
-                    className="aspect-video object-cover"
-                  />
-                  <div className="p-4">
-                    <div className="mb-2 flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
-                        <span className="text-xl">✈️</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">FPV Drone</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Award className="h-3 w-3" />
-                            Sponsored by PCB Way
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-muted-foreground">
-                      High-performance FPV drone with custom-designed parts and advanced features for an immersive
-                      flying experience.
-                    </p>
-                  </div>
-                </Card>
-
-
-                <Card className="overflow-hidden">
-                  <Image
-                    src="/skadis.png"
-                    alt="Ridge Wallet Clone"
-                    width={500}
-                    height={300}
-                    className="aspect-video object-cover"
-                  />
-                  <div className="p-4">
-                    <div className="mb-2 flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-yellow-100 dark:bg-yellow-900">
-                        <span className="text-xl">🛠️</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">IKEA Skadis CAD Attachments</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Award className="h-3 w-3" />
-                            CAD • 3D Printing
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-sm text-muted-foreground">
-                      Custom-designed 3D-printed attachments for IKEA Skadis pegboards, enhancing workspace organization
-                      and functionality.
-                    </p>
-                  </div>
-                </Card>
-              </div>
-            </section>
-
-            {/* Experience */}
-            <section>
-              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Experience</h2>
-              <div className="space-y-6">
-                <Card className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 dark:bg-blue-900">
-                      <span className="text-2xl">🔬</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="mb-3">
-                        <h3 className="font-semibold">Machine Learning and Robotics Engineer</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="h-3 w-3" />
-                            Present
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Building2 className="h-3 w-3" />
-                            Elixer Labs
-                          </span>
-                        </div>
-                      </div>
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        Conducting research in autonomous systems, machine learning applications, and embedded systems.
-                        Developing algorithms for robotic control and AI integration in mechatronic systems.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-900">
-                      <span className="text-2xl">💻</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="mb-3">
-                        <h3 className="font-semibold">Full-Stack Developer</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="h-3 w-3" />
-                            Present
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Building2 className="h-3 w-3" />
-                            Anomaily (startup)
-                          </span>
-                        </div>
-                      </div>
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        Developer specializing in web applications, IoT integrations, and embedded
-                        systems. Building full-stack solutions with modern frameworks and technologies.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-100 dark:bg-red-900">
-                      <span className="text-2xl">🤖</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="mb-3">
-                        <h3 className="font-semibold">University Robotics Captain & Avionics Team</h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="h-3 w-3" />
-                            Present
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Building2 className="h-3 w-3" />
-                            University Robotics Club
-                          </span>
-                        </div>
-                      </div>
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        Leading the university robotics team and avionics division. Coordinating competition
-                        preparations, mentoring team members, and developing innovative robotic systems for
-                        competitions.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </section>
-
-            {/* Certifications & Achievements */}
-            <section>
-              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Certifications & Achievements
-              </h2>
-              <div className="space-y-4">
-                <Card className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 dark:bg-blue-900">
-                      <Award className="h-6 w-6 text-blue-700 dark:text-blue-300" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold">CSWA (Certified SolidWorks Associate)</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                        Professional certification in SolidWorks CAD software, demonstrating proficiency in 3D modeling
-                        and engineering design.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-900">
-                      <Award className="h-6 w-6 text-purple-700 dark:text-purple-300" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold">Provincial Winner - Engineering Competition</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                        First place winner at the provincial engineering competition, showcasing excellence in
-                        engineering design and innovation.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-100 dark:bg-green-900">
-                      <span className="text-2xl">✈️</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold">Private & Glider Pilot License</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                        Licensed private pilot and glider pilot, combining passion for aviation with engineering
-                        expertise.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-
-               
+                {filteredProjects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
               </div>
             </section>
 
@@ -549,10 +277,7 @@ export default function ResumePage() {
                       <div className="mb-3">
                         <h3 className="font-semibold">Bachelor of Science in Mechatronics Engineering</h3>
                         <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="h-3 w-3" />
-                            In Progress
-                          </span>
+                          <span>In Progress</span>
                         </div>
                       </div>
                       <p className="text-sm leading-relaxed text-muted-foreground">
@@ -568,6 +293,17 @@ export default function ResumePage() {
           </main>
         </div>
       </div>
+
+      {/* Certification Modal */}
+      {selectedCert && (
+        <CertificationModal
+          title={selectedCert.title}
+          description={selectedCert.description}
+          imagePath={selectedCert.imagePath}
+          isOpen={!!selectedCert}
+          onClose={() => setSelectedCert(null)}
+        />
+      )}
     </div>
   )
 }
