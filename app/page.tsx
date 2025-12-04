@@ -142,6 +142,8 @@ export default function ResumePage() {
                 <Badge variant="secondary">IoT</Badge>
                 <Badge variant="secondary">Pytorch</Badge>
                 <Badge variant="secondary">Matlab</Badge>
+                <Badge variant="secondary">Java</Badge>
+                <Badge variant="secondary">Render</Badge>
               </div>
             </div>
 

@@ -949,6 +949,48 @@ We faced and overcame issues with IMU accuracy and GPS reliability through advan
             results: `The system was successfully flown in over 30 launches. We overcame significant challenges including telemetry packet drops in hilly terrain and initial hardware failures. Through iterative testing and software filtering, we achieved reliable recovery deployment and data recovery.`
         }
     },
+    {
+        id: '25',
+        slug: 'url-shortener',
+        title: 'URL Shortener Service',
+        shortDescription: 'A simple URL Shortener Service built with Spring Boot, featuring click tracking and a clean web interface.',
+        fullDescription: `A robust URL Shortener Service built with Spring Boot 3.2.0 and Java 17. This application allows users to shorten long URLs into 6-character short codes, redirect to original URLs, and track click statistics.
+
+The project features a clean web interface built with Thymeleaf and a REST API for programmatic access. It is containerized with Docker and deployed on Render for easy accessibility.`,
+        thumbnail: '/url-shortener.png',
+        videoUrl: 'https://youtu.be/06LozTtrpVM',
+        detailImages: ['/url-shortener.png'],
+        type: ['Software'],
+        tags: ['Java', 'Spring Boot', 'REST API', 'Docker', 'Render', 'Thymeleaf'],
+        date: '2025',
+        githubUrl: 'https://github.com/ammarjmahmood/url_shortner_java',
+        liveUrl: 'https://url-shortener-yccf.onrender.com/',
+        technicalStack: ['Java', 'Spring Boot', 'Maven', 'Thymeleaf', 'Docker', 'Render'],
+        role: 'Full-Stack Developer',
+        duration: '2025',
+        scope: 'Backend Development + Frontend Interface + Deployment',
+        sections: {
+            overview: `This project is a full-featured URL shortening service designed to provide a simple and efficient way to manage long URLs. It addresses the need for concise links in social media and marketing while providing valuable insights through click tracking.
+
+The application is built with a focus on clean architecture, scalability, and ease of deployment. It demonstrates proficiency in modern Java development using the Spring Boot ecosystem.`,
+            softwareArchitecture: `**Backend:**
+The backend is built with **Java 17** and **Spring Boot 3.2.0**, utilizing **Spring Web** for RESTful endpoints and **Spring MVC** for the web interface. Data persistence is handled with an in-memory database (or configured for persistent storage) using Spring Data JPA.
+
+**Frontend:**
+The user interface is rendered server-side using **Thymeleaf** templates, providing a lightweight and responsive experience without the need for a complex client-side framework.
+
+**API Design:**
+The application exposes REST endpoints:
+- \`POST /api/shorten\`: Accepts a long URL and returns a short code.
+- \`GET /api/stats/{shortCode}\`: Retrieves click statistics and metadata.
+
+**Deployment:**
+The application is containerized using **Docker**, ensuring consistency across environments. It is deployed on **Render**, leveraging its platform-as-a-service capabilities for seamless hosting and scaling.`,
+            results: `The URL Shortener Service is fully operational and deployed. It successfully handles URL shortening, redirection, and click tracking. The clean web interface ensures a user-friendly experience, while the API allows for integration with other tools.
+
+The project demonstrates the ability to build, containerize, and deploy a complete Spring Boot application, showcasing skills in Java backend development and modern DevOps practices.`
+        }
+    },
 ];
 
 
