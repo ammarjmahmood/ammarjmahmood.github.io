@@ -957,9 +957,9 @@ We faced and overcame issues with IMU accuracy and GPS reliability through advan
         fullDescription: `A robust URL Shortener Service built with Spring Boot 3.2.0 and Java 17. This application allows users to shorten long URLs into 6-character short codes, redirect to original URLs, and track click statistics.
 
 The project features a clean web interface built with Thymeleaf and a REST API for programmatic access. It is containerized with Docker and deployed on Render for easy accessibility.`,
-        thumbnail: '/url-shortener.png',
+        thumbnail: '/gallery/URLShortner.png',
         videoUrl: 'https://youtu.be/06LozTtrpVM',
-        detailImages: ['/url-shortener.png'],
+        detailImages: ['/gallery/URLShortner.png'],
         type: ['Software'],
         tags: ['Java', 'Spring Boot', 'REST API', 'Docker', 'Render', 'Thymeleaf'],
         date: '2025',
