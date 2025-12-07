@@ -44,9 +44,9 @@ export const projects: Project[] = [
         fullDescription: `Reverse-engineered and modified an iRobot Roomba to create a versatile autonomous robotics platform. The project involved bypassing the original control system to implement custom firmware and integrating additional sensors for enhanced environmental awareness.
 
 The modified Roomba features Arduino-based control, ultrasonic and IR sensors for obstacle detection, and a custom navigation algorithm. This platform serves as an excellent testbed for robotics experiments, autonomous navigation research, and sensor integration projects.`,
-        thumbnail: '/hackedroomba.png',
-        previewMedia: '/hackedroomba.png',
-        detailImages: ['/hackedroomba.png', '/hackedroomba2.png', '/gallery/roombabeforehack.png'],
+        thumbnail: '/hackedroomba.webp',
+        previewMedia: '/hackedroomba.webp',
+        detailImages: ['/hackedroomba.webp', '/hackedroomba2.webp', '/gallery/roombabeforehack.webp'],
         type: ['Software', 'Electrical'],
         tags: ['Robotics', 'Arduino', 'Autonomous Navigation', 'Embedded Systems', 'Reverse Engineering'],
         date: '2023',
@@ -78,10 +78,10 @@ The platform has been used for testing various navigation algorithms and serves 
         fullDescription: `Developed a fully functional robotic hand capable of performing American Sign Language (ASL) gestures using machine learning and computer vision. The hand features precision 3D-printed components with servo-controlled finger articulation.
 
 The system uses a camera to detect hand gestures, processes them through a trained ML model, and translates them into corresponding servo movements. This project combines mechanical design, electronics, and AI to create an accessible communication tool.`,
-        thumbnail: '/ml-arm.png',
+        thumbnail: '/ml-arm.webp',
         videoUrl: 'https://www.youtube.com/watch?v=Xffxt38l2kA',
-        previewMedia: '/ml-arm.png',
-        detailImages: ['/ml-arm.png', '/ASLtraining.png', '/Featured Instructables.png'],
+        previewMedia: '/ml-arm.webp',
+        detailImages: ['/ml-arm.webp', '/ASLtraining.webp', '/Featured Instructables.webp'],
         type: ['Software', 'Mechanical', 'Machine Learning'],
         tags: ['Robotics', 'Python', 'Machine Learning', '3D Printing', 'Computer Vision'],
         date: '2024',
@@ -119,9 +119,9 @@ Future improvements include expanding the gesture vocabulary, implementing bilat
         fullDescription: `Designed and built a 1-pound combat robot for competitive robot fighting. The design features a carefully optimized weapon system, reinforced chassis, and strategic weight distribution to maximize combat effectiveness while staying within the 1lb weight limit.
 
 The project involved extensive CAD design, material selection, electronics integration, and iterative testing. The robot competed in multiple tournaments, showcasing durability and combat effectiveness.`,
-        thumbnail: '/lebotjames.png',
-        previewMedia: '/lebotjames.png', // TODO: Replace with GIF/video
-        detailImages: ['/lebotjames.png'], // TODO: Add more project images
+        thumbnail: '/lebotjames.webp',
+        previewMedia: '/lebotjames.webp', // TODO: Replace with GIF/video
+        detailImages: ['/lebotjames.webp'], // TODO: Add more project images
         type: ['Mechanical', 'Electrical'],
         tags: ['Competition Robot', 'CAD', 'Electronics', 'Combat Robotics'],
         date: '2024',
@@ -154,10 +154,10 @@ Key learnings include the importance of armor geometry and the effectiveness of 
         fullDescription: `Built a high-performance First-Person View (FPV) drone from scratch, featuring custom-designed and 3D-printed components. This project was sponsored by PCB Way and showcases advanced electronics integration and aerodynamic design.
 
 The drone features a custom frame designed for durability and optimal flight characteristics, integrated with high-performance motors, ESCs, and FPV camera system for immersive flying.`,
-        thumbnail: '/fpvdrone.png',
-        previewMedia: '/fpvdrone.png',
+        thumbnail: '/fpvdrone.webp',
+        previewMedia: '/fpvdrone.webp',
         githubUrl: 'https://github.com/FPV-Drone-STM32F411/DroneController',
-        detailImages: ['/fpvdrone.png', '/gallery/FPVDrone.png', '/gallery/FPVDrone2.png'],
+        detailImages: ['/fpvdrone.webp', '/gallery/FPVDrone.webp', '/gallery/FPVDrone2.webp'],
         type: ['Electrical', 'Mechanical'],
         tags: ['Sponsored by PCB Way', 'FPV', 'Drones', '3D Printing', 'Electronics'],
         date: '2023',
@@ -190,9 +190,9 @@ The PCB Way sponsorship enabled professional-quality PCB fabrication for custom 
         fullDescription: `Created a collection of custom 3D-printed accessories for the IKEA Skadis pegboard system. These attachments are designed to enhance workspace organization and provide specialized tool storage solutions.
 
 Each attachment is carefully designed to integrate seamlessly with the Skadis system while providing specific functionality for workshop tools, electronics, and project materials.`,
-        thumbnail: '/skadis.png',
-        previewMedia: '/skadis.png', // TODO: Replace with GIF/video
-        detailImages: ['/skadis.png'], // TODO: Add more project images
+        thumbnail: '/skadis.webp',
+        previewMedia: '/skadis.webp', // TODO: Replace with GIF/video
+        detailImages: ['/skadis.webp'], // TODO: Add more project images
         type: ['Mechanical'],
         tags: ['CAD', '3D Printing', 'Organization', 'Product Design'],
         date: '2023',
@@ -221,9 +221,9 @@ The project demonstrates how 3D printing enables custom storage solutions tailor
         fullDescription: `Created a productivity-focused Chrome extension that helps job seekers organize and track their application process. The extension automatically captures job details from LinkedIn and other job boards, stores application data locally, and provides insightful analytics.
 
 Features include a Sankey diagram for visualizing application flow, resume upload and management, timeline tracking, and statistics dashboard. Built with modern web technologies and integrates with AI for smart job description extraction.`,
-        thumbnail: '/job-tracker.png',
+        thumbnail: '/job-tracker.webp',
         videoUrl: 'https://www.youtube.com/watch?v=4ywUH2kK_Z8',
-        detailImages: ['/job-tracker.png'],
+        detailImages: ['/job-tracker.webp'],
         type: ['Software'],
         tags: ['Chrome Extension', 'JavaScript', 'Data Visualization', 'Productivity'],
         date: '2024',
@@ -255,9 +255,9 @@ Future improvements include integration with more job boards, automated follow-u
         fullDescription: `Developed during a hackathon, this assistive communication tool provides non-verbal autistic individuals with an accessible way to express their needs and thoughts. The application features a grid-based interface with customizable symbols, text-to-speech functionality, and an intuitive design.
 
 The tool allows users to quickly communicate common phrases, needs, and emotions through visual buttons. It includes customization options for caregivers to add personalized phrases and adjust the interface to individual needs.`,
-        thumbnail: '/autism-tool.png',
+        thumbnail: '/autism-tool.webp',
         videoUrl: 'https://www.youtube.com/watch?v=v_Y_EmeTrDs',
-        detailImages: ['/autism-tool.png'],
+        detailImages: ['/autism-tool.webp'],
         type: ['Software'],
         tags: ['Accessibility', 'Hackathon', 'Assistive Technology', 'React', 'Social Impact'],
         date: '2024',
@@ -289,9 +289,9 @@ Future development could include symbol libraries (PECS-style), user profile man
         fullDescription: `Developed a robotic manipulation system demonstrating precise liquid pouring using a robotic arm equipped with computer vision feedback. The system uses real-time object detection to locate the target cup and calculates the optimal pouring trajectory.
 
 The project showcases advanced robotics concepts including inverse kinematics, trajectory planning, and visual servoing. The system adapts to different cup positions and ensures controlled pouring to prevent spills.`,
-        thumbnail: '/robot pouring.png',
+        thumbnail: '/robot pouring.webp',
         videoUrl: 'https://www.youtube.com/watch?v=0dajAsJu7Ws',
-        detailImages: ['/robot pouring.png'],
+        detailImages: ['/robot pouring.webp'],
         type: ['Software', 'Mechanical', 'Machine Learning'],
         tags: ['Robotics', 'Computer Vision', 'ROS', 'Manipulation', 'Python'],
         date: '2024',
@@ -322,9 +322,9 @@ The project validates visual servoing techniques for dynamic manipulation tasks 
         fullDescription: `Implemented a voice-controlled interface for the UFactory xArm 850 robotic arm, enabling hands-free operation through natural language commands. The system uses speech recognition to interpret user commands and translates them into robot movements.
 
 Users can command the robot to perform pick-and-place operations, move to specific positions, and execute predefined routines using simple voice commands. The system includes safety features and command validation to ensure safe operation.`,
-        thumbnail: '/voicecommands.png',
+        thumbnail: '/voicecommands.webp',
         videoUrl: 'https://youtu.be/_UWGSVLbFRw',
-        detailImages: ['/voicecommands.png'],
+        detailImages: ['/voicecommands.webp'],
         type: ['Software', 'Machine Learning'],
         tags: ['Voice Control', 'NLP', 'Industrial Robotics', 'Python', 'Speech Recognition'],
         date: '2024',
@@ -355,9 +355,9 @@ Future improvements include custom wake word activation, noise-robust recognitio
         fullDescription: `Created a VR implementation of Minecraft using WebXR technology, allowing players to experience block-building gameplay in virtual reality directly through a web browser. The project demonstrates the capabilities of WebXR for creating immersive 3D experiences without native applications.
 
 Features include VR controller support, block placement and destruction, terrain generation, and multiplayer capabilities. The web-based approach makes VR gaming more accessible without requiring dedicated VR software installations.`,
-        thumbnail: '/gallery/webxrMinecraft.png',
+        thumbnail: '/gallery/webxrMinecraft.webp',
         videoUrl: 'https://youtu.be/1IPwPkCNBuI',
-        detailImages: ['/gallery/webxrMinecraft.png'],
+        detailImages: ['/gallery/webxrMinecraft.webp'],
         type: ['Software'],
         tags: ['VR', 'WebXR', 'Game Development', 'JavaScript', '3D Graphics'],
         date: '2024',
@@ -388,9 +388,9 @@ The project validates WebXR as a viable platform for VR gaming and demonstrates 
         fullDescription: `Developed an offline positioning system that uses Inertial Measurement Unit (IMU) sensors to track position and orientation in GPS-denied environments. The system employs sensor fusion algorithms to combine accelerometer, gyroscope, and magnetometer data for accurate dead-reckoning navigation.
 
 The project addresses the challenge of indoor navigation where GPS signals are unavailable. It includes Kalman filtering for noise reduction and drift correction algorithms to maintain accuracy over extended periods.`,
-        thumbnail: '/offlinenagivationusingimu.png',
+        thumbnail: '/offlinenagivationusingimu.webp',
         videoUrl: 'https://youtu.be/WyOEDoJD8ZI',
-        detailImages: ['/offlinenagivationusingimu.png'],
+        detailImages: ['/offlinenagivationusingimu.webp'],
         type: ['Software', 'Electrical'],
         tags: ['IMU', 'Sensor Fusion', 'Navigation', 'Embedded Systems', 'Kalman Filter'],
         date: '2024',
@@ -422,8 +422,8 @@ Future enhancements include integrating visual odometry for drift correction and
         fullDescription: `Developed a predictive model for NBA game outcomes using machine learning techniques on comprehensive basketball statistics. The system analyzes team performance metrics, player statistics, home/away advantages, and historical matchup data to forecast game winners with high accuracy.
 
 The project demonstrates data collection, feature engineering, model training, and validation using real NBA data. The model provides win probabilities and confidence scores for each prediction.`,
-        thumbnail: '/gallery/NBA Predictor.png',
-        detailImages: ['/gallery/NBA Predictor.png'],
+        thumbnail: '/gallery/NBA Predictor.webp',
+        detailImages: ['/gallery/NBA Predictor.webp'],
         type: ['Machine Learning', 'Software'],
         tags: ['Machine Learning', 'Python', 'Data Science', 'Sports Analytics', 'Predictive Modeling'],
         date: '2024',
@@ -458,8 +458,8 @@ The model successfully predicted 72% of playoff game outcomes, demonstrating rob
         fullDescription: `Built a computer vision system that accurately classifies various candy types from images using deep learning. The project involved creating a custom dataset through image collection, training a CNN model, and deploying a user-friendly interface for real-time candy identification.
 
 The classifier recognizes multiple candy varieties with high accuracy, demonstrating practical applications of image classification in food recognition systems. The project showcases end-to-end ML pipeline from data collection to model deployment.`,
-        thumbnail: '/gallery/candy classifier.png',
-        detailImages: ['/gallery/candy classifier.png'],
+        thumbnail: '/gallery/candy classifier.webp',
+        detailImages: ['/gallery/candy classifier.webp'],
         type: ['Machine Learning', 'Software'],
         tags: ['Computer Vision', 'Deep Learning', 'CNN', 'TensorFlow', 'Image Classification'],
         date: '2024',
@@ -494,8 +494,8 @@ Processing time averages 150ms per image on CPU, making it suitable for real-tim
         fullDescription: `Designed and fabricated a two-finger parallel gripper for robotic arm integration. The gripper features precision-machined aluminum components, linear guide rails for smooth parallel motion, and servo-driven actuation for controlled grasping force.
 
 The design emphasizes repeatability, high grip force, and compatibility with standard robot arm mounting interfaces. The gripper successfully handles objects ranging from 10mm to 80mm in width with adjustable grip force to prevent damage to delicate items.`,
-        thumbnail: '/gallery/robotgrippertwofinger.png',
-        detailImages: ['/gallery/robotgrippertwofinger.png'],
+        thumbnail: '/gallery/robotgrippertwofinger.webp',
+        detailImages: ['/gallery/robotgrippertwofinger.webp'],
         type: ['Mechanical'],
         tags: ['Robotics', 'CAD', 'Mechanical Design', 'Manufacturing', 'End Effector'],
         date: '2024',
@@ -530,8 +530,8 @@ Integration with a UFactory xArm required minimal modification, using standard I
         fullDescription: `Designed and built a 30-pound combat robot for competitive robot fighting tournaments. This heavyweight class bot features a powerful spinning weapon system, titanium armor plating, advanced drive train, and sophisticated electronics package.
 
 The robot represents a significant engineering challenge in maximizing destructive power while maintaining structural integrity, mobility, and reliability under extreme combat conditions. Every subsystem was optimized for weight, strength, and combat effectiveness.`,
-        thumbnail: '/gallery/30lbbattlebot.png',
-        detailImages: ['/gallery/30lbbattlebot.png', '/gallery/top30lb.png'],
+        thumbnail: '/gallery/30lbbattlebot.webp',
+        detailImages: ['/gallery/30lbbattlebot.webp', '/gallery/top30lb.webp'],
         type: ['Mechanical', 'Electrical'],
         tags: ['Combat Robotics', 'CAD', 'High-Power Electronics', 'Competition Robot', 'Mechanical Design'],
         date: '2024',
@@ -576,9 +576,9 @@ Key lessons included the importance of redundant weapon mount fasteners and the 
         fullDescription: `Designed and built an intelligent safe system combining multiple security layers including fingerprint scanning, voice command recognition, and loudness-based intrusion detection. The project integrates custom electronics with a 3D-printed mechanical enclosure for a complete smart home security solution.
 
 The safe features Arduino-based control logic, solenoid locking mechanism, LCD display for user feedback, and multiple unlock methods. The system demonstrates embedded systems design, sensor integration, and mechanical/electrical synergy.`,
-        thumbnail: '/gallery/safethumbnail.png',
+        thumbnail: '/gallery/safethumbnail.webp',
         videoUrl: 'https://youtu.be/GFhqRhR-xxc',
-        detailImages: ['/gallery/safethumbnail.png', 'https://www.youtube.com/watch?v=1QEjZAZJ12g'],
+        detailImages: ['/gallery/safethumbnail.webp', 'https://www.youtube.com/watch?v=1QEjZAZJ12g'],
         type: ['Electrical', 'Mechanical', 'Software'],
         tags: ['Arduino', 'Biometric Security', 'Voice Recognition', '3D Printing', 'IoT', 'Embedded Systems'],
         date: '2024',
@@ -629,8 +629,8 @@ The project demonstrates practical IoT security applications and received positi
         fullDescription: `Developed and deployed the complete web presence for Youth Flight Canada, a youth aviation organization. The project involved comprehensive web development from domain registration and DNS configuration to AWS backend deployment and responsive frontend implementation.
 
 Working closely with designers and stakeholders, I architected a scalable cloud infrastructure, implemented modern web technologies, and established hosting and maintenance procedures. The site serves as the primary digital platform for youth aviation programs and community engagement.`,
-        thumbnail: '/gallery/yfc.png',
-        detailImages: ['/gallery/yfc.png'],
+        thumbnail: '/gallery/yfc.webp',
+        detailImages: ['/gallery/yfc.webp'],
         type: ['Web Design', 'Software'],
         tags: ['Full-Stack', 'AWS', 'DNS', 'Domain Management', 'Web Hosting', 'Frontend Development'],
         date: '2024',
@@ -676,8 +676,8 @@ Ongoing maintenance includes content updates, security patches, and feature enha
         fullDescription: `Led the complete development and deployment of the University Student Society (USS) website, serving as the central digital hub for student governance, events, and resources. The project involved extensive collaboration with design teams, full-stack implementation, production hosting setup, and establishing maintenance procedures.
 
 Managed the entire technical stack from frontend development to backend infrastructure, ensuring a scalable, maintainable platform that serves thousands of students. The site integrates dynamic content management, event systems, and student resources.`,
-        thumbnail: '/gallery/uss.png',
-        detailImages: ['/gallery/uss.png'],
+        thumbnail: '/gallery/uss.webp',
+        detailImages: ['/gallery/uss.webp'],
         type: ['Web Design', 'Software'],
         tags: ['Full-Stack', 'Web Development', 'Cloud Hosting', 'Content Management', 'UI/UX', 'Maintenance'],
         date: '2024',
@@ -736,8 +736,8 @@ Site uptime maintains 99.95%+ availability. Security audits confirmed robust pro
         fullDescription: `Developed a complete web presence for iFast Roadside Assistance, a local emergency roadside service provider. This project represents one of many websites built with my brother for small businesses in the community, focusing on creating professional, accessible platforms for local entrepreneurs.
 
 The website serves as the primary customer touchpoint, featuring service information, contact forms, pricing details, and emergency request functionality. The project emphasizes mobile responsiveness, fast loading times, and SEO optimization to help the small business compete in the local market.`,
-        thumbnail: '/gallery/ifast.png',
-        detailImages: ['/gallery/ifast.png'],
+        thumbnail: '/gallery/ifast.webp',
+        detailImages: ['/gallery/ifast.webp'],
         type: ['Web Design', 'Software'],
         tags: ['Small Business', 'Web Development', 'Local Community', 'SEO', 'Mobile-First', 'Responsive Design'],
         date: '2024',
@@ -806,8 +806,8 @@ Ongoing maintenance includes content updates for seasonal services, adding custo
 Abstract— We present ARRC (advanced reasoning robot control), a practical system that connects natural language instructions to safe, local robotic control by combining Retrieval-Augmented Generation (RAG) with RGB–D perception and guarded execution on an affordable robot arm. The system indexes curated robot knowledge (movement patterns, task templates, and safety heuristics) in a vector database, retrieves task-relevant context for each instruction, and conditions a large language model (LLM) to synthesize JSON-structured action plans.
 
 These plans are executed on a UFactory xArm 850 fitted with a Dynamixel-driven parallel gripper and an Intel RealSense D435 camera. Perception uses AprilTags detections fused with depth to produce object-centric metric poses; execution is enforced via a set of software safety gates (workspace bounds, speed/force caps, timeouts, and bounded retries). We describe the architecture, knowledge design, integration choices, and a reproducible evaluation protocol for tabletop scan/approach/pick–place tasks. Experimental results are reported to demonstrate efficacy of the proposed approach. Our design shows that RAG-based planning can substantially improve plan validity and adaptability while keeping perception and low-level control local to the robot.`,
-        thumbnail: '/gallery/arrc_thumbnail.png',
-        detailImages: ['/gallery/arrc_thumbnail.png'],
+        thumbnail: '/gallery/arrc_thumbnail.webp',
+        detailImages: ['/gallery/arrc_thumbnail.webp'],
         type: ['Publications', 'Machine Learning'],
         tags: ['Research Paper', 'RAG', 'LLM', 'Robotics', 'Autonomous Manipulation'],
         date: '2025',
@@ -849,8 +849,8 @@ Adaptability: The system demonstrated advanced reasoning by automatically transi
 Abstract— Robots with internal visual self-models promise unprecedented adaptability, yet existing autonomous modeling pipelines remain fragile under realistic sensing conditions such as noisy imagery and cluttered backgrounds. This paper presents the first systematic study quantifying how visual degradations—including blur, salt-and-pepper noise, and Gaussian noise—affect robotic self-modeling. Through both simulation and physical experiments, we demonstrate their impact on morphology prediction, trajectory planning, and damage recovery in state-of-the-art pipelines.
 
 To overcome these challenges, we introduce a task-aware denoising framework that couples classical restoration with morphology-preserving constraints, ensuring retention of structural cues critical for self-modeling. In addition, we integrate semantic segmentation to robustly isolate robots from cluttered and colorful scenes. Extensive experiments show that our approach restores near-baseline performance across simulated and physical platforms, while existing pipelines degrade significantly. These contributions advance the robustness of visual self-modeling and establish practical foundations for deploying self-aware robots in unpredictable real-world environments.`,
-        thumbnail: '/gallery/paper11.png',
-        detailImages: ['/gallery/paper11.png'],
+        thumbnail: '/gallery/paper11.webp',
+        detailImages: ['/gallery/paper11.webp'],
         type: ['Publications', 'Machine Learning'],
         tags: ['Research Paper', 'Computer Vision', 'Self-Modeling', 'Robotics', 'Denoising'],
         date: '2025',
@@ -882,9 +882,9 @@ To overcome these challenges, we introduce a task-aware denoising framework that
         fullDescription: `Designed and implemented a custom robotic system using NVIDIA's Isaac Sim platform for simulation and training. The project involved creating a detailed robot model, implementing reinforcement learning algorithms, and training the robot in various scenarios.
 
 This work demonstrates the power of simulation-based training for robotics, allowing rapid iteration and testing without the need for physical prototypes during the development phase.`,
-        thumbnail: '/NemaRobotArm.png',
-        previewMedia: '/NemaRobotArm.png', // TODO: Replace with GIF/video
-        detailImages: ['/NemaRobotArm.png'], // TODO: Add more project images
+        thumbnail: '/NemaRobotArm.webp',
+        previewMedia: '/NemaRobotArm.webp', // TODO: Replace with GIF/video
+        detailImages: ['/NemaRobotArm.webp'], // TODO: Add more project images
         type: ['Software'],
         tags: ['Isaac Sim', 'Python', 'Reinforcement Learning', 'Robotics', 'AI'],
         date: '2024',
@@ -913,9 +913,9 @@ Next steps include physical robot construction and validation of sim-to-real tra
         fullDescription: `Reverse-engineered and redesigned the popular Ridge Wallet using CAD software and 3D printing technology. The project focused on understanding the mechanical design principles that make the original wallet functional while optimizing for 3D printing manufacturing.
 
 The design incorporates precision tolerances for the sliding mechanism and material selection for durability. This project showcases CAD design skills and understanding of manufacturing constraints.`,
-        thumbnail: '/RidgeClone.png',
-        previewMedia: '/RidgeClone.png', // TODO: Replace with GIF/video
-        detailImages: ['/RidgeClone.png'], // TODO: Add more project images
+        thumbnail: '/RidgeClone.webp',
+        previewMedia: '/RidgeClone.webp', // TODO: Replace with GIF/video
+        detailImages: ['/RidgeClone.webp'], // TODO: Add more project images
         type: ['Mechanical'],
         tags: ['3D Printing', 'CAD', 'Product Design'],
         date: '2023',
@@ -944,9 +944,9 @@ Print time is approximately 4 hours. The project demonstrated that functional pr
         fullDescription: `Developed CIBO, a comprehensive restaurant ordering platform that bridges the gap between customers and restaurant services. The system features a React Native mobile app for customers, a web-based admin panel for restaurant staff, and a robust Node.js backend API.
 
 The platform enables customers to browse menus, place orders, track their order status in real-time, and make payments. Restaurant staff can manage menus, process orders, and handle table reservations through an intuitive dashboard.`,
-        thumbnail: '/cibo-app.png',
+        thumbnail: '/cibo-app.webp',
         videoUrl: 'https://www.youtube.com/watch?v=ehJRiRirNdg',
-        detailImages: ['/cibo-app.png'],
+        detailImages: ['/cibo-app.webp'],
         type: ['Software'],
         tags: ['Full-Stack', 'React Native', 'Node.js', 'Restaurant Tech', 'Mobile App'],
         date: '2024',
@@ -979,9 +979,9 @@ The platform demonstrates scalability potential for multi-restaurant deployment.
         fullDescription: `Designed and prototyped a mechanical knee brace to assist patients recovering from knee surgery. This project was driven by a personal connection to a close friend's recovery journey, aiming to improve upon existing rehabilitation tools. This is the second iteration (V2) of the design, focusing on enhanced comfort, adjustable tension, and ease of use.
         
 The device was developed in collaboration with a startup to address specific pain points in current recovery methods. The design includes a novel folding mechanism (demonstrated in the "Knee 3" prototype) allowing the brace to fit compactly into suitcases for travel.`,
-        thumbnail: '/gallery/kneebracedesign.png',
+        thumbnail: '/gallery/kneebracedesign.webp',
         liveUrl: 'https://docs.google.com/document/d/1Kafr3DGXgkPG0eHfMQrDlj_wAlwApKt7SJ6aq1e55r8/edit?usp=sharing',
-        detailImages: ['/gallery/kneebracedesign.png', '/gallery/knee2.png', '/gallery/knee3.png', '/gallery/knee5.png'],
+        detailImages: ['/gallery/kneebracedesign.webp', '/gallery/knee2.webp', '/gallery/knee3.webp', '/gallery/knee5.webp'],
         type: ['Mechanical'],
         tags: ['Medical Device', 'SolidWorks', 'Product Design', 'Startup', 'Prototyping'],
         date: '2024',
@@ -1008,8 +1008,8 @@ A key innovation in this iteration is the folding mechanism, designed to make th
         fullDescription: `As a member of the Avionics Team at the TMU MARS Rocket Team, I worked on the design, programming, and testing of custom flight controllers for high-powered rocketry. The system was deployed in over 30 rocket launches in 2025.
 
 The project involved developing a robust avionics package capable of recording flight data, handling recovery deployment, and maintaining telemetry links over long distances.`,
-        thumbnail: '/gallery/rocket3.png',
-        detailImages: ['/gallery/rocket3.png', '/gallery/AmoungUSboard.png', '/gallery/rocket1.png'],
+        thumbnail: '/gallery/rocket3.webp',
+        detailImages: ['/gallery/rocket3.webp', '/gallery/AmoungUSboard.webp', '/gallery/rocket1.webp'],
         type: ['Electrical', 'Software'],
         tags: ['Avionics', 'Embedded Systems', 'Rocketry', 'PCB Design', 'Altium', 'KiCad', 'C++'],
         date: '2025',
@@ -1037,9 +1037,9 @@ We faced and overcame issues with IMU accuracy and GPS reliability through advan
         fullDescription: `A robust URL Shortener Service built with Spring Boot 3.2.0 and Java 17. This application allows users to shorten long URLs into 6-character short codes, redirect to original URLs, and track click statistics.
 
 The project features a clean web interface built with Thymeleaf and a REST API for programmatic access. It is containerized with Docker and deployed on Render for easy accessibility.`,
-        thumbnail: '/gallery/URLShortner.png',
+        thumbnail: '/gallery/URLShortner.webp',
         videoUrl: 'https://youtu.be/06LozTtrpVM',
-        detailImages: ['/gallery/URLShortner.png'],
+        detailImages: ['/gallery/URLShortner.webp'],
         type: ['Software'],
         tags: ['Java', 'Spring Boot', 'REST API', 'Docker', 'Render', 'Thymeleaf'],
         date: '2025',
@@ -1077,25 +1077,25 @@ export const certifications = [
         id: 'cswa',
         title: 'CSWA (Certified SolidWorks Associate)',
         description: 'Professional certification in SolidWorks CAD software, demonstrating proficiency in 3D modeling and engineering design.',
-        imagePath: '/gallery/soldiworks.png',
+        imagePath: '/gallery/soldiworks.webp',
     },
     {
         id: 'pilot-license',
         title: 'Private & Glider Pilot License',
         description: 'Licensed private pilot and glider pilot, combining passion for aviation with engineering expertise.',
-        imagePath: '/gallery/aviationdocument.jpg',
+        imagePath: '/gallery/aviationdocument.webp',
     },
     {
         id: 'tensorflow',
         title: 'TensorFlow Developer Certificate',
         description: 'Professional certification demonstrating proficiency in building and training neural networks using TensorFlow.',
-        imagePath: '/gallery/tensorflow.png',
+        imagePath: '/gallery/tensorflow.webp',
     },
     {
         id: 'opencv',
         title: 'OpenCV Certification',
         description: 'Certification in Computer Vision using OpenCV, covering image processing and object detection techniques.',
-        imagePath: '/gallery/opencv.png',
+        imagePath: '/gallery/opencv.webp',
     },
 ];
 

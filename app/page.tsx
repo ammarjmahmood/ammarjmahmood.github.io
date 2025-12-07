@@ -46,7 +46,7 @@ export default function ResumePage() {
               <Card className="p-6">
                 <div className="flex items-start gap-4">
                   <Image
-                    src="/professional-headshot.png"
+                    src="/professional-headshot.webp"
                     alt="Ammar J Mahmood"
                     width={64}
                     height={64}
@@ -295,7 +295,7 @@ export default function ResumePage() {
                   <div className="flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border">
                       <Image
-                        src="/gallery/google_scholar_logo.png"
+                        src="/gallery/google_scholar_logo.webp"
                         alt="Google Scholar"
                         width={32}
                         height={32}
