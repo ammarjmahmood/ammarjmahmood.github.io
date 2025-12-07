@@ -114,7 +114,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                         <Button variant="outline" className="gap-2">
                                             <ExternalLink className="h-4 w-4" />
-                                            {project.liveUrl.includes('docs.google.com') ? 'Detailed Report' : 'Live Demo'}
+                                            {project.liveUrl.includes('docs.google.com') ? 'Detailed Report' : (project.type.includes('Publications') || project.liveUrl.includes('arxiv.org')) ? 'Paper' : 'Live Demo'}
+                                        </Button>
+                                    </a>
+                                )}
+                                {project.learnMoreUrl && (
+                                    <a href={project.learnMoreUrl} target="_blank" rel="noopener noreferrer">
+                                        <Button variant="outline" className="gap-2">
+                                            <ExternalLink className="h-4 w-4" />
+                                            Learn More
                                         </Button>
                                     </a>
                                 )}
@@ -297,7 +305,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                 src={project.thumbnail}
                                 alt={project.title}
                                 fill
-                                className="object-cover"
+                                className={`object-cover ${project.thumbnailAlignment ? `object-${project.thumbnailAlignment}` : ''}`}
                                 priority
                             />
                         </div>

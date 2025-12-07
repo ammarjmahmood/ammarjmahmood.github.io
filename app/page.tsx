@@ -13,6 +13,7 @@ import {
   FontAwesomeTikTokIcon,
   XIcon,
   InstructablesIcon,
+  GoogleScholarIcon,
 } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-provider"
 import { ProjectFilter } from "@/components/project-filter"
@@ -24,6 +25,7 @@ import { projects, certifications, type ProjectType } from "@/lib/projects-data"
 export default function ResumePage() {
   const [activeFilter, setActiveFilter] = useState<ProjectType>('All');
   const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
+
 
   const filteredProjects = activeFilter === 'All'
     ? projects
@@ -102,6 +104,15 @@ export default function ResumePage() {
                 >
                   <FileText className="h-4 w-4" />
                   <span>Resume</span>
+                </a>
+                <a
+                  href="https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AElLoL0Zc3-XITwkgGIZE8qJeANWCDQpaxe4eteBsJsZfXYXfghHXxDsXyqprvxWkSFF767PaiEOtaBaDT1XkKMROAZb&user=glPhta8AAAAJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-foreground hover:text-primary"
+                >
+                  <GoogleScholarIcon className="h-4 w-4" />
+                  <span>Publications</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/ammarjmahmood"
@@ -275,6 +286,74 @@ export default function ResumePage() {
               </div>
             </section>
 
+            {/* Publications */}
+            <section id="publications">
+              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Publications</h2>
+              <div className="space-y-4">
+                <Card className="p-6">
+                  <div className="flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border">
+                      <Image
+                        src="/gallery/google_scholar_logo.png"
+                        alt="Google Scholar"
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <div className="mb-4">
+                        <h3 className="font-semibold text-lg">Research & Publications</h3>
+                        <a
+                          href="https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AElLoL0Zc3-XITwkgGIZE8qJeANWCDQpaxe4eteBsJsZfXYXfghHXxDsXyqprvxWkSFF767PaiEOtaBaDT1XkKMROAZb&user=glPhta8AAAAJ"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-primary hover:underline flex items-center gap-1 mt-1"
+                        >
+                          View Google Scholar Profile
+                          <Globe className="h-3 w-3" />
+                        </a>
+                      </div>
+
+                      <div className="space-y-4">
+                        <div className="border-l-2 border-muted pl-4">
+                          <a
+                            href="https://arxiv.org/abs/2510.05547"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group block"
+                          >
+                            <h4 className="font-medium group-hover:text-primary transition-colors">
+                              ARRC: Advanced Reasoning Robot Control—Knowledge-Driven Autonomous Manipulation Using Retrieval-Augmented Generation
+                            </h4>
+                            <p className="text-sm text-muted-foreground mt-1">
+                              arXiv:2510.05547
+                            </p>
+                          </a>
+                        </div>
+
+                        <div className="border-l-2 border-muted pl-4">
+                          <a
+                            href="https://arxiv.org/pdf/2510.03677"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group block"
+                          >
+                            <h4 className="font-medium group-hover:text-primary transition-colors">
+                              Robust Visual Embodiment: How Robots Discover Their Bodies in Real Environments
+                            </h4>
+                            <p className="text-sm text-muted-foreground mt-1">
+                              arXiv:2510.03677
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </section>
+
             {/* Education */}
             <section>
               <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Education</h2>
@@ -301,20 +380,23 @@ export default function ResumePage() {
                 </Card>
               </div>
             </section>
+
           </main>
         </div>
       </div>
 
       {/* Certification Modal */}
-      {selectedCert && (
-        <CertificationModal
-          title={selectedCert.title}
-          description={selectedCert.description}
-          imagePath={selectedCert.imagePath}
-          isOpen={!!selectedCert}
-          onClose={() => setSelectedCert(null)}
-        />
-      )}
-    </div>
+      {
+        selectedCert && (
+          <CertificationModal
+            title={selectedCert.title}
+            description={selectedCert.description}
+            imagePath={selectedCert.imagePath}
+            isOpen={!!selectedCert}
+            onClose={() => setSelectedCert(null)}
+          />
+        )
+      }
+    </div >
   )
 }

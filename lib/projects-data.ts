@@ -1,4 +1,4 @@
-export type ProjectType = 'Mechanical' | 'Electrical' | 'Software' | 'Machine Learning' | 'Web Design' | 'All';
+export type ProjectType = 'Mechanical' | 'Electrical' | 'Software' | 'Machine Learning' | 'Web Design' | 'Publications' | 'All';
 
 export interface Project {
     id: string;
@@ -13,8 +13,10 @@ export interface Project {
     type: ProjectType[];
     tags: string[];
     date: string;
+    thumbnailAlignment?: 'top' | 'center' | 'bottom' | 'left' | 'right';
     githubUrl?: string;
     liveUrl?: string;
+    learnMoreUrl?: string;
     isPrivate?: boolean;
     achievements?: string[];
     technicalStack: string[];
@@ -80,7 +82,7 @@ The system uses a camera to detect hand gestures, processes them through a train
         videoUrl: 'https://www.youtube.com/watch?v=Xffxt38l2kA',
         previewMedia: '/ml-arm.png',
         detailImages: ['/ml-arm.png', '/ASLtraining.png', '/Featured Instructables.png'],
-        type: ['Software', 'Mechanical'],
+        type: ['Software', 'Mechanical', 'Machine Learning'],
         tags: ['Robotics', 'Python', 'Machine Learning', '3D Printing', 'Computer Vision'],
         date: '2024',
         githubUrl: 'https://github.com/ammarjmahmood/ASLRoboticHand',
@@ -290,7 +292,7 @@ The project showcases advanced robotics concepts including inverse kinematics, t
         thumbnail: '/robot pouring.png',
         videoUrl: 'https://www.youtube.com/watch?v=0dajAsJu7Ws',
         detailImages: ['/robot pouring.png'],
-        type: ['Software', 'Mechanical'],
+        type: ['Software', 'Mechanical', 'Machine Learning'],
         tags: ['Robotics', 'Computer Vision', 'ROS', 'Manipulation', 'Python'],
         date: '2024',
         technicalStack: ['Python', 'ROS', 'OpenCV', 'MoveIt', 'Robot Kinematics'],
@@ -323,7 +325,7 @@ Users can command the robot to perform pick-and-place operations, move to specif
         thumbnail: '/voicecommands.png',
         videoUrl: 'https://youtu.be/_UWGSVLbFRw',
         detailImages: ['/voicecommands.png'],
-        type: ['Software'],
+        type: ['Software', 'Machine Learning'],
         tags: ['Voice Control', 'NLP', 'Industrial Robotics', 'Python', 'Speech Recognition'],
         date: '2024',
         technicalStack: ['Python', 'Speech Recognition', 'UFactory SDK', 'Natural Language Processing'],
@@ -792,6 +794,84 @@ Page load times consistently under 2 seconds provide positive user experience ev
 The success of this project led to additional community website projects, establishing a portfolio of small business web development work. The experience demonstrates technical skills applied to real-world business problems while providing valuable community service.
 
 Ongoing maintenance includes content updates for seasonal services, adding customer testimonials, and refining SEO strategies based on search performance data. The website continues to effectively serve the business's digital marketing needs.`
+        }
+    },
+    {
+        id: 'paper-1',
+        slug: 'arrc-paper',
+        title: 'ARRC: Advanced Reasoning Robot Control',
+        shortDescription: 'Knowledge-Driven Autonomous Manipulation Using Retrieval-Augmented Generation.',
+        fullDescription: `ARRC: Advanced Reasoning Robot Control—Knowledge-Driven Autonomous Manipulation Using Retrieval-Augmented Generation.
+
+Abstract— We present ARRC (advanced reasoning robot control), a practical system that connects natural language instructions to safe, local robotic control by combining Retrieval-Augmented Generation (RAG) with RGB–D perception and guarded execution on an affordable robot arm. The system indexes curated robot knowledge (movement patterns, task templates, and safety heuristics) in a vector database, retrieves task-relevant context for each instruction, and conditions a large language model (LLM) to synthesize JSON-structured action plans.
+
+These plans are executed on a UFactory xArm 850 fitted with a Dynamixel-driven parallel gripper and an Intel RealSense D435 camera. Perception uses AprilTags detections fused with depth to produce object-centric metric poses; execution is enforced via a set of software safety gates (workspace bounds, speed/force caps, timeouts, and bounded retries). We describe the architecture, knowledge design, integration choices, and a reproducible evaluation protocol for tabletop scan/approach/pick–place tasks. Experimental results are reported to demonstrate efficacy of the proposed approach. Our design shows that RAG-based planning can substantially improve plan validity and adaptability while keeping perception and low-level control local to the robot.`,
+        thumbnail: '/gallery/arrc_thumbnail.png',
+        detailImages: ['/gallery/arrc_thumbnail.png'],
+        type: ['Publications', 'Machine Learning'],
+        tags: ['Research Paper', 'RAG', 'LLM', 'Robotics', 'Autonomous Manipulation'],
+        date: '2025',
+        liveUrl: 'https://arxiv.org/abs/2510.05547',
+        learnMoreUrl: 'https://arrc-eight.vercel.app/',
+        technicalStack: ['RAG', 'LLM', 'Robotics', 'Python', 'Machine Learning'],
+        role: 'Researcher',
+        duration: '2025',
+        scope: 'Research + Robotics + AI',
+        sections: {
+            overview: `We bridge the gap between high-level reasoning and low-level control by introducing ARRC (Advanced Reasoning Robot Control). This RAG-enabled robotic manipulation pipeline unifies perception, retrieval, and safe plan execution.
+
+We deploy this system on a UFactory xArm 850 equipped with a RealSense D435 and a Dynamixel gripper, integrating retrieval of robot-centric safety heuristics and procedural templates at inference time. This design offers both adaptability and reliability, enabling the injection of new task knowledge or safety rules without retraining.`,
+            softwareArchitecture: `The system architecture consists of three main components:
+
+1. Perception: AprilTags combined with depth data from an Intel RealSense D435 provide marker-based detections fused to recover metric 3D poses in the robot frame.
+
+2. Retrieval & Planning: A curated robotics knowledge base (movement primitives, templates, safety heuristics) is embedded and indexed. At inference time, relevant context is retrieved and passed to an LLM to generate structured JSON plans.
+
+3. Execution: JSON plans are validated and executed via the XArm Python SDK. Execution is safeguarded by software safety gates, including workspace limits, speed caps, and gripper torque gating.`,
+            results: `We benchmarked the system on tabletop manipulation tasks (scan, approach, pick–place).
+
+Plan Validity: 80% success rate in generating valid, executable paths.
+
+Approach Accuracy: 87.1% average accuracy in placing the gripper in the vicinity of the object.
+
+Pick & Place: 80% success rate in full manipulation tasks.
+
+Adaptability: The system demonstrated advanced reasoning by automatically transitioning scanning strategies (from horizontal to arc scan) when objects were occluded, successfully recovering and completing the task.`
+        }
+    },
+    {
+        id: 'paper-2',
+        slug: 'robust-visual-embodiment',
+        title: 'Robust Visual Embodiment',
+        shortDescription: 'How Robots Discover Their Bodies in Real Environments: A study on visual self-modeling robustness.',
+        fullDescription: `Robust Visual Embodiment: How Robots Discover Their Bodies in Real Environments.
+
+Abstract— Robots with internal visual self-models promise unprecedented adaptability, yet existing autonomous modeling pipelines remain fragile under realistic sensing conditions such as noisy imagery and cluttered backgrounds. This paper presents the first systematic study quantifying how visual degradations—including blur, salt-and-pepper noise, and Gaussian noise—affect robotic self-modeling. Through both simulation and physical experiments, we demonstrate their impact on morphology prediction, trajectory planning, and damage recovery in state-of-the-art pipelines.
+
+To overcome these challenges, we introduce a task-aware denoising framework that couples classical restoration with morphology-preserving constraints, ensuring retention of structural cues critical for self-modeling. In addition, we integrate semantic segmentation to robustly isolate robots from cluttered and colorful scenes. Extensive experiments show that our approach restores near-baseline performance across simulated and physical platforms, while existing pipelines degrade significantly. These contributions advance the robustness of visual self-modeling and establish practical foundations for deploying self-aware robots in unpredictable real-world environments.`,
+        thumbnail: '/gallery/paper11.png',
+        detailImages: ['/gallery/paper11.png'],
+        type: ['Publications', 'Machine Learning'],
+        tags: ['Research Paper', 'Computer Vision', 'Self-Modeling', 'Robotics', 'Denoising'],
+        date: '2025',
+        liveUrl: 'https://arxiv.org/pdf/2510.03677',
+        learnMoreUrl: 'https://robot-visual-embodiment.vercel.app/',
+        technicalStack: ['Computer Vision', 'Deep Learning', 'Robotics', 'Python', 'Semantic Segmentation'],
+        role: 'Researcher',
+        duration: '2025',
+        scope: 'Research + Computer Vision + Robotics',
+        sections: {
+            overview: `Self-supervised robotic self-modeling enables machines to autonomously infer their morphology and kinematics directly from visual data. However, existing approaches often fail in realistic conditions with visual noise and cluttered backgrounds. This paper addresses these limitations by introducing a robust visual embodiment framework.`,
+            softwareArchitecture: `The proposed pipeline integrates a task-aware denoising framework with semantic segmentation. 
+            
+1. Semantic Segmentation: Uses a deep convolutional network to isolate the robot from complex backgrounds, overcoming the limitations of color-based segmentation.
+2. Task-Aware Denoising: Combines Wiener filtering (for blur), Median filtering (for salt-and-pepper noise), and Non-Local Means with Intuitionistic Fuzzy Twin SVM (for Gaussian noise) to restore image quality while preserving morphological features.
+3. Self-Modeling Engine: Feeds the processed visual data into the FFKSM framework to reconstruct the robot's kinematic model.`,
+            results: `Extensive experiments on both simulated and physical robots demonstrated that the proposed framework significantly improves robustness.
+            
+- Segmentation: Achieved over 4x improvement in IoU and F1-score compared to baseline methods in cluttered environments.
+- Morphology Reconstruction: Restored near-baseline accuracy in morphology prediction even under severe noise conditions where standard pipelines failed.
+- Real-World Validation: Validated on a custom 3D-printed 4-DOF manipulator, proving the system's effectiveness in real-world scenarios.`
         }
     },
     {

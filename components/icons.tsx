@@ -54,10 +54,19 @@ export function FontAwesomeTikTokIcon(props: { className?: string }) {
   return <FontAwesomeIcon icon={faTiktok} className={props.className} />
 }
 
+
 export function InstructablesIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
       <path d="M4.792 14.333h14.416v-1.416H4.792v1.416zm1.417-2.833h11.583v-1.417H6.209v1.417zm-2.834 5.666h1.417v-1.416H3.375v1.416zm17.25 0h1.417v-1.416h-1.417v1.416zM12 3.375c-1.94 0-3.542 1.602-3.542 3.542h7.084c0-1.94-1.603-3.542-3.542-3.542zM3.375 8.333h1.417V6.917H3.375v1.416zm17.25 0h1.417V6.917h-1.417v1.416zM6.208 20.625h11.584v-1.417H6.208v1.417zM12 22.042c2.75 0 4.958-2.208 4.958-4.959H7.042c0 2.751 2.208 4.959 4.958 4.959zM19.208 10.042H4.792v1.416h14.416v-1.416z" />
+    </svg>
+  )
+}
+
+export function GoogleScholarIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
     </svg>
   )
 }

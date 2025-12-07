@@ -10,7 +10,7 @@ interface ProjectFilterProps {
 }
 
 export function ProjectFilter({ activeFilter, onFilterChange }: ProjectFilterProps) {
-    const filters: ProjectType[] = ['All', 'Mechanical', 'Electrical', 'Software', 'Machine Learning', 'Web Design'];
+    const filters: ProjectType[] = ['All', 'Mechanical', 'Electrical', 'Software', 'Machine Learning', 'Web Design', 'Publications'];
 
     return (
         <div className="mb-6 flex flex-wrap gap-2">
