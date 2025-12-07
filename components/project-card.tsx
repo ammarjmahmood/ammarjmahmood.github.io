@@ -27,6 +27,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                         src={isHovered && project.previewMedia ? project.previewMedia : project.thumbnail}
                         alt={project.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className={`object-cover transition-transform duration-500 group-hover:scale-110 ${project.thumbnailAlignment ? `object-${project.thumbnailAlignment}` : ''}`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

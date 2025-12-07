@@ -51,6 +51,7 @@ export default function ResumePage() {
                     width={64}
                     height={64}
                     className="h-16 w-16 rounded-full object-cover"
+                    priority
                   />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">

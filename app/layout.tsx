@@ -5,6 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -61,6 +62,7 @@ export default function RootLayout({
         >
           {children}
           <ScrollToTop />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
