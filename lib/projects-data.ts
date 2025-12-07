@@ -1077,19 +1077,25 @@ export const certifications = [
         id: 'cswa',
         title: 'CSWA (Certified SolidWorks Associate)',
         description: 'Professional certification in SolidWorks CAD software, demonstrating proficiency in 3D modeling and engineering design.',
-        imagePath: '/certifications/cswa.jpg', // TODO: Add certificate image
-    },
-    {
-        id: 'provincial-winner',
-        title: 'Provincial Winner - Engineering Competition',
-        description: 'First place winner at the provincial engineering competition, showcasing excellence in engineering design and innovation.',
-        imagePath: '/certifications/provincial-winner.jpg', // TODO: Add certificate image
+        imagePath: '/gallery/soldiworks.png',
     },
     {
         id: 'pilot-license',
         title: 'Private & Glider Pilot License',
         description: 'Licensed private pilot and glider pilot, combining passion for aviation with engineering expertise.',
-        imagePath: '/certifications/pilot-license.jpg', // TODO: Add certificate image
+        imagePath: '/gallery/aviationdocument.jpg',
+    },
+    {
+        id: 'tensorflow',
+        title: 'TensorFlow Developer Certificate',
+        description: 'Professional certification demonstrating proficiency in building and training neural networks using TensorFlow.',
+        imagePath: '/gallery/tensorflow.png',
+    },
+    {
+        id: 'opencv',
+        title: 'OpenCV Certification',
+        description: 'Certification in Computer Vision using OpenCV, covering image processing and object detection techniques.',
+        imagePath: '/gallery/opencv.png',
     },
 ];
 
