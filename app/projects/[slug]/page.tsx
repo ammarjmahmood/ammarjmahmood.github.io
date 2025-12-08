@@ -76,7 +76,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
     return (
         <div className="min-h-screen bg-background overflow-x-hidden">
-            <div className="mx-auto max-w-7xl px-6 py-8 md:px-8 lg:px-12">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:px-8 lg:px-12">
                 {/* Back Button */}
                 <Link href="/#projects">
                     <Button variant="ghost" className="mb-8 gap-2">
@@ -95,7 +95,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                 {project.type.join(' + ')} Project
                             </div>
 
-                            <h1 className="mb-4 text-4xl font-bold md:text-5xl">{project.title}</h1>
+                            <h1 className="mb-4 text-4xl font-bold md:text-5xl break-words">{project.title}</h1>
 
                             <p className="text-lg text-muted-foreground mb-6">
                                 {project.shortDescription}
@@ -262,37 +262,37 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         )}
 
                         {/* Navigation to other projects */}
-                        <div className="flex justify-between items-center pt-12 border-t">
+                        <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 pt-12 border-t">
                             {prevProject ? (
-                                <Link href={`/projects/${prevProject.slug}`}>
-                                    <Button variant="ghost" className="gap-2">
-                                        <ArrowLeft className="h-4 w-4" />
-                                        <div className="text-left">
+                                <Link href={`/projects/${prevProject.slug}`} className="flex-1">
+                                    <Button variant="ghost" className="gap-2 w-full sm:w-auto justify-start">
+                                        <ArrowLeft className="h-4 w-4 flex-shrink-0" />
+                                        <div className="text-left min-w-0">
                                             <p className="text-xs text-muted-foreground">Previous</p>
-                                            <p className="font-medium">{prevProject.title}</p>
+                                            <p className="font-medium truncate">{prevProject.title}</p>
                                         </div>
                                     </Button>
                                 </Link>
                             ) : (
-                                <div />
+                                <div className="flex-1" />
                             )}
 
-                            <Link href="/#projects">
-                                <Button variant="outline">All Projects</Button>
+                            <Link href="/#projects" className="sm:flex-shrink-0">
+                                <Button variant="outline" className="w-full sm:w-auto">All Projects</Button>
                             </Link>
 
                             {nextProject ? (
-                                <Link href={`/projects/${nextProject.slug}`}>
-                                    <Button variant="ghost" className="gap-2">
-                                        <div className="text-right">
+                                <Link href={`/projects/${nextProject.slug}`} className="flex-1">
+                                    <Button variant="ghost" className="gap-2 w-full sm:w-auto justify-end">
+                                        <div className="text-right min-w-0">
                                             <p className="text-xs text-muted-foreground">Next</p>
-                                            <p className="font-medium">{nextProject.title}</p>
+                                            <p className="font-medium truncate">{nextProject.title}</p>
                                         </div>
-                                        <ExternalLink className="h-4 w-4" />
+                                        <ExternalLink className="h-4 w-4 flex-shrink-0" />
                                     </Button>
                                 </Link>
                             ) : (
-                                <div />
+                                <div className="flex-1" />
                             )}
                         </div>
                     </main>
@@ -346,7 +346,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                         <Calendar className="h-4 w-4 mt-1 text-muted-foreground flex-shrink-0" />
                                         <div>
                                             <p className="text-xs text-muted-foreground">Scope</p>
-                                            <p className="font-medium text-sm">{project.scope}</p>
+                                            <p className="font-medium text-sm break-words">{project.scope}</p>
                                         </div>
                                     </div>
                                 )}
@@ -363,7 +363,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                     techs.length > 0 && (
                                         <div key={category}>
                                             <p className="text-xs text-muted-foreground mb-2">{category}</p>
-                                            <p className="font-medium text-sm">{techs.join(', ')}</p>
+                                            <p className="font-medium text-sm break-words">{techs.join(', ')}</p>
                                         </div>
                                     )
                                 )}
