@@ -32,6 +32,18 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-KHTJ9K5L');`}
         </Script>
 
+        {/* GitHub Pages SPA redirect handler */}
+        <Script id="spa-redirect" strategy="beforeInteractive">
+          {`(function(l) {
+            if (l.search[1] === '/') {
+              var decoded = l.search.slice(1).split('&').map(function(s) {
+                return s.replace(/~and~/g, '&')
+              }).join('?');
+              window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+            }
+          }(window.location))`}
+        </Script>
+
         {/* Microsoft Clarity */}
         <Script id="clarity-script" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){
