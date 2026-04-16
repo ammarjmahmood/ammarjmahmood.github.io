@@ -1067,6 +1067,76 @@ Deployment: The application is containerized using Docker, ensuring consistency 
 The project demonstrates the ability to build, containerize, and deploy a complete Spring Boot application, showcasing skills in Java backend development and modern DevOps practices.`
         }
     },
+    {
+        id: '26',
+        slug: 'healthsync',
+        title: 'HealthSync iOS App',
+        shortDescription: 'Comprehensive iOS health and fitness application tracking steps, water intake, and active calories with a modern UI.',
+        fullDescription: `HealthSync is a modern iOS application designed to help users track their daily health and fitness metrics seamlessly. The app provides real-time tracking of steps, water consumption, and active calorie burn, presenting the data in a clean, intuitive interface.
+
+Built with native iOS technologies, HealthSync integrates deeply with the iOS ecosystem, offering widgets and a responsive design that keeps health data at the user's fingertips.`,
+        thumbnail: '/gallery/healthsync.png',
+        detailImages: ['/gallery/healthsync.png'],
+        type: ['Software'],
+        tags: ['iOS', 'Swift', 'HealthKit', 'Mobile App', 'Fitness'],
+        date: '2025',
+        technicalStack: ['Swift', 'SwiftUI', 'HealthKit', 'WidgetKit'],
+        role: 'iOS Developer',
+        duration: '2025',
+        scope: 'Native Mobile Development + Health Data Integration',
+        sections: {
+            overview: `HealthSync was developed to provide a unified dashboard for the most critical daily health metrics. By focusing on steps, hydration, and activity, the app helps users maintain a healthy lifestyle through clear visual feedback and goal tracking.`,
+            softwareArchitecture: `The app is built using SwiftUI for a modern, reactive user interface. It leverages Apple's HealthKit framework to securely access and contribute to the user's health data. The architecture follows the MVVM pattern, ensuring a clean separation between data logic and UI presentation.`,
+            results: `HealthSync successfully launched on the iOS App Store, providing users with a reliable tool for daily health monitoring. The integration of home screen widgets has significantly increased user engagement by making health data accessible without opening the app.`
+        }
+    },
+    {
+        id: '27',
+        slug: 'issh',
+        title: 'iSSH - Pro SSH Client',
+        shortDescription: 'Powerful iOS SSH client featuring network scanning, persistent sessions, and integrated AI assistant for developers.',
+        fullDescription: `iSSH is a professional-grade SSH client for iOS, built for developers and system administrators who need reliable remote access on the go. It goes beyond simple terminal emulation by offering built-in network scanning, session persistence with tmux integration, and an innovative AI assistant.
+
+The app supports multiple AI models (Claude, Gemini, OpenAI) to help users debug scripts, generate commands, and manage remote servers more efficiently.`,
+        thumbnail: '/gallery/issh.png',
+        detailImages: ['/gallery/issh.png'],
+        type: ['Software'],
+        tags: ['iOS', 'SSH', 'Networking', 'Developer Tools', 'AI Integration'],
+        date: '2025',
+        technicalStack: ['Swift', 'SwiftUI', 'SSH', 'AI APIs', 'tmux'],
+        role: 'Lead Developer',
+        duration: '2025',
+        scope: 'Native Mobile Development + Network Engineering + AI Integration',
+        sections: {
+            overview: `The goal of iSSH was to create the most productive remote management tool for iOS. By integrating essential networking tools like port forwarding and network scanning with modern AI capabilities, iSSH transforms the mobile terminal experience into a powerful dev environment.`,
+            softwareArchitecture: `iSSH features a custom terminal emulator built for low latency and high compatibility. The backend handles encrypted SSH connections and persistent background sessions. The AI integration uses a modular provider system, allowing users to connect their own API keys for various LLM models.`,
+            results: `iSSH has become a top-rated tool in the Developer Tools category on the App Store, praised for its stability and the unique productivity boost provided by the integrated AI assistant.`
+        }
+    },
+    {
+        id: '28',
+        slug: 'isaacsim-autosave',
+        title: 'Isaac Sim Autosave Extension',
+        shortDescription: 'Open-source productivity tool for NVIDIA Isaac Sim that automatically saves progress and prevents data loss.',
+        fullDescription: `Isaac Sim Autosave is an open-source extension developed for the NVIDIA Isaac Sim robotics simulation platform. It addresses a common pain point for developers by providing automated saving functionality for USD stages, ensuring that hours of simulation setup are never lost due to crashes or power failures.
+
+The tool is designed to be lightweight and non-intrusive, operating in the background while developers focus on their robotics and AI research.`,
+        thumbnail: '/gallery/isaacsim_autosave.png',
+        detailImages: ['/gallery/isaacsim_autosave.png'],
+        type: ['Software'],
+        tags: ['Isaac Sim', 'NVIDIA', 'Python', 'Open Source', 'Robotics'],
+        date: '2024',
+        githubUrl: 'https://github.com/ammarjmahmood/isaacsim_autosave',
+        technicalStack: ['Python', 'NVIDIA Omniverse Kit', 'USD'],
+        role: 'Creator & Maintainer',
+        duration: '2024',
+        scope: 'Robotics Simulation Tooling + Open Source',
+        sections: {
+            overview: `Simulation environments can be notoriously unstable when working with complex robotics scenes. This extension was born out of personal necessity to protect work-in-progress simulation stages in Isaac Sim, and was later released to the community as an open-source tool.`,
+            softwareArchitecture: `Built using the NVIDIA Omniverse Kit extension system, the tool hooks into the application's update loop to monitor changes and trigger saves at configurable intervals. It interacts directly with the USD (Universal Scene Description) API to perform safe, background saves.`,
+            results: `The extension has been widely adopted by the Isaac Sim community on GitHub, helping many researchers and engineers avoid data loss and improve their daily simulation workflow.`
+        }
+    },
 ];
 
 
