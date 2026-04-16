@@ -44,12 +44,13 @@ export const projects: Project[] = [
         fullDescription: `Reverse-engineered and modified an iRobot Roomba to create a versatile autonomous robotics platform. The project involved bypassing the original control system to implement custom firmware and integrating additional sensors for enhanced environmental awareness.
 
 The modified Roomba features Arduino-based control, ultrasonic and IR sensors for obstacle detection, and a custom navigation algorithm. This platform serves as an excellent testbed for robotics experiments, autonomous navigation research, and sensor integration projects.`,
-        thumbnail: '/hackedroomba.webp',
-        previewMedia: '/hackedroomba.webp',
-        detailImages: ['/hackedroomba.webp', '/hackedroomba2.webp', '/gallery/roombabeforehack.webp'],
+        thumbnail: '/gallery/hackedroomba-new.png',
+        previewMedia: '/gallery/hackedroomba-new.png',
+        detailImages: ['/gallery/hackedroomba-new.png', '/gallery/hackedroomba.webp', '/gallery/hackedroomba2.webp', '/gallery/roombabeforehack.webp'],
         type: ['Software', 'Electrical'],
         tags: ['Robotics', 'Arduino', 'Autonomous Navigation', 'Embedded Systems', 'Reverse Engineering'],
         date: '2023',
+        learnMoreUrl: 'https://www.instructables.com/How-to-Make-an-Autonomous-Robot-for-Under-30/',
         technicalStack: ['Arduino', 'C++', 'Ultrasonic Sensors', 'IR Sensors', 'Motor Control'],
         role: 'Hardware Hacker & Developer',
         duration: '2023',
@@ -882,9 +883,9 @@ To overcome these challenges, we introduce a task-aware denoising framework that
         fullDescription: `This project involves the advanced training and simulation of the SO Arm 101 robotic system within NVIDIA's Isaac Sim environment. We utilized a Pi 0 VLA to train robust pick-and-place policies, enabling the robot to handle complex manipulation tasks with high precision.
 
 A key highlight of the project was the integration of Meta Quest 3 for immersive teleoperation. By creating a custom bridge to Isaac Sim, we were able to collect high-quality demonstration data for pick-and-place operations, specifically transitioning objects from a table to a box. This data-driven approach significantly accelerated the learning process for our autonomous policies.`,
-        thumbnail: '/gallery/so-arm-101.jpg',
-        previewMedia: '/gallery/so-arm-101.jpg',
-        detailImages: ['/gallery/so-arm-101.jpg'],
+        thumbnail: '/gallery/so-arm-101.png',
+        previewMedia: '/gallery/so-arm-101.png',
+        detailImages: ['/gallery/so-arm-101.png'],
         type: ['Software', 'Machine Learning'],
         tags: ['Isaac Sim', 'SO Arm 101', 'Pi 0 VLA', 'Quest 3', 'Teleoperation', 'Reinforcement Learning', 'Robotics'],
         date: '2024',

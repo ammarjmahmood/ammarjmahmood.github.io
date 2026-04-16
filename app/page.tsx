@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Globe, CheckCircle2, Award, GraduationCap, FileText } from "lucide-react"
+import { Globe, CheckCircle2, Award, GraduationCap, FileText, Briefcase } from "lucide-react"
 import {
   LinkedinIcon,
   GithubIcon,
@@ -349,6 +349,52 @@ export default function ResumePage() {
                           </a>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </section>
+
+            {/* Experience */}
+            <section>
+              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Experience</h2>
+              <div className="space-y-4">
+                <Card className="p-6">
+                  <div className="flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 dark:bg-blue-900 overflow-hidden border border-border">
+                      <Briefcase className="h-6 w-6 text-blue-700 dark:text-blue-300" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="mb-3">
+                        <h3 className="font-semibold">Autodesk AI Lab Intern</h3>
+                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                          <span>Jan 2026 — Present</span>
+                        </div>
+                      </div>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        Working at the Autodesk AI Lab on cutting-edge research and development in artificial intelligence.
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-100 dark:bg-red-900 overflow-hidden border border-border">
+                      <Briefcase className="h-6 w-6 text-red-700 dark:text-red-300" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="mb-3">
+                        <h3 className="font-semibold">Robotics and Machine Learning Engineer</h3>
+                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                          <span>Kiwi Charge</span>
+                          <span className="text-muted-foreground/50">•</span>
+                          <span>Oct 2025 — Present</span>
+                        </div>
+                      </div>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        Developing autonomous systems and machine learning models for EV charging infrastructure.
+                      </p>
                     </div>
                   </div>
                 </Card>
