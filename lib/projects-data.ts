@@ -877,32 +877,30 @@ To overcome these challenges, we introduce a task-aware denoising framework that
     {
         id: '2',
         slug: 'isaac-sim-robot',
-        title: 'Custom Robot Trained in Isaac Sim/Lab',
-        shortDescription: 'A custom robot designed and trained in NVIDIA\'s Isaac Sim for advanced robotics and AI research.',
-        fullDescription: `Designed and implemented a custom robotic system using NVIDIA's Isaac Sim platform for simulation and training. The project involved creating a detailed robot model, implementing reinforcement learning algorithms, and training the robot in various scenarios.
+        title: 'SO Arm 101 - Isaac Sim Training',
+        shortDescription: 'Training a pick-and-place policy for the SO Arm 101 using Pi 0 VLA and Quest 3 teleoperation in NVIDIA Isaac Sim.',
+        fullDescription: `This project involves the advanced training and simulation of the SO Arm 101 robotic system within NVIDIA's Isaac Sim environment. We utilized a Pi 0 VLA to train robust pick-and-place policies, enabling the robot to handle complex manipulation tasks with high precision.
 
-This work demonstrates the power of simulation-based training for robotics, allowing rapid iteration and testing without the need for physical prototypes during the development phase.`,
-        thumbnail: '/NemaRobotArm.webp',
-        previewMedia: '/NemaRobotArm.webp', // TODO: Replace with GIF/video
-        detailImages: ['/NemaRobotArm.webp'], // TODO: Add more project images
-        type: ['Software'],
-        tags: ['Isaac Sim', 'Python', 'Reinforcement Learning', 'Robotics', 'AI'],
+A key highlight of the project was the integration of Meta Quest 3 for immersive teleoperation. By creating a custom bridge to Isaac Sim, we were able to collect high-quality demonstration data for pick-and-place operations, specifically transitioning objects from a table to a box. This data-driven approach significantly accelerated the learning process for our autonomous policies.`,
+        thumbnail: '/gallery/so-arm-101.jpg',
+        previewMedia: '/gallery/so-arm-101.jpg',
+        detailImages: ['/gallery/so-arm-101.jpg'],
+        type: ['Software', 'Machine Learning'],
+        tags: ['Isaac Sim', 'SO Arm 101', 'Pi 0 VLA', 'Quest 3', 'Teleoperation', 'Reinforcement Learning', 'Robotics'],
         date: '2024',
-        technicalStack: ['Python', 'Isaac Sim', 'Isaac Lab', 'PyTorch', 'ROS'],
+        technicalStack: ['Python', 'Isaac Sim', 'PyTorch', 'ROS', 'Quest 3 Bridge', 'Pi 0 VLA'],
         role: 'AI Researcher & Developer',
         duration: '2024',
-        scope: 'Simulation + Reinforcement Learning + Robot Design',
+        scope: 'Simulation + Reinforcement Learning + Teleoperation + Data Collection',
         relatedProjects: ['1', '14'],
         sections: {
-            overview: `This project explores the cutting edge of sim-to-real robotics transfer using NVIDIA's Isaac Sim platform. By designing and training a custom robot entirely in simulation, the project demonstrates how virtual environments can accelerate robotics development and enable rapid experimentation with different designs and algorithms.
+            overview: `This project explores the cutting edge of sim-to-real robotics transfer using the SO Arm 101 platform and NVIDIA's Isaac Sim. By combining powerful simulation tools with immersive teleoperation, we've developed a highly efficient pipeline for training robotic manipulation policies.
 
-The work focuses on creating a photorealistic robot model, implementing domain randomization techniques, and training reinforcement learning policies that can potentially transfer to real hardware.`,
-            softwareArchitecture: `The software stack leverages NVIDIA Isaac Sim's USD-based simulation environment with Isaac Lab for reinforcement learning training. The robot model is defined using URDF and imported into the simulator with accurate physics properties.
+The work focuses on pick-and-place tasks, utilizing Pi 0 VLA for policy training and Meta Quest 3 for intuitive data collection.`,
+            softwareArchitecture: `The software stack leverages NVIDIA Isaac Sim's USD-based environment. We developed a custom bridge to interface the Meta Quest 3 with the simulator, allowing for real-time teleoperation and data logging. 
 
-Training uses Proximal Policy Optimization (PPO) implemented in PyTorch, with custom reward shaping for task-specific behaviors. The system includes ROS integration for potential hardware deployment and teleoperation capabilities. Domain randomization is applied to textures, lighting, and dynamics parameters to improve sim-to-real transfer.`,
-            results: `Successfully trained policies for navigation and manipulation tasks, achieving convergence within reasonable training times. The simulation environment allows for 10x faster iteration compared to physical robot testing. The learned behaviors demonstrate robust performance across varied environmental conditions within the simulation.
-
-Next steps include physical robot construction and validation of sim-to-real transfer performance.`
+Training uses the Pi 0 VLA architecture to learn pick-and-place behaviors from the collected demonstrations. The system includes domain randomization to improve the robustness of the learned policies for eventual hardware transfer.`,
+            results: `Successfully collected hundreds of demonstrations via Quest 3 teleoperation, leading to a highly reliable pick-and-place policy. The SO Arm 101 demonstrated 90%+ success rates in simulation for table-to-box transfers. The bridge proved to be a powerful tool for rapid data collection and human-in-the-loop training.`
         }
     },
     {
