@@ -39,7 +39,7 @@ export const projects: Project[] = [
 {
         id: '32',
         slug: 'autodesk-internship',
-        title: 'Autodesk — AI & Innovation Intern',
+        title: 'Autodesk AI Lab — AI/ML Developer Intern',
         shortDescription: 'Built an Electron application for an Autodesk product, developed agentic AI workflows, World Labs API integrations, and contributed to Autodesk Assistant features and product innovation.',
         fullDescription: `Interned at Autodesk on the AI and innovation team, working across a range of high-impact projects spanning product development, agentic AI, and exploratory research.
 
@@ -53,7 +53,7 @@ Contributed to Autodesk Assistant features and innovation initiatives. Conducted
         tags: ['Autodesk', 'Electron', 'AI Agents', 'Agentic Workflows', 'World Labs', '3D Data', 'Product Development', 'Internship'],
         date: '2025',
         technicalStack: ['Electron', 'TypeScript', 'Python', 'World Labs API', 'LLMs', 'Agentic Frameworks', 'Autodesk APIs'],
-        role: 'AI & Innovation Intern',
+        role: 'AI/ML Developer Intern',
         duration: '2025',
         scope: 'Product Development + Agentic AI + Research + UX Collaboration',
         sections: {
