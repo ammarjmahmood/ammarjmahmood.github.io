@@ -78,9 +78,9 @@ Collaborated across engineering, design, and product to bridge research prototyp
         fullDescription: `Kiwi Charge is an autonomous EV charging robot designed to eliminate the need for drivers to manually plug in their vehicles. The robot navigates parking environments independently, locates the vehicle's charge port, and autonomously connects and disconnects the charging connector.
 
 The system supports both NACS (Tesla standard) and CCS (Combined Charging System) connectors. A core part of the mechanical work involved designing custom end effectors and mounting flanges tailored to each connector type, enabling reliable automated mating and de-mating with real-world charge ports.`,
-        thumbnail: '/kiwi-pizza-teleop.jpg',
-        previewMedia: '/kiwi-pizza-teleop.jpg',
-        detailImages: ['/kiwi-pizza-teleop.jpg'],
+        thumbnail: '/kiwi-charge-robot.webp',
+        previewMedia: '/kiwi-charge-robot.webp',
+        detailImages: ['/kiwi-charge-robot.webp'],
         type: ['Mechanical', 'Software', 'Electrical'],
         tags: ['EV Charging', 'Autonomous Robot', 'NACS', 'CCS', 'CAD', 'End Effector', 'Startup'],
         date: '2025',
