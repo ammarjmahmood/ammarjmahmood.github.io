@@ -36,7 +36,127 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-    {
+{
+        id: '32',
+        slug: 'autodesk-internship',
+        title: 'Autodesk — AI & Innovation Intern',
+        shortDescription: 'Built an Electron application for an Autodesk product, developed agentic AI workflows, World Labs API integrations, and contributed to Autodesk Assistant features and product innovation.',
+        fullDescription: `Interned at Autodesk on the AI and innovation team, working across a range of high-impact projects spanning product development, agentic AI, and exploratory research.
+
+Built an Electron-based desktop application integrated with an Autodesk product. Developed agentic workflows spanning 3D data, information pipelines, and automation — including permit and location agents, generative scheduling systems, script and screenplay breakdown agents, and data prediction models. Explored and integrated the World Labs spatial intelligence API into Autodesk tooling.
+
+Contributed to Autodesk Assistant features and innovation initiatives. Conducted customer exploratory studies, collaborated closely with UI/UX designers, and presented work and research findings to product managers and design leads.`,
+        thumbnail: '/autodesk-internship.jpg',
+        previewMedia: '/autodesk-internship.jpg',
+        detailImages: ['/autodesk-internship.jpg'],
+        type: ['Software', 'Machine Learning'],
+        tags: ['Autodesk', 'Electron', 'AI Agents', 'Agentic Workflows', 'World Labs', '3D Data', 'Product Development', 'Internship'],
+        date: '2025',
+        technicalStack: ['Electron', 'TypeScript', 'Python', 'World Labs API', 'LLMs', 'Agentic Frameworks', 'Autodesk APIs'],
+        role: 'AI & Innovation Intern',
+        duration: '2025',
+        scope: 'Product Development + Agentic AI + Research + UX Collaboration',
+        sections: {
+            overview: `Worked on Autodesk's AI and innovation team across product development and emerging technology research. The role spanned from shipping features in production software to blue-sky exploration of agentic AI capabilities within Autodesk's product ecosystem.
+
+Core areas included Electron application development, agentic workflow engineering, World Labs API integration, and customer-facing research to inform product direction.`,
+            softwareArchitecture: `Built an Electron desktop application integrating with an Autodesk product, handling cross-process communication, native OS integration, and Autodesk's internal APIs.
+
+Developed multiple agentic AI pipelines: a generative scheduling agent for production planning, permit and location agents for construction and infrastructure workflows, and script/screenplay breakdown agents that parse and structure complex documents for 3D production pipelines. Data prediction models were built on top of structured data outputs from these agents.
+
+Integrated the World Labs spatial intelligence API to explore 3D scene understanding and generation within Autodesk tooling — an early exploratory integration pushing the boundaries of what's possible in design and construction software.`,
+            results: `Delivered working Electron application features shipped within an Autodesk product. Agentic workflow prototypes were demonstrated to product managers and design leads, informing the product roadmap. Customer exploratory studies surfaced key user pain points that directly shaped feature prioritization.
+
+Collaborated across engineering, design, and product to bridge research prototypes and production-ready features. Presented findings and demos at internal reviews, receiving strong feedback on the innovation potential of the agentic pipeline work.`
+        }
+    },
+{
+        id: '29',
+        slug: 'kiwi-charge',
+        title: 'Kiwi Charge — Autonomous EV Charging Robot',
+        shortDescription: 'Autonomous mobile robot that navigates parking lots and self-connects to EVs using NACS and CCS charging standards, with custom-designed end effectors and connector flanges.',
+        fullDescription: `Kiwi Charge is an autonomous EV charging robot designed to eliminate the need for drivers to manually plug in their vehicles. The robot navigates parking environments independently, locates the vehicle's charge port, and autonomously connects and disconnects the charging connector.
+
+The system supports both NACS (Tesla standard) and CCS (Combined Charging System) connectors. A core part of the mechanical work involved designing custom end effectors and mounting flanges tailored to each connector type, enabling reliable automated mating and de-mating with real-world charge ports.`,
+        thumbnail: '/kiwi-pizza-teleop.jpg',
+        previewMedia: '/kiwi-pizza-teleop.jpg',
+        detailImages: ['/kiwi-pizza-teleop.jpg'],
+        type: ['Mechanical', 'Software', 'Electrical'],
+        tags: ['EV Charging', 'Autonomous Robot', 'NACS', 'CCS', 'CAD', 'End Effector', 'Startup'],
+        date: '2025',
+        technicalStack: ['SolidWorks', 'ROS', 'Python', 'Computer Vision', '3D Printing', 'CNC Machining'],
+        role: 'Robotics & Mechanical Engineer',
+        duration: '2025',
+        scope: 'Mechanical Design + Autonomous Navigation + Connector Engineering',
+        relatedProjects: ['30', '17'],
+        sections: {
+            overview: `Kiwi Charge addresses the last-mile friction in EV adoption: plugging in. The robot autonomously navigates to a parked vehicle, identifies the charge port using computer vision, and physically connects the appropriate charging connector — NACS or CCS — without any driver interaction.
+
+The mechanical design of the end effector and connector flange was a central engineering challenge, requiring precision tolerancing for reliable mating across real-world charge port variations and orientations.`,
+            mechanicalDesign: `Custom end effectors were designed in SolidWorks for both NACS and CCS connector standards. Each end effector integrates a force-compliant mounting flange that accommodates small misalignments during insertion — critical for real-world reliability where vehicles are never parked perfectly.
+
+The flange design uses a passive compliance mechanism (floating mount with spring preload) to absorb lateral and angular offsets. Connector retention and release mechanisms were designed for repeatable actuation by the robot arm. All components were prototyped via 3D printing and iterated against physical connector samples before transitioning to machined aluminum for production-intent parts.`,
+            results: `Successfully demonstrated autonomous connector mating with both NACS and CCS charge ports across multiple vehicle models. The end effector design achieved reliable insertion with offsets up to ±8mm lateral and ±5° angular misalignment.`
+        }
+    },
+{
+        id: '30',
+        slug: 'vla-training-isaac-lab',
+        title: 'VLA Training on Robot in Isaac Lab',
+        shortDescription: 'Training Vision-Language-Action models on a mobile manipulator robot in NVIDIA Isaac Lab for autonomous retail shelf manipulation tasks.',
+        fullDescription: `Developed a simulation pipeline in NVIDIA Isaac Lab to train Vision-Language-Action (VLA) models on a mobile manipulator robot. The environment simulates a retail grocery store setting where the robot must interpret natural language instructions and execute precise shelf manipulation tasks — picking, placing, and organizing products.
+
+The project involves environment setup, robot policy training using reinforcement and imitation learning, and domain randomization to improve sim-to-real transfer for future physical deployment.`,
+        thumbnail: '/kiwi-vla-isaaclab.jpg',
+        previewMedia: '/kiwi-vla-isaaclab.jpg',
+        detailImages: ['/kiwi-vla-isaaclab.jpg'],
+        type: ['Machine Learning', 'Software'],
+        tags: ['VLA', 'Isaac Lab', 'Isaac Sim', 'NVIDIA', 'Mobile Manipulator', 'Imitation Learning', 'Retail Robotics'],
+        date: '2025',
+        technicalStack: ['NVIDIA Isaac Lab', 'Python', 'PyTorch', 'VLA Models', 'ROS 2', 'USD', 'Reinforcement Learning'],
+        role: 'Robotics ML Engineer',
+        duration: '2025',
+        scope: 'Simulation + VLA Training + Policy Development',
+        relatedProjects: ['29', '2', '11'],
+        sections: {
+            overview: `This project builds a full training pipeline for Vision-Language-Action models within NVIDIA Isaac Lab. The simulated environment replicates a retail grocery aisle where a mobile manipulator must respond to natural language commands and execute the corresponding manipulation sequence.
+
+VLA models combine vision encoders, language understanding, and action prediction into a unified architecture, enabling generalist robot policies that can follow open-ended instructions.`,
+            softwareArchitecture: `The simulation environment is built in Isaac Lab using USD-based scene composition. The robot model (mobile base + 6-DOF arm with gripper) is imported from URDF and configured with accurate physics properties and articulation drives.
+
+Training uses a combination of imitation learning from teleoperated demonstrations and reinforcement learning for policy refinement. Domain randomization is applied to lighting, object textures, positions, and robot dynamics to improve sim-to-real transfer.`,
+            results: `Ongoing training has demonstrated the robot successfully interpreting shelf manipulation commands and executing pick-and-place sequences in simulation. Domain randomization significantly improved policy robustness across varied object placements. The pipeline is designed for eventual deployment on physical hardware for real-world retail automation tasks.`
+        }
+    },
+{
+        id: '31',
+        slug: 'quest3-teleop-pizza-robot',
+        title: 'Quest 3 Overseas Teleoperation — Pizza Making Robot',
+        shortDescription: 'Personal project: fully 3D-printed robot arm controlled remotely via Meta Quest 3 VR headset to make a pizza from overseas.',
+        fullDescription: `A personal project where I designed and 3D-printed a robot arm from scratch, then built a teleoperation system using a Meta Quest 3 VR headset to control it remotely from overseas. As a proof-of-concept, the robot was operated to complete a real-world dexterous task: making a pizza — including spreading sauce, distributing toppings, and preparing it for baking.
+
+Every structural component of the robot arm was 3D printed and assembled by hand. The system streams hand and headset pose data from the Quest 3 to the robot in real time, translating operator movements into servo commands with minimal latency over the internet.`,
+        thumbnail: '/kiwi-pizza-teleop.jpg',
+        previewMedia: '/kiwi-pizza-teleop.jpg',
+        detailImages: ['/kiwi-pizza-teleop.jpg'],
+        type: ['Software', 'Mechanical', 'Electrical'],
+        tags: ['Teleoperation', 'Meta Quest 3', 'VR', '3D Printing', 'Personal Project', 'Robot Control', 'Remote Operation'],
+        date: '2025',
+        technicalStack: ['Meta Quest 3', 'Python', '3D Printing', 'Servo Motors', 'Arduino', 'WebRTC'],
+        role: 'Designer, Builder & Systems Engineer',
+        duration: '2025',
+        scope: 'Personal Project — 3D Printed Robot + Teleoperation System + VR Interface',
+        relatedProjects: ['11', '10', '1'],
+        sections: {
+            overview: `This is a personal project built entirely from scratch. I designed and 3D-printed every structural part of the robot arm, wired all the servo motors, and wrote the full teleoperation stack. The goal was to demonstrate that a low-cost, fully 3D-printed robot arm could be controlled in real time from the other side of the world using a Meta Quest 3 headset.
+
+The pizza-making task was chosen deliberately — it requires a wide range of manipulation primitives: spreading (force compliance), grasping small objects, and precise positioning, all in an unstructured real-world environment.`,
+            mechanicalDesign: `The entire robot arm was designed and 3D printed — links, joint housings, base, and end effector. Each joint is driven by a servo motor with 3D-printed brackets and hardware inserts for rigidity. The design prioritized ease of assembly and repairability, with modular link sections that can be reprinted independently if damaged.`,
+            softwareArchitecture: `The Quest 3 client captures hand tracking and controller pose data and streams it over WebRTC to a local server on the robot's host machine. The server maps the operator's wrist and finger poses to servo target angles via inverse kinematics, then sends commands to the Arduino-based servo controller.`,
+            results: `Successfully demonstrated full overseas teleoperation — controlling the robot from a remote location to complete the pizza-making sequence end-to-end. The 3D-printed structure held up reliably throughout testing, validating that consumer VR hardware combined with a low-cost printed robot can perform meaningful dexterous tasks remotely.`
+        }
+    },
+{
         id: '14',
         slug: 'hacked-roomba',
         title: 'Hacked Roomba Autonomous Robot',
@@ -71,7 +191,7 @@ The software communicates with a host computer via serial connection, allowing f
 The platform has been used for testing various navigation algorithms and serves as an educational tool for learning robotics fundamentals. Future improvements could include SLAM integration, camera-based navigation, and ROS compatibility.`
         }
     },
-    {
+{
         id: '1',
         slug: 'asl-robotic-hand',
         title: '3D Printed ASL Robotic Hand',
@@ -112,7 +232,7 @@ Deployment was streamlined using Docker containers to ensure consistent environm
 Future improvements include expanding the gesture vocabulary, implementing bilateral hand design, and developing a standalone embedded system without requiring a computer for ML inference.`
         }
     },
-    {
+{
         id: '4',
         slug: 'battle-bot',
         title: '1lb Battle Bot',
@@ -147,383 +267,7 @@ Protection circuitry includes battery monitoring and current limiting. The radio
 Key learnings include the importance of armor geometry and the effectiveness of active weapons versus wedge-based defenses.`
         }
     },
-    {
-        id: '5',
-        slug: 'fpv-drone',
-        title: 'FPV Drone',
-        shortDescription: 'High-performance FPV drone with custom-designed parts and advanced features for an immersive flying experience.',
-        fullDescription: `Built a high-performance First-Person View (FPV) drone from scratch, featuring custom-designed and 3D-printed components. This project was sponsored by PCB Way and showcases advanced electronics integration and aerodynamic design.
-
-The drone features a custom frame designed for durability and optimal flight characteristics, integrated with high-performance motors, ESCs, and FPV camera system for immersive flying.`,
-        thumbnail: '/fpvdrone.webp',
-        previewMedia: '/fpvdrone.webp',
-        githubUrl: 'https://github.com/FPV-Drone-STM32F411/DroneController',
-        detailImages: ['/fpvdrone.webp', '/gallery/FPVDrone.webp', '/gallery/FPVDrone2.webp'],
-        type: ['Electrical', 'Mechanical'],
-        tags: ['Sponsored by PCB Way', 'FPV', 'Drones', '3D Printing', 'Electronics'],
-        date: '2023',
-        achievements: ['PCB Way Sponsorship'],
-        technicalStack: ['Beta flight', 'LiPo Batteries', 'Brushless Motors', '3D Printing'],
-        role: 'Drone Builder & Pilot',
-        duration: '2023',
-        scope: 'Mechanical Design + Electronics + Flight Control',
-        relatedProjects: ['4', '3'],
-        sections: {
-            overview: `This FPV drone project showcases custom frame design, advanced electronics integration, and aerodynamic optimization for high-performance flight. Sponsored by PCB Way, the build demonstrates professional-grade construction techniques and tuning methodologies.
-
-The quad features a custom 5-inch frame designed for freestyle flying with emphasis on durability and crash resistance. Every component was carefully selected and tuned for optimal performance.`,
-            mechanicalDesign: `The frame design prioritizes arm strength and camera protection while minimizing weight. CAD modeling in Fusion 360 allowed for stress analysis and geometry optimization. The frame uses 4mm carbon fiber arms with 3D-printed TPU camera mounts for vibration damping.
-
-The design incorporates modular components allowing quick repairs in the field. Battery placement and CG optimization ensure stable flight characteristics.`,
-            electricalDesign: `The power system uses 2306 2400KV brushless motors paired with 45A BLHeli_32 ESCs for responsive throttle control. A 4S 1500mAh LiPo provides 4-5 minute flight times. The flight controller runs Betaflight firmware with custom PIDs tuned for this specific build.
-
-FPV system includes a 600mW VTX and CMOS camera with 2.5mm lens. GPS module enables return-to-home functionality. All components are carefully routed to minimize EMI and ensure clean video feed.`,
-            results: `The completed drone achieved impressive flight performance with smooth freestyle maneuvers and stable video transmission up to 1km range. Flight times average 4.5 minutes with aggressive flying. The carbon fiber construction survived multiple crashes with minimal damage.
-
-The PCB Way sponsorship enabled professional-quality PCB fabrication for custom power distribution. Future improvements include adding HD recording capability.`
-        }
-    },
-    {
-        id: '6',
-        slug: 'ikea-skadis',
-        title: 'IKEA Skadis CAD Attachments',
-        shortDescription: 'Custom-designed 3D-printed attachments for IKEA Skadis pegboards, enhancing workspace organization and functionality.',
-        fullDescription: `Created a collection of custom 3D-printed accessories for the IKEA Skadis pegboard system. These attachments are designed to enhance workspace organization and provide specialized tool storage solutions.
-
-Each attachment is carefully designed to integrate seamlessly with the Skadis system while providing specific functionality for workshop tools, electronics, and project materials.`,
-        thumbnail: '/skadis.webp',
-        previewMedia: '/skadis.webp', // TODO: Replace with GIF/video
-        detailImages: ['/skadis.webp'], // TODO: Add more project images
-        type: ['Mechanical'],
-        tags: ['CAD', '3D Printing', 'Organization', 'Product Design'],
-        date: '2023',
-        technicalStack: ['Fusion 360', '3D Printing', 'Product Design'],
-        role: 'Product Designer',
-        duration: '2023',
-        scope: 'CAD Design + 3D Printing + Product Design',
-        relatedProjects: ['3', '4'],
-        sections: {
-            overview: `This project creates a suite of custom organizational accessories for the IKEA Skadis pegboard system. Each attachment solves a specific workspace storage challenge while maintaining compatibility with the Skadis hook system.
-
-The collection demonstrates parametric CAD design, 3D printing optimization, and user-centered product development. All designs are shared open-source for the maker community.`,
-            mechanicalDesign: `Each attachment was designed in Fusion 360 using parametric modeling to allow easy customization. The hook interface dimensions were reverse-engineered from IKEA Skadis to ensure perfect fit. Design considerations included print orientation for strength, support-free geometry, and snap-fit tolerances.
-
-The collection includes tool holders, electronics organizers, spool holders, and custom mounts for specific workshop items. Each design prioritizes functionality while maintaining a clean aesthetic that complements the Skadis system.`,
-            results: `Created over 15 different attachment designs, all successfully printed and tested. The attachments integrate seamlessly with the Skadis system and have received positive feedback from the maker community. Files have been downloaded 500+ times from Thingiverse.
-
-The project demonstrates how 3D printing enables custom storage solutions tailored to individual needs, extending the functionality of commercial products.`
-        }
-    },
-    {
-        id: '8',
-        slug: 'job-tracker-extension',
-        title: 'Job Application Tracker - Chrome Extension',
-        shortDescription: 'Chrome extension for tracking job applications with analytics, resume management, and Sankey diagram visualization.',
-        fullDescription: `Created a productivity-focused Chrome extension that helps job seekers organize and track their application process. The extension automatically captures job details from LinkedIn and other job boards, stores application data locally, and provides insightful analytics.
-
-Features include a Sankey diagram for visualizing application flow, resume upload and management, timeline tracking, and statistics dashboard. Built with modern web technologies and integrates with AI for smart job description extraction.`,
-        thumbnail: '/job-tracker.webp',
-        videoUrl: 'https://www.youtube.com/watch?v=4ywUH2kK_Z8',
-        detailImages: ['/job-tracker.webp'],
-        type: ['Software'],
-        tags: ['Chrome Extension', 'JavaScript', 'Data Visualization', 'Productivity'],
-        date: '2024',
-        githubUrl: 'https://github.com/ammarjmahmood/JobTracker',
-        technicalStack: ['JavaScript', 'Chrome Extension API', 'D3.js', 'IndexedDB', 'Gemini API'],
-        role: 'Full-Stack Developer',
-        duration: '2024',
-        scope: 'Chrome Extension + Data Visualization + AI Integration',
-        relatedProjects: ['7', '9'],
-        sections: {
-            overview: `This Chrome extension addresses the common challenge of job application tracking by automating data capture and providing insightful analytics. The tool helps job seekers stay organized, identify application bottlenecks, and optimize their job search strategy.
-
-By integrating AI-powered job description extraction and sophisticated data visualization, the extension transforms job searching from a chaotic process into a data-driven workflow.`,
-            softwareArchitecture: `The extension architecture uses Chrome Extension Manifest V3 with service workers for background processing. Job data is stored locally in IndexedDB for privacy and offline access. The popup interface is built with vanilla JavaScript and modern CSS.
-
-Key features include content scripts that extract job information from LinkedIn and other job boards, background workers that integrate with Gemini API for intelligent job description parsing, and D3.js-powered Sankey diagrams for visualizing application flow through different stages (Applied → Interview → Offer/Rejected).
-
-The resume management feature uses the FileReader API for local file handling, storing resume metadata and associating uploaded resumes with specific applications. All data remains local to the user's machine, ensuring privacy.`,
-            results: `The extension has been successfully deployed and is actively used for tracking 100+ job applications. The Sankey diagram provides instant visual feedback on application success rates and helps identify which types of roles have better response rates. Average time to log a new application reduced from 5 minutes to 30 seconds.
-
-Future improvements include integration with more job boards, automated follow-up reminders, and advanced analytics on optimal application timing.`
-        }
-    },
-    {
-        id: '9',
-        slug: 'autism-communication-tool',
-        title: 'Non-Verbal Autism Communication Tool',
-        shortDescription: 'Assistive technology hackathon project enabling non-verbal autistic individuals to communicate through an intuitive visual interface.',
-        fullDescription: `Developed during a hackathon, this assistive communication tool provides non-verbal autistic individuals with an accessible way to express their needs and thoughts. The application features a grid-based interface with customizable symbols, text-to-speech functionality, and an intuitive design.
-
-The tool allows users to quickly communicate common phrases, needs, and emotions through visual buttons. It includes customization options for caregivers to add personalized phrases and adjust the interface to individual needs.`,
-        thumbnail: '/autism-tool.webp',
-        videoUrl: 'https://www.youtube.com/watch?v=v_Y_EmeTrDs',
-        detailImages: ['/autism-tool.webp'],
-        type: ['Software'],
-        tags: ['Accessibility', 'Hackathon', 'Assistive Technology', 'React', 'Social Impact'],
-        date: '2024',
-        achievements: ['Hackathon Project'],
-        technicalStack: ['React', 'TypeScript', 'Web Speech API', 'TailwindCSS'],
-        role: 'Developer',
-        duration: '2024 (24-hour Hackathon)',
-        scope: 'Assistive Technology + Accessibility + UX Design',
-        relatedProjects: ['8', '12'],
-        sections: {
-            overview: `Developed during a 24-hour hackathon, this project addresses the communication challenges faced by non-verbal autistic individuals. The application provides an accessible, customizable communication tool that empowers users to express their needs and emotions through visual interfaces.
-
-The project demonstrates how technology can create meaningful social impact by improving quality of life for individuals with communication disabilities.`,
-            softwareArchitecture: `Built using React and TypeScript for type-safe component development. The interface features a grid-based layout displaying customizable communication cards. Each card triggers Web Speech API text-to-speech when pressed, providing audible communication.
-
-The application includes caregiver configuration modes allowing customization of card content, images, and phrases to match individual user needs. State management uses React hooks with local storage persistence. TailwindCSS provides responsive styling that works across devices.
-
-Accessibility features include high-contrast modes, large touch targets (minimum 44x44px), and simple navigation optimized for motor skill variability.`,
-            results: `The hackathon project received positive recognition for its social impact focus and practical implementation. The tool successfully demonstrated real-time communication capabilities with clear, natural-sounding speech output. User testing with accessibility consultants validated the interface design.
-
-Future development could include symbol libraries (PECS-style), user profile management, and offline functionality for use in all environments.`
-        }
-    },
-    {
-        id: '10',
-        slug: 'robot-pouring-demo',
-        title: 'Robotic Arm Pouring Demonstration',
-        shortDescription: 'Precision robotic manipulation demo featuring a robotic arm pouring liquid with computer vision guidance.',
-        fullDescription: `Developed a robotic manipulation system demonstrating precise liquid pouring using a robotic arm equipped with computer vision feedback. The system uses real-time object detection to locate the target cup and calculates the optimal pouring trajectory.
-
-The project showcases advanced robotics concepts including inverse kinematics, trajectory planning, and visual servoing. The system adapts to different cup positions and ensures controlled pouring to prevent spills.`,
-        thumbnail: '/robot pouring.webp',
-        videoUrl: 'https://www.youtube.com/watch?v=0dajAsJu7Ws',
-        detailImages: ['/robot pouring.webp'],
-        type: ['Software', 'Mechanical', 'Machine Learning'],
-        tags: ['Robotics', 'Computer Vision', 'ROS', 'Manipulation', 'Python'],
-        date: '2024',
-        technicalStack: ['Python', 'ROS', 'OpenCV', 'MoveIt', 'Robot Kinematics'],
-        role: 'Robotics Developer',
-        duration: '2024',
-        scope: 'Computer Vision + Motion Planning + Robot Control',
-        relatedProjects: ['1', '11', '2'],
-        sections: {
-            overview: `This project demonstrates advanced robotic manipulation through precise liquid pouring using vision-guided control. The system combines computer vision for target detection, inverse kinematics for motion planning, and trajectory optimization for smooth, controlled pouring movements.
-
-The demonstration showcases the integration of perception, planning, and control—three fundamental pillars of modern robotics.`,
-            softwareArchitecture: `The software stack is built on ROS (Robot Operating System) with OpenCV for computer vision and MoveIt for motion planning. The vision pipeline uses color-based segmentation to detect the target cup position and orientation in 3D space using calibrated camera parameters.
-
-Once the cup is localized, the system calculates the optimal pouring trajectory using inverse kinematics to determine joint angles for the UFactory robotic arm. MoveIt generates collision-free paths and smooth joint-space trajectories. The pouring action uses feedforward control with tilt rate adjusted based on liquid properties.
-
-The system runs in a closed-loop configuration with visual servoing allowing real-time adjustments during pouring based on cup position changes.`,
-            results: `Successfully demonstrated precise pouring with 95% success rate (liquid in cup without spills) across varied cup positions. The system adapts to cups placed within a 30cm workspace radius. Average task completion time is 8 seconds from detection to pour completion.
-
-The project validates visual servoing techniques for dynamic manipulation tasks and demonstrates the maturity of open-source robotics frameworks like ROS and MoveIt.`
-        }
-    },
-    {
-        id: '11',
-        slug: 'voice-command-robot',
-        title: 'Voice-Controlled UFactory xArm 850',
-        shortDescription: 'Voice command system for controlling industrial robot arm through natural language processing.',
-        fullDescription: `Implemented a voice-controlled interface for the UFactory xArm 850 robotic arm, enabling hands-free operation through natural language commands. The system uses speech recognition to interpret user commands and translates them into robot movements.
-
-Users can command the robot to perform pick-and-place operations, move to specific positions, and execute predefined routines using simple voice commands. The system includes safety features and command validation to ensure safe operation.`,
-        thumbnail: '/voicecommands.webp',
-        videoUrl: 'https://youtu.be/_UWGSVLbFRw',
-        detailImages: ['/voicecommands.webp'],
-        type: ['Software', 'Machine Learning'],
-        tags: ['Voice Control', 'NLP', 'Industrial Robotics', 'Python', 'Speech Recognition'],
-        date: '2024',
-        technicalStack: ['Python', 'Speech Recognition', 'UFactory SDK', 'Natural Language Processing'],
-        role: 'Robotics Developer',
-        duration: '2024',
-        scope: 'Voice Recognition + NLP + Robot Control',
-        relatedProjects: ['10', '1', '2'],
-        sections: {
-            overview: `This project enables hands-free operation of industrial robotic arms through natural language voice commands. By implementing speech recognition and natural language understanding, the system makes robotics more accessible and allows operators to multitask while controlling robotic systems.
-
-The voice interface demonstrates how intuitive human-robot interaction can improve workflow efficiency in industrial and research settings.`,
-            softwareArchitecture: `The system uses Python's SpeechRecognition library with Google Speech Recognition API for audio-to-text conversion. The natural language processing pipeline parses voice commands using pattern matching and keyword extraction to identify robot actions (move, pick, place) and parameters (positions, objects).
-
-The UFactory SDK provides low-level robot control interfacing with the xArm 850. The system maintains a state machine tracking current robot position and operation mode. Command validation ensures safety by checking workspace limits and collision possibilities before executing movements.
-
-Predefined position labels allow users to reference locations by name ("home position", "pickup zone") rather than coordinates. The system includes voice feedback confirming command interpretation before execution.`,
-            results: `Successfully demonstrated voice control for common pick-and-place operations with 90%+ command recognition accuracy in quiet environments. Response latency from voice command to robot movement initiation averages 1.5 seconds. The natural language interface reduced training time for new operators by 40% compared to traditional pendant programming.
-
-Future improvements include custom wake word activation, noise-robust recognition, and multi-robot coordination through voice commands.`
-        }
-    },
-    {
-        id: '12',
-        slug: 'vr-minecraft-webxr',
-        title: 'VR Minecraft using WebXR',
-        shortDescription: 'Virtual Reality Minecraft experience built with WebXR for browser-based VR gaming.',
-        fullDescription: `Created a VR implementation of Minecraft using WebXR technology, allowing players to experience block-building gameplay in virtual reality directly through a web browser. The project demonstrates the capabilities of WebXR for creating immersive 3D experiences without native applications.
-
-Features include VR controller support, block placement and destruction, terrain generation, and multiplayer capabilities. The web-based approach makes VR gaming more accessible without requiring dedicated VR software installations.`,
-        thumbnail: '/gallery/webxrMinecraft.webp',
-        videoUrl: 'https://youtu.be/1IPwPkCNBuI',
-        detailImages: ['/gallery/webxrMinecraft.webp'],
-        type: ['Software'],
-        tags: ['VR', 'WebXR', 'Game Development', 'JavaScript', '3D Graphics'],
-        date: '2024',
-        technicalStack: ['JavaScript', 'WebXR', 'Three.js', 'WebGL', 'VR Controllers'],
-        role: 'Game Developer',
-        duration: '2024',
-        scope: 'VR Development + 3D Graphics + WebXR',
-        relatedProjects: ['9', '8'],
-        sections: {
-            overview: `This project reimagines Minecraft in virtual reality using WebXR technology, making immersive VR gaming accessible directly through web browsers without requiring native applications. The browser-based approach dramatically lowers the barrier to entry for VR gaming, allowing anyone with a VR headset to experience block-building in virtual reality.
-
-The project demonstrates the capabilities of modern web standards for creating compelling VR experiences that rival native applications.`,
-            softwareArchitecture: `Built using Three.js for 3D rendering and WebXR Device API for VR functionality. The game implements procedural terrain generation using Perlin noise algorithms for realistic world creation. The voxel-based world uses efficient chunk management and frustum culling for performance optimization.
-
-Block placement and destruction use raycasting to detect which block the user is targeting. The VR controller input is mapped to game actions: trigger for block interaction, thumbstick for movement, and grip buttons for inventory access. Physics simulation handles player collision with blocks and gravity.
-
-The rendering pipeline uses instanced rendering for efficient drawing of thousands of identical block geometries. Texture atlasing combines all block textures into a single image to minimize draw calls. The system achieves 90 FPS required for comfortable VR experiences.`,
-            results: `Successfully demonstrated immersive VR Minecraft gameplay with smooth performance on Meta Quest 2 and other WebXR-compatible headsets. The browser-based deployment eliminates installation friction—users can start playing within seconds of visiting the URL. Frame rates maintain steady 90 FPS with render distances up to 8 chunks.
-
-The project validates WebXR as a viable platform for VR gaming and demonstrates how web technologies can deliver experiences previously requiring native development. Future improvements include multiplayer support, more block types, and crafting systems.`
-        }
-    },
-    {
-        id: '13',
-        slug: 'imu-positioning-system',
-        title: 'Offline Positioning System using IMU',
-        shortDescription: 'Indoor positioning system using Inertial Measurement Unit (IMU) sensors for GPS-denied environments.',
-        fullDescription: `Developed an offline positioning system that uses Inertial Measurement Unit (IMU) sensors to track position and orientation in GPS-denied environments. The system employs sensor fusion algorithms to combine accelerometer, gyroscope, and magnetometer data for accurate dead-reckoning navigation.
-
-The project addresses the challenge of indoor navigation where GPS signals are unavailable. It includes Kalman filtering for noise reduction and drift correction algorithms to maintain accuracy over extended periods.`,
-        thumbnail: '/offlinenagivationusingimu.webp',
-        videoUrl: 'https://youtu.be/WyOEDoJD8ZI',
-        detailImages: ['/offlinenagivationusingimu.webp'],
-        type: ['Software', 'Electrical'],
-        tags: ['IMU', 'Sensor Fusion', 'Navigation', 'Embedded Systems', 'Kalman Filter'],
-        date: '2024',
-        technicalStack: ['Python', 'Arduino', 'IMU Sensors', 'Kalman Filter', 'Data Fusion'],
-        role: 'Embedded Systems Developer',
-        duration: '2024',
-        scope: 'Sensor Fusion + Navigation Algorithms + Embedded Systems',
-        relatedProjects: ['2', '5'],
-        sections: {
-            overview: `This project tackles the challenge of accurate indoor positioning where GPS signals are unavailable. Using an Inertial Measurement Unit (IMU) with accelerometer, gyroscope, and magnetometer sensors, the system performs dead-reckoning navigation through sensor fusion algorithms.
-
-The implementation focuses on minimizing drift through advanced filtering techniques and regular calibration procedures. The system provides real-time position and orientation tracking suitable for indoor robotics, navigation aids, and location-based services.`,
-            electricalDesign: `The system uses a 9-DOF IMU sensor (MPU-9250) interfaced with an Arduino microcontroller via I2C communication. The sensor provides tri-axis accelerometer, gyroscope, and magnetometer data at 100Hz sampling rate. Power management ensures stable operation with noise filtering on the supply lines.
-
-The compact circuit design allows for integration into wearable or mobile platforms. Additional components include a battery management system for portable operation and LED indicators for system status.`,
-            softwareArchitecture: `The software implements an Extended Kalman Filter (EKF) for sensor fusion, combining accelerometer data for position estimation with gyroscope data for orientation tracking. The magnetometer provides heading reference to prevent cumulative yaw drift.
-
-The Python processing pipeline reads sensor data over serial connection, applies calibration matrices, runs the EKF algorithm, and outputs position/orientation estimates. The system includes automatic drift detection and correction mechanisms, as well as configurable noise parameters for different environments.`,
-            results: `Testing showed position accuracy within 5% error over 10-meter traversals, with orientation tracking accurate to within 2 degrees. The system successfully operated for 30+ minute sessions with minimal drift accumulation. Performance metrics demonstrate its suitability for indoor robot navigation and personal tracking applications.
-
-Future enhancements include integrating visual odometry for drift correction and implementing zero-velocity updates (ZUPT) for stationary detection.`
-        }
-    },
-    {
-        id: '15',
-        slug: 'nba-game-predictor',
-        title: 'NBA Game Outcome Predictor',
-        shortDescription: 'Machine learning model that predicts NBA game outcomes using historical team statistics, player performance data, and advanced analytics.',
-        fullDescription: `Developed a predictive model for NBA game outcomes using machine learning techniques on comprehensive basketball statistics. The system analyzes team performance metrics, player statistics, home/away advantages, and historical matchup data to forecast game winners with high accuracy.
-
-The project demonstrates data collection, feature engineering, model training, and validation using real NBA data. The model provides win probabilities and confidence scores for each prediction.`,
-        thumbnail: '/gallery/NBA Predictor.webp',
-        detailImages: ['/gallery/NBA Predictor.webp'],
-        type: ['Machine Learning', 'Software'],
-        tags: ['Machine Learning', 'Python', 'Data Science', 'Sports Analytics', 'Predictive Modeling'],
-        date: '2024',
-        technicalStack: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'NBA API'],
-        role: 'Data Scientist',
-        duration: '2024',
-        scope: 'Machine Learning + Data Analysis + Sports Analytics',
-        relatedProjects: ['16', '8'],
-        sections: {
-            overview: `This project applies machine learning to the exciting domain of sports analytics, specifically predicting NBA game outcomes. By analyzing vast amounts of historical data including team statistics, player performance metrics, and situational variables, the model learns patterns that indicate game outcomes.
-
-The system aggregates data from multiple seasons, performing feature engineering to extract meaningful predictors such as recent team form, offensive/defensive efficiency ratings, pace of play, and head-to-head history. The predictive model serves as both a practical tool and a demonstration of applied ML techniques.`,
-            softwareArchitecture: `The data pipeline begins with scraping NBA statistics using the nba_api Python library, collecting team stats, player metrics, and game results spanning multiple seasons. Raw data undergoes extensive cleaning and transformation in Pandas, handling missing values and ensuring temporal consistency.
-
-Feature engineering creates derived metrics including moving averages for recent performance (last 5/10 games), offensive/defensive ratings, rest days between games, and home court advantage factors. The feature set includes 50+ variables per matchup.
-
-Multiple ML algorithms were evaluated: Logistic Regression (baseline), Random Forest, Gradient Boosting (XGBoost), and Neural Networks. Models were trained on 70% of historical data with 30% held for testing. Hyperparameter tuning used grid search with cross-validation. The final ensemble model combines Random Forest and XGBoost predictions.
-
-The system outputs win probabilities for each team along with confidence intervals. Model performance metrics and feature importance visualizations are generated using Matplotlib and Seaborn.`,
-            results: `The final model achieved 68% prediction accuracy on test data, significantly outperforming baseline random chance (50%) and simple win-rate predictions (62%). The model performs best on games where team strength differentials are clear, achieving 78% accuracy when predicting by 10+ point margins.
-
-Feature importance analysis revealed that recent team form (last 10 games), offensive efficiency rating, and pace differential were the strongest predictors. Home court advantage contributed approximately 3-4% to win probability.
-
-The model successfully predicted 72% of playoff game outcomes, demonstrating robust performance on high-stakes matchups. Future improvements include integrating player injury data, lineup-specific statistics, and betting market odds as features.`,
-        }
-    },
-    {
-        id: '16',
-        slug: 'candy-classifier',
-        title: 'Candy Type Classifier using Computer Vision',
-        shortDescription: 'Convolutional neural network that identifies and classifies different types of candy using image recognition and deep learning.',
-        fullDescription: `Built a computer vision system that accurately classifies various candy types from images using deep learning. The project involved creating a custom dataset through image collection, training a CNN model, and deploying a user-friendly interface for real-time candy identification.
-
-The classifier recognizes multiple candy varieties with high accuracy, demonstrating practical applications of image classification in food recognition systems. The project showcases end-to-end ML pipeline from data collection to model deployment.`,
-        thumbnail: '/gallery/candy classifier.webp',
-        detailImages: ['/gallery/candy classifier.webp'],
-        type: ['Machine Learning', 'Software'],
-        tags: ['Computer Vision', 'Deep Learning', 'CNN', 'TensorFlow', 'Image Classification'],
-        date: '2024',
-        technicalStack: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Data Augmentation'],
-        role: 'ML Engineer',
-        duration: '2024',
-        scope: 'Computer Vision + Deep Learning + Dataset Creation',
-        relatedProjects: ['15', '1'],
-        sections: {
-            overview: `This project applies convolutional neural networks to the task of candy classification, combining computer vision with practical food recognition applications. The system can identify different candy types from smartphone photos, making it useful for dietary tracking, allergen detection, or inventory management.
-
-The challenge lies in handling visual variations caused by lighting conditions, angles, packaging variations, and candy shapes. The solution leverages transfer learning and extensive data augmentation to achieve robust classification performance.`,
-            softwareArchitecture: `The dataset consists of 2,000+ images across 10 candy categories, collected through web scraping and manual photography. Images were standardized to 224x224 pixels with normalization applied. Data augmentation techniques (rotation, flipping, brightness adjustment, zoom) expanded the effective training set to 10,000+ images.
-
-The model architecture uses transfer learning with MobileNetV2 as the base, pre-trained on ImageNet. The final layers were replaced with custom dense layers (256 neurons) with dropout regularization to prevent overfitting. The model uses categorical cross-entropy loss with Adam optimizer.
-
-Training employed early stopping and learning rate reduction callbacks to optimize convergence. The model was trained for 50 epochs with batch size of 32, using GPU acceleration for efficiency.
-
-The inference pipeline preprocesses input images through the same normalization pipeline, performs prediction, and outputs the top-3 most likely candy types with confidence scores. OpenCV handles image preprocessing and augmentation.`,
-            results: `The trained model achieved 92% accuracy on the validation set and 89% accuracy on real-world test images taken with various smartphones. Per-class accuracy ranged from 85% (for visually similar candies) to 97% (for distinctive shapes/colors).
-
-Confusion matrix analysis revealed that errors primarily occurred between candy types with similar packaging colors (e.g., red wrappers). The model demonstrated good generalization to candy orientations and lighting conditions not seen during training.
-
-Processing time averages 150ms per image on CPU, making it suitable for real-time mobile applications. The model size (23MB) is optimized for deployment on resource-constrained devices. Future improvements include expanding to 30+ candy types and implementing fine-grained classification for flavors within brands.`
-        }
-    },
-    {
-        id: '17',
-        slug: 'two-finger-robot-gripper',
-        title: 'Two-Finger Parallel Robot Gripper',
-        shortDescription: 'Custom-designed two-finger parallel gripper for robotic manipulation with precision machined components and servo actuation.',
-        fullDescription: `Designed and fabricated a two-finger parallel gripper for robotic arm integration. The gripper features precision-machined aluminum components, linear guide rails for smooth parallel motion, and servo-driven actuation for controlled grasping force.
-
-The design emphasizes repeatability, high grip force, and compatibility with standard robot arm mounting interfaces. The gripper successfully handles objects ranging from 10mm to 80mm in width with adjustable grip force to prevent damage to delicate items.`,
-        thumbnail: '/gallery/robotgrippertwofinger.webp',
-        detailImages: ['/gallery/robotgrippertwofinger.webp'],
-        type: ['Mechanical'],
-        tags: ['Robotics', 'CAD', 'Mechanical Design', 'Manufacturing', 'End Effector'],
-        date: '2024',
-        technicalStack: ['SolidWorks', 'CNC Machining', 'Servo Motors', 'Linear Guides'],
-        role: 'Mechanical Designer',
-        duration: '2024',
-        scope: 'Mechanical Design + Manufacturing + Integration',
-        relatedProjects: ['10', '11', '4'],
-        sections: {
-            overview: `This parallel gripper provides precise, repeatable object manipulation for robotic arms. The two-finger design offers excellent stability for cylindrical and rectangular objects while maintaining a compact footprint suitable for confined workspaces.
-
-Unlike commercial grippers, this custom design optimizes for specific task requirements including grip force range, finger spacing, and mounting compatibility. The modular design allows easy finger replacement for different gripping tasks.`,
-            mechanicalDesign: `The gripper architecture uses a rack-and-pinion mechanism driven by a servo motor. As the pinion rotates, it drives two racks in opposite directions, creating parallel jaw motion. Linear guide rails (8mm diameter) ensure precise parallel alignment throughout the grip range (10-80mm opening).
-
-The body structure is machined from 6061 aluminum for strength and lightweight construction. Gripper fingers are modular with threaded mounting points accepting custom jaw designs. Rubber padding on the standard fingers provides friction without marking delicate parts.
-
-Key design features include force sensors in each finger for grip force feedback, an ISO 9409 mounting flange for universal robot arm compatibility, and cable management channels for clean integration. The gripper weighs 450g and can exert up to 50N grip force.
-
-Finite element analysis validated structural integrity under maximum load conditions, with safety factor of 3x applied. All components were designed for CNC machining manufacturability with standard tooling.`,
-            results: `The completed gripper demonstrated excellent performance in pick-and-place applications. Repeatability testing showed position accuracy within ±0.2mm over 1000 cycles. Grip force control proved consistent across the full range (5-50N) with force sensor feedback.
-
-The gripper successfully handled diverse object geometries including cylindrical bottles, rectangular boxes, and irregular shaped components. Soft rubber fingers prevented surface damage on delicate items while maintaining secure grip.
-
-Integration with a UFactory xArm required minimal modification, using standard ISO mounting. The gripper has been reliably used for 500+ hours of operation without mechanical failures. Future enhancements include electrically actuated fingers and integrated object detection sensors.`
-        }
-    },
-    {
+{
         id: '18',
         slug: '30lb-battle-bot',
         title: '30lb Combat Robot',
@@ -569,7 +313,309 @@ The weapon motor ESC experienced overheating during one extended match, leading 
 Key lessons included the importance of redundant weapon mount fasteners and the effectiveness of titanium for impact resistance. The bot has since received upgrades including enhanced weapon teeth geometry and improved ground clearance based on competition feedback.`
         }
     },
-    {
+{
+        id: '5',
+        slug: 'fpv-drone',
+        title: 'FPV Drone',
+        shortDescription: 'High-performance FPV drone with custom-designed parts and advanced features for an immersive flying experience.',
+        fullDescription: `Built a high-performance First-Person View (FPV) drone from scratch, featuring custom-designed and 3D-printed components. This project was sponsored by PCB Way and showcases advanced electronics integration and aerodynamic design.
+
+The drone features a custom frame designed for durability and optimal flight characteristics, integrated with high-performance motors, ESCs, and FPV camera system for immersive flying.`,
+        thumbnail: '/fpvdrone.webp',
+        previewMedia: '/fpvdrone.webp',
+        githubUrl: 'https://github.com/FPV-Drone-STM32F411/DroneController',
+        detailImages: ['/fpvdrone.webp', '/gallery/FPVDrone.webp', '/gallery/FPVDrone2.webp'],
+        type: ['Electrical', 'Mechanical'],
+        tags: ['Sponsored by PCB Way', 'FPV', 'Drones', '3D Printing', 'Electronics'],
+        date: '2023',
+        achievements: ['PCB Way Sponsorship'],
+        technicalStack: ['Beta flight', 'LiPo Batteries', 'Brushless Motors', '3D Printing'],
+        role: 'Drone Builder & Pilot',
+        duration: '2023',
+        scope: 'Mechanical Design + Electronics + Flight Control',
+        relatedProjects: ['4', '3'],
+        sections: {
+            overview: `This FPV drone project showcases custom frame design, advanced electronics integration, and aerodynamic optimization for high-performance flight. Sponsored by PCB Way, the build demonstrates professional-grade construction techniques and tuning methodologies.
+
+The quad features a custom 5-inch frame designed for freestyle flying with emphasis on durability and crash resistance. Every component was carefully selected and tuned for optimal performance.`,
+            mechanicalDesign: `The frame design prioritizes arm strength and camera protection while minimizing weight. CAD modeling in Fusion 360 allowed for stress analysis and geometry optimization. The frame uses 4mm carbon fiber arms with 3D-printed TPU camera mounts for vibration damping.
+
+The design incorporates modular components allowing quick repairs in the field. Battery placement and CG optimization ensure stable flight characteristics.`,
+            electricalDesign: `The power system uses 2306 2400KV brushless motors paired with 45A BLHeli_32 ESCs for responsive throttle control. A 4S 1500mAh LiPo provides 4-5 minute flight times. The flight controller runs Betaflight firmware with custom PIDs tuned for this specific build.
+
+FPV system includes a 600mW VTX and CMOS camera with 2.5mm lens. GPS module enables return-to-home functionality. All components are carefully routed to minimize EMI and ensure clean video feed.`,
+            results: `The completed drone achieved impressive flight performance with smooth freestyle maneuvers and stable video transmission up to 1km range. Flight times average 4.5 minutes with aggressive flying. The carbon fiber construction survived multiple crashes with minimal damage.
+
+The PCB Way sponsorship enabled professional-quality PCB fabrication for custom power distribution. Future improvements include adding HD recording capability.`
+        }
+    },
+{
+        id: '10',
+        slug: 'robot-pouring-demo',
+        title: 'Robotic Arm Pouring Demonstration',
+        shortDescription: 'Precision robotic manipulation demo featuring a robotic arm pouring liquid with computer vision guidance.',
+        fullDescription: `Developed a robotic manipulation system demonstrating precise liquid pouring using a robotic arm equipped with computer vision feedback. The system uses real-time object detection to locate the target cup and calculates the optimal pouring trajectory.
+
+The project showcases advanced robotics concepts including inverse kinematics, trajectory planning, and visual servoing. The system adapts to different cup positions and ensures controlled pouring to prevent spills.`,
+        thumbnail: '/robot pouring.webp',
+        videoUrl: 'https://www.youtube.com/watch?v=0dajAsJu7Ws',
+        detailImages: ['/robot pouring.webp'],
+        type: ['Software', 'Mechanical', 'Machine Learning'],
+        tags: ['Robotics', 'Computer Vision', 'ROS', 'Manipulation', 'Python'],
+        date: '2024',
+        technicalStack: ['Python', 'ROS', 'OpenCV', 'MoveIt', 'Robot Kinematics'],
+        role: 'Robotics Developer',
+        duration: '2024',
+        scope: 'Computer Vision + Motion Planning + Robot Control',
+        relatedProjects: ['1', '11', '2'],
+        sections: {
+            overview: `This project demonstrates advanced robotic manipulation through precise liquid pouring using vision-guided control. The system combines computer vision for target detection, inverse kinematics for motion planning, and trajectory optimization for smooth, controlled pouring movements.
+
+The demonstration showcases the integration of perception, planning, and control—three fundamental pillars of modern robotics.`,
+            softwareArchitecture: `The software stack is built on ROS (Robot Operating System) with OpenCV for computer vision and MoveIt for motion planning. The vision pipeline uses color-based segmentation to detect the target cup position and orientation in 3D space using calibrated camera parameters.
+
+Once the cup is localized, the system calculates the optimal pouring trajectory using inverse kinematics to determine joint angles for the UFactory robotic arm. MoveIt generates collision-free paths and smooth joint-space trajectories. The pouring action uses feedforward control with tilt rate adjusted based on liquid properties.
+
+The system runs in a closed-loop configuration with visual servoing allowing real-time adjustments during pouring based on cup position changes.`,
+            results: `Successfully demonstrated precise pouring with 95% success rate (liquid in cup without spills) across varied cup positions. The system adapts to cups placed within a 30cm workspace radius. Average task completion time is 8 seconds from detection to pour completion.
+
+The project validates visual servoing techniques for dynamic manipulation tasks and demonstrates the maturity of open-source robotics frameworks like ROS and MoveIt.`
+        }
+    },
+{
+        id: '11',
+        slug: 'voice-command-robot',
+        title: 'Voice-Controlled UFactory xArm 850',
+        shortDescription: 'Voice command system for controlling industrial robot arm through natural language processing.',
+        fullDescription: `Implemented a voice-controlled interface for the UFactory xArm 850 robotic arm, enabling hands-free operation through natural language commands. The system uses speech recognition to interpret user commands and translates them into robot movements.
+
+Users can command the robot to perform pick-and-place operations, move to specific positions, and execute predefined routines using simple voice commands. The system includes safety features and command validation to ensure safe operation.`,
+        thumbnail: '/voicecommands.webp',
+        videoUrl: 'https://youtu.be/_UWGSVLbFRw',
+        detailImages: ['/voicecommands.webp'],
+        type: ['Software', 'Machine Learning'],
+        tags: ['Voice Control', 'NLP', 'Industrial Robotics', 'Python', 'Speech Recognition'],
+        date: '2024',
+        technicalStack: ['Python', 'Speech Recognition', 'UFactory SDK', 'Natural Language Processing'],
+        role: 'Robotics Developer',
+        duration: '2024',
+        scope: 'Voice Recognition + NLP + Robot Control',
+        relatedProjects: ['10', '1', '2'],
+        sections: {
+            overview: `This project enables hands-free operation of industrial robotic arms through natural language voice commands. By implementing speech recognition and natural language understanding, the system makes robotics more accessible and allows operators to multitask while controlling robotic systems.
+
+The voice interface demonstrates how intuitive human-robot interaction can improve workflow efficiency in industrial and research settings.`,
+            softwareArchitecture: `The system uses Python's SpeechRecognition library with Google Speech Recognition API for audio-to-text conversion. The natural language processing pipeline parses voice commands using pattern matching and keyword extraction to identify robot actions (move, pick, place) and parameters (positions, objects).
+
+The UFactory SDK provides low-level robot control interfacing with the xArm 850. The system maintains a state machine tracking current robot position and operation mode. Command validation ensures safety by checking workspace limits and collision possibilities before executing movements.
+
+Predefined position labels allow users to reference locations by name ("home position", "pickup zone") rather than coordinates. The system includes voice feedback confirming command interpretation before execution.`,
+            results: `Successfully demonstrated voice control for common pick-and-place operations with 90%+ command recognition accuracy in quiet environments. Response latency from voice command to robot movement initiation averages 1.5 seconds. The natural language interface reduced training time for new operators by 40% compared to traditional pendant programming.
+
+Future improvements include custom wake word activation, noise-robust recognition, and multi-robot coordination through voice commands.`
+        }
+    },
+{
+        id: '17',
+        slug: 'two-finger-robot-gripper',
+        title: 'Two-Finger Parallel Robot Gripper',
+        shortDescription: 'Custom-designed two-finger parallel gripper for robotic manipulation with precision machined components and servo actuation.',
+        fullDescription: `Designed and fabricated a two-finger parallel gripper for robotic arm integration. The gripper features precision-machined aluminum components, linear guide rails for smooth parallel motion, and servo-driven actuation for controlled grasping force.
+
+The design emphasizes repeatability, high grip force, and compatibility with standard robot arm mounting interfaces. The gripper successfully handles objects ranging from 10mm to 80mm in width with adjustable grip force to prevent damage to delicate items.`,
+        thumbnail: '/gallery/robotgrippertwofinger.webp',
+        detailImages: ['/gallery/robotgrippertwofinger.webp'],
+        type: ['Mechanical'],
+        tags: ['Robotics', 'CAD', 'Mechanical Design', 'Manufacturing', 'End Effector'],
+        date: '2024',
+        technicalStack: ['SolidWorks', 'CNC Machining', 'Servo Motors', 'Linear Guides'],
+        role: 'Mechanical Designer',
+        duration: '2024',
+        scope: 'Mechanical Design + Manufacturing + Integration',
+        relatedProjects: ['10', '11', '4'],
+        sections: {
+            overview: `This parallel gripper provides precise, repeatable object manipulation for robotic arms. The two-finger design offers excellent stability for cylindrical and rectangular objects while maintaining a compact footprint suitable for confined workspaces.
+
+Unlike commercial grippers, this custom design optimizes for specific task requirements including grip force range, finger spacing, and mounting compatibility. The modular design allows easy finger replacement for different gripping tasks.`,
+            mechanicalDesign: `The gripper architecture uses a rack-and-pinion mechanism driven by a servo motor. As the pinion rotates, it drives two racks in opposite directions, creating parallel jaw motion. Linear guide rails (8mm diameter) ensure precise parallel alignment throughout the grip range (10-80mm opening).
+
+The body structure is machined from 6061 aluminum for strength and lightweight construction. Gripper fingers are modular with threaded mounting points accepting custom jaw designs. Rubber padding on the standard fingers provides friction without marking delicate parts.
+
+Key design features include force sensors in each finger for grip force feedback, an ISO 9409 mounting flange for universal robot arm compatibility, and cable management channels for clean integration. The gripper weighs 450g and can exert up to 50N grip force.
+
+Finite element analysis validated structural integrity under maximum load conditions, with safety factor of 3x applied. All components were designed for CNC machining manufacturability with standard tooling.`,
+            results: `The completed gripper demonstrated excellent performance in pick-and-place applications. Repeatability testing showed position accuracy within ±0.2mm over 1000 cycles. Grip force control proved consistent across the full range (5-50N) with force sensor feedback.
+
+The gripper successfully handled diverse object geometries including cylindrical bottles, rectangular boxes, and irregular shaped components. Soft rubber fingers prevented surface damage on delicate items while maintaining secure grip.
+
+Integration with a UFactory xArm required minimal modification, using standard ISO mounting. The gripper has been reliably used for 500+ hours of operation without mechanical failures. Future enhancements include electrically actuated fingers and integrated object detection sensors.`
+        }
+    },
+{
+        id: '2',
+        slug: 'isaac-sim-robot',
+        title: 'SO Arm 101 - Isaac Sim Training',
+        shortDescription: 'Training a pick-and-place policy for the SO Arm 101 using Pi 0 VLA and Quest 3 teleoperation in NVIDIA Isaac Sim.',
+        fullDescription: `This project involves the advanced training and simulation of the SO Arm 101 robotic system within NVIDIA's Isaac Sim environment. We utilized a Pi 0 VLA to train robust pick-and-place policies, enabling the robot to handle complex manipulation tasks with high precision.
+
+A key highlight of the project was the integration of Meta Quest 3 for immersive teleoperation. By creating a custom bridge to Isaac Sim, we were able to collect high-quality demonstration data for pick-and-place operations, specifically transitioning objects from a table to a box. This data-driven approach significantly accelerated the learning process for our autonomous policies.`,
+        thumbnail: '/gallery/so-arm-101.png',
+        previewMedia: '/gallery/so-arm-101.png',
+        detailImages: ['/gallery/so-arm-101.png'],
+        type: ['Software', 'Machine Learning'],
+        tags: ['Isaac Sim', 'SO Arm 101', 'Pi 0 VLA', 'Quest 3', 'Teleoperation', 'Reinforcement Learning', 'Robotics'],
+        date: '2024',
+        technicalStack: ['Python', 'Isaac Sim', 'PyTorch', 'ROS', 'Quest 3 Bridge', 'Pi 0 VLA'],
+        role: 'AI Researcher & Developer',
+        duration: '2024',
+        scope: 'Simulation + Reinforcement Learning + Teleoperation + Data Collection',
+        relatedProjects: ['1', '14'],
+        sections: {
+            overview: `This project explores the cutting edge of sim-to-real robotics transfer using the SO Arm 101 platform and NVIDIA's Isaac Sim. By combining powerful simulation tools with immersive teleoperation, we've developed a highly efficient pipeline for training robotic manipulation policies.
+
+The work focuses on pick-and-place tasks, utilizing Pi 0 VLA for policy training and Meta Quest 3 for intuitive data collection.`,
+            softwareArchitecture: `The software stack leverages NVIDIA Isaac Sim's USD-based environment. We developed a custom bridge to interface the Meta Quest 3 with the simulator, allowing for real-time teleoperation and data logging. 
+
+Training uses the Pi 0 VLA architecture to learn pick-and-place behaviors from the collected demonstrations. The system includes domain randomization to improve the robustness of the learned policies for eventual hardware transfer.`,
+            results: `Successfully collected hundreds of demonstrations via Quest 3 teleoperation, leading to a highly reliable pick-and-place policy. The SO Arm 101 demonstrated 90%+ success rates in simulation for table-to-box transfers. The bridge proved to be a powerful tool for rapid data collection and human-in-the-loop training.`
+        }
+    },
+{
+        id: '13',
+        slug: 'imu-positioning-system',
+        title: 'Offline Positioning System using IMU',
+        shortDescription: 'Indoor positioning system using Inertial Measurement Unit (IMU) sensors for GPS-denied environments.',
+        fullDescription: `Developed an offline positioning system that uses Inertial Measurement Unit (IMU) sensors to track position and orientation in GPS-denied environments. The system employs sensor fusion algorithms to combine accelerometer, gyroscope, and magnetometer data for accurate dead-reckoning navigation.
+
+The project addresses the challenge of indoor navigation where GPS signals are unavailable. It includes Kalman filtering for noise reduction and drift correction algorithms to maintain accuracy over extended periods.`,
+        thumbnail: '/offlinenagivationusingimu.webp',
+        videoUrl: 'https://youtu.be/WyOEDoJD8ZI',
+        detailImages: ['/offlinenagivationusingimu.webp'],
+        type: ['Software', 'Electrical'],
+        tags: ['IMU', 'Sensor Fusion', 'Navigation', 'Embedded Systems', 'Kalman Filter'],
+        date: '2024',
+        technicalStack: ['Python', 'Arduino', 'IMU Sensors', 'Kalman Filter', 'Data Fusion'],
+        role: 'Embedded Systems Developer',
+        duration: '2024',
+        scope: 'Sensor Fusion + Navigation Algorithms + Embedded Systems',
+        relatedProjects: ['2', '5'],
+        sections: {
+            overview: `This project tackles the challenge of accurate indoor positioning where GPS signals are unavailable. Using an Inertial Measurement Unit (IMU) with accelerometer, gyroscope, and magnetometer sensors, the system performs dead-reckoning navigation through sensor fusion algorithms.
+
+The implementation focuses on minimizing drift through advanced filtering techniques and regular calibration procedures. The system provides real-time position and orientation tracking suitable for indoor robotics, navigation aids, and location-based services.`,
+            electricalDesign: `The system uses a 9-DOF IMU sensor (MPU-9250) interfaced with an Arduino microcontroller via I2C communication. The sensor provides tri-axis accelerometer, gyroscope, and magnetometer data at 100Hz sampling rate. Power management ensures stable operation with noise filtering on the supply lines.
+
+The compact circuit design allows for integration into wearable or mobile platforms. Additional components include a battery management system for portable operation and LED indicators for system status.`,
+            softwareArchitecture: `The software implements an Extended Kalman Filter (EKF) for sensor fusion, combining accelerometer data for position estimation with gyroscope data for orientation tracking. The magnetometer provides heading reference to prevent cumulative yaw drift.
+
+The Python processing pipeline reads sensor data over serial connection, applies calibration matrices, runs the EKF algorithm, and outputs position/orientation estimates. The system includes automatic drift detection and correction mechanisms, as well as configurable noise parameters for different environments.`,
+            results: `Testing showed position accuracy within 5% error over 10-meter traversals, with orientation tracking accurate to within 2 degrees. The system successfully operated for 30+ minute sessions with minimal drift accumulation. Performance metrics demonstrate its suitability for indoor robot navigation and personal tracking applications.
+
+Future enhancements include integrating visual odometry for drift correction and implementing zero-velocity updates (ZUPT) for stationary detection.`
+        }
+    },
+{
+        id: '24',
+        slug: 'mars-rocket-avionics',
+        title: 'MARS Rocket Avionics',
+        shortDescription: 'Custom flight controller and avionics system for high-powered rocketry, developed with the TMU MARS Rocket Team.',
+        fullDescription: `As a member of the Avionics Team at the TMU MARS Rocket Team, I worked on the design, programming, and testing of custom flight controllers for high-powered rocketry. The system was deployed in over 30 rocket launches in 2025.
+
+The project involved developing a robust avionics package capable of recording flight data, handling recovery deployment, and maintaining telemetry links over long distances.`,
+        thumbnail: '/gallery/rocket3.webp',
+        detailImages: ['/gallery/rocket3.webp', '/gallery/AmoungUSboard.webp', '/gallery/rocket1.webp'],
+        type: ['Electrical', 'Software'],
+        tags: ['Avionics', 'Embedded Systems', 'Rocketry', 'PCB Design', 'Altium', 'KiCad', 'C++'],
+        date: '2025',
+        technicalStack: ['STM32', 'C++', 'Altium', 'KiCad', 'LoRa Telemetry', 'Sensors'],
+        role: 'Avionics Team Member',
+        duration: '2025',
+        scope: 'Flight Controller + Telemetry + Testing',
+        relatedProjects: ['5', '13'],
+        sections: {
+            overview: `Designed and implemented the avionics system for the university rocketry team. The core component was a custom flight controller (affectionately named the "Among Us" board) responsible for state estimation, data logging, and parachute deployment.`,
+            electricalDesign: `The flight controller featured a custom PCB design integrating a microcontroller, IMU sensors, GPS module, and telemetry transceiver.
+            
+Key challenges included power management—specifically preventing board damage when LiPo batteries were plugged in while shorted—and ensuring signal integrity for the GPS and telemetry modules. We iterated on the design to improve robustness against electrical faults.`,
+            softwareArchitecture: `The firmware was developed to handle high-speed sensor polling and real-time state estimation. It included drivers for the IMU and GPS, as well as a robust state machine for detecting launch, apogee, and landing events.
+            
+We faced and overcame issues with IMU accuracy and GPS reliability through advanced filtering and sensor fusion algorithms.`,
+            results: `The system was successfully flown in over 30 launches. We overcame significant challenges including telemetry packet drops in hilly terrain and initial hardware failures. Through iterative testing and software filtering, we achieved reliable recovery deployment and data recovery.`
+        }
+    },
+{
+        id: '28',
+        slug: 'isaacsim-autosave',
+        title: 'Isaac Sim Autosave Extension',
+        shortDescription: 'Open-source productivity tool for NVIDIA Isaac Sim that automatically saves progress and prevents data loss.',
+        fullDescription: `Isaac Sim Autosave is an open-source extension developed for the NVIDIA Isaac Sim robotics simulation platform. It addresses a common pain point for developers by providing automated saving functionality for USD stages, ensuring that hours of simulation setup are never lost due to crashes or power failures.
+
+The tool is designed to be lightweight and non-intrusive, operating in the background while developers focus on their robotics and AI research.`,
+        thumbnail: '/gallery/isaacsim_autosave.png',
+        detailImages: ['/gallery/isaacsim_autosave.png'],
+        type: ['Software'],
+        tags: ['Isaac Sim', 'NVIDIA', 'Python', 'Open Source', 'Robotics'],
+        date: '2024',
+        githubUrl: 'https://github.com/ammarjmahmood/isaacsim_autosave',
+        technicalStack: ['Python', 'NVIDIA Omniverse Kit', 'USD'],
+        role: 'Creator & Maintainer',
+        duration: '2024',
+        scope: 'Robotics Simulation Tooling + Open Source',
+        sections: {
+            overview: `Simulation environments can be notoriously unstable when working with complex robotics scenes. This extension was born out of personal necessity to protect work-in-progress simulation stages in Isaac Sim, and was later released to the community as an open-source tool.`,
+            softwareArchitecture: `Built using the NVIDIA Omniverse Kit extension system, the tool hooks into the application's update loop to monitor changes and trigger saves at configurable intervals. It interacts directly with the USD (Universal Scene Description) API to perform safe, background saves.`,
+            results: `The extension has been widely adopted by the Isaac Sim community on GitHub, helping many researchers and engineers avoid data loss and improve their daily simulation workflow.`
+        }
+    },
+{
+        id: '26',
+        slug: 'healthsync',
+        title: 'HealthSync iOS App',
+        shortDescription: 'Comprehensive iOS health and fitness application tracking steps, water intake, and active calories with a modern UI.',
+        fullDescription: `HealthSync is a modern iOS application designed to help users track their daily health and fitness metrics seamlessly. The app provides real-time tracking of steps, water consumption, and active calorie burn, presenting the data in a clean, intuitive interface.
+
+Built with native iOS technologies, HealthSync integrates deeply with the iOS ecosystem, offering widgets and a responsive design that keeps health data at the user's fingertips.`,
+        thumbnail: '/gallery/healthsync.png',
+        detailImages: ['/gallery/healthsync.png'],
+        type: ['Software'],
+        tags: ['iOS', 'Swift', 'HealthKit', 'Mobile App', 'Fitness'],
+        date: '2025',
+        liveUrl: 'https://apps.apple.com/ca/app/healthsync/id6759500944',
+        technicalStack: ['Swift', 'SwiftUI', 'HealthKit', 'WidgetKit'],
+        role: 'iOS Developer',
+        duration: '2025',
+        scope: 'Native Mobile Development + Health Data Integration',
+        sections: {
+            overview: `HealthSync was developed to provide a unified dashboard for the most critical daily health metrics. By focusing on steps, hydration, and activity, the app helps users maintain a healthy lifestyle through clear visual feedback and goal tracking.`,
+            softwareArchitecture: `The app is built using SwiftUI for a modern, reactive user interface. It leverages Apple's HealthKit framework to securely access and contribute to the user's health data. The architecture follows the MVVM pattern, ensuring a clean separation between data logic and UI presentation.`,
+            results: `HealthSync successfully launched on the iOS App Store, providing users with a reliable tool for daily health monitoring. The integration of home screen widgets has significantly increased user engagement by making health data accessible without opening the app.`
+        }
+    },
+{
+        id: '27',
+        slug: 'issh',
+        title: 'iSSH - Pro SSH Client',
+        shortDescription: 'Powerful iOS SSH client featuring network scanning, persistent sessions, and integrated AI assistant for developers.',
+        fullDescription: `iSSH is a professional-grade SSH client for iOS, built for developers and system administrators who need reliable remote access on the go. It goes beyond simple terminal emulation by offering built-in network scanning, session persistence with tmux integration, and an innovative AI assistant.
+
+The app supports multiple AI models (Claude, Gemini, OpenAI) to help users debug scripts, generate commands, and manage remote servers more efficiently.`,
+        thumbnail: '/gallery/issh.png',
+        detailImages: ['/gallery/issh.png'],
+        type: ['Software'],
+        tags: ['iOS', 'SSH', 'Networking', 'Developer Tools', 'AI Integration'],
+        date: '2025',
+        liveUrl: 'https://apps.apple.com/ca/app/issh/id6759501444',
+        technicalStack: ['Swift', 'SwiftUI', 'SSH', 'AI APIs', 'tmux'],
+        role: 'Lead Developer',
+        duration: '2025',
+        scope: 'Native Mobile Development + Network Engineering + AI Integration',
+        sections: {
+            overview: `The goal of iSSH was to create the most productive remote management tool for iOS. By integrating essential networking tools like port forwarding and network scanning with modern AI capabilities, iSSH transforms the mobile terminal experience into a powerful dev environment.`,
+            softwareArchitecture: `iSSH features a custom terminal emulator built for low latency and high compatibility. The backend handles encrypted SSH connections and persistent background sessions. The AI integration uses a modular provider system, allowing users to connect their own API keys for various LLM models.`,
+            results: `iSSH has become a top-rated tool in the Developer Tools category on the App Store, praised for its stability and the unique productivity boost provided by the integrated AI assistant.`
+        }
+    },
+{
         id: '19',
         slug: 'smart-safe',
         title: 'Smart Safe with Biometric & Voice Control',
@@ -622,7 +668,382 @@ The project demonstrates practical IoT security applications and received positi
 **Secondary video** showcasing the 3D design and assembly: https://youtu.be/1QEjZAZJ12g`
         }
     },
-    {
+{
+        id: '23',
+        slug: 'knee-brace-recovery',
+        title: 'Knee Brace Recovery Device',
+        shortDescription: 'Mechanical recovery device designed to aid post-surgery knee rehabilitation, developed in collaboration with a startup.',
+        fullDescription: `Designed and prototyped a mechanical knee brace to assist patients recovering from knee surgery. This project was driven by a personal connection to a close friend's recovery journey, aiming to improve upon existing rehabilitation tools. This is the second iteration (V2) of the design, focusing on enhanced comfort, adjustable tension, and ease of use.
+        
+The device was developed in collaboration with a startup to address specific pain points in current recovery methods. The design includes a novel folding mechanism (demonstrated in the "Knee 3" prototype) allowing the brace to fit compactly into suitcases for travel.`,
+        thumbnail: '/gallery/kneebracedesign.webp',
+        liveUrl: 'https://docs.google.com/document/d/1Kafr3DGXgkPG0eHfMQrDlj_wAlwApKt7SJ6aq1e55r8/edit?usp=sharing',
+        detailImages: ['/gallery/kneebracedesign.webp', '/gallery/knee2.webp', '/gallery/knee3.webp', '/gallery/knee5.webp'],
+        type: ['Mechanical'],
+        tags: ['Medical Device', 'SolidWorks', 'Product Design', 'Startup', 'Prototyping'],
+        date: '2024',
+        technicalStack: ['SolidWorks', '3D Printing', 'Mechanical Analysis', 'Prototyping'],
+        role: 'Mechanical Designer',
+        duration: '2024',
+        scope: 'Product Design + Prototyping',
+        relatedProjects: ['5', '1'],
+        sections: {
+            overview: `This project focuses on the development of a specialized knee brace for post-surgery rehabilitation. The initiative began as a challenge with a startup to create a more effective recovery device.
+            
+The project holds deep personal significance as it was inspired by my best friend's experience undergoing two knee surgeries and struggling with multiple existing recovery tools. This drove the design philosophy to prioritize patient comfort and practical usability alongside clinical efficacy.`,
+            mechanicalDesign: `The design features a custom hinge mechanism that allows for controlled range of motion, essential for progressive rehabilitation. The brace structure was modeled in SolidWorks with a focus on ergonomics and structural integrity.
+            
+A key innovation in this iteration is the folding mechanism, designed to make the device portable for patients who need to travel. The "Knee 3" prototype demonstrates this capability, folding down to a compact size suitable for standard luggage. 3D printing was used extensively for rapid prototyping to test fit and function.`
+        }
+    },
+{
+        id: '6',
+        slug: 'ikea-skadis',
+        title: 'IKEA Skadis CAD Attachments',
+        shortDescription: 'Custom-designed 3D-printed attachments for IKEA Skadis pegboards, enhancing workspace organization and functionality.',
+        fullDescription: `Created a collection of custom 3D-printed accessories for the IKEA Skadis pegboard system. These attachments are designed to enhance workspace organization and provide specialized tool storage solutions.
+
+Each attachment is carefully designed to integrate seamlessly with the Skadis system while providing specific functionality for workshop tools, electronics, and project materials.`,
+        thumbnail: '/skadis.webp',
+        previewMedia: '/skadis.webp', // TODO: Replace with GIF/video
+        detailImages: ['/skadis.webp'], // TODO: Add more project images
+        type: ['Mechanical'],
+        tags: ['CAD', '3D Printing', 'Organization', 'Product Design'],
+        date: '2023',
+        technicalStack: ['Fusion 360', '3D Printing', 'Product Design'],
+        role: 'Product Designer',
+        duration: '2023',
+        scope: 'CAD Design + 3D Printing + Product Design',
+        relatedProjects: ['3', '4'],
+        sections: {
+            overview: `This project creates a suite of custom organizational accessories for the IKEA Skadis pegboard system. Each attachment solves a specific workspace storage challenge while maintaining compatibility with the Skadis hook system.
+
+The collection demonstrates parametric CAD design, 3D printing optimization, and user-centered product development. All designs are shared open-source for the maker community.`,
+            mechanicalDesign: `Each attachment was designed in Fusion 360 using parametric modeling to allow easy customization. The hook interface dimensions were reverse-engineered from IKEA Skadis to ensure perfect fit. Design considerations included print orientation for strength, support-free geometry, and snap-fit tolerances.
+
+The collection includes tool holders, electronics organizers, spool holders, and custom mounts for specific workshop items. Each design prioritizes functionality while maintaining a clean aesthetic that complements the Skadis system.`,
+            results: `Created over 15 different attachment designs, all successfully printed and tested. The attachments integrate seamlessly with the Skadis system and have received positive feedback from the maker community. Files have been downloaded 500+ times from Thingiverse.
+
+The project demonstrates how 3D printing enables custom storage solutions tailored to individual needs, extending the functionality of commercial products.`
+        }
+    },
+{
+        id: '3',
+        slug: 'ridge-wallet-clone',
+        title: 'Ridge Wallet Clone',
+        shortDescription: 'A 3D-printed clone of the popular Ridge Wallet, designed for durability and minimalism.',
+        fullDescription: `Reverse-engineered and redesigned the popular Ridge Wallet using CAD software and 3D printing technology. The project focused on understanding the mechanical design principles that make the original wallet functional while optimizing for 3D printing manufacturing.
+
+The design incorporates precision tolerances for the sliding mechanism and material selection for durability. This project showcases CAD design skills and understanding of manufacturing constraints.`,
+        thumbnail: '/RidgeClone.webp',
+        previewMedia: '/RidgeClone.webp', // TODO: Replace with GIF/video
+        detailImages: ['/RidgeClone.webp'], // TODO: Add more project images
+        type: ['Mechanical'],
+        tags: ['3D Printing', 'CAD', 'Product Design'],
+        date: '2023',
+        technicalStack: ['SolidWorks', 'Fusion 360', '3D Printing'],
+        role: 'Product Designer',
+        duration: '2023',
+        scope: 'CAD Design + 3D Printing + Product Engineering',
+        relatedProjects: ['4', '6'],
+        sections: {
+            overview: `This reverse-engineering project deconstructs the popular Ridge Wallet to understand its clever mechanical design and recreate it using 3D printing technology. The challenge lies in achieving the same slim profile, smooth sliding action, and robust construction using additive manufacturing instead of the original machined aluminum.
+
+The project demonstrates product design thinking, tolerance analysis, and material science considerations specific to 3D printing.`,
+            mechanicalDesign: `The wallet design features a clever sliding mechanism with precision tolerance requirements. Key mechanisms include card retention clips, money clip integration, and the primary sliding plate mechanism. Each component was redesigned in SolidWorks with 3D printing constraints in mind.
+
+Critical design considerations included layer orientation for strength, living hinge design for the clip, and tolerance compensation for FDM printing (typically +0.2mm clearances). The design uses minimal support structures and can be printed on standard FDM printers. Material choice settled on PLA+ for its strength and smooth surface finish.`,
+            results: `The final 3D-printed wallet successfully replicates the core functionality of the Ridge Wallet at a fraction of the cost. The sliding mechanism operates smoothly, and card retention is secure. Weight is comparable to the aluminum original.
+
+Print time is approximately 4 hours. The project demonstrated that functional product clones are achievable with consumer 3D printing when design principles are properly adapted.`
+        }
+    },
+{
+        id: 'paper-1',
+        slug: 'arrc-paper',
+        title: 'ARRC: Advanced Reasoning Robot Control',
+        shortDescription: 'Knowledge-Driven Autonomous Manipulation Using Retrieval-Augmented Generation.',
+        fullDescription: `ARRC: Advanced Reasoning Robot Control—Knowledge-Driven Autonomous Manipulation Using Retrieval-Augmented Generation.
+
+Abstract— We present ARRC (advanced reasoning robot control), a practical system that connects natural language instructions to safe, local robotic control by combining Retrieval-Augmented Generation (RAG) with RGB–D perception and guarded execution on an affordable robot arm. The system indexes curated robot knowledge (movement patterns, task templates, and safety heuristics) in a vector database, retrieves task-relevant context for each instruction, and conditions a large language model (LLM) to synthesize JSON-structured action plans.
+
+These plans are executed on a UFactory xArm 850 fitted with a Dynamixel-driven parallel gripper and an Intel RealSense D435 camera. Perception uses AprilTags detections fused with depth to produce object-centric metric poses; execution is enforced via a set of software safety gates (workspace bounds, speed/force caps, timeouts, and bounded retries). We describe the architecture, knowledge design, integration choices, and a reproducible evaluation protocol for tabletop scan/approach/pick–place tasks. Experimental results are reported to demonstrate efficacy of the proposed approach. Our design shows that RAG-based planning can substantially improve plan validity and adaptability while keeping perception and low-level control local to the robot.`,
+        thumbnail: '/gallery/arrc_thumbnail.webp',
+        detailImages: ['/gallery/arrc_thumbnail.webp'],
+        type: ['Publications', 'Machine Learning'],
+        tags: ['Research Paper', 'RAG', 'LLM', 'Robotics', 'Autonomous Manipulation'],
+        date: '2025',
+        liveUrl: 'https://arxiv.org/abs/2510.05547',
+        learnMoreUrl: 'https://arrc-eight.vercel.app/',
+        technicalStack: ['RAG', 'LLM', 'Robotics', 'Python', 'Machine Learning'],
+        role: 'Researcher',
+        duration: '2025',
+        scope: 'Research + Robotics + AI',
+        sections: {
+            overview: `We bridge the gap between high-level reasoning and low-level control by introducing ARRC (Advanced Reasoning Robot Control). This RAG-enabled robotic manipulation pipeline unifies perception, retrieval, and safe plan execution.
+
+We deploy this system on a UFactory xArm 850 equipped with a RealSense D435 and a Dynamixel gripper, integrating retrieval of robot-centric safety heuristics and procedural templates at inference time. This design offers both adaptability and reliability, enabling the injection of new task knowledge or safety rules without retraining.`,
+            softwareArchitecture: `The system architecture consists of three main components:
+
+1. Perception: AprilTags combined with depth data from an Intel RealSense D435 provide marker-based detections fused to recover metric 3D poses in the robot frame.
+
+2. Retrieval & Planning: A curated robotics knowledge base (movement primitives, templates, safety heuristics) is embedded and indexed. At inference time, relevant context is retrieved and passed to an LLM to generate structured JSON plans.
+
+3. Execution: JSON plans are validated and executed via the XArm Python SDK. Execution is safeguarded by software safety gates, including workspace limits, speed caps, and gripper torque gating.`,
+            results: `We benchmarked the system on tabletop manipulation tasks (scan, approach, pick–place).
+
+Plan Validity: 80% success rate in generating valid, executable paths.
+
+Approach Accuracy: 87.1% average accuracy in placing the gripper in the vicinity of the object.
+
+Pick & Place: 80% success rate in full manipulation tasks.
+
+Adaptability: The system demonstrated advanced reasoning by automatically transitioning scanning strategies (from horizontal to arc scan) when objects were occluded, successfully recovering and completing the task.`
+        }
+    },
+{
+        id: 'paper-2',
+        slug: 'robust-visual-embodiment',
+        title: 'Robust Visual Embodiment',
+        shortDescription: 'How Robots Discover Their Bodies in Real Environments: A study on visual self-modeling robustness.',
+        fullDescription: `Robust Visual Embodiment: How Robots Discover Their Bodies in Real Environments.
+
+Abstract— Robots with internal visual self-models promise unprecedented adaptability, yet existing autonomous modeling pipelines remain fragile under realistic sensing conditions such as noisy imagery and cluttered backgrounds. This paper presents the first systematic study quantifying how visual degradations—including blur, salt-and-pepper noise, and Gaussian noise—affect robotic self-modeling. Through both simulation and physical experiments, we demonstrate their impact on morphology prediction, trajectory planning, and damage recovery in state-of-the-art pipelines.
+
+To overcome these challenges, we introduce a task-aware denoising framework that couples classical restoration with morphology-preserving constraints, ensuring retention of structural cues critical for self-modeling. In addition, we integrate semantic segmentation to robustly isolate robots from cluttered and colorful scenes. Extensive experiments show that our approach restores near-baseline performance across simulated and physical platforms, while existing pipelines degrade significantly. These contributions advance the robustness of visual self-modeling and establish practical foundations for deploying self-aware robots in unpredictable real-world environments.`,
+        thumbnail: '/gallery/paper11.webp',
+        detailImages: ['/gallery/paper11.webp'],
+        type: ['Publications', 'Machine Learning'],
+        tags: ['Research Paper', 'Computer Vision', 'Self-Modeling', 'Robotics', 'Denoising'],
+        date: '2025',
+        liveUrl: 'https://arxiv.org/pdf/2510.03677',
+        learnMoreUrl: 'https://robot-visual-embodiment.vercel.app/',
+        technicalStack: ['Computer Vision', 'Deep Learning', 'Robotics', 'Python', 'Semantic Segmentation'],
+        role: 'Researcher',
+        duration: '2025',
+        scope: 'Research + Computer Vision + Robotics',
+        sections: {
+            overview: `Self-supervised robotic self-modeling enables machines to autonomously infer their morphology and kinematics directly from visual data. However, existing approaches often fail in realistic conditions with visual noise and cluttered backgrounds. This paper addresses these limitations by introducing a robust visual embodiment framework.`,
+            softwareArchitecture: `The proposed pipeline integrates a task-aware denoising framework with semantic segmentation. 
+            
+1. Semantic Segmentation: Uses a deep convolutional network to isolate the robot from complex backgrounds, overcoming the limitations of color-based segmentation.
+2. Task-Aware Denoising: Combines Wiener filtering (for blur), Median filtering (for salt-and-pepper noise), and Non-Local Means with Intuitionistic Fuzzy Twin SVM (for Gaussian noise) to restore image quality while preserving morphological features.
+3. Self-Modeling Engine: Feeds the processed visual data into the FFKSM framework to reconstruct the robot's kinematic model.`,
+            results: `Extensive experiments on both simulated and physical robots demonstrated that the proposed framework significantly improves robustness.
+            
+- Segmentation: Achieved over 4x improvement in IoU and F1-score compared to baseline methods in cluttered environments.
+- Morphology Reconstruction: Restored near-baseline accuracy in morphology prediction even under severe noise conditions where standard pipelines failed.
+- Real-World Validation: Validated on a custom 3D-printed 4-DOF manipulator, proving the system's effectiveness in real-world scenarios.`
+        }
+    },
+{
+        id: '8',
+        slug: 'job-tracker-extension',
+        title: 'Job Application Tracker - Chrome Extension',
+        shortDescription: 'Chrome extension for tracking job applications with analytics, resume management, and Sankey diagram visualization.',
+        fullDescription: `Created a productivity-focused Chrome extension that helps job seekers organize and track their application process. The extension automatically captures job details from LinkedIn and other job boards, stores application data locally, and provides insightful analytics.
+
+Features include a Sankey diagram for visualizing application flow, resume upload and management, timeline tracking, and statistics dashboard. Built with modern web technologies and integrates with AI for smart job description extraction.`,
+        thumbnail: '/job-tracker.webp',
+        videoUrl: 'https://www.youtube.com/watch?v=4ywUH2kK_Z8',
+        detailImages: ['/job-tracker.webp'],
+        type: ['Software'],
+        tags: ['Chrome Extension', 'JavaScript', 'Data Visualization', 'Productivity'],
+        date: '2024',
+        githubUrl: 'https://github.com/ammarjmahmood/JobTracker',
+        technicalStack: ['JavaScript', 'Chrome Extension API', 'D3.js', 'IndexedDB', 'Gemini API'],
+        role: 'Full-Stack Developer',
+        duration: '2024',
+        scope: 'Chrome Extension + Data Visualization + AI Integration',
+        relatedProjects: ['7', '9'],
+        sections: {
+            overview: `This Chrome extension addresses the common challenge of job application tracking by automating data capture and providing insightful analytics. The tool helps job seekers stay organized, identify application bottlenecks, and optimize their job search strategy.
+
+By integrating AI-powered job description extraction and sophisticated data visualization, the extension transforms job searching from a chaotic process into a data-driven workflow.`,
+            softwareArchitecture: `The extension architecture uses Chrome Extension Manifest V3 with service workers for background processing. Job data is stored locally in IndexedDB for privacy and offline access. The popup interface is built with vanilla JavaScript and modern CSS.
+
+Key features include content scripts that extract job information from LinkedIn and other job boards, background workers that integrate with Gemini API for intelligent job description parsing, and D3.js-powered Sankey diagrams for visualizing application flow through different stages (Applied → Interview → Offer/Rejected).
+
+The resume management feature uses the FileReader API for local file handling, storing resume metadata and associating uploaded resumes with specific applications. All data remains local to the user's machine, ensuring privacy.`,
+            results: `The extension has been successfully deployed and is actively used for tracking 100+ job applications. The Sankey diagram provides instant visual feedback on application success rates and helps identify which types of roles have better response rates. Average time to log a new application reduced from 5 minutes to 30 seconds.
+
+Future improvements include integration with more job boards, automated follow-up reminders, and advanced analytics on optimal application timing.`
+        }
+    },
+{
+        id: '9',
+        slug: 'autism-communication-tool',
+        title: 'Non-Verbal Autism Communication Tool',
+        shortDescription: 'Assistive technology hackathon project enabling non-verbal autistic individuals to communicate through an intuitive visual interface.',
+        fullDescription: `Developed during a hackathon, this assistive communication tool provides non-verbal autistic individuals with an accessible way to express their needs and thoughts. The application features a grid-based interface with customizable symbols, text-to-speech functionality, and an intuitive design.
+
+The tool allows users to quickly communicate common phrases, needs, and emotions through visual buttons. It includes customization options for caregivers to add personalized phrases and adjust the interface to individual needs.`,
+        thumbnail: '/autism-tool.webp',
+        videoUrl: 'https://www.youtube.com/watch?v=v_Y_EmeTrDs',
+        detailImages: ['/autism-tool.webp'],
+        type: ['Software'],
+        tags: ['Accessibility', 'Hackathon', 'Assistive Technology', 'React', 'Social Impact'],
+        date: '2024',
+        achievements: ['Hackathon Project'],
+        technicalStack: ['React', 'TypeScript', 'Web Speech API', 'TailwindCSS'],
+        role: 'Developer',
+        duration: '2024 (24-hour Hackathon)',
+        scope: 'Assistive Technology + Accessibility + UX Design',
+        relatedProjects: ['8', '12'],
+        sections: {
+            overview: `Developed during a 24-hour hackathon, this project addresses the communication challenges faced by non-verbal autistic individuals. The application provides an accessible, customizable communication tool that empowers users to express their needs and emotions through visual interfaces.
+
+The project demonstrates how technology can create meaningful social impact by improving quality of life for individuals with communication disabilities.`,
+            softwareArchitecture: `Built using React and TypeScript for type-safe component development. The interface features a grid-based layout displaying customizable communication cards. Each card triggers Web Speech API text-to-speech when pressed, providing audible communication.
+
+The application includes caregiver configuration modes allowing customization of card content, images, and phrases to match individual user needs. State management uses React hooks with local storage persistence. TailwindCSS provides responsive styling that works across devices.
+
+Accessibility features include high-contrast modes, large touch targets (minimum 44x44px), and simple navigation optimized for motor skill variability.`,
+            results: `The hackathon project received positive recognition for its social impact focus and practical implementation. The tool successfully demonstrated real-time communication capabilities with clear, natural-sounding speech output. User testing with accessibility consultants validated the interface design.
+
+Future development could include symbol libraries (PECS-style), user profile management, and offline functionality for use in all environments.`
+        }
+    },
+{
+        id: '12',
+        slug: 'vr-minecraft-webxr',
+        title: 'VR Minecraft using WebXR',
+        shortDescription: 'Virtual Reality Minecraft experience built with WebXR for browser-based VR gaming.',
+        fullDescription: `Created a VR implementation of Minecraft using WebXR technology, allowing players to experience block-building gameplay in virtual reality directly through a web browser. The project demonstrates the capabilities of WebXR for creating immersive 3D experiences without native applications.
+
+Features include VR controller support, block placement and destruction, terrain generation, and multiplayer capabilities. The web-based approach makes VR gaming more accessible without requiring dedicated VR software installations.`,
+        thumbnail: '/gallery/webxrMinecraft.webp',
+        videoUrl: 'https://youtu.be/1IPwPkCNBuI',
+        detailImages: ['/gallery/webxrMinecraft.webp'],
+        type: ['Software'],
+        tags: ['VR', 'WebXR', 'Game Development', 'JavaScript', '3D Graphics'],
+        date: '2024',
+        technicalStack: ['JavaScript', 'WebXR', 'Three.js', 'WebGL', 'VR Controllers'],
+        role: 'Game Developer',
+        duration: '2024',
+        scope: 'VR Development + 3D Graphics + WebXR',
+        relatedProjects: ['9', '8'],
+        sections: {
+            overview: `This project reimagines Minecraft in virtual reality using WebXR technology, making immersive VR gaming accessible directly through web browsers without requiring native applications. The browser-based approach dramatically lowers the barrier to entry for VR gaming, allowing anyone with a VR headset to experience block-building in virtual reality.
+
+The project demonstrates the capabilities of modern web standards for creating compelling VR experiences that rival native applications.`,
+            softwareArchitecture: `Built using Three.js for 3D rendering and WebXR Device API for VR functionality. The game implements procedural terrain generation using Perlin noise algorithms for realistic world creation. The voxel-based world uses efficient chunk management and frustum culling for performance optimization.
+
+Block placement and destruction use raycasting to detect which block the user is targeting. The VR controller input is mapped to game actions: trigger for block interaction, thumbstick for movement, and grip buttons for inventory access. Physics simulation handles player collision with blocks and gravity.
+
+The rendering pipeline uses instanced rendering for efficient drawing of thousands of identical block geometries. Texture atlasing combines all block textures into a single image to minimize draw calls. The system achieves 90 FPS required for comfortable VR experiences.`,
+            results: `Successfully demonstrated immersive VR Minecraft gameplay with smooth performance on Meta Quest 2 and other WebXR-compatible headsets. The browser-based deployment eliminates installation friction—users can start playing within seconds of visiting the URL. Frame rates maintain steady 90 FPS with render distances up to 8 chunks.
+
+The project validates WebXR as a viable platform for VR gaming and demonstrates how web technologies can deliver experiences previously requiring native development. Future improvements include multiplayer support, more block types, and crafting systems.`
+        }
+    },
+{
+        id: '15',
+        slug: 'nba-game-predictor',
+        title: 'NBA Game Outcome Predictor',
+        shortDescription: 'Machine learning model that predicts NBA game outcomes using historical team statistics, player performance data, and advanced analytics.',
+        fullDescription: `Developed a predictive model for NBA game outcomes using machine learning techniques on comprehensive basketball statistics. The system analyzes team performance metrics, player statistics, home/away advantages, and historical matchup data to forecast game winners with high accuracy.
+
+The project demonstrates data collection, feature engineering, model training, and validation using real NBA data. The model provides win probabilities and confidence scores for each prediction.`,
+        thumbnail: '/gallery/NBA Predictor.webp',
+        detailImages: ['/gallery/NBA Predictor.webp'],
+        type: ['Machine Learning', 'Software'],
+        tags: ['Machine Learning', 'Python', 'Data Science', 'Sports Analytics', 'Predictive Modeling'],
+        date: '2024',
+        technicalStack: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'NBA API'],
+        role: 'Data Scientist',
+        duration: '2024',
+        scope: 'Machine Learning + Data Analysis + Sports Analytics',
+        relatedProjects: ['16', '8'],
+        sections: {
+            overview: `This project applies machine learning to the exciting domain of sports analytics, specifically predicting NBA game outcomes. By analyzing vast amounts of historical data including team statistics, player performance metrics, and situational variables, the model learns patterns that indicate game outcomes.
+
+The system aggregates data from multiple seasons, performing feature engineering to extract meaningful predictors such as recent team form, offensive/defensive efficiency ratings, pace of play, and head-to-head history. The predictive model serves as both a practical tool and a demonstration of applied ML techniques.`,
+            softwareArchitecture: `The data pipeline begins with scraping NBA statistics using the nba_api Python library, collecting team stats, player metrics, and game results spanning multiple seasons. Raw data undergoes extensive cleaning and transformation in Pandas, handling missing values and ensuring temporal consistency.
+
+Feature engineering creates derived metrics including moving averages for recent performance (last 5/10 games), offensive/defensive ratings, rest days between games, and home court advantage factors. The feature set includes 50+ variables per matchup.
+
+Multiple ML algorithms were evaluated: Logistic Regression (baseline), Random Forest, Gradient Boosting (XGBoost), and Neural Networks. Models were trained on 70% of historical data with 30% held for testing. Hyperparameter tuning used grid search with cross-validation. The final ensemble model combines Random Forest and XGBoost predictions.
+
+The system outputs win probabilities for each team along with confidence intervals. Model performance metrics and feature importance visualizations are generated using Matplotlib and Seaborn.`,
+            results: `The final model achieved 68% prediction accuracy on test data, significantly outperforming baseline random chance (50%) and simple win-rate predictions (62%). The model performs best on games where team strength differentials are clear, achieving 78% accuracy when predicting by 10+ point margins.
+
+Feature importance analysis revealed that recent team form (last 10 games), offensive efficiency rating, and pace differential were the strongest predictors. Home court advantage contributed approximately 3-4% to win probability.
+
+The model successfully predicted 72% of playoff game outcomes, demonstrating robust performance on high-stakes matchups. Future improvements include integrating player injury data, lineup-specific statistics, and betting market odds as features.`,
+        }
+    },
+{
+        id: '16',
+        slug: 'candy-classifier',
+        title: 'Candy Type Classifier using Computer Vision',
+        shortDescription: 'Convolutional neural network that identifies and classifies different types of candy using image recognition and deep learning.',
+        fullDescription: `Built a computer vision system that accurately classifies various candy types from images using deep learning. The project involved creating a custom dataset through image collection, training a CNN model, and deploying a user-friendly interface for real-time candy identification.
+
+The classifier recognizes multiple candy varieties with high accuracy, demonstrating practical applications of image classification in food recognition systems. The project showcases end-to-end ML pipeline from data collection to model deployment.`,
+        thumbnail: '/gallery/candy classifier.webp',
+        detailImages: ['/gallery/candy classifier.webp'],
+        type: ['Machine Learning', 'Software'],
+        tags: ['Computer Vision', 'Deep Learning', 'CNN', 'TensorFlow', 'Image Classification'],
+        date: '2024',
+        technicalStack: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Data Augmentation'],
+        role: 'ML Engineer',
+        duration: '2024',
+        scope: 'Computer Vision + Deep Learning + Dataset Creation',
+        relatedProjects: ['15', '1'],
+        sections: {
+            overview: `This project applies convolutional neural networks to the task of candy classification, combining computer vision with practical food recognition applications. The system can identify different candy types from smartphone photos, making it useful for dietary tracking, allergen detection, or inventory management.
+
+The challenge lies in handling visual variations caused by lighting conditions, angles, packaging variations, and candy shapes. The solution leverages transfer learning and extensive data augmentation to achieve robust classification performance.`,
+            softwareArchitecture: `The dataset consists of 2,000+ images across 10 candy categories, collected through web scraping and manual photography. Images were standardized to 224x224 pixels with normalization applied. Data augmentation techniques (rotation, flipping, brightness adjustment, zoom) expanded the effective training set to 10,000+ images.
+
+The model architecture uses transfer learning with MobileNetV2 as the base, pre-trained on ImageNet. The final layers were replaced with custom dense layers (256 neurons) with dropout regularization to prevent overfitting. The model uses categorical cross-entropy loss with Adam optimizer.
+
+Training employed early stopping and learning rate reduction callbacks to optimize convergence. The model was trained for 50 epochs with batch size of 32, using GPU acceleration for efficiency.
+
+The inference pipeline preprocesses input images through the same normalization pipeline, performs prediction, and outputs the top-3 most likely candy types with confidence scores. OpenCV handles image preprocessing and augmentation.`,
+            results: `The trained model achieved 92% accuracy on the validation set and 89% accuracy on real-world test images taken with various smartphones. Per-class accuracy ranged from 85% (for visually similar candies) to 97% (for distinctive shapes/colors).
+
+Confusion matrix analysis revealed that errors primarily occurred between candy types with similar packaging colors (e.g., red wrappers). The model demonstrated good generalization to candy orientations and lighting conditions not seen during training.
+
+Processing time averages 150ms per image on CPU, making it suitable for real-time mobile applications. The model size (23MB) is optimized for deployment on resource-constrained devices. Future improvements include expanding to 30+ candy types and implementing fine-grained classification for flavors within brands.`
+        }
+    },
+{
+        id: '7',
+        slug: 'cibo-restaurant-app',
+        title: 'CIBO - Restaurant Ordering Platform',
+        shortDescription: 'Full-stack restaurant ordering platform with mobile app, web interface, and backend API for seamless food ordering experience.',
+        fullDescription: `Developed CIBO, a comprehensive restaurant ordering platform that bridges the gap between customers and restaurant services. The system features a React Native mobile app for customers, a web-based admin panel for restaurant staff, and a robust Node.js backend API.
+
+The platform enables customers to browse menus, place orders, track their order status in real-time, and make payments. Restaurant staff can manage menus, process orders, and handle table reservations through an intuitive dashboard.`,
+        thumbnail: '/cibo-app.webp',
+        videoUrl: 'https://www.youtube.com/watch?v=ehJRiRirNdg',
+        detailImages: ['/cibo-app.webp'],
+        type: ['Software'],
+        tags: ['Full-Stack', 'React Native', 'Node.js', 'Restaurant Tech', 'Mobile App'],
+        date: '2024',
+        githubUrl: 'https://github.com/ammarjmahmood/CIBO',
+        technicalStack: ['React Native', 'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'Expo'],
+        role: 'Full-Stack Developer',
+        duration: '2024',
+        scope: 'Mobile Development + Backend API + Web Dashboard',
+        relatedProjects: ['8', '9'],
+        sections: {
+            overview: `CIBO is a comprehensive restaurant technology platform addressing the disconnect between customer ordering and restaurant operations. The project originated from identifying inefficiencies at Eataly (Eaton Center) and evolved into a full-featured ordering and management system.
+
+The platform serves dual purposes: customer-facing mobile app for browsing menus and placing orders, and restaurant-facing web dashboard for order management and analytics. Real-time synchronization ensures seamless communication between customers and kitchen staff.`,
+            softwareArchitecture: `The architecture follows a microservices approach with three main components: (1) React Native mobile app built with Expo for cross-platform deployment, (2) Node.js/Express backend API handling business logic and database operations, and (3) React web dashboard for restaurant staff.
+
+The backend uses PostgreSQL for relational data (menus, orders, users) hosted on Supabase, providing real-time subscriptions for live order updates. Authentication uses JWT tokens with refresh token rotation. The API implements RESTful endpoints with comprehensive error handling and validation.
+
+The mobile app features Redux state management, optimistic updates for responsiveness, and offline-first architecture for menu browsing. Push notifications alert customers of order status changes.`,
+            results: `Successfully deployed to test pilot at a local restaurant with positive feedback on ease of use. The system handles concurrent orders efficiently, with real-time updates appearing within 500ms. Average order placement time reduced from 3 minutes (traditional) to under 60 seconds.
+
+The platform demonstrates scalability potential for multi-restaurant deployment. Future enhancements include payment integration, delivery tracking, and customer loyalty programs.`
+        }
+    },
+{
         id: '20',
         slug: 'youth-flight-canada',
         title: 'Youth Flight Canada Website',
@@ -669,7 +1090,7 @@ AWS infrastructure scales automatically during traffic spikes, maintaining 99.9%
 Ongoing maintenance includes content updates, security patches, and feature enhancements based on user feedback. The site handles 10,000+ monthly visitors with consistent performance. Future improvements include membership portal integration and event registration system.`
         }
     },
-    {
+{
         id: '21',
         slug: 'uss-website',
         title: 'University Student Society Website',
@@ -729,7 +1150,7 @@ Positive feedback from both designers and end-users validated the collaborative 
 Site uptime maintains 99.95%+ availability. Security audits confirmed robust protection against common web vulnerabilities. The platform continues to evolve with new features driven by student needs and feedback.`
         }
     },
-    {
+{
         id: '22',
         slug: 'ifast-roadside',
         title: 'iFast Roadside Assistance Website',
@@ -797,238 +1218,7 @@ The success of this project led to additional community website projects, establ
 Ongoing maintenance includes content updates for seasonal services, adding customer testimonials, and refining SEO strategies based on search performance data. The website continues to effectively serve the business's digital marketing needs.`
         }
     },
-    {
-        id: 'paper-1',
-        slug: 'arrc-paper',
-        title: 'ARRC: Advanced Reasoning Robot Control',
-        shortDescription: 'Knowledge-Driven Autonomous Manipulation Using Retrieval-Augmented Generation.',
-        fullDescription: `ARRC: Advanced Reasoning Robot Control—Knowledge-Driven Autonomous Manipulation Using Retrieval-Augmented Generation.
-
-Abstract— We present ARRC (advanced reasoning robot control), a practical system that connects natural language instructions to safe, local robotic control by combining Retrieval-Augmented Generation (RAG) with RGB–D perception and guarded execution on an affordable robot arm. The system indexes curated robot knowledge (movement patterns, task templates, and safety heuristics) in a vector database, retrieves task-relevant context for each instruction, and conditions a large language model (LLM) to synthesize JSON-structured action plans.
-
-These plans are executed on a UFactory xArm 850 fitted with a Dynamixel-driven parallel gripper and an Intel RealSense D435 camera. Perception uses AprilTags detections fused with depth to produce object-centric metric poses; execution is enforced via a set of software safety gates (workspace bounds, speed/force caps, timeouts, and bounded retries). We describe the architecture, knowledge design, integration choices, and a reproducible evaluation protocol for tabletop scan/approach/pick–place tasks. Experimental results are reported to demonstrate efficacy of the proposed approach. Our design shows that RAG-based planning can substantially improve plan validity and adaptability while keeping perception and low-level control local to the robot.`,
-        thumbnail: '/gallery/arrc_thumbnail.webp',
-        detailImages: ['/gallery/arrc_thumbnail.webp'],
-        type: ['Publications', 'Machine Learning'],
-        tags: ['Research Paper', 'RAG', 'LLM', 'Robotics', 'Autonomous Manipulation'],
-        date: '2025',
-        liveUrl: 'https://arxiv.org/abs/2510.05547',
-        learnMoreUrl: 'https://arrc-eight.vercel.app/',
-        technicalStack: ['RAG', 'LLM', 'Robotics', 'Python', 'Machine Learning'],
-        role: 'Researcher',
-        duration: '2025',
-        scope: 'Research + Robotics + AI',
-        sections: {
-            overview: `We bridge the gap between high-level reasoning and low-level control by introducing ARRC (Advanced Reasoning Robot Control). This RAG-enabled robotic manipulation pipeline unifies perception, retrieval, and safe plan execution.
-
-We deploy this system on a UFactory xArm 850 equipped with a RealSense D435 and a Dynamixel gripper, integrating retrieval of robot-centric safety heuristics and procedural templates at inference time. This design offers both adaptability and reliability, enabling the injection of new task knowledge or safety rules without retraining.`,
-            softwareArchitecture: `The system architecture consists of three main components:
-
-1. Perception: AprilTags combined with depth data from an Intel RealSense D435 provide marker-based detections fused to recover metric 3D poses in the robot frame.
-
-2. Retrieval & Planning: A curated robotics knowledge base (movement primitives, templates, safety heuristics) is embedded and indexed. At inference time, relevant context is retrieved and passed to an LLM to generate structured JSON plans.
-
-3. Execution: JSON plans are validated and executed via the XArm Python SDK. Execution is safeguarded by software safety gates, including workspace limits, speed caps, and gripper torque gating.`,
-            results: `We benchmarked the system on tabletop manipulation tasks (scan, approach, pick–place).
-
-Plan Validity: 80% success rate in generating valid, executable paths.
-
-Approach Accuracy: 87.1% average accuracy in placing the gripper in the vicinity of the object.
-
-Pick & Place: 80% success rate in full manipulation tasks.
-
-Adaptability: The system demonstrated advanced reasoning by automatically transitioning scanning strategies (from horizontal to arc scan) when objects were occluded, successfully recovering and completing the task.`
-        }
-    },
-    {
-        id: 'paper-2',
-        slug: 'robust-visual-embodiment',
-        title: 'Robust Visual Embodiment',
-        shortDescription: 'How Robots Discover Their Bodies in Real Environments: A study on visual self-modeling robustness.',
-        fullDescription: `Robust Visual Embodiment: How Robots Discover Their Bodies in Real Environments.
-
-Abstract— Robots with internal visual self-models promise unprecedented adaptability, yet existing autonomous modeling pipelines remain fragile under realistic sensing conditions such as noisy imagery and cluttered backgrounds. This paper presents the first systematic study quantifying how visual degradations—including blur, salt-and-pepper noise, and Gaussian noise—affect robotic self-modeling. Through both simulation and physical experiments, we demonstrate their impact on morphology prediction, trajectory planning, and damage recovery in state-of-the-art pipelines.
-
-To overcome these challenges, we introduce a task-aware denoising framework that couples classical restoration with morphology-preserving constraints, ensuring retention of structural cues critical for self-modeling. In addition, we integrate semantic segmentation to robustly isolate robots from cluttered and colorful scenes. Extensive experiments show that our approach restores near-baseline performance across simulated and physical platforms, while existing pipelines degrade significantly. These contributions advance the robustness of visual self-modeling and establish practical foundations for deploying self-aware robots in unpredictable real-world environments.`,
-        thumbnail: '/gallery/paper11.webp',
-        detailImages: ['/gallery/paper11.webp'],
-        type: ['Publications', 'Machine Learning'],
-        tags: ['Research Paper', 'Computer Vision', 'Self-Modeling', 'Robotics', 'Denoising'],
-        date: '2025',
-        liveUrl: 'https://arxiv.org/pdf/2510.03677',
-        learnMoreUrl: 'https://robot-visual-embodiment.vercel.app/',
-        technicalStack: ['Computer Vision', 'Deep Learning', 'Robotics', 'Python', 'Semantic Segmentation'],
-        role: 'Researcher',
-        duration: '2025',
-        scope: 'Research + Computer Vision + Robotics',
-        sections: {
-            overview: `Self-supervised robotic self-modeling enables machines to autonomously infer their morphology and kinematics directly from visual data. However, existing approaches often fail in realistic conditions with visual noise and cluttered backgrounds. This paper addresses these limitations by introducing a robust visual embodiment framework.`,
-            softwareArchitecture: `The proposed pipeline integrates a task-aware denoising framework with semantic segmentation. 
-            
-1. Semantic Segmentation: Uses a deep convolutional network to isolate the robot from complex backgrounds, overcoming the limitations of color-based segmentation.
-2. Task-Aware Denoising: Combines Wiener filtering (for blur), Median filtering (for salt-and-pepper noise), and Non-Local Means with Intuitionistic Fuzzy Twin SVM (for Gaussian noise) to restore image quality while preserving morphological features.
-3. Self-Modeling Engine: Feeds the processed visual data into the FFKSM framework to reconstruct the robot's kinematic model.`,
-            results: `Extensive experiments on both simulated and physical robots demonstrated that the proposed framework significantly improves robustness.
-            
-- Segmentation: Achieved over 4x improvement in IoU and F1-score compared to baseline methods in cluttered environments.
-- Morphology Reconstruction: Restored near-baseline accuracy in morphology prediction even under severe noise conditions where standard pipelines failed.
-- Real-World Validation: Validated on a custom 3D-printed 4-DOF manipulator, proving the system's effectiveness in real-world scenarios.`
-        }
-    },
-    {
-        id: '2',
-        slug: 'isaac-sim-robot',
-        title: 'SO Arm 101 - Isaac Sim Training',
-        shortDescription: 'Training a pick-and-place policy for the SO Arm 101 using Pi 0 VLA and Quest 3 teleoperation in NVIDIA Isaac Sim.',
-        fullDescription: `This project involves the advanced training and simulation of the SO Arm 101 robotic system within NVIDIA's Isaac Sim environment. We utilized a Pi 0 VLA to train robust pick-and-place policies, enabling the robot to handle complex manipulation tasks with high precision.
-
-A key highlight of the project was the integration of Meta Quest 3 for immersive teleoperation. By creating a custom bridge to Isaac Sim, we were able to collect high-quality demonstration data for pick-and-place operations, specifically transitioning objects from a table to a box. This data-driven approach significantly accelerated the learning process for our autonomous policies.`,
-        thumbnail: '/gallery/so-arm-101.png',
-        previewMedia: '/gallery/so-arm-101.png',
-        detailImages: ['/gallery/so-arm-101.png'],
-        type: ['Software', 'Machine Learning'],
-        tags: ['Isaac Sim', 'SO Arm 101', 'Pi 0 VLA', 'Quest 3', 'Teleoperation', 'Reinforcement Learning', 'Robotics'],
-        date: '2024',
-        technicalStack: ['Python', 'Isaac Sim', 'PyTorch', 'ROS', 'Quest 3 Bridge', 'Pi 0 VLA'],
-        role: 'AI Researcher & Developer',
-        duration: '2024',
-        scope: 'Simulation + Reinforcement Learning + Teleoperation + Data Collection',
-        relatedProjects: ['1', '14'],
-        sections: {
-            overview: `This project explores the cutting edge of sim-to-real robotics transfer using the SO Arm 101 platform and NVIDIA's Isaac Sim. By combining powerful simulation tools with immersive teleoperation, we've developed a highly efficient pipeline for training robotic manipulation policies.
-
-The work focuses on pick-and-place tasks, utilizing Pi 0 VLA for policy training and Meta Quest 3 for intuitive data collection.`,
-            softwareArchitecture: `The software stack leverages NVIDIA Isaac Sim's USD-based environment. We developed a custom bridge to interface the Meta Quest 3 with the simulator, allowing for real-time teleoperation and data logging. 
-
-Training uses the Pi 0 VLA architecture to learn pick-and-place behaviors from the collected demonstrations. The system includes domain randomization to improve the robustness of the learned policies for eventual hardware transfer.`,
-            results: `Successfully collected hundreds of demonstrations via Quest 3 teleoperation, leading to a highly reliable pick-and-place policy. The SO Arm 101 demonstrated 90%+ success rates in simulation for table-to-box transfers. The bridge proved to be a powerful tool for rapid data collection and human-in-the-loop training.`
-        }
-    },
-    {
-        id: '3',
-        slug: 'ridge-wallet-clone',
-        title: 'Ridge Wallet Clone',
-        shortDescription: 'A 3D-printed clone of the popular Ridge Wallet, designed for durability and minimalism.',
-        fullDescription: `Reverse-engineered and redesigned the popular Ridge Wallet using CAD software and 3D printing technology. The project focused on understanding the mechanical design principles that make the original wallet functional while optimizing for 3D printing manufacturing.
-
-The design incorporates precision tolerances for the sliding mechanism and material selection for durability. This project showcases CAD design skills and understanding of manufacturing constraints.`,
-        thumbnail: '/RidgeClone.webp',
-        previewMedia: '/RidgeClone.webp', // TODO: Replace with GIF/video
-        detailImages: ['/RidgeClone.webp'], // TODO: Add more project images
-        type: ['Mechanical'],
-        tags: ['3D Printing', 'CAD', 'Product Design'],
-        date: '2023',
-        technicalStack: ['SolidWorks', 'Fusion 360', '3D Printing'],
-        role: 'Product Designer',
-        duration: '2023',
-        scope: 'CAD Design + 3D Printing + Product Engineering',
-        relatedProjects: ['4', '6'],
-        sections: {
-            overview: `This reverse-engineering project deconstructs the popular Ridge Wallet to understand its clever mechanical design and recreate it using 3D printing technology. The challenge lies in achieving the same slim profile, smooth sliding action, and robust construction using additive manufacturing instead of the original machined aluminum.
-
-The project demonstrates product design thinking, tolerance analysis, and material science considerations specific to 3D printing.`,
-            mechanicalDesign: `The wallet design features a clever sliding mechanism with precision tolerance requirements. Key mechanisms include card retention clips, money clip integration, and the primary sliding plate mechanism. Each component was redesigned in SolidWorks with 3D printing constraints in mind.
-
-Critical design considerations included layer orientation for strength, living hinge design for the clip, and tolerance compensation for FDM printing (typically +0.2mm clearances). The design uses minimal support structures and can be printed on standard FDM printers. Material choice settled on PLA+ for its strength and smooth surface finish.`,
-            results: `The final 3D-printed wallet successfully replicates the core functionality of the Ridge Wallet at a fraction of the cost. The sliding mechanism operates smoothly, and card retention is secure. Weight is comparable to the aluminum original.
-
-Print time is approximately 4 hours. The project demonstrated that functional product clones are achievable with consumer 3D printing when design principles are properly adapted.`
-        }
-    },
-    {
-        id: '7',
-        slug: 'cibo-restaurant-app',
-        title: 'CIBO - Restaurant Ordering Platform',
-        shortDescription: 'Full-stack restaurant ordering platform with mobile app, web interface, and backend API for seamless food ordering experience.',
-        fullDescription: `Developed CIBO, a comprehensive restaurant ordering platform that bridges the gap between customers and restaurant services. The system features a React Native mobile app for customers, a web-based admin panel for restaurant staff, and a robust Node.js backend API.
-
-The platform enables customers to browse menus, place orders, track their order status in real-time, and make payments. Restaurant staff can manage menus, process orders, and handle table reservations through an intuitive dashboard.`,
-        thumbnail: '/cibo-app.webp',
-        videoUrl: 'https://www.youtube.com/watch?v=ehJRiRirNdg',
-        detailImages: ['/cibo-app.webp'],
-        type: ['Software'],
-        tags: ['Full-Stack', 'React Native', 'Node.js', 'Restaurant Tech', 'Mobile App'],
-        date: '2024',
-        githubUrl: 'https://github.com/ammarjmahmood/CIBO',
-        technicalStack: ['React Native', 'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'Expo'],
-        role: 'Full-Stack Developer',
-        duration: '2024',
-        scope: 'Mobile Development + Backend API + Web Dashboard',
-        relatedProjects: ['8', '9'],
-        sections: {
-            overview: `CIBO is a comprehensive restaurant technology platform addressing the disconnect between customer ordering and restaurant operations. The project originated from identifying inefficiencies at Eataly (Eaton Center) and evolved into a full-featured ordering and management system.
-
-The platform serves dual purposes: customer-facing mobile app for browsing menus and placing orders, and restaurant-facing web dashboard for order management and analytics. Real-time synchronization ensures seamless communication between customers and kitchen staff.`,
-            softwareArchitecture: `The architecture follows a microservices approach with three main components: (1) React Native mobile app built with Expo for cross-platform deployment, (2) Node.js/Express backend API handling business logic and database operations, and (3) React web dashboard for restaurant staff.
-
-The backend uses PostgreSQL for relational data (menus, orders, users) hosted on Supabase, providing real-time subscriptions for live order updates. Authentication uses JWT tokens with refresh token rotation. The API implements RESTful endpoints with comprehensive error handling and validation.
-
-The mobile app features Redux state management, optimistic updates for responsiveness, and offline-first architecture for menu browsing. Push notifications alert customers of order status changes.`,
-            results: `Successfully deployed to test pilot at a local restaurant with positive feedback on ease of use. The system handles concurrent orders efficiently, with real-time updates appearing within 500ms. Average order placement time reduced from 3 minutes (traditional) to under 60 seconds.
-
-The platform demonstrates scalability potential for multi-restaurant deployment. Future enhancements include payment integration, delivery tracking, and customer loyalty programs.`
-        }
-    },
-
-    {
-        id: '23',
-        slug: 'knee-brace-recovery',
-        title: 'Knee Brace Recovery Device',
-        shortDescription: 'Mechanical recovery device designed to aid post-surgery knee rehabilitation, developed in collaboration with a startup.',
-        fullDescription: `Designed and prototyped a mechanical knee brace to assist patients recovering from knee surgery. This project was driven by a personal connection to a close friend's recovery journey, aiming to improve upon existing rehabilitation tools. This is the second iteration (V2) of the design, focusing on enhanced comfort, adjustable tension, and ease of use.
-        
-The device was developed in collaboration with a startup to address specific pain points in current recovery methods. The design includes a novel folding mechanism (demonstrated in the "Knee 3" prototype) allowing the brace to fit compactly into suitcases for travel.`,
-        thumbnail: '/gallery/kneebracedesign.webp',
-        liveUrl: 'https://docs.google.com/document/d/1Kafr3DGXgkPG0eHfMQrDlj_wAlwApKt7SJ6aq1e55r8/edit?usp=sharing',
-        detailImages: ['/gallery/kneebracedesign.webp', '/gallery/knee2.webp', '/gallery/knee3.webp', '/gallery/knee5.webp'],
-        type: ['Mechanical'],
-        tags: ['Medical Device', 'SolidWorks', 'Product Design', 'Startup', 'Prototyping'],
-        date: '2024',
-        technicalStack: ['SolidWorks', '3D Printing', 'Mechanical Analysis', 'Prototyping'],
-        role: 'Mechanical Designer',
-        duration: '2024',
-        scope: 'Product Design + Prototyping',
-        relatedProjects: ['5', '1'],
-        sections: {
-            overview: `This project focuses on the development of a specialized knee brace for post-surgery rehabilitation. The initiative began as a challenge with a startup to create a more effective recovery device.
-            
-The project holds deep personal significance as it was inspired by my best friend's experience undergoing two knee surgeries and struggling with multiple existing recovery tools. This drove the design philosophy to prioritize patient comfort and practical usability alongside clinical efficacy.`,
-            mechanicalDesign: `The design features a custom hinge mechanism that allows for controlled range of motion, essential for progressive rehabilitation. The brace structure was modeled in SolidWorks with a focus on ergonomics and structural integrity.
-            
-A key innovation in this iteration is the folding mechanism, designed to make the device portable for patients who need to travel. The "Knee 3" prototype demonstrates this capability, folding down to a compact size suitable for standard luggage. 3D printing was used extensively for rapid prototyping to test fit and function.`
-        }
-    },
-
-    {
-        id: '24',
-        slug: 'mars-rocket-avionics',
-        title: 'MARS Rocket Avionics',
-        shortDescription: 'Custom flight controller and avionics system for high-powered rocketry, developed with the TMU MARS Rocket Team.',
-        fullDescription: `As a member of the Avionics Team at the TMU MARS Rocket Team, I worked on the design, programming, and testing of custom flight controllers for high-powered rocketry. The system was deployed in over 30 rocket launches in 2025.
-
-The project involved developing a robust avionics package capable of recording flight data, handling recovery deployment, and maintaining telemetry links over long distances.`,
-        thumbnail: '/gallery/rocket3.webp',
-        detailImages: ['/gallery/rocket3.webp', '/gallery/AmoungUSboard.webp', '/gallery/rocket1.webp'],
-        type: ['Electrical', 'Software'],
-        tags: ['Avionics', 'Embedded Systems', 'Rocketry', 'PCB Design', 'Altium', 'KiCad', 'C++'],
-        date: '2025',
-        technicalStack: ['STM32', 'C++', 'Altium', 'KiCad', 'LoRa Telemetry', 'Sensors'],
-        role: 'Avionics Team Member',
-        duration: '2025',
-        scope: 'Flight Controller + Telemetry + Testing',
-        relatedProjects: ['5', '13'],
-        sections: {
-            overview: `Designed and implemented the avionics system for the university rocketry team. The core component was a custom flight controller (affectionately named the "Among Us" board) responsible for state estimation, data logging, and parachute deployment.`,
-            electricalDesign: `The flight controller featured a custom PCB design integrating a microcontroller, IMU sensors, GPS module, and telemetry transceiver.
-            
-Key challenges included power management—specifically preventing board damage when LiPo batteries were plugged in while shorted—and ensuring signal integrity for the GPS and telemetry modules. We iterated on the design to improve robustness against electrical faults.`,
-            softwareArchitecture: `The firmware was developed to handle high-speed sensor polling and real-time state estimation. It included drivers for the IMU and GPS, as well as a robust state machine for detecting launch, apogee, and landing events.
-            
-We faced and overcame issues with IMU accuracy and GPS reliability through advanced filtering and sensor fusion algorithms.`,
-            results: `The system was successfully flown in over 30 launches. We overcame significant challenges including telemetry packet drops in hilly terrain and initial hardware failures. Through iterative testing and software filtering, we achieved reliable recovery deployment and data recovery.`
-        }
-    },
-    {
+{
         id: '25',
         slug: 'url-shortener',
         title: 'URL Shortener Service',
@@ -1065,79 +1255,7 @@ Deployment: The application is containerized using Docker, ensuring consistency 
 
 The project demonstrates the ability to build, containerize, and deploy a complete Spring Boot application, showcasing skills in Java backend development and modern DevOps practices.`
         }
-    },
-    {
-        id: '26',
-        slug: 'healthsync',
-        title: 'HealthSync iOS App',
-        shortDescription: 'Comprehensive iOS health and fitness application tracking steps, water intake, and active calories with a modern UI.',
-        fullDescription: `HealthSync is a modern iOS application designed to help users track their daily health and fitness metrics seamlessly. The app provides real-time tracking of steps, water consumption, and active calorie burn, presenting the data in a clean, intuitive interface.
-
-Built with native iOS technologies, HealthSync integrates deeply with the iOS ecosystem, offering widgets and a responsive design that keeps health data at the user's fingertips.`,
-        thumbnail: '/gallery/healthsync.png',
-        detailImages: ['/gallery/healthsync.png'],
-        type: ['Software'],
-        tags: ['iOS', 'Swift', 'HealthKit', 'Mobile App', 'Fitness'],
-        date: '2025',
-        liveUrl: 'https://apps.apple.com/ca/app/healthsync/id6759500944',
-        technicalStack: ['Swift', 'SwiftUI', 'HealthKit', 'WidgetKit'],
-        role: 'iOS Developer',
-        duration: '2025',
-        scope: 'Native Mobile Development + Health Data Integration',
-        sections: {
-            overview: `HealthSync was developed to provide a unified dashboard for the most critical daily health metrics. By focusing on steps, hydration, and activity, the app helps users maintain a healthy lifestyle through clear visual feedback and goal tracking.`,
-            softwareArchitecture: `The app is built using SwiftUI for a modern, reactive user interface. It leverages Apple's HealthKit framework to securely access and contribute to the user's health data. The architecture follows the MVVM pattern, ensuring a clean separation between data logic and UI presentation.`,
-            results: `HealthSync successfully launched on the iOS App Store, providing users with a reliable tool for daily health monitoring. The integration of home screen widgets has significantly increased user engagement by making health data accessible without opening the app.`
-        }
-    },
-    {
-        id: '27',
-        slug: 'issh',
-        title: 'iSSH - Pro SSH Client',
-        shortDescription: 'Powerful iOS SSH client featuring network scanning, persistent sessions, and integrated AI assistant for developers.',
-        fullDescription: `iSSH is a professional-grade SSH client for iOS, built for developers and system administrators who need reliable remote access on the go. It goes beyond simple terminal emulation by offering built-in network scanning, session persistence with tmux integration, and an innovative AI assistant.
-
-The app supports multiple AI models (Claude, Gemini, OpenAI) to help users debug scripts, generate commands, and manage remote servers more efficiently.`,
-        thumbnail: '/gallery/issh.png',
-        detailImages: ['/gallery/issh.png'],
-        type: ['Software'],
-        tags: ['iOS', 'SSH', 'Networking', 'Developer Tools', 'AI Integration'],
-        date: '2025',
-        liveUrl: 'https://apps.apple.com/ca/app/issh/id6759501444',
-        technicalStack: ['Swift', 'SwiftUI', 'SSH', 'AI APIs', 'tmux'],
-        role: 'Lead Developer',
-        duration: '2025',
-        scope: 'Native Mobile Development + Network Engineering + AI Integration',
-        sections: {
-            overview: `The goal of iSSH was to create the most productive remote management tool for iOS. By integrating essential networking tools like port forwarding and network scanning with modern AI capabilities, iSSH transforms the mobile terminal experience into a powerful dev environment.`,
-            softwareArchitecture: `iSSH features a custom terminal emulator built for low latency and high compatibility. The backend handles encrypted SSH connections and persistent background sessions. The AI integration uses a modular provider system, allowing users to connect their own API keys for various LLM models.`,
-            results: `iSSH has become a top-rated tool in the Developer Tools category on the App Store, praised for its stability and the unique productivity boost provided by the integrated AI assistant.`
-        }
-    },
-    {
-        id: '28',
-        slug: 'isaacsim-autosave',
-        title: 'Isaac Sim Autosave Extension',
-        shortDescription: 'Open-source productivity tool for NVIDIA Isaac Sim that automatically saves progress and prevents data loss.',
-        fullDescription: `Isaac Sim Autosave is an open-source extension developed for the NVIDIA Isaac Sim robotics simulation platform. It addresses a common pain point for developers by providing automated saving functionality for USD stages, ensuring that hours of simulation setup are never lost due to crashes or power failures.
-
-The tool is designed to be lightweight and non-intrusive, operating in the background while developers focus on their robotics and AI research.`,
-        thumbnail: '/gallery/isaacsim_autosave.png',
-        detailImages: ['/gallery/isaacsim_autosave.png'],
-        type: ['Software'],
-        tags: ['Isaac Sim', 'NVIDIA', 'Python', 'Open Source', 'Robotics'],
-        date: '2024',
-        githubUrl: 'https://github.com/ammarjmahmood/isaacsim_autosave',
-        technicalStack: ['Python', 'NVIDIA Omniverse Kit', 'USD'],
-        role: 'Creator & Maintainer',
-        duration: '2024',
-        scope: 'Robotics Simulation Tooling + Open Source',
-        sections: {
-            overview: `Simulation environments can be notoriously unstable when working with complex robotics scenes. This extension was born out of personal necessity to protect work-in-progress simulation stages in Isaac Sim, and was later released to the community as an open-source tool.`,
-            softwareArchitecture: `Built using the NVIDIA Omniverse Kit extension system, the tool hooks into the application's update loop to monitor changes and trigger saves at configurable intervals. It interacts directly with the USD (Universal Scene Description) API to perform safe, background saves.`,
-            results: `The extension has been widely adopted by the Isaac Sim community on GitHub, helping many researchers and engineers avoid data loss and improve their daily simulation workflow.`
-        }
-    },
+    }
 ];
 
 
