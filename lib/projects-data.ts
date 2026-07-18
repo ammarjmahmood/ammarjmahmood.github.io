@@ -40,34 +40,41 @@ export const projects: Project[] = [
         id: '32',
         slug: 'autodesk-internship',
         title: 'Autodesk AI Lab — AI/ML Developer Intern',
-        shortDescription: 'Built an Electron application for an Autodesk product, developed agentic AI workflows, World Labs API integrations, and contributed to Autodesk Assistant features and product innovation.',
-        fullDescription: `Interned at Autodesk on the AI and innovation team, working across a range of high-impact projects spanning product development, agentic AI, and exploratory research.
+        shortDescription: 'Integrated World Labs spatial AI and Gaussian-splat workflows into Maya while building multimodal, agentic AI experiences across the Autodesk platform.',
+        fullDescription: `Interned at Autodesk on the AI and innovation team, applying emerging AI capabilities across product development, agentic workflows, and exploratory research.
 
-Built an Electron-based desktop application integrated with an Autodesk product. Developed agentic workflows spanning 3D data, information pipelines, and automation — including permit and location agents, generative scheduling systems, script and screenplay breakdown agents, and data prediction models. Explored and integrated the World Labs spatial intelligence API into Autodesk tooling.
+Integrated World Labs directly into Autodesk Maya, enabling spatial-world generation and Gaussian-splat workflows inside the artist's existing 3D environment. The work explored generating worlds from image and text inputs, importing splats and collision meshes, and making spatial AI easier to use without leaving Maya. Autodesk announced its $200 million strategic investment in World Labs on February 18, 2026, creating a timely product context for this integration.
 
-Contributed to Autodesk Assistant features and innovation initiatives. Conducted customer exploratory studies, collaborated closely with UI/UX designers, and presented work and research findings to product managers and design leads.`,
-        thumbnail: '/autodesk-internship.jpg',
-        previewMedia: '/autodesk-internship.jpg',
-        detailImages: ['/autodesk-internship.jpg'],
+Built an Electron-based desktop application integrated with an Autodesk product and developed AI experiences that combined LLMs with video, audio, and 3D generation models. Also contributed to Autodesk Assistant features, customer discovery, and product innovation initiatives in collaboration with engineering, UI/UX, and product teams.`,
+        thumbnail: '/autodesk-world-labs-maya.jpg',
+        previewMedia: '/autodesk-world-labs-maya.jpg',
+        detailImages: ['/autodesk-world-labs-maya.jpg'],
         type: ['Software', 'Machine Learning'],
-        tags: ['Autodesk', 'Electron', 'AI Agents', 'Agentic Workflows', 'World Labs', '3D Data', 'Product Development', 'Internship'],
-        date: '2025',
-        technicalStack: ['Electron', 'TypeScript', 'Python', 'World Labs API', 'LLMs', 'Agentic Frameworks', 'Autodesk APIs'],
+        tags: ['Autodesk', 'Maya', 'Gaussian Splats', 'World Labs', 'Multimodal AI', 'AI Agents', '3D Generation', 'Product Development'],
+        date: '2026',
+        technicalStack: ['Autodesk Maya', 'Electron', 'TypeScript', 'Python', 'World Labs API', 'Gaussian Splatting', 'LLMs', 'Video & Audio Models', '3D Generation Models', 'Autodesk APIs'],
         role: 'AI/ML Developer Intern',
-        duration: '2025',
-        scope: 'Product Development + Agentic AI + Research + UX Collaboration',
+        duration: 'January 2026 — Present',
+        scope: 'Maya Integration + Spatial AI + Multimodal Agents + Product Innovation',
+        learnMoreUrl: 'https://adsknews.autodesk.com/en/news/autodesk-invests-in-world-labs/',
+        achievements: [
+            'Integrated World Labs spatial intelligence and Gaussian-splat workflows directly into Autodesk Maya.',
+            'Applied LLMs, video and audio understanding, and 3D generation models to simplify complex Autodesk workflows.',
+            'Built agentic pipelines for scheduling, location and permit research, production breakdowns, and data prediction.',
+            'Contributed to Autodesk Assistant and translated customer research into product concepts with design and product teams.'
+        ],
         sections: {
-            overview: `Worked on Autodesk's AI and innovation team across product development and emerging technology research. The role spanned from shipping features in production software to blue-sky exploration of agentic AI capabilities within Autodesk's product ecosystem.
+            overview: `Worked on Autodesk's AI and innovation team across product development and emerging-technology research, with a focus on making advanced AI capabilities practical and approachable inside existing creative workflows.
 
-Core areas included Electron application development, agentic workflow engineering, World Labs API integration, and customer-facing research to inform product direction.`,
-            softwareArchitecture: `Built an Electron desktop application integrating with an Autodesk product, handling cross-process communication, native OS integration, and Autodesk's internal APIs.
+Following Autodesk's February 18, 2026 announcement of a $200 million strategic investment in World Labs, integrated World Labs spatial intelligence into Maya and prototyped an end-to-end Gaussian-splat workflow for generating, previewing, importing, and positioning AI-created 3D worlds.`,
+            softwareArchitecture: `Built an in-Maya World Labs workflow that lets artists create 3D worlds from image or text inputs, preview generated panoramas, import Gaussian splats and collision meshes, and lock the Maya camera to the generated scene. The integration kept spatial-AI tooling inside the familiar Maya workspace to reduce setup and context switching.
 
-Developed multiple agentic AI pipelines: a generative scheduling agent for production planning, permit and location agents for construction and infrastructure workflows, and script/screenplay breakdown agents that parse and structure complex documents for 3D production pipelines. Data prediction models were built on top of structured data outputs from these agents.
+Developed AI-powered experiences across the Autodesk platform by combining LLM reasoning with video and audio understanding, 3D generation, and Autodesk APIs. Built an Electron desktop application and agentic pipelines for generative scheduling, permit and location research, script and screenplay breakdown, and data prediction.
 
-Integrated the World Labs spatial intelligence API to explore 3D scene understanding and generation within Autodesk tooling — an early exploratory integration pushing the boundaries of what's possible in design and construction software.`,
-            results: `Delivered working Electron application features shipped within an Autodesk product. Agentic workflow prototypes were demonstrated to product managers and design leads, informing the product roadmap. Customer exploratory studies surfaced key user pain points that directly shaped feature prioritization.
+Contributed to Autodesk Assistant features and explored how multimodal models could make powerful Autodesk tools easier to discover and operate through natural interaction.`,
+            results: `Delivered functional prototypes spanning Maya, Electron, agentic automation, and multimodal AI. Demonstrated the workflows to product managers and design leads to support product exploration and roadmap discussions.
 
-Collaborated across engineering, design, and product to bridge research prototypes and production-ready features. Presented findings and demos at internal reviews, receiving strong feedback on the innovation potential of the agentic pipeline work.`
+Conducted customer exploratory studies, surfaced workflow pain points, and collaborated with UI/UX designers to turn research concepts into clearer product experiences.`
         }
     },
 {

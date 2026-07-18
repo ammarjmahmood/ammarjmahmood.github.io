@@ -372,7 +372,7 @@ export default function ResumePage() {
                         </div>
                       </div>
                       <p className="text-sm leading-relaxed text-muted-foreground">
-                        Working at the Autodesk AI Lab on cutting-edge research and development in artificial intelligence.
+                        Integrating World Labs spatial AI and Gaussian-splat workflows into Maya, while applying LLMs and multimodal generation models across Autodesk products.
                       </p>
                     </div>
                   </div>
