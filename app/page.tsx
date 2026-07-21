@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Globe, CheckCircle2, Award, GraduationCap, FileText, Briefcase } from "lucide-react"
+import { Globe, CheckCircle2, Award, GraduationCap, FileText, Briefcase, BookOpen } from "lucide-react"
 import {
   LinkedinIcon,
   GithubIcon,
@@ -128,6 +128,13 @@ export default function ResumePage() {
                 >
                   <GithubIcon className="h-4 w-4" />
                   <span>GitHub</span>
+                </a>
+                <a
+                  href="/blog/"
+                  className="flex items-center gap-2 text-sm text-foreground hover:text-primary"
+                >
+                  <BookOpen className="h-4 w-4" />
+                  <span>Blog & Tutorials</span>
                 </a>
               </div>
             </div>
