@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Calendar, Clock, Youtube, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Youtube, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-provider';
 import { tutorials } from '@/lib/tutorials-data';
 
@@ -94,6 +94,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             {post.readTime}
                         </span>
                     </div>
+
+                    {post.instructablesUrl && (
+                        <a
+                            href={post.instructablesUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg bg-yellow-500/10 border border-yellow-500/30 text-sm font-medium text-yellow-700 dark:text-yellow-400 hover:bg-yellow-500/20 transition-colors"
+                        >
+                            <ExternalLink className="h-4 w-4" />
+                            View full tutorial on Instructables
+                        </a>
+                    )}
                 </header>
 
                 {/* YouTube Video */}
