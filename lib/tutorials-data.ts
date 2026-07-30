@@ -278,10 +278,10 @@ The total build cost stays under $30 when sourcing the Roomba secondhand, making
         title: 'How to Set Up OctoPrint on a Raspberry Pi & Make Your Prusa Wi-Fi Enabled',
         description:
             'A step-by-step guide to installing OctoPrint on a Raspberry Pi, connecting it to your Prusa i3 MK3S+, and controlling your 3D printer wirelessly from any device on your network.',
-        thumbnail: '/tutorials/octoprint-setup.jpg',
+        thumbnail: 'https://img.youtube.com/vi/kHT8Q25NUTc/maxresdefault.jpg',
         date: '2026-07-21',
         tags: ['3D Printing', 'Raspberry Pi', 'OctoPrint', 'Prusa', 'IoT'],
-        youtubeUrl: '',
+        youtubeUrl: 'https://youtu.be/kHT8Q25NUTc?si=0rBYEavT9Umvi08b',
         readTime: '15 min read',
         content: [
             {
