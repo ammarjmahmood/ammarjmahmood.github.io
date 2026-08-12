@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Github, ExternalLink, Calendar, User, Clock, Target } from 'lucide-react';
 import { projects } from '@/lib/projects-data';
+import { ProjectGallery } from '@/components/project-gallery';
 
 // Generate static params for all projects
 export async function generateStaticParams() {
@@ -88,7 +89,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 {/* Main Layout: Content + Sidebar */}
                 <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
                     {/* Main Content */}
-                    <main>
+                    <main className="min-w-0">
                         {/* Header */}
                         <div className="mb-8">
                             <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-primary">
@@ -222,39 +223,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         {project.detailImages.length > 1 && (
                             <section className="mb-12">
                                 <h2 className="mb-4 text-2xl font-bold">Gallery</h2>
-                                <div className="grid gap-4 md:grid-cols-2">
-                                    {project.detailImages.slice(1).map((image, index) => (
-                                        <div
-                                            key={index}
-                                            className="relative aspect-video overflow-hidden rounded-lg bg-muted"
-                                        >
-                                            {image.includes('youtube.com') || image.includes('youtu.be') ? (
-                                                <iframe
-                                                    className="absolute inset-0 h-full w-full"
-                                                    src={image.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
-                                                    title={`${project.title} - Video ${index + 1}`}
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowFullScreen
-                                                />
-                                            ) : /\.(mp4|webm|mov)$/i.test(image) ? (
-                                                <video
-                                                    className="absolute inset-0 h-full w-full object-contain bg-black"
-                                                    src={image}
-                                                    controls
-                                                    playsInline
-                                                    preload="metadata"
-                                                />
-                                            ) : (
-                                                <Image
-                                                    src={image}
-                                                    alt={`${project.title} - Image ${index + 2}`}
-                                                    fill
-                                                    className="object-cover"
-                                                />
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
+                                <ProjectGallery images={project.detailImages.slice(1)} title={project.title} />
                             </section>
                         )}
 
@@ -318,7 +287,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     </main>
 
                     {/* Sidebar */}
-                    <aside className="space-y-6">
+                    <aside className="min-w-0 space-y-6">
                         {/* Hero Image */}
                         <div className="relative aspect-square overflow-hidden rounded-xl bg-muted">
                             <Image
