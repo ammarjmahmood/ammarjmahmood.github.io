@@ -134,18 +134,27 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             </div>
                         </div>
 
-                        {/* YouTube Video */}
+                        {/* Demo Video */}
                         {project.videoUrl && (
                             <section className="mb-12">
                                 <h2 className="mb-4 text-2xl font-bold">Demo Video</h2>
                                 <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-muted">
-                                    <iframe
-                                        className="absolute inset-0 h-full w-full"
-                                        src={project.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
-                                        title={project.title}
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                    />
+                                    {project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be') ? (
+                                        <iframe
+                                            className="absolute inset-0 h-full w-full"
+                                            src={project.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
+                                            title={project.title}
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        />
+                                    ) : (
+                                        <video
+                                            className="absolute inset-0 h-full w-full object-contain bg-black"
+                                            src={project.videoUrl}
+                                            controls
+                                            playsInline
+                                        />
+                                    )}
                                 </div>
                             </section>
                         )}
@@ -223,6 +232,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                                     title={`${project.title} - Video ${index + 1}`}
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                     allowFullScreen
+                                                />
+                                            ) : /\.(mp4|webm|mov)$/i.test(image) ? (
+                                                <video
+                                                    className="absolute inset-0 h-full w-full object-contain bg-black"
+                                                    src={image}
+                                                    controls
+                                                    playsInline
                                                 />
                                             ) : (
                                                 <Image

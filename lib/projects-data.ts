@@ -81,29 +81,69 @@ Conducted customer exploratory studies, surfaced workflow pain points, and colla
         id: '29',
         slug: 'kiwi-charge',
         title: 'Kiwi Charge — Autonomous EV Charging Robot',
-        shortDescription: 'Autonomous mobile robot that navigates parking lots and self-connects to EVs using NACS and CCS charging standards, with custom-designed end effectors and connector flanges.',
-        fullDescription: `Kiwi Charge is an autonomous EV charging robot designed to eliminate the need for drivers to manually plug in their vehicles. The robot navigates parking environments independently, locates the vehicle's charge port, and autonomously connects and disconnects the charging connector.
+        shortDescription: 'Fully autonomous mobile robot that navigates parking lots and self-connects to EVs via NACS, CCS, and wireless charging, with a companion mobile app, custom end effectors, and depth-sensing, force-controlled insertion.',
+        fullDescription: `Kiwi Charge is an autonomous EV charging robot designed to eliminate the need for drivers to manually plug in their vehicles. The robot navigates parking environments independently, locates the vehicle's charge port, and autonomously connects and disconnects the charging connector — with full support for NACS (Tesla standard), CCS (Combined Charging System), and wireless charging, plus a companion mobile app for drivers to request and monitor a charge.
 
-The system supports both NACS (Tesla standard) and CCS (Combined Charging System) connectors. A core part of the mechanical work involved designing custom end effectors and mounting flanges tailored to each connector type, enabling reliable automated mating and de-mating with real-world charge ports.`,
+A core part of the engineering work involved designing custom end effectors and mounting flanges tailored to each connector type, and building the perception and control stack that lets the arm reliably find and mate with a charge port it has never seen positioned exactly that way before. The insertion pipeline combines multiple IK solvers, depth perception from a stereo camera, and force-sensor feedback with PID and admittance control to guide the connector home with sub-centimeter precision and zero unintended contact.
+
+This work was presented at a Clean Energy Zone showcase at Toronto Metropolitan University (Centre for Urban Energy) to industry professionals and researchers.`,
         thumbnail: '/kiwi-charge-robot.webp',
         previewMedia: '/kiwi-charge-robot.webp',
-        detailImages: ['/kiwi-charge-robot.webp'],
+        videoUrl: '/kiwi-charge-demo.mp4',
+        detailImages: [
+            '/kiwi-charge-robot.webp',
+            '/kiwi-charge-ccs-flange.webp',
+            '/kiwi-charge-wireless-pending.svg',
+            '/kiwi-charge-nacs-connector.webp',
+            '/kiwi-charge-tmu-showcase.webp'
+        ],
         type: ['Mechanical', 'Software', 'Electrical'],
-        tags: ['EV Charging', 'Autonomous Robot', 'NACS', 'CCS', 'CAD', 'End Effector', 'Startup'],
+        tags: ['EV Charging', 'Autonomous Robot', 'NACS', 'CCS', 'Wireless Charging', 'CAD', 'End Effector', 'Depth Perception', 'Force Control', 'PID', 'Mobile App', 'Startup'],
         date: '2025',
-        technicalStack: ['SolidWorks', 'ROS', 'Python', 'Computer Vision', '3D Printing', 'CNC Machining'],
+        technicalStack: ['SolidWorks', 'ROS', 'Python', 'Computer Vision', 'Stereo Depth Cameras', 'Inverse Kinematics', 'Force/Torque Sensing', 'PID Control', 'iOS/Android', '3D Printing', 'CNC Machining'],
         role: 'Robotics & Mechanical Engineer',
         duration: '2025',
-        scope: 'Mechanical Design + Autonomous Navigation + Connector Engineering',
+        scope: 'Mechanical Design + Autonomous Navigation + Connector Engineering + Mobile App',
         relatedProjects: ['30', '17'],
         sections: {
-            overview: `Kiwi Charge addresses the last-mile friction in EV adoption: plugging in. The robot autonomously navigates to a parked vehicle, identifies the charge port using computer vision, and physically connects the appropriate charging connector — NACS or CCS — without any driver interaction.
+            overview: `Kiwi Charge addresses the last-mile friction in EV adoption: plugging in. The robot autonomously navigates to a parked vehicle, identifies the charge port using computer vision, and physically connects the appropriate charging connector — NACS, CCS, or wireless — without any driver interaction. A companion mobile app lets a driver request a charge, track the robot's status, and get notified when charging starts and completes.
 
-The mechanical design of the end effector and connector flange was a central engineering challenge, requiring precision tolerancing for reliable mating across real-world charge port variations and orientations.`,
-            mechanicalDesign: `Custom end effectors were designed in SolidWorks for both NACS and CCS connector standards. Each end effector integrates a force-compliant mounting flange that accommodates small misalignments during insertion — critical for real-world reliability where vehicles are never parked perfectly.
+The mechanical design of the end effector and connector flange was a central engineering challenge, requiring precision tolerancing for reliable mating across real-world charge port variations and orientations. Two connector standards were engineered to share a single arm-mounted flange, reducing tooling changeovers in the field.`,
+            mechanicalDesign: `Custom end effectors were designed in SolidWorks for both NACS and CCS connector standards, sharing a common flange and cable-routing spine so either connector head can be mounted on the same arm. Each end effector integrates a force-compliant mounting that accommodates small misalignments during insertion — critical for real-world reliability where vehicles are never parked perfectly.
 
-The flange design uses a passive compliance mechanism (floating mount with spring preload) to absorb lateral and angular offsets. Connector retention and release mechanisms were designed for repeatable actuation by the robot arm. All components were prototyped via 3D printing and iterated against physical connector samples before transitioning to machined aluminum for production-intent parts.`,
-            results: `Successfully demonstrated autonomous connector mating with both NACS and CCS charge ports across multiple vehicle models. The end effector design achieved reliable insertion with offsets up to ±8mm lateral and ±5° angular misalignment.`
+Wireless charging hardware for the pad-based system is also in development; specifics are being kept under wraps while a patent application is pending. Connector retention and release mechanisms were designed for repeatable actuation by the robot arm, and all components were prototyped via 3D printing and iterated against physical connector samples before transitioning toward machined, production-intent parts.`,
+            softwareArchitecture: `The insertion pipeline fuses a stereo depth camera mounted at the wrist with a force/torque sensor in the flange. Port pose is estimated from the depth stream, and the arm is driven toward it using a stack of inverse-kinematics solvers chosen per approach phase — coarse IK for the initial reach, then a finer, damped-least-squares solve for the final approach where accuracy matters most.
+
+Once the connector makes contact, control hands off to a force-feedback loop: PID and admittance control keep contact forces within safe bounds while the arm searches out small pose corrections, letting the system tolerate real-world misalignment instead of relying on a perfect approach trajectory. The mobile app talks to the robot's onboard controller to queue a charging session, report robot/vehicle state, and confirm session start and completion to the driver.`,
+            results: `Successfully demonstrated autonomous connector mating with both NACS and CCS charge ports across multiple real vehicles, including Tesla Model 3 and Model Y, with high port-detection accuracy and zero unintended contact events during testing. The end effector design achieved reliable insertion across a range of port heights and lateral/angular misalignment typical of real-world parking.
+
+The project — and the perception, insertion-control, and charging-stack work behind it — was presented at a Clean Energy Zone showcase at Toronto Metropolitan University's Centre for Urban Energy to industry professionals and researchers.`
+        }
+    },
+{
+        id: '33',
+        slug: 'purpose-robotics',
+        title: 'Purpose Robotics — Semi-Humanoid Robot Under $2,000',
+        shortDescription: 'A semi-humanoid robot with dual manipulator arms built for under $2,000, demonstrating autonomous pick-and-place manipulation on a standard tabletop.',
+        fullDescription: `Purpose Robotics is a semi-humanoid platform built to prove that capable manipulation hardware doesn't require a six-figure budget. The robot has a torso-mounted head with a status display, dual multi-DOF arms with custom grippers, and an onboard compute stack — the entire build came in under $2,000.
+
+The arms are driven by a chain of servo actuators and 3D-printed structural links, giving the robot a humanoid-like reach and working envelope on a tabletop. A demo task has the robot autonomously picking items and placing them into a bin, exercising the full perception-to-manipulation pipeline on affordable hardware.`,
+        thumbnail: '/purpose-robotics-thumbnail.webp',
+        previewMedia: '/purpose-robotics-thumbnail.webp',
+        videoUrl: '/purpose-robotics-pickplace.mp4',
+        detailImages: ['/purpose-robotics-thumbnail.webp'],
+        type: ['Mechanical', 'Software', 'Electrical'],
+        tags: ['Humanoid Robot', 'Low-Cost Robotics', 'Manipulation', 'Pick and Place', 'Servo Actuators', '3D Printing', 'Startup'],
+        date: '2025',
+        technicalStack: ['SolidWorks', 'Python', 'Computer Vision', 'Servo Control', '3D Printing'],
+        role: 'Robotics & Mechanical Engineer',
+        duration: '2025',
+        scope: 'Mechanical Design + Low-Cost Manipulation + Autonomous Pick-and-Place',
+        relatedProjects: ['29', '30'],
+        sections: {
+            overview: `Purpose Robotics set out to answer a simple question: how capable a semi-humanoid manipulator can you build for under $2,000? The result is a torso-and-head platform with dual arms, each with enough degrees of freedom to reach across a tabletop workspace and manipulate everyday objects.`,
+            mechanicalDesign: `The chassis, head, and arm links are 3D-printed, keeping structural cost low while allowing rapid iteration on link lengths and joint layouts. Each arm is a chain of servo actuators terminating in a custom gripper, sized to pick up small consumer items reliably.`,
+            results: `The robot demonstrates autonomous pick-and-place, identifying objects on the table and placing them into a bin without manual teleoperation for each pick — showing that a functional humanoid-style manipulator is achievable well outside typical research-lab budgets.`
         }
     },
 {

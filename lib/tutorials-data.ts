@@ -23,6 +23,39 @@ export interface TutorialSection {
 
 export const tutorials: Tutorial[] = [
     {
+        id: '5',
+        slug: 'training-humanoid-isaac-sim',
+        title: 'Train a Humanoid Robot, Start to Finish — Isaac Sim/Lab Series',
+        description:
+            'A video series walking through training a humanoid robot end-to-end in NVIDIA Isaac Sim and Isaac Lab, from environment setup through policy training.',
+        thumbnail: 'https://img.youtube.com/vi/-wHHJGRobww/maxresdefault.jpg',
+        date: '2026-08-12',
+        tags: ['Robotics', 'Humanoid Robot', 'NVIDIA Isaac Sim', 'Isaac Lab', 'Reinforcement Learning', 'Simulation'],
+        youtubeUrl: 'https://www.youtube.com/watch?v=-wHHJGRobww',
+        readTime: '10 min watch',
+        content: [
+            {
+                heading: 'Overview',
+                body: `This is Part 1 of a video series on training a humanoid robot from start to finish in NVIDIA Isaac Sim and Isaac Lab. Rather than a text write-up, this tutorial lives as a video walkthrough — watch it above or on YouTube.
+
+The series follows the full workflow of getting a humanoid robot policy trained in simulation: setting up the Isaac Sim/Isaac Lab environment, configuring the robot and task, and running through training so the policy is ready to evaluate and, eventually, move toward sim-to-real deployment.`,
+            },
+            {
+                heading: 'What the Series Covers',
+                body: `- Setting up NVIDIA Isaac Sim and Isaac Lab for humanoid robot work
+- Configuring a humanoid robot model and simulation environment
+- Structuring a training task for a humanoid policy
+- Running and iterating on training in Isaac Lab
+
+Later parts in the series build on this foundation — check the video description and channel for the rest of the series as it's released.`,
+            },
+            {
+                heading: 'Who This Is For',
+                body: `This series is aimed at anyone getting started with humanoid robotics in simulation — whether you're coming from mobile-manipulator or arm-based Isaac Lab work (like the VLA training project elsewhere on this site) and want to extend into full humanoid platforms, or you're new to Isaac Sim/Lab entirely and want a start-to-finish walkthrough instead of piecing together scattered docs.`,
+            },
+        ],
+    },
+    {
         id: '3',
         slug: 'asl-robotic-hand-tutorial',
         title: 'Computer Vision ASL Detection Robotic Arm',
