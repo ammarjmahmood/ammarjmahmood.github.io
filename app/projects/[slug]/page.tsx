@@ -138,8 +138,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         {project.videoUrl && (
                             <section className="mb-12">
                                 <h2 className="mb-4 text-2xl font-bold">Demo Video</h2>
-                                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-muted">
-                                    {project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be') ? (
+                                {project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be') ? (
+                                    <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-muted">
                                         <iframe
                                             className="absolute inset-0 h-full w-full"
                                             src={project.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
@@ -147,15 +147,18 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
                                         />
-                                    ) : (
+                                    </div>
+                                ) : (
+                                    <div className="w-full overflow-hidden rounded-xl bg-black flex justify-center">
                                         <video
-                                            className="absolute inset-0 h-full w-full object-contain bg-black"
+                                            className="w-full max-h-[80vh] object-contain"
                                             src={project.videoUrl}
                                             controls
                                             playsInline
+                                            preload="metadata"
                                         />
-                                    )}
-                                </div>
+                                    </div>
+                                )}
                             </section>
                         )}
 
@@ -239,6 +242,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                                     src={image}
                                                     controls
                                                     playsInline
+                                                    preload="metadata"
                                                 />
                                             ) : (
                                                 <Image
