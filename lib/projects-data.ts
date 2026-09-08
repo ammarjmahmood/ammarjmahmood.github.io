@@ -8,7 +8,8 @@ export interface Project {
     fullDescription: string;
     thumbnail: string;
     previewMedia?: string; // GIF or video for hover effect
-    videoUrl?: string; // YouTube video URL
+    videoUrl?: string; // YouTube or local video URL
+    videoPoster?: string;
     detailImages: string[];
     type: ProjectType[];
     tags: string[];
@@ -36,45 +37,86 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+        id: 'kiwi-fr5-mujoco',
+        slug: 'kiwi-fr5-mujoco-simulation',
+        title: 'MuJoCo — Fairino FR5 & NACS Charging Simulation',
+        shortDescription: 'A CAD-based EV charging simulation for testing the Fairino FR5 arm, synthetic stereo-camera perception, and NACS charging approaches without needing the physical robot for every iteration.',
+        fullDescription: `Built a MuJoCo simulation environment for Kiwi Charge to bring robot development off the hardware and into a repeatable local workflow. The scene combines a Fairino FR5 cobot on the mobile charging platform, an underground parking garage with Tesla vehicles, and NACS connector and inlet geometry.
+
+Integrated the robot CAD, custom flange, wrist-mounted ZED camera, and charging tool with the perception and control workflow. Synthetic camera frames make it possible to inspect charge-port detection alongside the arm's motion and iterate on the charging approach in simulation.`,
+        thumbnail: '/kiwi-fr5-mujoco-card.webp',
+        videoPoster: '/kiwi-fr5-mujoco-poster.webp',
+        videoUrl: '/kiwi-fr5-mujoco-demo.mp4',
+        detailImages: [],
+        type: ['Mechanical', 'Software', 'Machine Learning'],
+        tags: ['MuJoCo', 'Fairino FR5', 'NACS', 'ROS 2', 'Computer Vision', 'Robot Simulation'],
+        date: '2026',
+        technicalStack: ['MuJoCo', 'Python', 'ROS 2', 'Fairino FR5', 'URDF / MJCF', 'STEP / STL CAD', 'ZED Stereo Camera', 'YOLO Segmentation', 'NACS'],
+        role: 'Robotics & Simulation Development',
+        scope: 'Robot CAD + Synthetic Perception + EV Charging Approach',
+        relatedProjects: ['29'],
+        achievements: [
+            'Built a repeatable garage simulation around the Fairino FR5 and Kiwi mobile charging platform.',
+            'Integrated robot and end-effector CAD, a wrist-mounted ZED camera, and downloaded Tesla NACS connector and inlet geometry.',
+            'Rendered synthetic RGB and depth frames for charge-port perception experiments.',
+            'Connected local robot-control interfaces to MuJoCo for inspecting motion and charging approaches before hardware testing.'
+        ],
+        sections: {
+            overview: `Testing charging code on the physical robot for every change slows down iteration. I built this MuJoCo environment to inspect arm motion, camera views, and charge-port detection locally, then use those observations to prepare for hardware tests.
+
+The recording shows the simulated Fairino FR5 charging approach alongside the wrist-camera detector input and depth visualization.`,
+            mechanicalDesign: `Assembled the Fairino FR5 from robot description and mesh assets, mounted it to the Kiwi charging platform, and integrated the custom flange, ZED camera, and NACS tool. Downloaded Tesla connector and inlet CAD provides a more representative charging interface than basic placeholder shapes.
+
+The garage includes Tesla vehicle meshes and parking geometry so the charging approach can be inspected in the context of the car and surrounding space.`,
+            softwareArchitecture: `MuJoCo provides the articulated robot scene and camera rendering. Local robot-control interfaces route commands into the simulator, while ROS 2 camera data exposes synthetic RGB, depth, camera calibration, and transforms for perception experiments.
+
+A trained NACS segmentation model was exercised on rendered camera frames. Viewing detection output next to the robot makes camera alignment, visibility, and approach behavior easier to diagnose.`,
+            results: `Created a local testbed for iterating on robot motion and NACS perception without requiring the physical robot for every experiment. The September 7, 2026 recording captures the simulation and camera views together.
+
+This is a development simulation: contact behavior, insertion tolerances, and perception across varied conditions still require validation. A successful simulated approach does not establish reliable physical insertion.`
+        }
+    },
+
 {
         id: '32',
         slug: 'autodesk-internship',
         title: 'Autodesk AI Lab — AI/ML Developer Intern',
-        shortDescription: 'Integrated World Labs spatial AI and Gaussian-splat workflows into Maya while building multimodal, agentic AI experiences across the Autodesk platform.',
-        fullDescription: `Interned at Autodesk on the AI and innovation team, applying emerging AI capabilities across product development, agentic workflows, and exploratory research.
+        shortDescription: 'Built multi-agent, agentic AI systems on the Claude Agent SDK for Autodesk Assistant, including a World Labs spatial-AI integration into Maya, shipped through a Jenkins CI/CD pipeline to senior leadership.',
+        fullDescription: `Interned at Autodesk on the AI and innovation team, building agentic AI systems for Autodesk Assistant and applying emerging AI capabilities across product development and exploratory research.
 
-Integrated World Labs directly into Autodesk Maya, enabling spatial-world generation and Gaussian-splat workflows inside the artist's existing 3D environment. The work explored generating worlds from image and text inputs, importing splats and collision meshes, and making spatial AI easier to use without leaving Maya. Autodesk announced its $200 million strategic investment in World Labs on February 18, 2026, creating a timely product context for this integration.
+Built multi-agent workflows on the Claude Agent SDK, with an emphasis on context management and graph-based agent orchestration — designing how agents hand off state, share context, and coordinate as a graph of specialized roles rather than a single monolithic prompt. Also integrated World Labs spatial intelligence directly into Autodesk Maya, enabling Gaussian-splat and spatial-world generation from image and text inputs inside the artist's existing 3D environment; Autodesk announced its $200 million strategic investment in World Labs on February 18, 2026, creating a timely product context for this integration.
 
-Built an Electron-based desktop application integrated with an Autodesk product and developed AI experiences that combined LLMs with video, audio, and 3D generation models. Also contributed to Autodesk Assistant features, customer discovery, and product innovation initiatives in collaboration with engineering, UI/UX, and product teams.`,
-        thumbnail: '/autodesk-world-labs-maya.jpg',
-        previewMedia: '/autodesk-world-labs-maya.jpg',
-        detailImages: ['/autodesk-world-labs-maya.jpg'],
+Built an Electron-based desktop application shipped through a Jenkins pipeline that produced signed macOS DMG builds for internal testing, with demos delivered to senior leadership as a high-visibility initiative. Worked in two-week scrum sprints with daily standups, collaborating directly with principal engineers, senior architects, project managers, and senior UI/UX designers to take the work from prototype to a testable product.`,
+        thumbnail: '/autodesk-assistant-fusion.jpg',
+        previewMedia: '/autodesk-assistant-fusion.jpg',
+        detailImages: ['/autodesk-assistant-fusion.jpg'],
         type: ['Software', 'Machine Learning'],
-        tags: ['Autodesk', 'Maya', 'Gaussian Splats', 'World Labs', 'Multimodal AI', 'AI Agents', '3D Generation', 'Product Development'],
+        tags: ['Autodesk', 'Agentic AI', 'Multi-Agent Systems', 'Claude SDK', 'World Labs', 'Gaussian Splats', 'Maya', 'CI/CD', 'Jenkins', 'Product Development'],
         date: '2026',
-        technicalStack: ['Autodesk Maya', 'Electron', 'TypeScript', 'Python', 'World Labs API', 'Gaussian Splatting', 'LLMs', 'Video & Audio Models', '3D Generation Models', 'Autodesk APIs'],
+        technicalStack: ['Claude Agent SDK', 'Electron', 'TypeScript', 'Python', 'Agent Orchestration Graphs', 'Jenkins', 'Autodesk Maya', 'World Labs API', 'Gaussian Splatting', 'Autodesk APIs'],
         role: 'AI/ML Developer Intern',
         duration: 'January 2026 — Present',
-        scope: 'Maya Integration + Spatial AI + Multimodal Agents + Product Innovation',
+        scope: 'Multi-Agent Systems + Maya Spatial AI Integration + CI/CD + Product Innovation',
         learnMoreUrl: 'https://adsknews.autodesk.com/en/news/autodesk-invests-in-world-labs/',
         achievements: [
+            'Built multi-agent, agentic workflows on the Claude Agent SDK for Autodesk Assistant, designing context management and graph-based agent orchestration.',
             'Integrated World Labs spatial intelligence and Gaussian-splat workflows directly into Autodesk Maya.',
-            'Applied LLMs, video and audio understanding, and 3D generation models to simplify complex Autodesk workflows.',
-            'Built agentic pipelines for scheduling, location and permit research, production breakdowns, and data prediction.',
-            'Contributed to Autodesk Assistant and translated customer research into product concepts with design and product teams.'
+            'Built and maintained a Jenkins CI/CD pipeline producing signed macOS DMG builds of an Electron desktop app for internal testing.',
+            'Delivered high-visibility demos to senior leadership and worked in scrum sprints with daily standups alongside principal engineers, senior architects, project managers, and senior UI/UX designers.'
         ],
         sections: {
-            overview: `Worked on Autodesk's AI and innovation team across product development and emerging-technology research, with a focus on making advanced AI capabilities practical and approachable inside existing creative workflows.
+            overview: `Worked on Autodesk's AI and innovation team building agentic AI systems for Autodesk Assistant, with a focus on making advanced multi-agent capabilities practical and approachable inside existing creative workflows.
 
 Following Autodesk's February 18, 2026 announcement of a $200 million strategic investment in World Labs, integrated World Labs spatial intelligence into Maya and prototyped an end-to-end Gaussian-splat workflow for generating, previewing, importing, and positioning AI-created 3D worlds.`,
-            softwareArchitecture: `Built an in-Maya World Labs workflow that lets artists create 3D worlds from image or text inputs, preview generated panoramas, import Gaussian splats and collision meshes, and lock the Maya camera to the generated scene. The integration kept spatial-AI tooling inside the familiar Maya workspace to reduce setup and context switching.
+            softwareArchitecture: `Designed multi-agent workflows on the Claude Agent SDK, treating the system as a graph of specialized agents rather than a single prompt: each node owns a slice of the task, and the architecture centers on how context is managed and passed as agents hand work off to one another. This graph-engineering approach made it possible to reason about and debug individual agent responsibilities independently.
 
-Developed AI-powered experiences across the Autodesk platform by combining LLM reasoning with video and audio understanding, 3D generation, and Autodesk APIs. Built an Electron desktop application and agentic pipelines for generative scheduling, permit and location research, script and screenplay breakdown, and data prediction.
+Built an in-Maya World Labs workflow that lets artists create 3D worlds from image or text inputs, preview generated panoramas, import Gaussian splats and collision meshes, and lock the Maya camera to the generated scene — keeping spatial-AI tooling inside the familiar Maya workspace to reduce setup and context switching.
 
-Contributed to Autodesk Assistant features and explored how multimodal models could make powerful Autodesk tools easier to discover and operate through natural interaction.`,
-            results: `Delivered functional prototypes spanning Maya, Electron, agentic automation, and multimodal AI. Demonstrated the workflows to product managers and design leads to support product exploration and roadmap discussions.
+Shipped the work as an Electron desktop application through a Jenkins CI/CD pipeline that built and signed macOS DMG installers for internal distribution, enabling frequent, low-friction testing cycles ahead of leadership demos.`,
+            results: `Delivered functional, testable builds spanning Maya, Electron, multi-agent orchestration, and CI/CD. Demoed the agentic Assistant workflows and Maya integration directly to senior leadership as a high-visibility initiative within the AI and innovation team.
 
-Conducted customer exploratory studies, surfaced workflow pain points, and collaborated with UI/UX designers to turn research concepts into clearer product experiences.`
+Operated in two-week scrum sprints with daily standups, working cross-functionally with principal engineers, senior architects, project managers, and senior UI/UX designers to move the project from prototype to a shippable, testable product.`
         }
     },
 {
@@ -127,23 +169,42 @@ The project — and the perception, insertion-control, and charging-stack work b
         shortDescription: 'A semi-humanoid robot with dual manipulator arms built for under $2,000, demonstrating autonomous pick-and-place manipulation on a standard tabletop.',
         fullDescription: `Purpose Robotics is a semi-humanoid platform built to prove that capable manipulation hardware doesn't require a six-figure budget. The robot has a torso-mounted head with a status display, dual multi-DOF arms with custom grippers, and an onboard compute stack — the entire build came in under $2,000.
 
-The arms are driven by a chain of servo actuators and 3D-printed structural links, giving the robot a humanoid-like reach and working envelope on a tabletop. A demo task has the robot autonomously picking items and placing them into a bin, exercising the full perception-to-manipulation pipeline on affordable hardware.`,
+The arms are driven by a chain of servo actuators and 3D-printed structural links, giving the robot a humanoid-like reach and working envelope on a tabletop. A demo task has the robot autonomously picking items and placing them into a bin, exercising the full perception-to-manipulation pipeline on affordable hardware.
+
+To develop and test manipulation behavior without needing hardware access for every iteration, I built a CAD-accurate MuJoCo simulation of the robot: the chassis, telescopic lift, torso, and head imported directly from the Onshape assembly, and the dual arms built from their own URDF and mesh exports so joint limits and mounting geometry match the physical build. The sim runs a scripted bimanual folding task on a simulated T-shirt using MuJoCo's native cloth physics, and exports joint trajectories in the same units and rate limits the real controller expects, so a validated motion can be replayed on hardware.`,
         thumbnail: '/purpose-robotics-thumbnail.webp',
+        thumbnailAlignment: 'top',
         previewMedia: '/purpose-robotics-thumbnail.webp',
         videoUrl: '/purpose-robotics-pickplace.mp4',
-        detailImages: ['/purpose-robotics-thumbnail.webp'],
-        type: ['Mechanical', 'Software', 'Electrical'],
-        tags: ['Humanoid Robot', 'Low-Cost Robotics', 'Manipulation', 'Pick and Place', 'Servo Actuators', '3D Printing', 'Startup'],
+        detailImages: [
+            '/purpose-robotics-thumbnail.webp',
+            '/purpose-robotics-fold-demo.mp4',
+            'https://youtube.com/shorts/5i89apVo1Xw',
+        ],
+        type: ['Mechanical', 'Software', 'Electrical', 'Machine Learning'],
+        tags: ['Humanoid Robot', 'Low-Cost Robotics', 'Manipulation', 'Pick and Place', 'Servo Actuators', '3D Printing', 'Startup', 'MuJoCo', 'Cloth Simulation', 'Sim-to-Real'],
         date: '2025',
-        technicalStack: ['SolidWorks', 'Python', 'Computer Vision', 'Servo Control', '3D Printing'],
+        technicalStack: ['SolidWorks', 'Python', 'Computer Vision', 'Servo Control', '3D Printing', 'MuJoCo', 'Onshape CAD', 'URDF / MJCF', 'Reinforcement Learning'],
         role: 'Robotics & Mechanical Engineer',
         duration: '2025',
-        scope: 'Mechanical Design + Low-Cost Manipulation + Autonomous Pick-and-Place',
+        scope: 'Mechanical Design + Low-Cost Manipulation + Autonomous Pick-and-Place + MuJoCo Simulation',
         relatedProjects: ['29', '30'],
+        achievements: [
+            'Designed and built a semi-humanoid dual-arm manipulator for under $2,000 in parts.',
+            'Demonstrated autonomous pick-and-place from perception through grasp and placement on real hardware.',
+            'Built a CAD-accurate MuJoCo digital twin from the robot\'s own Onshape assembly and arm URDFs, down to convex collision geometry decomposed from the real meshes.',
+            'Implemented a scripted bimanual cloth-folding task on a simulated garment using MuJoCo\'s native flex solver.',
+            'Built a sim-to-real trajectory exporter matching the hardware controller\'s units and rate limits, plus a Gymnasium environment for residual reinforcement-learning refinement of the fold.'
+        ],
         sections: {
             overview: `Purpose Robotics set out to answer a simple question: how capable a semi-humanoid manipulator can you build for under $2,000? The result is a torso-and-head platform with dual arms, each with enough degrees of freedom to reach across a tabletop workspace and manipulate everyday objects.`,
             mechanicalDesign: `The chassis, head, and arm links are 3D-printed, keeping structural cost low while allowing rapid iteration on link lengths and joint layouts. Each arm is a chain of servo actuators terminating in a custom gripper, sized to pick up small consumer items reliably.`,
-            results: `The robot demonstrates autonomous pick-and-place, identifying objects on the table and placing them into a bin without manual teleoperation for each pick — showing that a functional humanoid-style manipulator is achievable well outside typical research-lab budgets.`
+            softwareArchitecture: `Alongside the physical robot, I built a MuJoCo simulation to iterate on manipulation behavior without hardware in the loop for every change. The chassis, telescopic lift, torso, and head come straight from the robot's Onshape CAD; the arms come from their own URDF definitions, with collision geometry generated by decomposing the real meshes into convex pieces rather than approximating them with primitives.
+
+A scripted controller drives both arms through a bimanual fold on a simulated T-shirt, using MuJoCo's flex cloth solver for the garment physics. The same environment is wrapped as a Gymnasium task with domain-randomized actuator offsets, set up to train a residual reinforcement-learning policy on top of the scripted motion. Joint trajectories export in the hardware controller's own units and rate limits, so a validated simulated motion is a direct candidate for hardware replay.`,
+            results: `The robot demonstrates autonomous pick-and-place, identifying objects on the table and placing them into a bin without manual teleoperation for each pick — showing that a functional humanoid-style manipulator is achievable well outside typical research-lab budgets.
+
+In simulation, the scripted bimanual fold reliably brings the shirt's hem up onto its shoulder seam and reduces its footprint by roughly a quarter each run. The residual-learning setup is in place and trains against that scripted baseline, but has not yet been shown to beat it — it's an active area of the project rather than a finished result.`
         }
     },
 {

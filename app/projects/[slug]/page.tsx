@@ -143,7 +143,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                     <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-muted">
                                         <iframe
                                             className="absolute inset-0 h-full w-full"
-                                            src={project.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
+                                            src={project.videoUrl
+                                                .replace('watch?v=', 'embed/')
+                                                .replace('youtu.be/', 'youtube.com/embed/')
+                                                .replace('youtube.com/shorts/', 'youtube.com/embed/')}
                                             title={project.title}
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
@@ -154,6 +157,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                         <video
                                             className="w-full max-h-[80vh] object-contain"
                                             src={project.videoUrl}
+                                            poster={project.videoPoster}
+                                            aria-label={`${project.title} demonstration`}
                                             controls
                                             playsInline
                                             preload="metadata"
@@ -294,7 +299,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                 src={project.thumbnail}
                                 alt={project.title}
                                 fill
-                                className={`object-cover ${project.thumbnailAlignment ? `object-${project.thumbnailAlignment}` : ''}`}
+                                className="object-cover"
+                                style={project.thumbnailAlignment ? { objectPosition: project.thumbnailAlignment } : undefined}
                                 priority
                             />
                         </div>

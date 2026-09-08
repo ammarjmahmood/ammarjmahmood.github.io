@@ -17,7 +17,10 @@ function isYouTube(src: string) {
 }
 
 function toEmbedUrl(src: string) {
-    return src.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/');
+    return src
+        .replace('watch?v=', 'embed/')
+        .replace('youtu.be/', 'youtube.com/embed/')
+        .replace('youtube.com/shorts/', 'youtube.com/embed/');
 }
 
 export function ProjectGallery({ images, title }: ProjectGalleryProps) {
