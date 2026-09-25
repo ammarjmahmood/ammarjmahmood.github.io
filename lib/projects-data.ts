@@ -38,6 +38,39 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: '34',
+        slug: 'viam-robot-hackathon-jenga',
+        title: 'Viam Robot Hackathon — Fine Motor Skills Winner',
+        shortDescription: 'Won the Fine Motor Skills category at Viam\'s 2026 Robot Hackathon, building a robot arcade that lets anyone play Jenga against a robot arm remotely, from anywhere in the world.',
+        fullDescription: `Built a robot arcade for Viam's 2026 Robot Hackathon with a three-person team, taking first place in the Fine Motor Skills challenge. The build lets a remote player challenge a robot arm to a game of Jenga over the internet, turning a dexterous manipulation task into something anyone can try from anywhere in the world.
+
+The robot arm handles the fine, precise motions that Jenga demands — identifying individual blocks in the tower, extracting one without toppling the stack, and placing it back on top — all driven through the Viam platform and streamed to a remote player in real time.`,
+        thumbnail: '/viam-hackathon-team.webp',
+        previewMedia: '/viam-hackathon-team.webp',
+        videoUrl: 'https://youtube.com/shorts/GgyeDJ3g36w',
+        detailImages: [
+            '/viam-hackathon-team.webp',
+            '/viam-hackathon-medal.webp',
+        ],
+        type: ['Mechanical', 'Software', 'Electrical'],
+        tags: ['Viam', 'Hackathon', 'Robot Arm', 'Fine Motor Skills', 'Teleoperation', 'Jenga', 'Remote Control'],
+        date: '2026',
+        technicalStack: ['Viam Platform', 'Robot Arm', 'Computer Vision', 'Python', 'Teleoperation'],
+        role: 'Robotics Engineer',
+        duration: '2026',
+        scope: 'Remote Teleoperation + Dexterous Manipulation + Hackathon Build',
+        achievements: [
+            'Won 1st place in the Fine Motor Skills category at Viam\'s 2026 Robot Hackathon.',
+            'Built a robot arm system capable of extracting and replacing Jenga blocks without toppling the tower.',
+            'Made the demo remotely playable, letting anyone challenge the robot to a game of Jenga from anywhere in the world.'
+        ],
+        sections: {
+            overview: `Viam's 2026 Robot Hackathon challenged teams to build a robot demo around a fine motor skills task. Our team built a robot arcade around a classic dexterity game — Jenga — where the robot arm plays against a remote player.`,
+            softwareArchitecture: `The arm runs on the Viam platform, which handles the low-level robot control and exposes the arm remotely so a player anywhere in the world can trigger a move over the internet. Vision and control logic identify which block to extract and guide the arm through the precise, low-tolerance motion needed to pull it free and stack it back on top without collapsing the tower.`,
+            results: `The system won 1st place in the Fine Motor Skills category, judged live at Viam's office in front of the other hackathon teams.`
+        }
+    },
+    {
         id: '33',
         slug: 'purpose-robotics',
         title: 'Purpose Robotics — Semi-Humanoid Robot Under $2,000',
