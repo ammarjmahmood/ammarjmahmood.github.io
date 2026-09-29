@@ -66,7 +66,10 @@ export function CaptionedGallery({ items }: CaptionedGalleryProps) {
         <>
             <div className="columns-2 gap-4 sm:columns-3 [column-fill:_balance]">
                 {items.map((item, index) => (
-                    <figure key={item.src + index} className="group mb-4 break-inside-avoid">
+                    <figure
+                        key={item.src + index}
+                        className={`group mb-4 break-inside-avoid ${item.pending ? 'no-print' : ''}`}
+                    >
                         {item.pending ? (
                             <div className="flex aspect-square w-full flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-white/20 bg-white/[0.03] text-center px-3">
                                 <span className="text-2xl">📸</span>
@@ -91,14 +94,14 @@ export function CaptionedGallery({ items }: CaptionedGalleryProps) {
                                 />
                             </button>
                         )}
-                        <figcaption className="mt-2 text-sm text-white/70">{item.caption}</figcaption>
+                        <figcaption className="print-muted mt-2 text-sm text-white/70">{item.caption}</figcaption>
                     </figure>
                 ))}
             </div>
 
             {lightboxIndex !== null && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+                    className="no-print fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
                     onClick={close}
                 >
                     <button

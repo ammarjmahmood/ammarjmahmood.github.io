@@ -143,3 +143,56 @@ body {
     @apply bg-background text-foreground;
   }
 }
+/* Beyond Engineering — print / PDF export styles */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.6in;
+  }
+
+  html, body {
+    background: #ffffff !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .beyond-engineering-page {
+    background: #ffffff !important;
+    color: #18181b !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .beyond-engineering-page * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .beyond-engineering-page .print-text {
+    color: #18181b !important;
+  }
+
+  .beyond-engineering-page .print-muted {
+    color: #52525b !important;
+  }
+
+  .beyond-engineering-page .print-border {
+    border-color: #d4d4d8 !important;
+  }
+
+  .beyond-engineering-page .print-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .beyond-engineering-page img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .beyond-engineering-page section {
+    break-inside: avoid-page;
+  }
+}

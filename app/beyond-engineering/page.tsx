@@ -28,7 +28,7 @@ function BioBlock({
     children: React.ReactNode;
 }) {
     return (
-        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12 print-avoid-break">
             <div className={reverse ? 'md:order-2' : ''}>
                 <Image
                     src={image}
@@ -40,7 +40,7 @@ function BioBlock({
                 />
             </div>
             <div className={reverse ? 'md:order-1' : ''}>
-                <div className="space-y-4 text-base leading-relaxed text-white/80">{children}</div>
+                <div className="space-y-4 text-base leading-relaxed text-white/80 print-text">{children}</div>
             </div>
         </div>
     );
@@ -59,11 +59,11 @@ const galleryItems = [
 
 export default function BeyondEngineeringPage() {
     return (
-        <div className="min-h-screen bg-black text-white">
+        <div className="beyond-engineering-page min-h-screen bg-black text-white">
             <div className="mx-auto max-w-5xl px-6 py-10 md:px-10">
                 <Link
                     href="/"
-                    className="inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
+                    className="no-print inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
                 >
                     <ArrowLeft className="h-4 w-4" />
                     Back to Portfolio
@@ -81,28 +81,28 @@ export default function BeyondEngineeringPage() {
                         />
                     </div>
                     <div>
-                        <h1 className={`${playfair.className} text-4xl leading-tight sm:text-6xl`}>
+                        <h1 className={`${playfair.className} print-text text-4xl leading-tight sm:text-6xl`}>
                             Ammar J Mahmood
                         </h1>
-                        <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
+                        <p className="print-muted mt-3 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
                             Private &amp; Glider Pilot
                         </p>
-                        <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
+                        <p className="print-muted mt-1 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
                             Space &amp; Robotics Hackathon Competitor
                         </p>
                     </div>
                 </header>
 
                 {/* Intro */}
-                <section className="mt-14 max-w-3xl space-y-5 text-lg leading-relaxed text-white/80 sm:mt-20">
-                    <p>
+                <section className="mt-14 max-w-3xl space-y-5 text-lg leading-relaxed text-white/80 sm:mt-20 print-avoid-break">
+                    <p className="print-text">
                         Ammar is a Mechatronics Engineering student and robotics engineer who spends about as much
                         time trying to leave the ground as he does building things that stay on it. Outside the
                         lab, he holds a private pilot license and a glider pilot license, competes at hackathons
                         across North America — 25 and counting — and has spent time building navigation systems
                         aimed squarely at space and robotics applications.
                     </p>
-                    <p className={`${playfair.className} text-xl italic text-white/60`}>
+                    <p className={`${playfair.className} print-muted text-xl italic text-white/60`}>
                         &ldquo;If it flies, floats, or drives itself, I want to have built one.&rdquo;
                     </p>
                 </section>
@@ -157,7 +157,7 @@ export default function BeyondEngineeringPage() {
                         <p>
                             Ammar has been to a handful of space-focused events, but BramHacks 2025 — Space
                             Edition is the one with a photo to prove it. His team of five built{' '}
-                            <strong className="text-white">N.O.P.S. (Navigation Offline Positioning System)</strong>
+                            <strong className="print-text text-white">N.O.P.S. (Navigation Offline Positioning System)</strong>
                             , an offline autonomous navigation system for space and robotics applications that
                             fuses gyroscope, accelerometer, and magnetometer data — an IMU sensor stack — to keep
                             track of position without relying on GPS or any live signal. Their pitch line said it
@@ -189,14 +189,14 @@ export default function BeyondEngineeringPage() {
 
                 {/* Gallery */}
                 <section className="mt-20 sm:mt-28">
-                    <h2 className={`${playfair.className} text-2xl tracking-wide sm:text-3xl`}>Gallery</h2>
+                    <h2 className={`${playfair.className} print-text text-2xl tracking-wide sm:text-3xl`}>Gallery</h2>
                     <div className="mt-8">
                         <CaptionedGallery items={galleryItems} />
                     </div>
                 </section>
 
                 {/* Contact */}
-                <section className="mt-20 border-t border-white/10 pt-12 sm:mt-28">
+                <section className="mt-20 border-t border-white/10 pt-12 sm:mt-28 print-border print-avoid-break">
                     <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
                         <Image
                             src="/gallery/pilot.webp"
@@ -207,10 +207,10 @@ export default function BeyondEngineeringPage() {
                             className="h-auto w-full rounded-2xl"
                         />
                         <div>
-                            <h2 className={`${playfair.className} text-2xl leading-snug sm:text-3xl`}>
+                            <h2 className={`${playfair.className} print-text text-2xl leading-snug sm:text-3xl`}>
                                 Contact me and follow my journey
                             </h2>
-                            <div className="mt-6 space-y-3 text-white/80">
+                            <div className="mt-6 space-y-3 text-white/80 print-text">
                                 <a
                                     href="mailto:ammarjmahmood@gmail.com"
                                     className="flex items-center gap-2 hover:text-white"
@@ -241,7 +241,7 @@ export default function BeyondEngineeringPage() {
                     </div>
                 </section>
 
-                <div className="mt-16 border-t border-white/10 pt-8 text-center">
+                <div className="no-print mt-16 border-t border-white/10 pt-8 text-center">
                     <Link href="/" className="text-sm text-white/50 hover:text-white">
                         ← Back to Portfolio
                     </Link>
