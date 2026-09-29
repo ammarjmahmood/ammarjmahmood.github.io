@@ -143,19 +143,31 @@ body {
     @apply bg-background text-foreground;
   }
 }
-/* Beyond Engineering — print / PDF export styles */
+/* Beyond Engineering — print / PDF export styles
+   The screen page is a long scrolling story; print needs a tight 2-page
+   media kit instead. .print-only content is hidden on screen and shown
+   only when printing; .screen-only is the reverse. */
+.print-only {
+  display: none;
+}
+
 @media print {
   @page {
     size: letter;
-    margin: 0.6in;
+    margin: 0.5in;
   }
 
   html, body {
     background: #ffffff !important;
   }
 
-  .no-print {
+  .no-print,
+  .screen-only {
     display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
   }
 
   .beyond-engineering-page {
@@ -190,9 +202,5 @@ body {
   .beyond-engineering-page img {
     break-inside: avoid;
     page-break-inside: avoid;
-  }
-
-  .beyond-engineering-page section {
-    break-inside: avoid-page;
   }
 }
