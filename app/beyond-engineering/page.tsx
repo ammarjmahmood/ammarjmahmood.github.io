@@ -4,7 +4,7 @@ import { Playfair_Display } from 'next/font/google';
 import { ArrowLeft, Mail, Linkedin, Github } from 'lucide-react';
 import { CaptionedGallery } from '@/components/captioned-gallery';
 
-const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '600', '700'] });
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '500', '600'] });
 
 export const metadata = {
     title: 'Beyond Engineering - Ammar J Mahmood',
@@ -12,31 +12,32 @@ export const metadata = {
         'Private and glider pilot, space-hackathon competitor, and aspiring skydiver — a look at what Ammar J Mahmood gets up to outside the lab.',
 };
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
-    return (
-        <p className={`${playfair.className} text-sm uppercase tracking-[0.3em] text-white/50`}>
-            {children}
-        </p>
-    );
-}
-
 function BioBlock({
     image,
     imageAlt,
+    width,
+    height,
     reverse = false,
     children,
 }: {
     image: string;
     imageAlt: string;
+    width: number;
+    height: number;
     reverse?: boolean;
     children: React.ReactNode;
 }) {
     return (
-        <div className="grid items-center gap-8 md:grid-cols-2">
+        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
             <div className={reverse ? 'md:order-2' : ''}>
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white/5">
-                    <Image src={image} alt={imageAlt} fill className="object-cover" />
-                </div>
+                <Image
+                    src={image}
+                    alt={imageAlt}
+                    width={width}
+                    height={height}
+                    loading="eager"
+                    className="h-auto w-full rounded-2xl"
+                />
             </div>
             <div className={reverse ? 'md:order-1' : ''}>
                 <div className="space-y-4 text-base leading-relaxed text-white/80">{children}</div>
@@ -46,13 +47,13 @@ function BioBlock({
 }
 
 const galleryItems = [
-    { src: '/gallery/withDA20.webp', caption: 'With a Diamond DA20 on the ramp' },
-    { src: '/gallery/pilot.webp', caption: 'Heads-up, headset on, mid-flight' },
-    { src: '/gallery/pillot.webp', caption: 'Glider training day with the University Soaring Society' },
-    { src: '/gallery/presidentaward.webp', caption: "President's Award, University Soaring Society" },
-    { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition — Team N.O.P.S' },
-    { src: '/gallery/bramhacksmentor.webp', caption: 'Working the build overnight at BramHacks' },
-    { src: '/gallery/Canada Leadership Conference.webp', caption: 'Canadian Engineering Leadership Conference, St. John\'s NL' },
+    { src: '/gallery/withDA20.webp', caption: 'With a Diamond DA20 on the ramp', width: 1286, height: 1714 },
+    { src: '/gallery/pilot.webp', caption: 'Heads-up, headset on, mid-flight', width: 1080, height: 1080 },
+    { src: '/gallery/pillot.webp', caption: 'Glider training day with the University Soaring Society', width: 1286, height: 1714 },
+    { src: '/gallery/presidentaward.webp', caption: "President's Award, University Soaring Society", width: 1920, height: 1280 },
+    { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition — Team N.O.P.S', width: 1440, height: 1920 },
+    { src: '/gallery/bramhacksmentor.webp', caption: 'Working the build overnight at BramHacks', width: 1280, height: 1707 },
+    { src: '/gallery/Canada Leadership Conference.webp', caption: 'Canadian Engineering Leadership Conference, St. John\'s NL', width: 1200, height: 1600 },
     { src: '', caption: 'Skydiving — photos coming soon', pending: true },
 ];
 
@@ -106,11 +107,14 @@ export default function BeyondEngineeringPage() {
                     </p>
                 </section>
 
-                {/* Piloting */}
-                <section className="mt-20 space-y-12 sm:mt-28">
-                    <SectionLabel>Piloting &amp; Soaring</SectionLabel>
-
-                    <BioBlock image="/gallery/withDA20.webp" imageAlt="Ammar with a Diamond DA20 trainer aircraft">
+                {/* Continuous bio: piloting, soaring, space hackathons */}
+                <section className="mt-20 space-y-20 sm:mt-28">
+                    <BioBlock
+                        image="/gallery/withDA20.webp"
+                        imageAlt="Ammar with a Diamond DA20 trainer aircraft"
+                        width={1286}
+                        height={1714}
+                    >
                         <p>
                             Ammar is a licensed private pilot and glider pilot, trained on aircraft like the
                             Diamond DA20 alongside unpowered cross-country glider flights. Flying started as a
@@ -127,27 +131,28 @@ export default function BeyondEngineeringPage() {
                     <BioBlock
                         image="/gallery/presidentaward.webp"
                         imageAlt="Ammar receiving a President's Award for the University Soaring Society"
+                        width={1920}
+                        height={1280}
                         reverse
                     >
                         <p>
                             That involvement with USS was recognized with a President&apos;s Award for
                             contributions to the club — presented on stage alongside teammates who logged just as
-                            many early mornings at the airfield.
+                            many early mornings at the airfield. Between checklists, cockpit selfies, and the
+                            occasional look straight down the wing at 2,000 feet, flying has stayed the one hobby
+                            that has nothing to do with a keyboard.
                         </p>
                         <p>
-                            Between checklists, cockpit selfies, and the occasional look straight down the wing at
-                            2,000 feet, flying has stayed the one hobby that has nothing to do with a keyboard.
+                            The same instinct — chase the thing that gets you off the ground — carries over into
+                            Ammar&apos;s space work.
                         </p>
                     </BioBlock>
-                </section>
-
-                {/* Space & Hackathons */}
-                <section className="mt-20 space-y-12 sm:mt-28">
-                    <SectionLabel>Space &amp; Hackathons</SectionLabel>
 
                     <BioBlock
                         image="/gallery/bramhacks.webp"
                         imageAlt="Ammar's team at BramHacks 2025: Space Edition"
+                        width={1440}
+                        height={1920}
                     >
                         <p>
                             Ammar has been to a handful of space-focused events, but BramHacks 2025 — Space
@@ -164,6 +169,8 @@ export default function BeyondEngineeringPage() {
                     <BioBlock
                         image="/gallery/bramhacksmentor.webp"
                         imageAlt="Ammar's team working through the night at a hackathon"
+                        width={1280}
+                        height={1707}
                         reverse
                     >
                         <p>
@@ -190,35 +197,47 @@ export default function BeyondEngineeringPage() {
 
                 {/* Contact */}
                 <section className="mt-20 border-t border-white/10 pt-12 sm:mt-28">
-                    <h2 className={`${playfair.className} text-2xl leading-snug sm:text-3xl`}>
-                        Contact me and follow my journey
-                    </h2>
-                    <div className="mt-6 space-y-3 text-white/80">
-                        <a
-                            href="mailto:ammarjmahmood@gmail.com"
-                            className="flex items-center gap-2 hover:text-white"
-                        >
-                            <Mail className="h-4 w-4" />
-                            ammarjmahmood@gmail.com
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/ammarjmahmood"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 hover:text-white"
-                        >
-                            <Linkedin className="h-4 w-4" />
-                            linkedin.com/in/ammarjmahmood
-                        </a>
-                        <a
-                            href="https://github.com/ammarjmahmood"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 hover:text-white"
-                        >
-                            <Github className="h-4 w-4" />
-                            github.com/ammarjmahmood
-                        </a>
+                    <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+                        <Image
+                            src="/gallery/pilot.webp"
+                            alt="Ammar in the cockpit"
+                            width={1080}
+                            height={1080}
+                            loading="eager"
+                            className="h-auto w-full rounded-2xl"
+                        />
+                        <div>
+                            <h2 className={`${playfair.className} text-2xl leading-snug sm:text-3xl`}>
+                                Contact me and follow my journey
+                            </h2>
+                            <div className="mt-6 space-y-3 text-white/80">
+                                <a
+                                    href="mailto:ammarjmahmood@gmail.com"
+                                    className="flex items-center gap-2 hover:text-white"
+                                >
+                                    <Mail className="h-4 w-4" />
+                                    ammarjmahmood@gmail.com
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/ammarjmahmood"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 hover:text-white"
+                                >
+                                    <Linkedin className="h-4 w-4" />
+                                    linkedin.com/in/ammarjmahmood
+                                </a>
+                                <a
+                                    href="https://github.com/ammarjmahmood"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 hover:text-white"
+                                >
+                                    <Github className="h-4 w-4" />
+                                    github.com/ammarjmahmood
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 

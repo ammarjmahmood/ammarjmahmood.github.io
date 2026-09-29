@@ -7,6 +7,8 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 export interface CaptionedGalleryItem {
     src: string;
     caption: string;
+    width?: number;
+    height?: number;
     pending?: boolean;
 }
 
@@ -62,9 +64,9 @@ export function CaptionedGallery({ items }: CaptionedGalleryProps) {
 
     return (
         <>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            <div className="columns-2 gap-4 sm:columns-3 [column-fill:_balance]">
                 {items.map((item, index) => (
-                    <figure key={item.src + index} className="group">
+                    <figure key={item.src + index} className="group mb-4 break-inside-avoid">
                         {item.pending ? (
                             <div className="flex aspect-square w-full flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-white/20 bg-white/[0.03] text-center px-3">
                                 <span className="text-2xl">📸</span>
@@ -76,14 +78,16 @@ export function CaptionedGallery({ items }: CaptionedGalleryProps) {
                             <button
                                 type="button"
                                 onClick={() => setLightboxIndex(index)}
-                                className="relative aspect-square w-full overflow-hidden rounded-xl bg-white/5"
+                                className="block w-full overflow-hidden rounded-xl bg-white/5"
                             >
                                 <Image
                                     src={item.src}
                                     alt={item.caption}
-                                    fill
-                                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                    width={item.width ?? 1200}
+                                    height={item.height ?? 1200}
+                                    sizes="(max-width: 640px) 50vw, 33vw"
+                                    loading="eager"
+                                    className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
                                 />
                             </button>
                         )}
