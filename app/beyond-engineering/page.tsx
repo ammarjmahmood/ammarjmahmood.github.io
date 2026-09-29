@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Playfair_Display } from 'next/font/google';
 import { ArrowLeft, Mail, Linkedin, Github } from 'lucide-react';
 import { CaptionedGallery } from '@/components/captioned-gallery';
+import { Reveal } from '@/components/reveal';
 
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '500', '600'] });
 
@@ -28,21 +29,23 @@ function BioBlock({
     children: React.ReactNode;
 }) {
     return (
-        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+        <Reveal className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
             <div className={reverse ? 'md:order-2' : ''}>
-                <Image
-                    src={image}
-                    alt={imageAlt}
-                    width={width}
-                    height={height}
-                    loading="eager"
-                    className="h-auto w-full rounded-2xl"
-                />
+                <div className="overflow-hidden rounded-2xl">
+                    <Image
+                        src={image}
+                        alt={imageAlt}
+                        width={width}
+                        height={height}
+                        loading="eager"
+                        className="h-auto w-full scale-100 transition-transform duration-700 ease-out hover:scale-[1.04]"
+                    />
+                </div>
             </div>
             <div className={reverse ? 'md:order-1' : ''}>
                 <div className="space-y-4 text-base leading-relaxed text-white/80">{children}</div>
             </div>
-        </div>
+        </Reveal>
     );
 }
 
@@ -111,42 +114,46 @@ export default function BeyondEngineeringPage() {
                 </Link>
 
                 {/* Screen: Hero */}
-                <header className="no-print mt-14 flex flex-col items-start gap-8 sm:mt-20 sm:flex-row sm:items-center">
-                    <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-full ring-1 ring-white/10 sm:h-40 sm:w-40">
-                        <Image
-                            src="/professional-headshot.webp"
-                            alt="Ammar J Mahmood"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                    </div>
-                    <div>
-                        <h1 className={`${playfair.className} text-4xl uppercase leading-tight sm:text-6xl`}>
-                            Ammar J Mahmood
-                        </h1>
-                        <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
-                            Private &amp; Glider Pilot
-                        </p>
-                        <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
-                            Space &amp; Robotics Hackathon Competitor
-                        </p>
-                    </div>
-                </header>
+                <Reveal delay={50} className="no-print">
+                    <header className="mt-14 flex flex-col items-start gap-8 sm:mt-20 sm:flex-row sm:items-center">
+                        <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-full ring-1 ring-white/10 transition-transform duration-700 ease-out hover:scale-105 sm:h-40 sm:w-40">
+                            <Image
+                                src="/professional-headshot.webp"
+                                alt="Ammar J Mahmood"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+                        <div>
+                            <h1 className={`${playfair.className} text-4xl uppercase leading-tight sm:text-6xl`}>
+                                Ammar J Mahmood
+                            </h1>
+                            <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
+                                Private &amp; Glider Pilot
+                            </p>
+                            <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
+                                Space &amp; Robotics Hackathon Competitor
+                            </p>
+                        </div>
+                    </header>
+                </Reveal>
 
                 {/* Screen: Intro */}
-                <section className="no-print mt-14 max-w-3xl space-y-5 text-lg leading-relaxed text-white/80 sm:mt-20">
-                    <p>
-                        Ammar is a Mechatronics Engineering student and robotics engineer who spends about as much
-                        time trying to leave the ground as he does building things that stay on it. Outside the
-                        lab, he holds a private pilot license and a glider pilot license, competes at hackathons
-                        across North America — 25 and counting — and has spent time building navigation systems
-                        aimed squarely at space and robotics applications.
-                    </p>
-                    <p className={`${playfair.className} text-xl italic text-white/60`}>
-                        &ldquo;If it flies, floats, or drives itself, I want to have built one.&rdquo;
-                    </p>
-                </section>
+                <Reveal delay={150} className="no-print mt-14 sm:mt-20">
+                    <section className="max-w-3xl space-y-5 text-lg leading-relaxed text-white/80">
+                        <p>
+                            Ammar is a Mechatronics Engineering student and robotics engineer who spends about as
+                            much time trying to leave the ground as he does building things that stay on it.
+                            Outside the lab, he holds a private pilot license and a glider pilot license, competes
+                            at hackathons across North America — 25 and counting — and has spent time building
+                            navigation systems aimed squarely at space and robotics applications.
+                        </p>
+                        <p className={`${playfair.className} text-xl italic text-white/60`}>
+                            &ldquo;If it flies, floats, or drives itself, I want to have built one.&rdquo;
+                        </p>
+                    </section>
+                </Reveal>
 
                 {/* Screen: continuous bio — piloting, soaring, space hackathons */}
                 <section className="no-print mt-20 space-y-20 sm:mt-28">
@@ -243,24 +250,28 @@ export default function BeyondEngineeringPage() {
                 </section>
 
                 {/* Screen: Gallery */}
-                <section className="no-print mt-20 sm:mt-28">
-                    <h2 className={`${playfair.className} text-2xl tracking-wide sm:text-3xl`}>Gallery</h2>
-                    <div className="mt-8">
-                        <CaptionedGallery items={galleryItems} />
-                    </div>
-                </section>
+                <Reveal className="no-print mt-20 sm:mt-28">
+                    <section>
+                        <h2 className={`${playfair.className} text-2xl tracking-wide sm:text-3xl`}>Gallery</h2>
+                        <div className="mt-8">
+                            <CaptionedGallery items={galleryItems} />
+                        </div>
+                    </section>
+                </Reveal>
 
                 {/* Screen: Contact */}
-                <section className="no-print mt-20 border-t border-white/10 pt-12 sm:mt-28">
-                    <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-                        <Image
-                            src="/gallery/pilot.webp"
-                            alt="Ammar in the cockpit"
-                            width={1080}
-                            height={1080}
-                            loading="eager"
-                            className="h-auto w-full rounded-2xl"
-                        />
+                <Reveal className="no-print mt-20 border-t border-white/10 pt-12 sm:mt-28">
+                    <section className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+                        <div className="overflow-hidden rounded-2xl">
+                            <Image
+                                src="/gallery/pilot.webp"
+                                alt="Ammar in the cockpit"
+                                width={1080}
+                                height={1080}
+                                loading="eager"
+                                className="h-auto w-full transition-transform duration-700 ease-out hover:scale-[1.04]"
+                            />
+                        </div>
                         <div>
                             <h2 className={`${playfair.className} text-2xl leading-snug sm:text-3xl`}>
                                 Contact me and follow my journey
@@ -293,8 +304,8 @@ export default function BeyondEngineeringPage() {
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </Reveal>
 
                 <div className="no-print mt-16 border-t border-white/10 pt-8 text-center">
                     <Link href="/" className="text-sm text-white/50 hover:text-white">
