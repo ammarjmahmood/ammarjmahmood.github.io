@@ -35,13 +35,13 @@ const gallery = [
     { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
     { src: '/kiwi-charge-robot.webp', caption: 'Kiwi Charge EV-Charging Robot', width: 848, height: 1264 },
     { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
+    { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
 ];
 
 const features = [
     { src: '/gallery/arrc_thumbnail.webp', width: 720, height: 530, label: 'ARRC — arXiv Research Paper', href: 'https://arxiv.org/abs/2510.05547' },
     { src: '/gallery/paper11.webp', width: 906, height: 734, label: 'Robust Visual Embodiment — arXiv Paper', href: 'https://arxiv.org/abs/2510.03677' },
     { src: '/Featured Instructables.webp', width: 3024, height: 1794, label: 'Featured on Instructables', href: 'https://www.instructables.com/member/amarsbar/' },
-    { src: '/autodesk-assistant-fusion.jpg', width: 1280, height: 720, label: 'Autodesk AI Lab Internship', href: '/projects/autodesk-internship/' },
     { src: '/kiwi-fr5-mujoco-poster.webp', width: 1600, height: 922, label: 'Kiwi Charge Robot Simulation', href: '/projects/kiwi-fr5-mujoco-simulation/' },
     { src: '/viam-hackathon-medal.webp', width: 1242, height: 2208, label: 'Viam Hackathon — Fine Motor Skills Winner', href: '/projects/viam-robot-hackathon-jenga/' },
 ];
@@ -208,6 +208,15 @@ export default function BeyondEngineeringPage() {
                         ))}
                     </Reveal>
                 </section>
+
+                {/* Interests */}
+                <Reveal className="be-quote-wrap">
+                    <p className="be-body font-light">
+                        Outside the build: I enjoy snowboarding and trying new things, attending conferences,
+                        meeting new people, building solutions with new tools, constantly learning, and making
+                        videos along the way.
+                    </p>
+                </Reveal>
 
                 {/* Contact */}
                 <Reveal className="be-contact mt-[12vw] pb-[8vw]">
