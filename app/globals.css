@@ -213,71 +213,74 @@ body {
   background: #0e0a0a;
   color: #eeeee6;
   overflow-x: hidden;
+  /* 1vw that stops growing at 1366px: the source design caps its scale there and centres. */
+  --vw: min(1vw, 13.66px);
 }
+.be-inner { max-width: 1366px; margin: 0 auto; position: relative; }
 .be a { color: inherit; }
-.be-body { font-size: clamp(16px, 2.5vw, 32px); line-height: 1.25; letter-spacing: 0.01em; }
-.be-name { font-size: clamp(30px, 8.96vw, 115px); line-height: 0.87; text-transform: uppercase; }
-.be-sub { font-size: clamp(9px, 1.77vw, 23px); letter-spacing: 0.1em; line-height: 1.1; text-transform: uppercase; }
-.be-quote { font-size: clamp(22px, 4.69vw, 60px); line-height: 1.25; letter-spacing: 0.01em; }
-.be-h2 { font-size: clamp(28px, 4.6vw, 59px); line-height: 0.87; text-transform: uppercase; }
-.be-contact-h { font-size: clamp(22px, 3.6vw, 46px); line-height: 0.95; text-transform: uppercase; }
-.be-caption { font-size: clamp(11px, 2.5vw, 32px); line-height: 1.2; letter-spacing: 0.01em; }
-.be-press-caption { font-size: clamp(10px, 1.6vw, 20px); line-height: 1.3; }
-.be-radius { border-radius: clamp(12px, 3vw, 38px); }
+.be-body { font-size: clamp(16px, calc(var(--vw) * 2.5), 32px); line-height: 1.25; letter-spacing: 0.01em; }
+.be-name { font-size: clamp(30px, calc(var(--vw) * 8.96), 115px); line-height: 0.87; text-transform: uppercase; }
+.be-sub { font-size: clamp(9px, calc(var(--vw) * 1.77), 23px); letter-spacing: 0.1em; line-height: 1.1; text-transform: uppercase; }
+.be-quote { font-size: clamp(22px, calc(var(--vw) * 4.69), 60px); line-height: 1.25; letter-spacing: 0.01em; }
+.be-h2 { font-size: clamp(28px, calc(var(--vw) * 4.6), 59px); line-height: 0.87; text-transform: uppercase; }
+.be-contact-h { font-size: clamp(22px, calc(var(--vw) * 3.6), 46px); line-height: 0.95; text-transform: uppercase; }
+.be-caption { font-size: clamp(11px, calc(var(--vw) * 2.5), 32px); line-height: 1.2; letter-spacing: 0.01em; }
+.be-press-caption { font-size: clamp(10px, calc(var(--vw) * 1.6), 20px); line-height: 1.3; }
+.be-radius { border-radius: clamp(12px, calc(var(--vw) * 3), 38px); }
 
 /* Hero */
-.be-hero { position: relative; height: max(44vw, 190px); }
+.be-hero { position: relative; height: max(calc(var(--vw) * 44), 190px); }
 .be-hero-photo {
-  position: absolute; left: 3.9vw; top: 1.5vw; width: 33.8vw; aspect-ratio: 1;
+  position: absolute; left: calc(var(--vw) * 3.9); top: calc(var(--vw) * 1.5); width: calc(var(--vw) * 33.8); aspect-ratio: 1;
   border-radius: 50%; overflow: hidden;
 }
-.be-hero-name { position: absolute; left: 50vw; top: 6.4vw; }
+.be-hero-name { position: absolute; left: calc(var(--vw) * 50); top: calc(var(--vw) * 6.4); }
 .be-hero-subs {
-  position: absolute; left: 41.8vw; top: 25vw; right: 2vw;
-  display: flex; flex-direction: column; gap: 2.2vw;
+  position: absolute; left: calc(var(--vw) * 41.8); top: calc(var(--vw) * 25); right: calc(var(--vw) * 2);
+  display: flex; flex-direction: column; gap: calc(var(--vw) * 2.2);
 }
-.be-hero-subs p:nth-child(2) { padding-left: 0.4vw; }
+.be-hero-subs p:nth-child(2) { padding-left: calc(var(--vw) * 0.4); }
 
 /* Bio rows (text/image alternating, vertically centred) */
 .be-row { display: grid; align-items: center; }
-.be-row-1 { grid-template-columns: 52vw 39.8vw; column-gap: 3.2vw; padding-left: 1.7vw; }
-.be-row-2 { grid-template-columns: 43.8vw 47.3vw; column-gap: 4vw; padding-left: 2.2vw; margin-top: 1.2vw; }
-.be-row-3 { grid-template-columns: 48.5vw 35.5vw; column-gap: 5.4vw; padding-left: 5.5vw; margin-top: 6.4vw; }
-.be-quote-wrap { padding: 0 10vw 0 7.6vw; margin-top: 6vw; }
+.be-row-1 { grid-template-columns: calc(var(--vw) * 52) calc(var(--vw) * 39.8); column-gap: calc(var(--vw) * 3.2); padding-left: calc(var(--vw) * 1.7); }
+.be-row-2 { grid-template-columns: calc(var(--vw) * 43.8) calc(var(--vw) * 47.3); column-gap: calc(var(--vw) * 4); padding-left: calc(var(--vw) * 2.2); margin-top: calc(var(--vw) * 1.2); }
+.be-row-3 { grid-template-columns: calc(var(--vw) * 48.5) calc(var(--vw) * 35.5); column-gap: calc(var(--vw) * 5.4); padding-left: calc(var(--vw) * 5.5); margin-top: calc(var(--vw) * 6.4); }
+.be-quote-wrap { padding: 0 calc(var(--vw) * 10) 0 calc(var(--vw) * 7.6); margin-top: calc(var(--vw) * 6); }
 
 /* Gallery rows of 3. Each slot in the 6-tile cycle has its own width,
    crop shape and vertical offset, measured from the source layout. */
 .be-gallery {
-  display: grid; grid-template-columns: 30vw 35vw 30vw;
-  column-gap: 0.9vw; row-gap: 5vw; padding-left: 2.2vw; align-items: start;
+  display: grid; grid-template-columns: calc(var(--vw) * 30) calc(var(--vw) * 35) calc(var(--vw) * 30);
+  column-gap: calc(var(--vw) * 0.9); row-gap: calc(var(--vw) * 5); padding-left: calc(var(--vw) * 2.2); align-items: start;
 }
 .be-tile { display: flex; flex-direction: column; }
 .be-tile img { object-fit: cover; }
-.be-tile:nth-child(6n + 1) { width: 28.2vw; margin-top: 1.7vw; }
+.be-tile:nth-child(6n + 1) { width: calc(var(--vw) * 28.2); margin-top: calc(var(--vw) * 1.7); }
 .be-tile:nth-child(6n + 1) img { aspect-ratio: 3 / 4; }
-.be-tile:nth-child(6n + 2) { width: 34vw; margin-top: 9.3vw; }
+.be-tile:nth-child(6n + 2) { width: calc(var(--vw) * 34); margin-top: calc(var(--vw) * 9.3); }
 .be-tile:nth-child(6n + 2) img { aspect-ratio: 4 / 3; }
-.be-tile:nth-child(6n + 3) { width: 27.9vw; margin-left: auto; }
+.be-tile:nth-child(6n + 3) { width: calc(var(--vw) * 27.9); margin-left: auto; }
 .be-tile:nth-child(6n + 3) img { aspect-ratio: 3 / 4; }
-.be-tile:nth-child(6n + 4) { width: 24vw; margin-left: 1.4vw; }
+.be-tile:nth-child(6n + 4) { width: calc(var(--vw) * 24); margin-left: calc(var(--vw) * 1.4); }
 .be-tile:nth-child(6n + 4) img { aspect-ratio: 3 / 4; }
-.be-tile:nth-child(6n + 5) { width: 23vw; margin-left: 3.4vw; }
+.be-tile:nth-child(6n + 5) { width: calc(var(--vw) * 23); margin-left: calc(var(--vw) * 3.4); }
 .be-tile:nth-child(6n + 5) img { aspect-ratio: 3 / 4; }
-.be-tile:nth-child(6n + 6) { width: 30vw; margin-top: 3vw; }
+.be-tile:nth-child(6n + 6) { width: calc(var(--vw) * 30); margin-top: calc(var(--vw) * 3); }
 .be-tile:nth-child(6n + 6) img { aspect-ratio: 3 / 2; }
-.be-tile figcaption { margin-top: 1.6vw; }
+.be-tile figcaption { margin-top: calc(var(--vw) * 1.6); }
 
 /* Press / features grid */
 .be-press {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  column-gap: 4vw; row-gap: 5vw; padding: 0 3vw; align-items: end;
+  column-gap: calc(var(--vw) * 4); row-gap: calc(var(--vw) * 5); padding: 0 calc(var(--vw) * 3); align-items: end;
 }
-.be-press figcaption { margin-top: 1.4vw; text-align: center; }
+.be-press figcaption { margin-top: calc(var(--vw) * 1.4); text-align: center; }
 .be-press figcaption a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Contact: photo bleeds off the left edge */
-.be-contact { display: grid; grid-template-columns: 47.8vw 1fr; column-gap: 3.5vw; align-items: center; padding-left: 1.4vw; }
-.be-contact-links { display: flex; flex-direction: column; gap: 4vw; margin-top: 3.6vw; overflow-wrap: anywhere; }
+.be-contact { display: grid; grid-template-columns: calc(var(--vw) * 47.8) 1fr; column-gap: calc(var(--vw) * 3.5); align-items: center; padding-left: calc(var(--vw) * 1.4); }
+.be-contact-links { display: flex; flex-direction: column; gap: calc(var(--vw) * 4); margin-top: calc(var(--vw) * 3.6); overflow-wrap: anywhere; }
 .be-contact-links a { text-decoration: underline; text-underline-offset: 4px; }
 
 /* Phones: stack the bio rows and contact block so body text stays

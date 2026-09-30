@@ -29,12 +29,10 @@ const gallery = [
     { src: '/gallery/aerobatic-placeholder.svg', caption: 'Aerobatic Flight', width: 1200, height: 1200 },
     { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
     { src: '/gallery/skydiving-placeholder.svg', caption: 'Indoor Skydiving', width: 1500, height: 1000 },
-    { src: '/kiwi-charge-tmu-showcase.webp', caption: 'Clean Energy Showcase, TMU', width: 1600, height: 2134 },
     { src: '/gallery/hypoxia-placeholder.svg', caption: 'Hypoxia Training', width: 1200, height: 1200 },
-    { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576 },
-    { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
-    { src: '/kiwi-charge-robot.webp', caption: 'Kiwi Charge EV-Charging Robot', width: 848, height: 1264 },
+    { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576, position: '50% 40%' },
     { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
+    { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
     { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
 ];
 
@@ -64,7 +62,7 @@ const printCredentials = [
         body: 'Award-winning IMU-based offline autonomous navigation system for space and robotics applications, built with a 5-person team.',
     },
     {
-        image: '/kiwi-charge-robot.webp',
+        image: '/kiwi-charge-nacs-connector.webp',
         title: 'Robotics Engineer — Kiwi Charge',
         body: 'Builds autonomous EV-charging robots; presented at the Clean Energy showcase at Toronto Metropolitan University. 25+ hackathons.',
     },
@@ -74,7 +72,7 @@ export default function BeyondEngineeringPage() {
     return (
         <div className={`be ${sans.className} beyond-engineering-page min-h-screen`}>
             {/* ---------- Screen layout ---------- */}
-            <div className="no-print">
+            <div className="no-print be-inner">
                 <Link
                     href="/"
                     className="fixed bottom-4 left-4 z-40 rounded-full border border-[#eeeee6]/15 bg-[#0e0a0a]/80 px-3 py-1.5 text-[10px] tracking-widest text-[#eeeee6]/70 uppercase backdrop-blur transition-colors hover:text-[#eeeee6]"
@@ -174,17 +172,17 @@ export default function BeyondEngineeringPage() {
                 </Reveal>
 
                 {/* Gallery */}
-                <section className="mt-[5vw]">
+                <section className="mt-[calc(var(--vw)*5)]">
                     <Reveal>
-                        <h2 className={`be-h2 ${display.className} ml-[4.1vw] mb-[3vw]`}>Gallery</h2>
+                        <h2 className={`be-h2 ${display.className} ml-[calc(var(--vw)*4.1)] mb-[calc(var(--vw)*3)]`}>Gallery</h2>
                     </Reveal>
                     <CaptionedGallery items={gallery} captionClassName="be-caption font-light" />
                 </section>
 
                 {/* Publications & features (press) */}
-                <section className="mt-[12vw]">
+                <section className="mt-[calc(var(--vw)*12)]">
                     <Reveal>
-                        <h2 className={`be-h2 ${display.className} ml-[4.1vw] mb-[5vw]`}>Publications &amp; Features</h2>
+                        <h2 className={`be-h2 ${display.className} ml-[calc(var(--vw)*4.1)] mb-[calc(var(--vw)*5)]`}>Publications &amp; Features</h2>
                     </Reveal>
                     <Reveal className="be-press">
                         {features.map((f) => (
@@ -219,7 +217,7 @@ export default function BeyondEngineeringPage() {
                 </Reveal>
 
                 {/* Contact */}
-                <Reveal className="be-contact mt-[12vw] pb-[8vw]">
+                <Reveal className="be-contact mt-[calc(var(--vw)*12)] pb-[calc(var(--vw)*8)]">
                     <div className="be-contact-photo">
                         <Image
                             src="/gallery/presidentaward.webp"
@@ -230,7 +228,7 @@ export default function BeyondEngineeringPage() {
                             className="h-auto w-full"
                         />
                     </div>
-                    <div className="pr-[3vw]">
+                    <div className="pr-[calc(var(--vw)*3)]">
                         <h2 className={`be-contact-h ${display.className}`}>
                             Contact me and
                             <br />
