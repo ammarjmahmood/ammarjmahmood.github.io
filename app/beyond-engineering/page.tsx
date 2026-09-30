@@ -35,6 +35,7 @@ const gallery = [
     { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
     { src: '/kiwi-charge-robot.webp', caption: 'Kiwi Charge EV-Charging Robot', width: 848, height: 1264 },
     { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
+    { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
 ];
 
 const features = [
