@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1200" fill="#141012"/>
+  <g transform="translate(600,500)" fill="none" stroke="#a1a1aa" stroke-width="8" stroke-linejoin="round">
+    <rect x="-110" y="-70" width="220" height="150" rx="22"/>
+    <path d="M-50 -70 L-30 -100 H30 L50 -70"/>
+    <circle cx="0" cy="5" r="45"/>
+  </g>
+  <text x="600" y="690" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="52" letter-spacing="3" fill="#eeeee6">HYPOXIA TRAINING</text>
+  <text x="600" y="745" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#71717a">Sample placeholder, swap for your photo</text>
+</svg>

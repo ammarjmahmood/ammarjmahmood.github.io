@@ -15,19 +15,26 @@ export const metadata = {
 };
 
 // Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
+// *-placeholder.svg tiles are stand-ins until the real IIAS / scuba / skydiving photos arrive.
 const gallery = [
-    { src: '/gallery/ast501-placeholder.svg', caption: 'AST501 Astronaut Training', width: 1200, height: 1200 },
+    { src: '/gallery/zero-g-placeholder.svg', caption: 'Zero Gravity Flight', width: 1200, height: 1200 },
     { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
+    { src: '/gallery/rocket3.webp', caption: 'TMU MARS Rocket Launch', width: 847, height: 1280 },
     { src: '/gallery/pillot.webp', caption: 'In the Cockpit', width: 1286, height: 1714 },
+    { src: '/gallery/spacesuit-placeholder.svg', caption: 'IVA Spacesuit Training', width: 1200, height: 1200 },
+    { src: '/gallery/rocket1.webp', caption: 'Launch Day, MARS Rocketry', width: 800, height: 519 },
     { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition', width: 1440, height: 1920 },
+    { src: '/gallery/pilot.webp', caption: 'Glider Training', width: 1080, height: 1080, position: '50% 20%' },
+    { src: '/gallery/suborbital-sim-placeholder.svg', caption: 'Suborbital Spacecraft Simulator', width: 1200, height: 1200 },
+    { src: '/gallery/aerobatic-placeholder.svg', caption: 'Aerobatic Flight', width: 1200, height: 1200 },
     { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
     { src: '/gallery/skydiving-placeholder.svg', caption: 'Skydiving', width: 1500, height: 1000 },
-    { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576 },
-    { src: '/gallery/pilot.webp', caption: 'Glider Training', width: 1080, height: 1080, position: '50% 20%' },
     { src: '/kiwi-charge-tmu-showcase.webp', caption: 'Clean Energy Showcase, TMU', width: 1600, height: 2134 },
-    { src: '/gallery/bramhacksmentor.webp', caption: 'Overnight Build, BramHacks', width: 1280, height: 1707 },
-    { src: '/gallery/Canada Leadership Conference.webp', caption: 'Engineering Leadership Conference', width: 1200, height: 1600 },
-    { src: '/kiwi-charge-robot.webp', caption: 'Kiwi Charge EV-Charging Robot', width: 848, height: 1264, position: '50% 60%' },
+    { src: '/gallery/hypoxia-placeholder.svg', caption: 'Hypoxia Training', width: 1200, height: 1200 },
+    { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576 },
+    { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
+    { src: '/kiwi-charge-robot.webp', caption: 'Kiwi Charge EV-Charging Robot', width: 848, height: 1264 },
+    { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
 ];
 
 const features = [
@@ -43,8 +50,8 @@ const features = [
 const printCredentials = [
     {
         image: '/gallery/ast501-placeholder.svg',
-        title: 'AST501 — Astronaut & Space Training',
-        body: 'Astronaut and space training through the AST501 program, paired with day-to-day robotics and autonomy research.',
+        title: 'IIAS — AST 501: Fundamentals of Astronautics',
+        body: 'Completing astronautics training with the International Institute for Astronautical Sciences: mission planning, aerospace physiology, suborbital life support; Florida Tech intensive.',
     },
     {
         image: '/gallery/withDA20.webp',
@@ -94,8 +101,8 @@ export default function BeyondEngineeringPage() {
                             Mahmood
                         </h1>
                         <div className="be-hero-subs be-sub">
-                            <p>Robotics Engineer · Astronaut Training (AST501)</p>
-                            <p>Private &amp; Glider Pilot</p>
+                            <p>Robotics Engineer · Astronautics Student</p>
+                            <p>International Institute for Astronautical Sciences</p>
                         </div>
                     </header>
                 </Reveal>
@@ -103,14 +110,15 @@ export default function BeyondEngineeringPage() {
                 {/* Bio row 1 — text left, image right */}
                 <Reveal className="be-row be-row-1">
                     <p className="be-body font-light">
-                        Ammar J Mahmood is a Mechatronics Engineering student and robotics engineer training for a
-                        future in space. Through the AST501 astronaut and space training program, he pairs hands-on
-                        astronaut preparation with the robotics and autonomy research he does every day — building
-                        machines that can see, navigate, and act on their own.
+                        Ammar J Mahmood is a robotics engineer and Mechatronics Engineering student completing AST 501:
+                        Fundamentals of Astronautics with the International Institute for Astronautical Sciences
+                        (IIAS). Taught by former NASA astronaut instructors, the program covers human-spaceflight
+                        mission planning, aerospace physiology, and suborbital life-support systems, capped by a
+                        hands-on intensive at Florida Tech.
                     </p>
                     <Image
                         src="/gallery/ast501-placeholder.svg"
-                        alt="AST501 astronaut training (placeholder)"
+                        alt="IIAS AST 501 astronautics training (placeholder)"
                         width={1200}
                         height={1200}
                         loading="eager"
@@ -131,15 +139,17 @@ export default function BeyondEngineeringPage() {
                     <p className="be-body font-light">
                         A licensed private and glider pilot, Ammar has trained on aircraft like the Diamond DA20 and
                         flies cross-country gliders with the University Soaring Society, where he received a
-                        President&apos;s Award for his contributions to the club. Outside the cockpit, he has competed
-                        in more than 25 hackathons across North America and is fluent in English and French.
+                        President&apos;s Award for his contributions to the club. Outside the cockpit, he is a scuba
+                        diver and snowboarder, has competed in more than 25 hackathons across North America, and is
+                        fluent in English and French.
                     </p>
                 </Reveal>
 
                 {/* Bio row 3 — text left, image right */}
                 <Reveal className="be-row be-row-3">
                     <p className="be-body font-light">
-                        His robotics work points skyward too. At BramHacks 2025 — Space Edition, his team built
+                        His robotics work points skyward too. He built flight avionics for high-powered rockets with
+                        the TMU MARS Rocket Team, and at BramHacks 2025 — Space Edition his team built
                         N.O.P.S. (Navigation Offline Positioning System), an IMU-based autonomous navigation system for
                         space and robotics applications that tracks position without GPS, and took home an award. By
                         day he builds autonomous EV-charging robots at Kiwi Charge, work he has presented to industry
@@ -253,14 +263,14 @@ export default function BeyondEngineeringPage() {
                             Ammar J Mahmood
                         </h1>
                         <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-zinc-500">
-                            Robotics Engineer · Astronaut Training (AST501) · Private &amp; Glider Pilot
+                            Robotics Engineer · Astronautics Student (IIAS) · Private &amp; Glider Pilot
                         </p>
                     </div>
                 </div>
 
                 <p className="mt-3 text-[11px] leading-snug text-zinc-800">
-                    Mechatronics Engineering student and robotics engineer training for a future in space. AST501
-                    astronaut and space training, licensed private and glider pilot, 25+ hackathons, and
+                    Robotics engineer and Mechatronics Engineering student completing IIAS AST 501: Fundamentals of
+                    Astronautics. Licensed private and glider pilot, TMU MARS rocketry avionics, 25+ hackathons, and
                     award-winning autonomous-navigation work for space and robotics applications.
                 </p>
 
