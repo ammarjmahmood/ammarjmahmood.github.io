@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 // Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
-// *-placeholder.svg tiles are stand-ins until the real IIAS / scuba / indoor skydiving photos arrive.
+// *-placeholder.svg tiles are stand-ins until the real IIAS / scuba photos arrive.
 const gallery = [
     { src: '/gallery/zero-g-placeholder.svg', caption: 'Zero Gravity Flight', width: 1200, height: 1200 },
     { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
@@ -28,7 +28,7 @@ const gallery = [
     { src: '/gallery/suborbital-sim-placeholder.svg', caption: 'Suborbital Spacecraft Simulator', width: 1200, height: 1200 },
     { src: '/gallery/aerobatic-placeholder.svg', caption: 'Aerobatic Flight', width: 1200, height: 1200 },
     { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
-    { src: '/gallery/skydiving-placeholder.svg', caption: 'Indoor Skydiving', width: 1500, height: 1000 },
+    { src: '/gallery/ifly-montreal.webp', caption: 'Indoor Skydiving, iFly Montreal', width: 1672, height: 941 },
     { src: '/gallery/hypoxia-placeholder.svg', caption: 'Hypoxia Training', width: 1200, height: 1200 },
     { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576, position: '50% 40%' },
     { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
