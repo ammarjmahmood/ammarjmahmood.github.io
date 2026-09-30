@@ -34,6 +34,8 @@ const gallery = [
     { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
     { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
     { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
+    { src: '/gallery/30lbbattlebot.webp', caption: '30lb Combat Robot', width: 1620, height: 886 },
+    { src: '/gallery/roscon-toronto.webp', caption: 'ROSCon Global 2026, Toronto', width: 1932, height: 2576 },
 ];
 
 const features = [
