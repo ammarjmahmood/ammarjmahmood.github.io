@@ -81,8 +81,8 @@ export default function ResumePage() {
             <div className="mt-6">
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">About</h2>
               <p className="text-sm leading-relaxed text-foreground">
-                Mechatronics Engineering student passionate about Robotics, AI, and Embedded Systems.
-                Full-stack developer, battle robot designer, and private & glider pilot.
+                Mechatronics Engineering student building robotics solutions that work in the real world.
+                Off the clock: cyclist, snowboarder, private & glider pilot, and Arsenal fan.
               </p>
             </div>
 
