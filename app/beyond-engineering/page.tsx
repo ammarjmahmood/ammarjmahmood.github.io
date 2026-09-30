@@ -29,11 +29,9 @@ const gallery = [
     { src: '/gallery/aerobatic-placeholder.svg', caption: 'Aerobatic Flight', width: 1200, height: 1200 },
     { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
     { src: '/gallery/skydiving-placeholder.svg', caption: 'Indoor Skydiving', width: 1500, height: 1000 },
-    { src: '/kiwi-charge-tmu-showcase.webp', caption: 'Clean Energy Showcase, TMU', width: 1600, height: 2134 },
     { src: '/gallery/hypoxia-placeholder.svg', caption: 'Hypoxia Training', width: 1200, height: 1200 },
     { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576 },
     { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
-    { src: '/kiwi-charge-robot.webp', caption: 'Kiwi Charge EV-Charging Robot', width: 848, height: 1264 },
     { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
     { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
 ];
