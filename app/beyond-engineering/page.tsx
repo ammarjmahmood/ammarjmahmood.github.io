@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 // Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
-// *-placeholder.svg tiles are stand-ins until the real IIAS / scuba / skydiving photos arrive.
+// *-placeholder.svg tiles are stand-ins until the real IIAS / scuba / indoor skydiving photos arrive.
 const gallery = [
     { src: '/gallery/zero-g-placeholder.svg', caption: 'Zero Gravity Flight', width: 1200, height: 1200 },
     { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
@@ -28,7 +28,7 @@ const gallery = [
     { src: '/gallery/suborbital-sim-placeholder.svg', caption: 'Suborbital Spacecraft Simulator', width: 1200, height: 1200 },
     { src: '/gallery/aerobatic-placeholder.svg', caption: 'Aerobatic Flight', width: 1200, height: 1200 },
     { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
-    { src: '/gallery/skydiving-placeholder.svg', caption: 'Skydiving', width: 1500, height: 1000 },
+    { src: '/gallery/skydiving-placeholder.svg', caption: 'Indoor Skydiving', width: 1500, height: 1000 },
     { src: '/kiwi-charge-tmu-showcase.webp', caption: 'Clean Energy Showcase, TMU', width: 1600, height: 2134 },
     { src: '/gallery/hypoxia-placeholder.svg', caption: 'Hypoxia Training', width: 1200, height: 1200 },
     { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576 },
@@ -140,7 +140,7 @@ export default function BeyondEngineeringPage() {
                         A licensed private and glider pilot, Ammar has trained on aircraft like the Diamond DA20 and
                         flies cross-country gliders with the University Soaring Society, where he received a
                         President&apos;s Award for his contributions to the club. Outside the cockpit, he is a scuba
-                        diver and snowboarder, has competed in more than 25 hackathons across North America, and is
+                        diver, snowboarder, and indoor skydiver, has competed in more than 25 hackathons across North America, and is
                         fluent in English and French.
                     </p>
                 </Reveal>

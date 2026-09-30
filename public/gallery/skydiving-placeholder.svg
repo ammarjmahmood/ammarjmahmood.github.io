@@ -17,6 +17,6 @@
     <circle cx="0" cy="232" r="18"/>
     <line x1="0" y1="250" x2="0" y2="300"/>
   </g>
-  <text x="750" y="740" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="#f4f4f5">SKYDIVING</text>
+  <text x="750" y="740" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="56" fill="#f4f4f5">INDOOR SKYDIVING</text>
   <text x="750" y="800" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#71717a">Sample placeholder — swap for your photo</text>
 </svg>
