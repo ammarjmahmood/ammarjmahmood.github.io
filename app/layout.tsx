@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
@@ -8,6 +8,7 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" })
 
 export const metadata: Metadata = {
   title: 'Ammar J Mahmood - Portfolio',
@@ -54,7 +55,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${inter.className} antialiased`}
+        className={`${inter.className} ${geistMono.variable} antialiased`}
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>
