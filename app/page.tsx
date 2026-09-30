@@ -20,7 +20,6 @@ import { ProjectFilter } from "@/components/project-filter"
 import { ProjectCard } from "@/components/project-card"
 import { CertificationModal } from "@/components/certification-modal"
 import { PhotoGallery } from "@/components/photo-gallery"
-import { PcbTraces } from "@/components/pcb-traces"
 import { projects, certifications, type ProjectType } from "@/lib/projects-data"
 
 export default function ResumePage() {
@@ -35,49 +34,13 @@ export default function ResumePage() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 lg:px-12 overflow-x-hidden">
-        {/* Hero — mirrors the PCB business card */}
-        <header className="relative mb-10 overflow-hidden rounded-3xl border border-border bg-card px-6 py-8 sm:px-10 sm:py-12">
-          <PcbTraces />
-          <div className="relative flex items-center justify-between">
-            <p className="font-mono text-xs tracking-[0.25em] text-muted-foreground">AJM / 01</p>
-            <ThemeToggle />
-          </div>
-          <h1 className="relative mt-8 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-            Human ideas.
-            <br />
-            Physical machines.
-          </h1>
-          <p className="relative mt-5 font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground sm:text-sm">
-            Create / Build / Connect
-          </p>
-          <p className="relative mt-5 max-w-xl text-muted-foreground">
-            Ammar J Mahmood, robotics engineer building autonomous machines at Kiwi Charge and Purpose Robotics.
-          </p>
-          <div className="relative mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-85"
-            >
-              See my work
-            </a>
-            <a
-              href="/beyond-engineering/"
-              className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-secondary"
-            >
-              Beyond engineering
-            </a>
-            <a
-              href="mailto:ammarjmahmood@gmail.com"
-              className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-secondary"
-            >
-              Get in touch
-            </a>
-          </div>
-        </header>
+        <div className="mb-6 flex justify-end">
+          <ThemeToggle />
+        </div>
 
         <div className="grid gap-8 lg:grid-cols-[320px_1fr]">
-          {/* Left Sidebar — below the main content on phones so visitors hit the work first */}
-          <aside className="order-2 space-y-6 lg:order-1">
+          {/* Left Sidebar */}
+          <aside className="space-y-6">
             {/* Profile Card */}
             <a href="https://www.linkedin.com/in/ammarjmahmood" target="_blank" rel="noopener noreferrer">
               <Card className="p-6">
@@ -113,6 +76,21 @@ export default function ResumePage() {
                 </div>
               </div>
             </Card>
+
+            {/* Beyond Engineering Card */}
+            <a href="/beyond-engineering/">
+              <Card className="p-4 transition-colors hover:bg-secondary/50">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <Plane className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm">Beyond Engineering</p>
+                    <p className="text-xs text-muted-foreground">Piloting, space training & more</p>
+                  </div>
+                </div>
+              </Card>
+            </a>
 
             {/* About */}
             <div className="mt-6">
@@ -304,12 +282,27 @@ export default function ResumePage() {
           </aside>
 
           {/* Main Content */}
-          <main className="order-1 min-w-0 space-y-12 lg:order-2">
+          <main className="space-y-12">
+            {/* Intro */}
+            <section>
+              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Intro</h2>
+              <div className="space-y-4 text-foreground">
+                <p className="leading-relaxed">
+                  Hi there! I'm Ammar J Mahmood, a Mechatronics Engineering student with a passion for pushing
+                  boundaries in Robotics, ML, AI, and Embedded Systems. Whether I'm working on projects, sharing knowledge,
+                  or flying above the clouds, I'm always exploring new frontiers.
+                </p>
+                <p className="leading-relaxed">
+                  <em>"Engineering is about pushing boundaries—one line of code and one circuit at a time."</em>
+                </p>
+              </div>
+            </section>
+
             {/* Photo Gallery */}
             <PhotoGallery />
 
             {/* Projects */}
-            <section id="projects" className="scroll-mt-6">
+            <section>
               <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Featured Projects
               </h2>
