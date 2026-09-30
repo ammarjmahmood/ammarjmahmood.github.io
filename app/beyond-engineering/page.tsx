@@ -1,387 +1,319 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Playfair_Display } from 'next/font/google';
-import { ArrowLeft, Mail, Linkedin, Github } from 'lucide-react';
+import { Italiana, Kumbh_Sans } from 'next/font/google';
 import { CaptionedGallery } from '@/components/captioned-gallery';
 import { Reveal } from '@/components/reveal';
 
-const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '500', '600'] });
+// Closest free matches to the source site's Canva fonts ("The Seasons" display + a geometric sans).
+const display = Italiana({ subsets: ['latin'], weight: '400' });
+const sans = Kumbh_Sans({ subsets: ['latin'], weight: ['300', '400'] });
 
 export const metadata = {
-    title: 'Beyond Engineering - Ammar J Mahmood',
+    title: 'Ammar J Mahmood — Robotics & Astronaut Training',
     description:
-        'Private and glider pilot, space-hackathon competitor, and aspiring skydiver — a look at what Ammar J Mahmood gets up to outside the lab.',
+        'Press kit for Ammar J Mahmood: robotics engineer, AST501 astronaut and space training, private and glider pilot.',
 };
 
-function BioBlock({
-    image,
-    imageAlt,
-    width,
-    height,
-    reverse = false,
-    children,
-}: {
-    image: string;
-    imageAlt: string;
-    width: number;
-    height: number;
-    reverse?: boolean;
-    children: React.ReactNode;
-}) {
-    return (
-        <Reveal className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-            <div className={reverse ? 'md:order-2' : ''}>
-                <div className="overflow-hidden rounded-2xl">
-                    <Image
-                        src={image}
-                        alt={imageAlt}
-                        width={width}
-                        height={height}
-                        loading="eager"
-                        className="h-auto w-full scale-100 transition-transform duration-700 ease-out hover:scale-[1.04]"
-                    />
-                </div>
-            </div>
-            <div className={reverse ? 'md:order-1' : ''}>
-                <div className="space-y-4 text-base leading-relaxed text-white/80">{children}</div>
-            </div>
-        </Reveal>
-    );
-}
-
-const galleryItems = [
-    { src: '/gallery/withDA20.webp', caption: 'With a Diamond DA20 on the ramp', width: 1286, height: 1714 },
-    { src: '/gallery/pilot.webp', caption: 'Heads-up, headset on, mid-flight', width: 1080, height: 1080 },
-    { src: '/gallery/pillot.webp', caption: 'Glider training day with the University Soaring Society', width: 1286, height: 1714 },
-    { src: '/gallery/presidentaward.webp', caption: "President's Award, University Soaring Society", width: 1920, height: 1280 },
-    { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition — Team N.O.P.S', width: 1440, height: 1920 },
-    { src: '/gallery/bramhacksmentor.webp', caption: 'Working the build overnight at BramHacks', width: 1280, height: 1707 },
-    { src: '/gallery/Canada Leadership Conference.webp', caption: 'Canadian Engineering Leadership Conference, St. John\'s NL', width: 1200, height: 1600 },
-    { src: '/gallery/ast501-placeholder.svg', caption: 'AST501 — Astronaut & Space Training (sample, swap for your photo)', width: 1200, height: 1200 },
-    { src: '', caption: 'Skydiving — photos coming soon', pending: true },
+// Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
+const gallery = [
+    { src: '/gallery/ast501-placeholder.svg', caption: 'AST501 Astronaut Training', width: 1200, height: 1200 },
+    { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
+    { src: '/gallery/pillot.webp', caption: 'In the Cockpit', width: 1286, height: 1714 },
+    { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition', width: 1440, height: 1920 },
+    { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
+    { src: '/gallery/skydiving-placeholder.svg', caption: 'Skydiving', width: 1500, height: 1000 },
+    { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576 },
+    { src: '/gallery/pilot.webp', caption: 'Glider Training', width: 1080, height: 1080, position: '50% 20%' },
+    { src: '/kiwi-charge-tmu-showcase.webp', caption: 'Clean Energy Showcase, TMU', width: 1600, height: 2134 },
+    { src: '/gallery/bramhacksmentor.webp', caption: 'Overnight Build, BramHacks', width: 1280, height: 1707 },
+    { src: '/gallery/Canada Leadership Conference.webp', caption: 'Engineering Leadership Conference', width: 1200, height: 1600 },
+    { src: '/kiwi-charge-robot.webp', caption: 'Kiwi Charge EV-Charging Robot', width: 848, height: 1264, position: '50% 60%' },
 ];
 
-// Compact print-only "media kit" — the on-screen page is a long scrolling
-// story, but a distributable PDF needs to fit in ~2 pages.
+const features = [
+    { src: '/gallery/arrc_thumbnail.webp', width: 720, height: 530, label: 'ARRC — arXiv Research Paper', href: 'https://arxiv.org/abs/2510.05547' },
+    { src: '/gallery/paper11.webp', width: 906, height: 734, label: 'Robust Visual Embodiment — arXiv Paper', href: 'https://arxiv.org/abs/2510.03677' },
+    { src: '/Featured Instructables.webp', width: 3024, height: 1794, label: 'Featured on Instructables', href: 'https://www.instructables.com/member/amarsbar/' },
+    { src: '/autodesk-assistant-fusion.jpg', width: 1280, height: 720, label: 'Autodesk AI Lab Internship', href: '/projects/autodesk-internship/' },
+    { src: '/kiwi-fr5-mujoco-poster.webp', width: 1600, height: 922, label: 'Kiwi Charge Robot Simulation', href: '/projects/kiwi-fr5-mujoco-simulation/' },
+    { src: '/viam-hackathon-medal.webp', width: 1242, height: 2208, label: 'Viam Hackathon — Fine Motor Skills Winner', href: '/projects/viam-robot-hackathon-jenga/' },
+];
+
+// Print-only one-page media kit (screen layout above is hidden when printing).
 const printCredentials = [
     {
+        image: '/gallery/ast501-placeholder.svg',
+        title: 'AST501 — Astronaut & Space Training',
+        body: 'Astronaut and space training through the AST501 program, paired with day-to-day robotics and autonomy research.',
+    },
+    {
         image: '/gallery/withDA20.webp',
-        alt: 'Ammar with a Diamond DA20',
         title: 'Private & Glider Pilot',
-        body: "Licensed private and glider pilot, trained on the Diamond DA20 and cross-country gliders. Active member of the University Soaring Society (USS); recognized with a President's Award for contributions to the club.",
+        body: "Licensed private and glider pilot (Diamond DA20, cross-country gliders). University Soaring Society President's Award.",
     },
     {
         image: '/gallery/bramhacks.webp',
-        alt: "Ammar's team at BramHacks 2025: Space Edition",
         title: 'BramHacks 2025: Space Edition — N.O.P.S.',
-        body: 'Built N.O.P.S. (Navigation Offline Positioning System) with a 5-person team: an IMU-driven (gyroscope, accelerometer, magnetometer) offline autonomous navigation system for space and robotics applications. Took home an award, judged live.',
+        body: 'Award-winning IMU-based offline autonomous navigation system for space and robotics applications, built with a 5-person team.',
     },
     {
-        image: '/gallery/ast501-placeholder.svg',
-        alt: 'AST501 astronaut and space training placeholder',
-        title: 'AST501 — Astronaut & Space Training',
-        body: 'Astronaut and space-systems training program. (Sample placeholder graphic below — swap in training photo and finalize details.)',
+        image: '/kiwi-charge-robot.webp',
+        title: 'Robotics Engineer — Kiwi Charge',
+        body: 'Builds autonomous EV-charging robots; presented at the Clean Energy showcase at Toronto Metropolitan University. 25+ hackathons.',
     },
-    {
-        image: '/gallery/bramhacksmentor.webp',
-        alt: 'Ammar working at a hackathon',
-        title: '25+ Hackathons',
-        body: 'Competed in 25+ hackathons across North America building robotics and software systems on 24-48 hour deadlines — the same instinct behind the space and EV-charging robotics work on this site.',
-    },
-];
-
-const printGalleryItems = [
-    { src: '/gallery/withDA20.webp', caption: 'With a Diamond DA20' },
-    { src: '/gallery/pilot.webp', caption: 'Mid-flight' },
-    { src: '/gallery/pillot.webp', caption: 'USS glider training' },
-    { src: '/gallery/presidentaward.webp', caption: "USS President's Award" },
-    { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition' },
-    { src: '/gallery/bramhacksmentor.webp', caption: 'Overnight build at BramHacks' },
-    { src: '/gallery/Canada Leadership Conference.webp', caption: "Canadian Eng. Leadership Conf." },
-    { src: '/gallery/ast501-placeholder.svg', caption: 'AST501 (sample placeholder)' },
 ];
 
 export default function BeyondEngineeringPage() {
     return (
-        <div className="beyond-engineering-page min-h-screen bg-black text-white">
-            <div className="mx-auto max-w-5xl px-6 py-10 md:px-10">
+        <div className={`be ${sans.className} beyond-engineering-page min-h-screen`}>
+            {/* ---------- Screen layout ---------- */}
+            <div className="no-print">
                 <Link
                     href="/"
-                    className="no-print inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
+                    className="fixed bottom-4 left-4 z-40 rounded-full border border-[#eeeee6]/15 bg-[#0e0a0a]/80 px-3 py-1.5 text-[10px] tracking-widest text-[#eeeee6]/70 uppercase backdrop-blur transition-colors hover:text-[#eeeee6]"
                 >
-                    <ArrowLeft className="h-4 w-4" />
-                    Back to Portfolio
+                    ← Portfolio
                 </Link>
 
-                {/* Screen: Hero */}
-                <Reveal delay={50} className="no-print">
-                    <header className="mt-14 flex flex-col items-start gap-8 sm:mt-20 sm:flex-row sm:items-center">
-                        <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-full ring-1 ring-white/10 transition-transform duration-700 ease-out hover:scale-105 sm:h-40 sm:w-40">
+                {/* Hero */}
+                <Reveal>
+                    <header className="be-hero">
+                        <div className="be-hero-photo">
                             <Image
                                 src="/professional-headshot.webp"
                                 alt="Ammar J Mahmood"
                                 fill
+                                sizes="34vw"
                                 className="object-cover"
                                 priority
                             />
                         </div>
-                        <div>
-                            <h1 className={`${playfair.className} text-4xl uppercase leading-tight sm:text-6xl`}>
-                                Ammar J Mahmood
-                            </h1>
-                            <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
-                                Private &amp; Glider Pilot
-                            </p>
-                            <p className="mt-1 text-sm uppercase tracking-[0.25em] text-white/60 sm:text-base">
-                                Space &amp; Robotics Hackathon Competitor
-                            </p>
+                        <h1 className={`be-hero-name be-name ${display.className}`}>
+                            Ammar J
+                            <br />
+                            Mahmood
+                        </h1>
+                        <div className="be-hero-subs be-sub">
+                            <p>Robotics Engineer · Astronaut Training (AST501)</p>
+                            <p>Private &amp; Glider Pilot</p>
                         </div>
                     </header>
                 </Reveal>
 
-                {/* Screen: Intro */}
-                <Reveal delay={150} className="no-print mt-14 sm:mt-20">
-                    <section className="max-w-3xl space-y-5 text-lg leading-relaxed text-white/80">
-                        <p>
-                            Ammar is a Mechatronics Engineering student and robotics engineer who spends about as
-                            much time trying to leave the ground as he does building things that stay on it.
-                            Outside the lab, he holds a private pilot license and a glider pilot license, competes
-                            at hackathons across North America — 25 and counting — and has spent time building
-                            navigation systems aimed squarely at space and robotics applications.
-                        </p>
-                        <p className={`${playfair.className} text-xl italic text-white/60`}>
-                            &ldquo;If it flies, floats, or drives itself, I want to have built one.&rdquo;
-                        </p>
-                    </section>
-                </Reveal>
-
-                {/* Screen: continuous bio — piloting, soaring, space hackathons */}
-                <section className="no-print mt-20 space-y-20 sm:mt-28">
-                    <BioBlock
-                        image="/gallery/withDA20.webp"
-                        imageAlt="Ammar with a Diamond DA20 trainer aircraft"
-                        width={1286}
-                        height={1714}
-                    >
-                        <p>
-                            Ammar is a licensed private pilot and glider pilot, trained on aircraft like the
-                            Diamond DA20 alongside unpowered cross-country glider flights. Flying started as a
-                            counterweight to a schedule full of robotics builds and hackathons — a reason to look
-                            up instead of down at a soldering iron for a few hours.
-                        </p>
-                        <p>
-                            He is an active member of the University Soaring Society (USS), where flight training
-                            happens the old-fashioned way: towed into the air, released, and flown back down on
-                            nothing but altitude and technique.
-                        </p>
-                    </BioBlock>
-
-                    <BioBlock
-                        image="/gallery/presidentaward.webp"
-                        imageAlt="Ammar receiving a President's Award for the University Soaring Society"
-                        width={1920}
-                        height={1280}
-                        reverse
-                    >
-                        <p>
-                            That involvement with USS was recognized with a President&apos;s Award for
-                            contributions to the club — presented on stage alongside teammates who logged just as
-                            many early mornings at the airfield. Between checklists, cockpit selfies, and the
-                            occasional look straight down the wing at 2,000 feet, flying has stayed the one hobby
-                            that has nothing to do with a keyboard.
-                        </p>
-                        <p>
-                            The same instinct — chase the thing that gets you off the ground — carries over into
-                            Ammar&apos;s space work.
-                        </p>
-                    </BioBlock>
-
-                    <BioBlock
-                        image="/gallery/bramhacks.webp"
-                        imageAlt="Ammar's team at BramHacks 2025: Space Edition"
-                        width={1440}
-                        height={1920}
-                    >
-                        <p>
-                            Ammar has been to a handful of space-focused events, but BramHacks 2025 — Space
-                            Edition is the one with a photo to prove it. His team of five built{' '}
-                            <strong className="text-white">N.O.P.S. (Navigation Offline Positioning System)</strong>
-                            , an offline autonomous navigation system for space and robotics applications that
-                            fuses gyroscope, accelerometer, and magnetometer data — an IMU sensor stack — to keep
-                            track of position without relying on GPS or any live signal. Their pitch line said it
-                            best: <em>&ldquo;Offline, but on target.&rdquo;</em>
-                        </p>
-                        <p>The team took home an award for the build, judged live against the rest of the field.</p>
-                    </BioBlock>
-
-                    <BioBlock
-                        image="/gallery/ast501-placeholder.svg"
-                        imageAlt="AST501 astronaut and space training placeholder"
+                {/* Bio row 1 — text left, image right */}
+                <Reveal className="be-row be-row-1">
+                    <p className="be-body font-light">
+                        Ammar J Mahmood is a Mechatronics Engineering student and robotics engineer training for a
+                        future in space. Through the AST501 astronaut and space training program, he pairs hands-on
+                        astronaut preparation with the robotics and autonomy research he does every day — building
+                        machines that can see, navigate, and act on their own.
+                    </p>
+                    <Image
+                        src="/gallery/ast501-placeholder.svg"
+                        alt="AST501 astronaut training (placeholder)"
                         width={1200}
                         height={1200}
-                        reverse
-                    >
-                        <p>
-                            <strong className="text-white">AST501 — Astronaut &amp; Space Training.</strong> Ammar
-                            has also gone through space and astronaut-oriented training under this program. The
-                            graphic here is a placeholder — swap it for the real training photo whenever it&apos;s
-                            ready, and expand this paragraph with the specifics.
-                        </p>
-                    </BioBlock>
+                        loading="eager"
+                        className="be-radius h-auto w-full"
+                    />
+                </Reveal>
 
-                    <BioBlock
-                        image="/gallery/bramhacksmentor.webp"
-                        imageAlt="Ammar's team working through the night at a hackathon"
-                        width={1280}
-                        height={1707}
-                    >
-                        <p>
-                            AST501 sits alongside 25+ hackathons Ammar has competed in — evenings that usually end
-                            with too much coffee, a pile of wires, and a demo assembled about ten minutes before
-                            judging. It is also the throughline behind most of the robotics work on this site: an
-                            IMU-driven navigation stack for space isn&apos;t so different from a perception stack
-                            for an EV-charging robot arm.
-                        </p>
-                        <p>
-                            Next on the list: turning &ldquo;aspiring skydiver&rdquo; into an actual jump —
-                            watch this space.
-                        </p>
-                    </BioBlock>
+                {/* Bio row 2 — image left, text right */}
+                <Reveal className="be-row be-row-2">
+                    <Image
+                        src="/gallery/withDA20.webp"
+                        alt="Ammar with a Diamond DA20 aircraft"
+                        width={1286}
+                        height={1714}
+                        loading="eager"
+                        className="be-radius aspect-[43.8/41] h-auto w-full object-cover object-[50%_60%]"
+                    />
+                    <p className="be-body font-light">
+                        A licensed private and glider pilot, Ammar has trained on aircraft like the Diamond DA20 and
+                        flies cross-country gliders with the University Soaring Society, where he received a
+                        President&apos;s Award for his contributions to the club. Outside the cockpit, he has competed
+                        in more than 25 hackathons across North America and is fluent in English and French.
+                    </p>
+                </Reveal>
+
+                {/* Bio row 3 — text left, image right */}
+                <Reveal className="be-row be-row-3">
+                    <p className="be-body font-light">
+                        His robotics work points skyward too. At BramHacks 2025 — Space Edition, his team built
+                        N.O.P.S. (Navigation Offline Positioning System), an IMU-based autonomous navigation system for
+                        space and robotics applications that tracks position without GPS, and took home an award. By
+                        day he builds autonomous EV-charging robots at Kiwi Charge, work he has presented to industry
+                        professionals and researchers at Toronto Metropolitan University.
+                    </p>
+                    <Image
+                        src="/gallery/bramhacks.webp"
+                        alt="Ammar's team at BramHacks 2025: Space Edition"
+                        width={1440}
+                        height={1920}
+                        loading="eager"
+                        className="be-radius h-auto w-full"
+                    />
+                </Reveal>
+
+                {/* Pull quote */}
+                <Reveal className="be-quote-wrap">
+                    <p className="be-quote font-light">
+                        &ldquo;Engineering is about pushing boundaries, one line of code and one circuit at a
+                        time.&rdquo;
+                    </p>
+                </Reveal>
+
+                {/* Gallery */}
+                <section className="mt-[5vw]">
+                    <Reveal>
+                        <h2 className={`be-h2 ${display.className} ml-[4.1vw] mb-[3vw]`}>Gallery</h2>
+                    </Reveal>
+                    <CaptionedGallery items={gallery} captionClassName="be-caption font-light" />
                 </section>
 
-                {/* Screen: Gallery */}
-                <Reveal className="no-print mt-20 sm:mt-28">
-                    <section>
-                        <h2 className={`${playfair.className} text-2xl tracking-wide sm:text-3xl`}>Gallery</h2>
-                        <div className="mt-8">
-                            <CaptionedGallery items={galleryItems} />
-                        </div>
-                    </section>
-                </Reveal>
-
-                {/* Screen: Contact */}
-                <Reveal className="no-print mt-20 border-t border-white/10 pt-12 sm:mt-28">
-                    <section className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-                        <div className="overflow-hidden rounded-2xl">
-                            <Image
-                                src="/gallery/pilot.webp"
-                                alt="Ammar in the cockpit"
-                                width={1080}
-                                height={1080}
-                                loading="eager"
-                                className="h-auto w-full transition-transform duration-700 ease-out hover:scale-[1.04]"
-                            />
-                        </div>
-                        <div>
-                            <h2 className={`${playfair.className} text-2xl leading-snug sm:text-3xl`}>
-                                Contact me and follow my journey
-                            </h2>
-                            <div className="mt-6 space-y-3 text-white/80">
-                                <a
-                                    href="mailto:ammarjmahmood@gmail.com"
-                                    className="flex items-center gap-2 hover:text-white"
-                                >
-                                    <Mail className="h-4 w-4" />
-                                    ammarjmahmood@gmail.com
+                {/* Publications & features (press) */}
+                <section className="mt-[12vw]">
+                    <Reveal>
+                        <h2 className={`be-h2 ${display.className} ml-[4.1vw] mb-[5vw]`}>Publications &amp; Features</h2>
+                    </Reveal>
+                    <Reveal className="be-press">
+                        {features.map((f) => (
+                            <figure key={f.src}>
+                                <a href={f.href} target={f.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
+                                    <Image
+                                        src={f.src}
+                                        alt={f.label}
+                                        width={f.width}
+                                        height={f.height}
+                                        loading="eager"
+                                        className="aspect-[16/10] h-auto w-full object-cover"
+                                    />
                                 </a>
-                                <a
-                                    href="https://www.linkedin.com/in/ammarjmahmood"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-2 hover:text-white"
-                                >
-                                    <Linkedin className="h-4 w-4" />
-                                    linkedin.com/in/ammarjmahmood
-                                </a>
-                                <a
-                                    href="https://github.com/ammarjmahmood"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-2 hover:text-white"
-                                >
-                                    <Github className="h-4 w-4" />
-                                    github.com/ammarjmahmood
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                </Reveal>
+                                <figcaption className="be-press-caption font-light">
+                                    <a href={f.href} target={f.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
+                                        {f.label}
+                                    </a>
+                                </figcaption>
+                            </figure>
+                        ))}
+                    </Reveal>
+                </section>
 
-                <div className="no-print mt-16 border-t border-white/10 pt-8 text-center">
-                    <Link href="/" className="text-sm text-white/50 hover:text-white">
-                        ← Back to Portfolio
-                    </Link>
-                </div>
-
-                {/* Print-only: compact 2-page media kit */}
-                <div className="print-only">
-                    <div className="flex items-center gap-4 border-b border-zinc-300 pb-3">
+                {/* Contact */}
+                <Reveal className="be-contact mt-[12vw] pb-[8vw]">
+                    <div className="be-contact-photo">
                         <Image
-                            src="/professional-headshot.webp"
-                            alt="Ammar J Mahmood"
-                            width={80}
-                            height={80}
-                            className="h-16 w-16 rounded-full object-cover"
+                            src="/gallery/presidentaward.webp"
+                            alt="Ammar at the University Soaring Society awards"
+                            width={1920}
+                            height={1280}
+                            loading="eager"
+                            className="h-auto w-full"
                         />
-                        <div>
-                            <h1 className={`${playfair.className} text-2xl uppercase leading-none text-zinc-900`}>
-                                Ammar J Mahmood
-                            </h1>
-                            <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-zinc-500">
-                                Private &amp; Glider Pilot · Space &amp; Robotics Hackathon Competitor
+                    </div>
+                    <div className="pr-[3vw]">
+                        <h2 className={`be-contact-h ${display.className}`}>
+                            Contact me and
+                            <br />
+                            follow my journey
+                        </h2>
+                        <div className="be-contact-links be-body font-light">
+                            <p>
+                                Email: <a href="mailto:ammarjmahmood@gmail.com">ammarjmahmood@gmail.com</a>
+                            </p>
+                            <p>
+                                LinkedIn:{' '}
+                                <a href="https://www.linkedin.com/in/ammarjmahmood" target="_blank" rel="noopener noreferrer">
+                                    Ammar J Mahmood
+                                </a>
+                            </p>
+                            <p>
+                                YouTube:{' '}
+                                <a href="https://www.youtube.com/@amarssbarr" target="_blank" rel="noopener noreferrer">
+                                    @amarssbarr
+                                </a>
                             </p>
                         </div>
                     </div>
+                </Reveal>
+            </div>
 
-                    <p className="mt-3 text-[11px] leading-snug text-zinc-800">
-                        Mechatronics Engineering student and robotics engineer. Licensed private and glider pilot;
-                        competes at hackathons across North America — 25 and counting; builds navigation systems
-                        for space and robotics applications. Aspiring skydiver.
-                    </p>
+            {/* ---------- Print-only: one-page media kit ---------- */}
+            <div className="print-only mx-auto max-w-5xl px-2">
+                <div className="flex items-center gap-4 border-b border-zinc-300 pb-3">
+                    <Image
+                        src="/professional-headshot.webp"
+                        alt="Ammar J Mahmood"
+                        width={80}
+                        height={80}
+                        className="h-16 w-16 rounded-full object-cover"
+                    />
+                    <div>
+                        <h1 className={`${display.className} text-3xl uppercase leading-none text-zinc-900`}>
+                            Ammar J Mahmood
+                        </h1>
+                        <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+                            Robotics Engineer · Astronaut Training (AST501) · Private &amp; Glider Pilot
+                        </p>
+                    </div>
+                </div>
 
-                    <div className="mt-4 grid grid-cols-2 gap-3">
-                        {printCredentials.map((c) => (
-                            <div key={c.title} className="flex gap-2">
-                                <Image
-                                    src={c.image}
-                                    alt={c.alt}
-                                    width={200}
-                                    height={200}
-                                    className="h-16 w-16 shrink-0 rounded-md object-cover"
-                                />
-                                <div>
-                                    <p className={`${playfair.className} text-[12px] font-semibold leading-tight text-zinc-900`}>
-                                        {c.title}
-                                    </p>
-                                    <p className="mt-0.5 text-[9px] leading-snug text-zinc-600">{c.body}</p>
-                                </div>
+                <p className="mt-3 text-[11px] leading-snug text-zinc-800">
+                    Mechatronics Engineering student and robotics engineer training for a future in space. AST501
+                    astronaut and space training, licensed private and glider pilot, 25+ hackathons, and
+                    award-winning autonomous-navigation work for space and robotics applications.
+                </p>
+
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                    {printCredentials.map((c) => (
+                        <div key={c.title} className="flex gap-2">
+                            <Image
+                                src={c.image}
+                                alt={c.title}
+                                width={200}
+                                height={200}
+                                className="h-16 w-16 shrink-0 rounded-md object-cover"
+                            />
+                            <div>
+                                <p className={`${display.className} text-[13px] leading-tight text-zinc-900`}>{c.title}</p>
+                                <p className="mt-0.5 text-[9px] leading-snug text-zinc-600">{c.body}</p>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
+                </div>
 
-                    <h2 className={`${playfair.className} mt-4 text-sm uppercase tracking-wide text-zinc-900`}>
-                        Gallery
-                    </h2>
-                    <div className="mt-2 grid grid-cols-4 gap-2">
-                        {printGalleryItems.map((g) => (
-                            <div key={g.src}>
-                                <Image
-                                    src={g.src}
-                                    alt={g.caption}
-                                    width={300}
-                                    height={300}
-                                    className="aspect-square w-full rounded-md object-cover"
-                                />
-                                <p className="mt-0.5 text-[8px] leading-tight text-zinc-500">{g.caption}</p>
-                            </div>
-                        ))}
-                    </div>
+                <h2 className={`${display.className} mt-4 text-base uppercase tracking-wide text-zinc-900`}>Gallery</h2>
+                <div className="mt-2 grid grid-cols-6 gap-2">
+                    {gallery.map((g) => (
+                        <div key={g.src}>
+                            <Image
+                                src={g.src}
+                                alt={g.caption}
+                                width={300}
+                                height={300}
+                                className="aspect-square w-full rounded-md object-cover"
+                            />
+                            <p className="mt-0.5 text-[7px] leading-tight text-zinc-500">{g.caption}</p>
+                        </div>
+                    ))}
+                </div>
 
-                    <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 border-t border-zinc-300 pt-2 text-[10px] text-zinc-700">
-                        <span>ammarjmahmood@gmail.com</span>
-                        <span>linkedin.com/in/ammarjmahmood</span>
-                        <span>github.com/ammarjmahmood</span>
-                    </div>
+                <h2 className={`${display.className} mt-4 text-base uppercase tracking-wide text-zinc-900`}>
+                    Publications &amp; Features
+                </h2>
+                <ul className="mt-1 grid grid-cols-2 gap-x-4 text-[9px] leading-relaxed text-zinc-700">
+                    {features.map((f) => (
+                        <li key={f.src}>
+                            {f.label}
+                            {f.href.startsWith('http') ? ` — ${f.href.replace('https://', '')}` : ''}
+                        </li>
+                    ))}
+                </ul>
+
+                <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 border-t border-zinc-300 pt-2 text-[10px] text-zinc-700">
+                    <span>ammarjmahmood@gmail.com</span>
+                    <span>linkedin.com/in/ammarjmahmood</span>
+                    <span>ammarjmahmood.me</span>
                 </div>
             </div>
         </div>
