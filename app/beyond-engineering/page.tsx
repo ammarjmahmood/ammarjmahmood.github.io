@@ -121,7 +121,6 @@ export default function BeyondEngineeringPage() {
                         alt="IIAS AST 501 astronautics training (placeholder)"
                         width={1200}
                         height={1200}
-                        loading="eager"
                         className="be-radius h-auto w-full"
                     />
                 </Reveal>
@@ -133,7 +132,6 @@ export default function BeyondEngineeringPage() {
                         alt="Ammar with a Diamond DA20 aircraft"
                         width={1286}
                         height={1714}
-                        loading="eager"
                         className="be-radius aspect-[43.8/41] h-auto w-full object-cover object-[50%_60%]"
                     />
                     <p className="be-body font-light">
@@ -160,7 +158,6 @@ export default function BeyondEngineeringPage() {
                         alt="Ammar's team at BramHacks 2025: Space Edition"
                         width={1440}
                         height={1920}
-                        loading="eager"
                         className="be-radius h-auto w-full"
                     />
                 </Reveal>
@@ -195,7 +192,6 @@ export default function BeyondEngineeringPage() {
                                         alt={f.label}
                                         width={f.width}
                                         height={f.height}
-                                        loading="eager"
                                         className="aspect-[16/10] h-auto w-full object-cover"
                                     />
                                 </a>
@@ -226,7 +222,6 @@ export default function BeyondEngineeringPage() {
                             alt="Ammar at the University Soaring Society awards"
                             width={1920}
                             height={1280}
-                            loading="eager"
                             className="h-auto w-full"
                         />
                     </div>
