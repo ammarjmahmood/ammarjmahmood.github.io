@@ -218,12 +218,15 @@ export default function BeyondEngineeringPage() {
                 <Reveal className="be-contact mt-[calc(var(--vw)*12)] pb-[calc(var(--vw)*8)]">
                     <div className="be-contact-photo">
                         <Image
-                            src="/gallery/roscon-toronto.webp"
-                            alt="Ammar at ROSCon Global 2026, Toronto"
-                            width={1932}
-                            height={2576}
+                            src="/gallery/presidentaward.webp"
+                            alt="Ammar receiving the University Soaring Society President's Award with the exec team"
+                            width={1920}
+                            height={1280}
                             className="h-auto w-full"
                         />
+                        <p className="be-press-caption font-light mt-[calc(var(--vw)*1.4)]">
+                            President&apos;s Award, University Soaring Society &mdash; with the exec team
+                        </p>
                     </div>
                     <div className="pr-[calc(var(--vw)*3)]">
                         <h2 className={`be-contact-h ${display.className}`}>
