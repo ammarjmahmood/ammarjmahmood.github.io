@@ -34,6 +34,8 @@ const gallery = [
     { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
     { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
     { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
+    { src: '/gallery/30lbbattlebot.webp', caption: '30lb Combat Robot', width: 1620, height: 886 },
+    { src: '/gallery/roscon-toronto.webp', caption: 'ROSCon Global 2026, Toronto', width: 1932, height: 2576 },
 ];
 
 const features = [
@@ -119,7 +121,6 @@ export default function BeyondEngineeringPage() {
                         alt="IIAS AST 501 astronautics training (placeholder)"
                         width={1200}
                         height={1200}
-                        loading="eager"
                         className="be-radius h-auto w-full"
                     />
                 </Reveal>
@@ -131,7 +132,6 @@ export default function BeyondEngineeringPage() {
                         alt="Ammar with a Diamond DA20 aircraft"
                         width={1286}
                         height={1714}
-                        loading="eager"
                         className="be-radius aspect-[43.8/41] h-auto w-full object-cover object-[50%_60%]"
                     />
                     <p className="be-body font-light">
@@ -158,7 +158,6 @@ export default function BeyondEngineeringPage() {
                         alt="Ammar's team at BramHacks 2025: Space Edition"
                         width={1440}
                         height={1920}
-                        loading="eager"
                         className="be-radius h-auto w-full"
                     />
                 </Reveal>
@@ -193,7 +192,6 @@ export default function BeyondEngineeringPage() {
                                         alt={f.label}
                                         width={f.width}
                                         height={f.height}
-                                        loading="eager"
                                         className="aspect-[16/10] h-auto w-full object-cover"
                                     />
                                 </a>
@@ -220,11 +218,10 @@ export default function BeyondEngineeringPage() {
                 <Reveal className="be-contact mt-[calc(var(--vw)*12)] pb-[calc(var(--vw)*8)]">
                     <div className="be-contact-photo">
                         <Image
-                            src="/gallery/presidentaward.webp"
-                            alt="Ammar at the University Soaring Society awards"
-                            width={1920}
-                            height={1280}
-                            loading="eager"
+                            src="/gallery/roscon-toronto.webp"
+                            alt="Ammar at ROSCon Global 2026, Toronto"
+                            width={1932}
+                            height={2576}
                             className="h-auto w-full"
                         />
                     </div>

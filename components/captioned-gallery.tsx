@@ -61,7 +61,6 @@ export function CaptionedGallery({ items, captionClassName = '' }: { items: Capt
                                 width={item.width}
                                 height={item.height}
                                 sizes="33vw"
-                                loading="eager"
                                 style={item.position ? { objectPosition: item.position } : undefined}
                                 className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                             />
