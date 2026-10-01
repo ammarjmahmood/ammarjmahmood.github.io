@@ -218,10 +218,10 @@ export default function BeyondEngineeringPage() {
                 <Reveal className="be-contact mt-[12vw] pb-[8vw]">
                     <div className="be-contact-photo">
                         <Image
-                            src="/gallery/presidentaward.webp"
-                            alt="Ammar at the University Soaring Society awards"
-                            width={1920}
-                            height={1280}
+                            src="/gallery/roscon-toronto.webp"
+                            alt="Ammar at ROSCon Global 2026, Toronto"
+                            width={1932}
+                            height={2576}
                             className="h-auto w-full"
                         />
                     </div>
