@@ -13,10 +13,19 @@
   }
 }
 
-/* Prevent horizontal overflow */
-html,
-body {
+/* Prevent horizontal overflow. Only html carries overflow-x: per the HTML
+   overflow-propagation spec, a non-visible overflow on html alone already
+   governs the viewport; adding the same overflow-x-only rule to body too
+   leaves body with a mismatched overflow-x/overflow-y pair, which the CSSOM
+   overflow spec auto-promotes to overflow-y: auto — silently turning body
+   into its own nested scroll container. The first touch/wheel scroll then
+   gets consumed trying to scroll that inner container before chaining up to
+   the real page scroll, which feels like the page is stuck on first swipe. */
+html {
   overflow-x: hidden;
+  max-width: 100vw;
+}
+body {
   max-width: 100vw;
 }
 
@@ -212,7 +221,12 @@ body {
 .be {
   background: #0e0a0a;
   color: #eeeee6;
-  overflow-x: hidden;
+  /* No overflow-x here on purpose: html/body already clip horizontal overflow
+     site-wide. Setting overflow-x: hidden on this element too (without an equal
+     overflow-y) makes the browser auto-promote overflow-y to auto per the CSSOM
+     overflow spec, turning this div into its own independent scroll container —
+     the first touch/wheel scroll gets consumed trying to scroll it before
+     chaining up to the real page scroll, which feels like the page is stuck. */
   /* 1vw that stops growing at 1366px: the source design caps its scale there and centres. */
   --vw: min(1vw, 13.66px);
 }
