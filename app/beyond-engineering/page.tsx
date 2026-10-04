@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 // Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
-// *-placeholder.svg tiles are stand-ins until the real IIAS / scuba photos arrive.
+// *-placeholder.svg tiles are stand-ins until the real photos arrive.
 const gallery = [
     { src: '/gallery/zero-g-placeholder.svg', caption: 'Zero Gravity Flight', width: 1200, height: 1200 },
     { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
@@ -32,7 +32,7 @@ const gallery = [
     { src: '/gallery/hypoxia-placeholder.svg', caption: 'Hypoxia Training', width: 1200, height: 1200 },
     { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576, position: '50% 40%' },
     { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
-    { src: '/gallery/scuba-placeholder.svg', caption: 'Scuba Diving', width: 1200, height: 1200 },
+    { src: '/gallery/scuba-training.webp', caption: 'Scuba Diving', width: 1932, height: 2576 },
     { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
     { src: '/gallery/30lbbattlebot.webp', caption: '30lb Combat Robot', width: 1620, height: 886 },
     { src: '/gallery/roscon-toronto.webp', caption: 'ROSCon Global 2026, Toronto', width: 1932, height: 2576 },
