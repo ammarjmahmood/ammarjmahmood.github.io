@@ -228,23 +228,23 @@ body {
      the first touch/wheel scroll gets consumed trying to scroll it before
      chaining up to the real page scroll, which feels like the page is stuck. */
   /* Layout unit. On desktop it is 0.8vw so the page reads like the source at
-     80% browser zoom, and it stops growing at 1366px (×0.8) like the source. */
+     70% browser zoom, and it stops growing at 1366px (×0.7) like the source. */
   --vw: 1vw;
 }
 @media (min-width: 641px) {
-  .be { --vw: min(0.8vw, 10.93px); }
+  .be { --vw: min(0.7vw, 9.56px); }
 }
 .be-inner { width: calc(var(--vw) * 100); margin: 0 auto; position: relative; }
 .be a { color: inherit; }
-.be-body { font-size: clamp(16px, calc(var(--vw) * 2.5), 25.6px); line-height: 1.25; letter-spacing: 0.01em; }
-.be-name { font-size: clamp(30px, calc(var(--vw) * 8.96), 92px); line-height: 0.87; text-transform: uppercase; }
-.be-sub { font-size: clamp(9px, calc(var(--vw) * 1.77), 18.4px); letter-spacing: 0.1em; line-height: 1.1; text-transform: uppercase; }
-.be-quote { font-size: clamp(22px, calc(var(--vw) * 4.69), 48px); line-height: 1.25; letter-spacing: 0.01em; }
-.be-h2 { font-size: clamp(28px, calc(var(--vw) * 4.6), 47.2px); line-height: 0.87; text-transform: uppercase; }
-.be-contact-h { font-size: clamp(22px, calc(var(--vw) * 3.6), 36.8px); line-height: 0.95; text-transform: uppercase; }
-.be-caption { font-size: clamp(11px, calc(var(--vw) * 2.5), 25.6px); line-height: 1.2; letter-spacing: 0.01em; }
-.be-press-caption { font-size: clamp(10px, calc(var(--vw) * 1.6), 16px); line-height: 1.3; }
-.be-radius { border-radius: clamp(12px, calc(var(--vw) * 3), 30.4px); }
+.be-body { font-size: clamp(16px, calc(var(--vw) * 2.5), 22.4px); line-height: 1.25; letter-spacing: 0.01em; }
+.be-name { font-size: clamp(30px, calc(var(--vw) * 8.96), 80.5px); line-height: 0.87; text-transform: uppercase; }
+.be-sub { font-size: clamp(9px, calc(var(--vw) * 1.77), 16.1px); letter-spacing: 0.1em; line-height: 1.1; text-transform: uppercase; }
+.be-quote { font-size: clamp(22px, calc(var(--vw) * 4.69), 42px); line-height: 1.25; letter-spacing: 0.01em; }
+.be-h2 { font-size: clamp(28px, calc(var(--vw) * 4.6), 41.3px); line-height: 0.87; text-transform: uppercase; }
+.be-contact-h { font-size: clamp(22px, calc(var(--vw) * 3.6), 32.2px); line-height: 0.95; text-transform: uppercase; }
+.be-caption { font-size: clamp(11px, calc(var(--vw) * 2.5), 22.4px); line-height: 1.2; letter-spacing: 0.01em; }
+.be-press-caption { font-size: clamp(10px, calc(var(--vw) * 1.6), 14px); line-height: 1.3; }
+.be-radius { border-radius: clamp(12px, calc(var(--vw) * 3), 26.6px); }
 
 /* Hero */
 .be-hero { position: relative; height: max(calc(var(--vw) * 44), 190px); }
