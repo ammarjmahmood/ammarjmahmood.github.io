@@ -15,23 +15,23 @@ export const metadata = {
 };
 
 // Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
-// *-placeholder.svg tiles are stand-ins until the real photos arrive.
+// iias-*.webp tiles are IIAS-logo stand-ins until the real AST 501 photos arrive.
 const gallery = [
-    { src: '/gallery/zero-g-placeholder.svg', caption: 'Zero Gravity Flight', width: 1200, height: 1200 },
+    { src: '/gallery/iias-zero-g.webp', caption: 'Zero Gravity Flight', width: 1000, height: 1000 },
     { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
     { src: '/gallery/rocket3.webp', caption: 'TMU MARS Rocket Launch', width: 847, height: 1280 },
     { src: '/gallery/pillot.webp', caption: 'In the Cockpit', width: 1286, height: 1714 },
-    { src: '/gallery/spacesuit-placeholder.svg', caption: 'IVA Spacesuit Training', width: 1200, height: 1200 },
+    { src: '/gallery/iias-spacesuit.webp', caption: 'IVA Spacesuit Training', width: 1000, height: 1000 },
     { src: '/gallery/rocket1.webp', caption: 'Launch Day, MARS Rocketry', width: 800, height: 519 },
     { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition', width: 1440, height: 1920 },
     { src: '/gallery/pilot.webp', caption: 'Glider Training', width: 1080, height: 1080, position: '50% 20%' },
-    { src: '/gallery/suborbital-sim-placeholder.svg', caption: 'Suborbital Spacecraft Simulator', width: 1200, height: 1200 },
-    { src: '/gallery/aerobatic-placeholder.svg', caption: 'Aerobatic Flight', width: 1200, height: 1200 },
+    { src: '/gallery/iias-suborbital-sim.webp', caption: 'Suborbital Spacecraft Simulator', width: 1000, height: 1000 },
+    { src: '/gallery/iias-aerobatic.webp', caption: 'Aerobatic Flight', width: 1000, height: 1000 },
     { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
     { src: '/gallery/ifly-montreal.webp', caption: 'Indoor Skydiving, iFly Montreal', width: 1672, height: 941 },
-    { src: '/gallery/hypoxia-placeholder.svg', caption: 'Hypoxia Training', width: 1200, height: 1200 },
+    { src: '/gallery/iias-hypoxia.webp', caption: 'Hypoxia Training', width: 1000, height: 1000 },
     { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576, position: '50% 40%' },
-    { src: '/gallery/iias-class-placeholder.svg', caption: 'IIAS AST 501 Class', width: 1200, height: 1200 },
+    { src: '/gallery/iias-class.webp', caption: 'IIAS AST 501 Class', width: 1000, height: 1000 },
     { src: '/gallery/scuba-training.webp', caption: 'Scuba Diving', width: 1932, height: 2576 },
     { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
     { src: '/gallery/30lbbattlebot.webp', caption: '30lb Combat Robot', width: 1620, height: 886 },
@@ -39,9 +39,10 @@ const gallery = [
 ];
 
 const features = [
-    { src: '/gallery/arrc_thumbnail.webp', width: 720, height: 530, label: 'ARRC — arXiv Research Paper', href: 'https://arxiv.org/abs/2510.05547' },
-    { src: '/gallery/paper11.webp', width: 906, height: 734, label: 'Robust Visual Embodiment — arXiv Paper', href: 'https://arxiv.org/abs/2510.03677' },
-    { src: '/Featured Instructables.webp', width: 3024, height: 1794, label: 'Featured on Instructables', href: 'https://www.instructables.com/member/amarsbar/' },
+    { src: '/gallery/press-arrc-paper.webp', width: 1200, height: 750, label: 'ARRC — arXiv Research Paper', href: 'https://arxiv.org/abs/2510.05547' },
+    { src: '/gallery/press-rve-paper.webp', width: 1200, height: 750, label: 'Robust Visual Embodiment — arXiv Paper', href: 'https://arxiv.org/abs/2510.03677' },
+    { src: '/gallery/press-instructables-asl.webp', width: 432, height: 360, label: 'Instructables — Computer Vision ASL Robotic Arm', href: 'https://www.instructables.com/Computer-Vision-ASL-Detection-Robotic-Arm/' },
+    { src: '/gallery/press-instructables-roomba.webp', width: 900, height: 911, label: 'Instructables — Autonomous Robot for Under $30', href: 'https://www.instructables.com/How-to-Make-an-Autonomous-Robot-for-Under-30/' },
     { src: '/kiwi-fr5-mujoco-poster.webp', width: 1600, height: 922, label: 'Kiwi Charge Robot Simulation', href: '/projects/kiwi-fr5-mujoco-simulation/' },
     { src: '/viam-hackathon-medal.webp', width: 1242, height: 2208, label: 'Viam Hackathon — Fine Motor Skills Winner', href: '/projects/viam-robot-hackathon-jenga/' },
 ];
@@ -49,7 +50,7 @@ const features = [
 // Print-only one-page media kit (screen layout above is hidden when printing).
 const printCredentials = [
     {
-        image: '/gallery/ast501-placeholder.svg',
+        image: '/gallery/iias-ast501.webp',
         title: 'IIAS — AST 501: Fundamentals of Astronautics',
         body: 'Completing astronautics training with the International Institute for Astronautical Sciences: mission planning, aerospace physiology, suborbital life support; Florida Tech intensive.',
     },
@@ -117,10 +118,10 @@ export default function BeyondEngineeringPage() {
                         hands-on intensive at Florida Tech.
                     </p>
                     <Image
-                        src="/gallery/ast501-placeholder.svg"
+                        src="/gallery/iias-ast501.webp"
                         alt="IIAS AST 501 astronautics training (placeholder)"
-                        width={1200}
-                        height={1200}
+                        width={1000}
+                        height={1000}
                         className="be-radius h-auto w-full"
                     />
                 </Reveal>
@@ -192,6 +193,7 @@ export default function BeyondEngineeringPage() {
                                         alt={f.label}
                                         width={f.width}
                                         height={f.height}
+                                        loading="eager"
                                         className="aspect-[16/10] h-auto w-full object-cover"
                                     />
                                 </a>
@@ -300,7 +302,7 @@ export default function BeyondEngineeringPage() {
                 </div>
 
                 <h2 className={`${display.className} mt-4 text-base uppercase tracking-wide text-zinc-900`}>Gallery</h2>
-                <div className="mt-2 grid grid-cols-6 gap-2">
+                <div className="mt-2 grid grid-cols-7 gap-2">
                     {gallery.map((g) => (
                         <div key={g.src}>
                             <Image
@@ -322,7 +324,7 @@ export default function BeyondEngineeringPage() {
                     {features.map((f) => (
                         <li key={f.src}>
                             {f.label}
-                            {f.href.startsWith('http') ? ` — ${f.href.replace('https://', '')}` : ''}
+                            {f.href.includes('arxiv.org') ? ` — ${f.href.replace('https://', '')}` : ''}
                         </li>
                     ))}
                 </ul>
