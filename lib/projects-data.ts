@@ -240,6 +240,48 @@ The project — and the perception, insertion-control, and charging-stack work b
         }
     },
 {
+        id: 'demo-driven-panda',
+        slug: 'demo-driven-panda-robots',
+        title: 'Two Hands, One or Two Robots',
+        shortDescription: 'An ongoing robotics experiment: transfer object goals from a two-hand video demonstration to one or two Panda arms, then compare sequential and parallel execution in MuJoCo.',
+        fullDescription: `Can a robot adapt a two-handed demonstration to the number of arms available? I built a video-to-simulation pipeline that extracts object start and goal positions, compares one-arm and two-arm schedules, and executes physical pick-and-place motions with simulated Panda manipulators.
+
+Development began with a Gemini-generated video so I could test perception, calibration, scheduling, and contact-based grasping before collecting real footage. The demo below shows that generated input alongside the resulting one-arm and two-arm rollouts. Personally recorded demonstrations with different everyday objects are the next validation stage.`,
+        thumbnail: '/demo-driven-panda-poster.jpg',
+        videoPoster: '/demo-driven-panda-poster.jpg',
+        videoUrl: '/demo-driven-panda-comparison.mp4',
+        detailImages: [],
+        type: ['Software', 'Machine Learning'],
+        tags: ['Robotics Research', 'MuJoCo', 'Panda', 'Computer Vision', 'Task Planning', 'Work in Progress'],
+        date: '2026',
+        githubUrl: 'https://github.com/ammarjmahmood/Demo-driven-pandasrobot',
+        learnMoreUrl: 'https://github.com/ammarjmahmood/Demo-driven-pandasrobot/blob/main/docs/METHOD.md',
+        technicalStack: ['Python', 'MuJoCo', 'OpenCV', 'NumPy', 'Franka Panda', 'Inverse Kinematics'],
+        role: 'Independent Robotics Development',
+        duration: 'October 2026 — ongoing',
+        scope: 'Video Demonstrations + Embodiment Retargeting + Simulation Evaluation',
+        relatedProjects: ['33', 'kiwi-fr5-mujoco'],
+        achievements: [
+            'Built an end-to-end pipeline from a generated demonstration to physical pick-and-place rollouts in MuJoCo.',
+            'Compared one-arm sequential execution with two-arm parallel execution on the same extracted object goals.',
+            'Recorded 19.6 s and 10.2 s simulated completion times in the initial two-object scene.',
+            'Documented data provenance, contact failures, controller assumptions, and the planned transition to personally recorded footage.'
+        ],
+        sections: {
+            overview: `The research question is how to preserve the goal of a human demonstration when the robot has a different number of manipulators. Two simultaneous human moves can become a sequential plan for one arm or a parallel plan for two arms. A scheduling heuristic considers dependencies, path clearance, and a penalty for recruiting the second arm.
+
+This is an ongoing independent experiment. The current video is a development baseline using generated input; real-data evaluation is pending.`,
+            softwareArchitecture: `OpenCV detects the colored objects and targets in the baseline video. Four tabletop markers and supplied workspace dimensions map image coordinates into a planar task representation. A scheduler selects an arm configuration, and an inverse-kinematics controller executes reach, grasp, lift, transport, and release phases.
+
+MuJoCo simulates free objects moved by finger contact, without grasp welds or object teleportation. The motion controller uses simulator object state. Coordination messages are templates, and the demonstrated system is not a trained VLA or learned world model.
+
+An experimental pretrained vision-language perception extension is under development to interpret other objects. It has not yet established reliable end-to-end generalization to real cups, balls, or charger bricks.`,
+            results: `In the initial Gemini-video scene, both objects were placed successfully with either arm configuration: 19.6 seconds of simulated execution for one arm and 10.2 seconds for two. Six additional rollouts with small position perturbations passed the baseline checks. These are development results on a narrow setup, not a generalization benchmark.
+
+Early failures included confusing target rings with objects, hand occlusion, and contact between the two robot hands. The baseline was refined using those observations. Next, I will collect phone videos of real objects, measure their geometry, and evaluate success, contacts, and timing on new layouts. Generated and personally collected data will be reported separately.`
+        }
+    },
+{
         id: '30',
         slug: 'vla-training-isaac-lab',
         title: 'VLA Training on Robot in Isaac Lab',
