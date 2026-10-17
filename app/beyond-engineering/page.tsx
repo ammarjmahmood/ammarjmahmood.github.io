@@ -15,27 +15,30 @@ export const metadata = {
 };
 
 // Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
-// iias-*.webp tiles are IIAS-logo stand-ins until the real AST 501 photos arrive.
+// iias-zero-g.webp and iias-aerobatic.webp are IIAS-logo stand-ins until those photos arrive.
 const gallery = [
     { src: '/gallery/iias-zero-g.webp', caption: 'Zero Gravity Flight', width: 1000, height: 1000 },
     { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
     { src: '/gallery/rocket3.webp', caption: 'TMU MARS Rocket Launch', width: 847, height: 1280 },
     { src: '/gallery/pillot.webp', caption: 'In the Cockpit', width: 1286, height: 1714 },
-    { src: '/gallery/iias-spacesuit.webp', caption: 'IVA Spacesuit Training', width: 1000, height: 1000 },
+    { src: '/gallery/iias-spacesuit.webp', caption: 'IVA Spacesuit Training', width: 1932, height: 2576 },
     { src: '/gallery/rocket1.webp', caption: 'Launch Day, MARS Rocketry', width: 800, height: 519 },
     { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition', width: 1440, height: 1920 },
     { src: '/gallery/pilot.webp', caption: 'Glider Training', width: 1080, height: 1080, position: '50% 20%' },
-    { src: '/gallery/iias-suborbital-sim.webp', caption: 'Suborbital Spacecraft Simulator', width: 1000, height: 1000 },
+    { src: '/gallery/iias-suborbital-sim.webp', caption: 'Suborbital Spacecraft Simulator', width: 1086, height: 1448 },
     { src: '/gallery/iias-aerobatic.webp', caption: 'Aerobatic Flight', width: 1000, height: 1000 },
     { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
     { src: '/gallery/ifly-montreal.webp', caption: 'Indoor Skydiving, iFly Montreal', width: 1672, height: 941 },
-    { src: '/gallery/iias-hypoxia.webp', caption: 'Hypoxia Training', width: 1000, height: 1000 },
+    { src: '/gallery/iias-hypoxia.webp', caption: 'Hypoxia Training', width: 948, height: 1659 },
     { src: '/viam-hackathon-team.webp', caption: 'Viam Robot Hackathon', width: 1932, height: 2576, position: '50% 40%' },
-    { src: '/gallery/iias-class.webp', caption: 'IIAS AST 501 Class', width: 1000, height: 1000 },
+    { src: '/gallery/iias-class.webp', caption: 'IIAS AST 501 Flight Planning', width: 1932, height: 2576 },
     { src: '/gallery/scuba-training.webp', caption: 'Scuba Diving', width: 1932, height: 2576 },
     { src: '/gallery/snowboarding.webp', caption: 'Snowboarding', width: 1536, height: 2048 },
     { src: '/gallery/30lbbattlebot.webp', caption: '30lb Combat Robot', width: 1620, height: 886 },
     { src: '/gallery/roscon-toronto.webp', caption: 'ROSCon Global 2026, Toronto', width: 1932, height: 2576 },
+    { src: '/gallery/iias-possum-training.webp', caption: 'POSSUM Training, with Diallo Wallace', width: 1932, height: 2576 },
+    { src: '/gallery/iias-flight-gear.webp', caption: 'Flight Suit & Patches', width: 1086, height: 1448 },
+    { src: '/gallery/sami-chamber-certificate.webp', caption: 'SAMI Advanced Chamber Program', width: 2576, height: 1932 },
 ];
 
 const features = [
@@ -119,9 +122,9 @@ export default function BeyondEngineeringPage() {
                     </p>
                     <Image
                         src="/gallery/iias-ast501.webp"
-                        alt="IIAS AST 501 astronautics training (placeholder)"
-                        width={1000}
-                        height={1000}
+                        alt="IIAS AST 501 flight planning worksheet"
+                        width={1932}
+                        height={2576}
                         className="be-radius h-auto w-full"
                     />
                 </Reveal>
