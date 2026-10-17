@@ -39,6 +39,7 @@ const photos = [
     { src: '/gallery/robotgripper.webp', alt: 'Robotics Team' },
     { src: '/gallery/kneebracedesign.webp', alt: 'Knee Brace Design' },
     { src: '/gallery/gpsSchematic.webp', alt: 'GPS Schematic' },
+    { src: '/gallery/iias-flight-gear.webp', alt: 'Flight Suit & Patches' },
 ];
 
 export function PhotoGallery() {
