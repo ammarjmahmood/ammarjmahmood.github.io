@@ -339,6 +339,29 @@ The pizza-making task was chosen deliberately — it requires a wide range of ma
         }
     },
 {
+        id: '35',
+        slug: 'valsalva-ear-pressure-equalizer',
+        title: 'Valsalva Ear-Pressure Equalizer — Blender Design, TPU 3D Print',
+        shortDescription: 'A flexible, 3D-printed device for clearing ear pressure using the Valsalva method, modeled in Blender after a Final Frontier Design reference and printed in TPU across several sizes.',
+        fullDescription: `Designed a Valsalva-style ear-pressure equalizer in Blender, based on a Final Frontier Design reference piece, and 3D printed it in flexible TPU filament.
+
+The part was produced in several sizes to find the right fit, taking advantage of TPU's flexibility for a comfortable seal during the Valsalva maneuver.`,
+        thumbnail: '/valsalva-tpu-equalizer.webp',
+        previewMedia: '/valsalva-tpu-equalizer.webp',
+        detailImages: ['/valsalva-tpu-equalizer.webp'],
+        type: ['Mechanical'],
+        tags: ['Blender', '3D Printing', 'TPU', 'CAD', 'Aerospace Physiology'],
+        date: '2026',
+        technicalStack: ['Blender', 'TPU Filament', '3D Printing'],
+        role: 'Designer',
+        duration: '2026',
+        scope: 'CAD Design + 3D Printing',
+        sections: {
+            overview: `Modeled a Valsalva-method ear-pressure equalizer in Blender, referencing a Final Frontier Design piece as a starting point for the geometry.`,
+            mechanicalDesign: `Printed in TPU for its flexibility, producing the part across a range of sizes to dial in fit and comfort.`
+        }
+    },
+{
         id: '14',
         slug: 'hacked-roomba',
         title: 'Hacked Roomba Autonomous Robot',
