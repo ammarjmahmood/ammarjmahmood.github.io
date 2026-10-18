@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 // Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
-// iias-zero-g.webp and iias-aerobatic.webp are IIAS-logo stand-ins until those photos arrive.
+// iias-zero-g.webp is an IIAS-logo stand-in until that photo arrives.
 const gallery = [
     { src: '/gallery/iias-zero-g.webp', caption: 'Zero Gravity Flight', width: 1000, height: 1000 },
     { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
@@ -26,7 +26,7 @@ const gallery = [
     { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition', width: 1440, height: 1920 },
     { src: '/gallery/pilot.webp', caption: 'Glider Training', width: 1080, height: 1080, position: '50% 20%' },
     { src: '/gallery/iias-suborbital-sim.webp', caption: 'Suborbital Spacecraft Simulator', width: 1086, height: 1448 },
-    { src: '/gallery/iias-aerobatic.webp', caption: 'Aerobatic Flight', width: 1000, height: 1000 },
+    { src: '/gallery/iias-aerobatic.webp', caption: 'Aerobatic Flight Training, with Instructor', width: 1932, height: 2576 },
     { src: '/purpose-robotics-thumbnail.webp', caption: 'Purpose Robotics Humanoid', width: 862, height: 1200 },
     { src: '/gallery/ifly-montreal.webp', caption: 'Indoor Skydiving, iFly Montreal', width: 1672, height: 941 },
     { src: '/gallery/iias-hypoxia.webp', caption: 'Hypoxia Training', width: 948, height: 1659 },
