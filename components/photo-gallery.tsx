@@ -40,6 +40,7 @@ const photos = [
     { src: '/gallery/kneebracedesign.webp', alt: 'Knee Brace Design' },
     { src: '/gallery/gpsSchematic.webp', alt: 'GPS Schematic' },
     { src: '/gallery/iias-flight-gear.webp', alt: 'Flight Suit & Patches' },
+    { src: '/gallery/ceta-robotics-award.webp', alt: 'CETA Robotics Exhibition — 2nd Place' },
 ];
 
 export function PhotoGallery() {
