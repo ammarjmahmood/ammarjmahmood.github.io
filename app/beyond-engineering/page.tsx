@@ -38,6 +38,8 @@ const gallery = [
     { src: '/gallery/roscon-toronto.webp', caption: 'ROSCon Global 2026, Toronto', width: 1932, height: 2576 },
     { src: '/gallery/iias-possum-training.webp', caption: 'POSSUM Training, with Diallo Wallace', width: 1932, height: 2576 },
     { src: '/gallery/sami-chamber-certificate.webp', caption: 'SAMI Advanced Chamber Program', width: 2576, height: 1932 },
+    { src: '/gallery/iias-spacesuit-design.webp', caption: 'Spacesuit Design', width: 1242, height: 2208 },
+    { src: '/gallery/iias-flightline.webp', caption: 'On the Flight Line', width: 1448, height: 1086 },
 ];
 
 const features = [
