@@ -23,7 +23,7 @@ const gallery = [
     { src: '/gallery/pillot.webp', caption: 'In the Cockpit', width: 1286, height: 1714 },
     { src: '/gallery/iias-spacesuit.webp', caption: 'IVA Spacesuit Training', width: 1932, height: 2576 },
     { src: '/gallery/rocket1.webp', caption: 'Launch Day, MARS Rocketry', width: 800, height: 519 },
-    { src: '/gallery/bramhacks.webp', caption: 'BramHacks 2025: Space Edition', width: 1440, height: 1920 },
+    { src: '/gallery/iias-hypoxia.webp', caption: 'Hypoxia Chamber Training', width: 948, height: 1659 },
     { src: '/gallery/pilot.webp', caption: 'Glider Training', width: 1080, height: 1080, position: '50% 20%' },
     { src: '/gallery/iias-suborbital-sim.webp', caption: 'Suborbital Spacecraft Simulator', width: 1086, height: 1448 },
     { src: '/gallery/iias-aerobatic.webp', caption: 'Aerobatic Flight Training, with Instructor', width: 1932, height: 2576 },
