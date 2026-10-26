@@ -38,7 +38,7 @@ const gallery = [
     { src: '/gallery/roscon-toronto.webp', caption: 'ROSCon Global 2026, Toronto', width: 1932, height: 2576 },
     { src: '/gallery/iias-possum-training.webp', caption: 'POSSUM Training, with Diallo Wallace', width: 1932, height: 2576 },
     { src: '/gallery/sami-chamber-certificate.webp', caption: 'SAMI Advanced Chamber Program', width: 2576, height: 1932 },
-    { src: '/gallery/iias-spacesuit-design.webp', caption: 'Spacesuit Design', width: 1242, height: 2208 },
+    { src: '/gallery/iias-diploma.webp', caption: 'IIAS Diploma and Pin', width: 1600, height: 2133 },
     { src: '/gallery/iias-flightline.webp', caption: 'On the Flight Line', width: 1448, height: 1086 },
 ];
 
@@ -122,10 +122,10 @@ export default function BeyondEngineeringPage() {
                         hands-on intensive at Florida Tech.
                     </p>
                     <Image
-                        src="/gallery/iias-ast501.webp"
-                        alt="IIAS AST 501 flight planning worksheet"
-                        width={1932}
-                        height={2576}
+                        src="/gallery/iias-spacesuit-design.webp"
+                        alt="Ammar in the IVA spacesuit against a lunar backdrop"
+                        width={1242}
+                        height={1610}
                         className="be-radius h-auto w-full"
                     />
                 </Reveal>
