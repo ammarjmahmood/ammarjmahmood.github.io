@@ -50,7 +50,15 @@ export default function ResumePage() {
                     alt="Ammar J Mahmood"
                     width={64}
                     height={64}
-                    className="h-16 w-16 rounded-full object-cover"
+                    className="h-16 w-16 rounded-full object-cover dark:hidden"
+                    priority
+                  />
+                  <Image
+                    src="/profile-spacesuit.webp"
+                    alt="Ammar J Mahmood in an IVA spacesuit"
+                    width={64}
+                    height={64}
+                    className="hidden h-16 w-16 rounded-full object-cover dark:block"
                     priority
                   />
                   <div className="flex-1">

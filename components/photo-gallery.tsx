@@ -13,6 +13,14 @@ import {
 } from "@/components/ui/carousel"
 
 const photos = [
+    { src: '/gallery/iias-spacesuit-design.webp', alt: 'IVA Spacesuit Training' },
+    { src: '/gallery/iias-flight-mooney.webp', alt: 'Astronaut Training Flight, Mooney N231TF' },
+    { src: '/gallery/iias-ast501-certificate.webp', alt: 'AST 501 Fundamentals of Astronautics Certificate' },
+    { src: '/gallery/iias-diploma.webp', alt: 'IIAS Diploma and Pin' },
+    { src: '/gallery/iias-hypoxia.webp', alt: 'Hypoxia Chamber Training' },
+    { src: '/gallery/iias-suborbital-sim.webp', alt: 'Suborbital Flight Simulator' },
+    { src: '/gallery/iias-possum-training.webp', alt: 'POSSUM Training' },
+    { src: '/gallery/iias-aerobatic.webp', alt: 'Aerobatic Flight Training' },
     { src: '/gallery/bramhacks.webp', alt: 'BramHacks Event' },
     { src: '/gallery/Google Hackathon.webp', alt: 'Google Hackathon' },
     { src: '/gallery/googlehackathon2.webp', alt: 'Google Hackathon Team' },
