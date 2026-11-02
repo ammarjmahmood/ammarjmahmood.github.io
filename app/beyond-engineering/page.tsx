@@ -15,9 +15,8 @@ export const metadata = {
 };
 
 // Order matters: slots cycle 3:4, 4:3, 3:4 / 3:4, 3:4, 3:2 (see .be-tile in globals.css).
-// iias-zero-g.webp is an IIAS-logo stand-in until that photo arrives.
 const gallery = [
-    { src: '/gallery/iias-zero-g.webp', caption: 'Zero Gravity Flight', width: 1000, height: 1000 },
+    { src: '/gallery/iias-diploma.webp', caption: 'IIAS Diploma and Pin', width: 1600, height: 2133 },
     { src: '/gallery/withDA20.webp', caption: 'Private Pilot', width: 1286, height: 1714, position: '50% 62%' },
     { src: '/gallery/rocket3.webp', caption: 'TMU MARS Rocket Launch', width: 847, height: 1280 },
     { src: '/gallery/pillot.webp', caption: 'In the Cockpit', width: 1286, height: 1714 },
@@ -38,8 +37,6 @@ const gallery = [
     { src: '/gallery/roscon-toronto.webp', caption: 'ROSCon Global 2026, Toronto', width: 1932, height: 2576 },
     { src: '/gallery/iias-possum-training.webp', caption: 'POSSUM Training, with Diallo Wallace', width: 1932, height: 2576 },
     { src: '/gallery/sami-chamber-certificate.webp', caption: 'SAMI Advanced Chamber Program', width: 2576, height: 1932 },
-    { src: '/gallery/iias-diploma.webp', caption: 'IIAS Diploma and Pin', width: 1600, height: 2133 },
-    { src: '/gallery/iias-flightline.webp', caption: 'On the Flight Line', width: 1448, height: 1086 },
 ];
 
 const features = [
