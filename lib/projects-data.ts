@@ -38,6 +38,54 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: '36',
+        slug: 'muse-home',
+        title: 'Muse Home — A Smart Speaker for Meta\'s Muse Agent',
+        shortDescription: 'A 3D-printed smart speaker that brings Meta\'s Muse agent onto the kitchen counter or the wall: a wake word, timers, lists, music, smart home and 3D-printer alerts, with an optional iPhone dock that becomes an animated screen.',
+        fullDescription: `Muse Home is a voice-first smart speaker built around Meta's Muse agent, designed to replace a Google Home or HomePod for people who already use Muse. You say the wake word and talk; it answers out loud. Drop an iPhone 16 Pro Max into the angled face and it becomes a screen: a StandBy-style clock with a living orb, lists, timers, approvals, synced Spotify lyrics, and a live view of Muse clicking through websites when it does computer use.
+
+I designed the enclosure in CadQuery as a single soft shell with a 660-hole grille, a 30° phone cradle with an eject mechanism, keys that press through the base, and keyhole slots so it hangs on two screws like a clock. Every revision runs an automated interference check between the shell and everything inside it, then gets sliced for a Bambu P1S from the command line.
+
+The software runs on the device: an on-device wake word and speech-to-text, a display hub that drives the phone over WebSockets, and a set of Muse commands for timers and alarms that ring, reminders, weather, a morning briefing, Spotify, Home Assistant and Bambu printer status. It keeps working by voice with no phone docked.
+
+The launch site (muse-home.vercel.app) shows the real CAD model in WebGL, driven by scroll, with Blender renders and a launch film rendered from the same geometry.`,
+        thumbnail: '/muse-home-thumbnail.webp',
+        thumbnailAlignment: 'center',
+        previewMedia: '/muse-home-hero.webp',
+        videoUrl: '/muse-home-launch.mp4',
+        videoPoster: '/muse-home-launch.jpg',
+        detailImages: [
+            '/muse-home-hero.webp',
+            '/muse-home-wall.webp',
+            '/muse-home-office.webp',
+            '/muse-home-living.webp',
+            '/muse-home-screen.webp',
+            '/muse-home-computer-use.webp',
+        ],
+        type: ['Mechanical', 'Electrical', 'Software', 'Web Design'],
+        tags: ['Smart Speaker', 'Voice Assistant', 'AI Agent', 'Meta Muse', '3D Printing', 'CadQuery', 'Blender', 'WebGL', 'Product Design', 'Home Automation'],
+        date: '2026',
+        liveUrl: 'https://muse-home.vercel.app',
+        isPrivate: true,
+        technicalStack: ['CadQuery', 'Blender (Cycles)', 'Bambu Studio CLI', 'Python', 'aiohttp / WebSockets', 'openWakeWord', 'faster-whisper', 'Piper TTS', 'SwiftUI', 'Three.js', 'GSAP', 'Vercel'],
+        role: 'Product Designer & Engineer',
+        duration: '2026',
+        scope: 'Enclosure CAD + Embedded Voice Software + iOS Display App + Launch Site',
+        achievements: [
+            'Designed a one-piece printable enclosure with a phone cradle, eject mechanism, press-through keys and built-in keyhole wall mounting, with automated interference checks on every revision.',
+            'Built an on-device voice pipeline (wake word, speech-to-text, spoken replies) that talks to Meta\'s Muse agent without extra hardware.',
+            'Wrote 27 Muse commands: ringing timers and alarms, reminders, lists shared with the household, weather and briefings, Spotify, Home Assistant and Bambu printer alerts.',
+            'Animated display for computer use: a cursor that glides to each click, live typing and a step checklist, plus Face ID approvals for purchases.',
+            'Launch site with a scroll-driven WebGL model of the real CAD, Blender lifestyle renders and a Cycles-rendered launch film.'
+        ],
+        sections: {
+            overview: `Muse Home puts Meta's Muse agent in a dedicated speaker for the home. It listens for its wake word on the device, sends the request to Muse, and speaks the answer. With a phone docked it adds a screen that shows what Muse is doing; without one, everything still works by voice.`,
+            mechanicalDesign: `The enclosure is parametric CadQuery: a single rounded shell, a 30° cradle for the phone with a spring-returned eject button, power and volume keys that press through the base, and two keyhole slots with closed screw-head pockets so it hangs on the wall. The pockets and pads use 45° faces so the shell prints open-bottom down without trapped supports. Each revision is checked for interference against every internal part and sliced for a Bambu P1S across two plates.`,
+            softwareArchitecture: `On the device, a voice daemon runs the wake word and speech-to-text locally, streams the request to Muse and speaks the reply sentence by sentence. A small hub owns the display state and pushes it to the docked phone over WebSockets: clock and orb, captions, lists, timers ringing, lyrics synced to Spotify, approval sheets and an animated computer-use view. Muse reaches all of it through custom commands, including Home Assistant control with approval for locks and garage doors, and a Bambu printer bridge that announces finished or failed prints.`,
+            results: `A working voice speaker with an optional screen, printable in about 14 hours on a P1S, plus a launch site with live pre-orders at muse-home.vercel.app.`
+        }
+    },
+    {
         id: '33',
         slug: 'purpose-robotics',
         title: 'Purpose Robotics — Semi-Humanoid Robot Under $2,000',
