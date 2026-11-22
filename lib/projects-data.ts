@@ -163,6 +163,41 @@ The robot arm handles the fine, precise motions that Jenga demands — identifyi
             results: `The system won the Fine Motor Skills category, judged live at Viam's office in front of the other hackathon teams.`
         }
     },
+    {
+        id: '37',
+        slug: 'rebot-devarm-teleoperation',
+        title: 'reBot DevArm Open Source Contribution: Phone and Quest Teleoperation',
+        shortDescription: 'Open source teleoperation for the Seeed reBot Arm B601 RS, driven by an iPhone, HEBI Mobile I/O or a Meta Quest and listed in the community contributions of the 4.8k star reBot DevArm project.',
+        fullDescription: `reBot DevArm is Seeed Studio's open source robotic arm for developers, with a community contributions section where builders add support for new ecosystems. My contribution there adds teleoperation for the reBot Arm B601 RS from an iPhone, HEBI Mobile I/O and a Meta Quest, so a phone or a VR controller can move the gripper in real time.
+
+Control uses the relative pose mapping from TidyBot++ (CoRL 2024): you move the phone or controller and the gripper follows the change in pose rather than an absolute position, which keeps the motion natural and avoids jumps when you re-grip. The iPhone path is a native SwiftUI and ARKit app, the Quest path uses WebXR passthrough, and HEBI Mobile I/O is supported as a third input.
+
+On the arm side, a 200 Hz MIT mode driver runs with gravity feedforward, and inverse kinematics runs on the official RS URDF with safety interlocks around joint limits. It was tested on a B601 RS arm with an iPhone 16 Pro Max.`,
+        thumbnail: '/rebot-devarm-thumbnail.webp',
+        thumbnailAlignment: 'center',
+        detailImages: ['/rebot-devarm-thumbnail.webp'],
+        type: ['Software', 'Electrical'],
+        tags: ['Open Source', 'Teleoperation', 'Robot Arm', 'iPhone', 'ARKit', 'Meta Quest', 'WebXR', 'HEBI Mobile I/O', 'Python', 'Seeed Studio'],
+        date: '2026',
+        githubUrl: 'https://github.com/ammarjmahmood/rebot-phone-teleop',
+        learnMoreUrl: 'https://github.com/Seeed-Projects/reBot-DevArm',
+        technicalStack: ['Python', 'SwiftUI', 'ARKit', 'WebXR', 'HEBI Mobile I/O', 'Meta Quest', 'URDF', 'Inverse Kinematics'],
+        role: 'Open Source Contributor',
+        duration: '2026',
+        scope: 'Teleoperation Drivers + Mobile and VR Control Apps + Safety Interlocks',
+        achievements: [
+            'Listed in the community contributions of the Seeed Studio reBot DevArm repository (4.8k stars).',
+            'Built a native SwiftUI and ARKit iPhone app plus WebXR passthrough on Meta Quest and HEBI Mobile I/O input to drive one arm.',
+            'Mapped phone and controller motion to the gripper with the relative pose mapping from TidyBot++ (CoRL 2024).',
+            'Wrote a 200 Hz MIT mode driver with gravity feedforward and IK on the official RS URDF, with safety interlocks.',
+            'Tested on a reBot Arm B601 RS with an iPhone 16 Pro Max.'
+        ],
+        sections: {
+            overview: `The reBot DevArm project invites the community to add support for new ecosystems. This contribution makes the B601 RS arm controllable from hardware people already have: a phone, a HEBI Mobile I/O device or a Meta Quest.`,
+            softwareArchitecture: `Each input device streams its pose to the controller. A relative pose mapping from TidyBot++ turns changes in that pose into gripper targets, inverse kinematics on the official RS URDF turns those into joint targets, and a 200 Hz MIT mode driver with gravity feedforward sends them to the motors. Safety interlocks sit between the mapping and the driver.`,
+            results: `The integration is listed in the reBot DevArm community contributions and was tested end to end on a B601 RS arm with an iPhone 16 Pro Max.`
+        }
+    },
 {
         id: 'kiwi-fr5-mujoco',
         slug: 'kiwi-fr5-mujoco-simulation',
