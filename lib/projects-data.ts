@@ -38,6 +38,81 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: '38',
+        slug: 'seeed-rebot-bimanual-pouring',
+        title: 'Seeed Studio reBot — Bimanual Water Pouring Policy',
+        shortDescription: 'A trained bimanual imitation-learning policy running on a dual-arm Seeed Studio reBot rig to pick up a water bottle and pour into a glass, shown side by side with a synchronized physics simulation replay.',
+        fullDescription: `Deployed a trained bimanual imitation-learning policy on a dual-arm Seeed Studio reBot platform to perform a coordinated liquid pouring task. One arm grasps and lifts a plastic water bottle while the opposing arm grips and positions a glass, bringing the spout cleanly over the rim to pour without spilling.
+
+To validate trajectories and inspect contact alignment in detail, the exact same dual-arm rollout is replayed in lockstep inside a physics simulation alongside the physical robot footage, tracking each phase of the task from pick-up through pouring and half-speed replay.`,
+        thumbnail: '/seeed-rebot-pouring-thumbnail.webp',
+        thumbnailAlignment: 'center',
+        videoUrl: 'https://www.youtube.com/watch?v=eNTnlSjK7YY',
+        detailImages: ['/seeed-rebot-pouring-thumbnail.webp'],
+        type: ['Machine Learning', 'Software', 'Mechanical'],
+        tags: ['Robotics', 'Imitation Learning', 'Bimanual Manipulation', 'Seeed Studio', 'reBot', 'Simulation', 'Dual-Arm', 'Robot Learning'],
+        date: '2026',
+        technicalStack: ['Python', 'Imitation Learning', 'Bimanual Control', 'Seeed Studio reBot', 'Physics Simulation', 'Robot Kinematics'],
+        role: 'Robotics & ML Engineer',
+        duration: '2026',
+        scope: 'Bimanual Policy Training + Dual-Arm Hardware Deployment + Real-to-Sim Replay',
+        relatedProjects: ['37', '10'],
+        achievements: [
+            'Trained and deployed a bimanual imitation-learning policy coordinating two Seeed Studio reBot arms simultaneously.',
+            'Executed coordinated dual-arm bottle grasping, alignment over a held glass, and controlled water pouring on real hardware.',
+            'Built synchronized real-robot and physics-simulation playback of the same rollout with task-phase tracking and half-speed inspection.'
+        ],
+        sections: {
+            overview: `Coordinated liquid pouring is a demanding test for bimanual manipulation: both arms must grasp their respective objects cleanly, meet in a shared workspace without colliding, and modulate wrist tilt smoothly as the center of mass shifts. This project runs a trained imitation-learning policy on a dual-arm Seeed Studio reBot setup and pairs physical execution with a synchronized physics-simulation replay of the identical recording.`,
+            softwareArchitecture: `The imitation-learning policy maps observations to synchronized dual-arm joint and gripper commands across sequential manipulation phases (pick up, align, and pour). Joint trajectories recorded during hardware rollouts are streamed directly into a matching bimanual simulation model so real-world contact behavior, bottle tilt angle, and timing can be audited side by side at both real-time and half-speed playback.`,
+            results: `Demonstrated clean end-to-end bimanual water pouring from a bottle into a glass on the physical dual-arm Seeed Studio reBot rig, verified frame-for-frame against the synchronized simulation replay.`
+        }
+    },
+    {
+        id: '39',
+        slug: 'ridge-airtag-wallet-3dprint',
+        title: '3D-Printed Ridge-Style Wallet — AirTag, Hidden Keyfob & PETG Money Clip',
+        shortDescription: 'A parametric CadQuery redesign of a Ridge-style wallet with a captive watch-bezel Apple AirTag mount, a 100% hidden RFID keyfob pocket, and a print-on-side PETG compliant money clip, sliced for a single 2-color Bambu P1S AMS plate.',
+        fullDescription: `Redesigned an open-source Ridge-style minimalist wallet from the ground up in parametric CadQuery to hold up to 10 cards, an Apple AirTag, a hidden RFID keyfob, and either a modular cash strap or a 3D-printed compliant money clip—all without adhesives, rattling parts, or print supports.
+
+The Apple AirTag sits inside a captive watch-bezel aperture (32.70 mm internal cavity stepped to a 26.20 mm chamfered front window) verified to 0.0000 mm³ geometric interference against a 31.90 × 8.00 mm AirTag. An apartment RFID keyfob drops into a 5.20 mm blind pocket sealed beneath a solid 2.50 mm exterior wall so nothing shows from outside.
+
+The entire build—including a print-on-side Bambu PETG leaf-spring money clip with an interlocking pull-out keyway—was sliced from the command line onto a single 2-color Bambu Lab P1S AMS plate using print-by-object scheduling (1 filament swap, 0.12 mm layer height, 4h 12m, 63.6 g PETG), then rendered in Blender Cycles for colorway comparisons and a 360° exploded assembly animation.`,
+        thumbnail: '/ridge-airtag-wallet-thumbnail.webp',
+        thumbnailAlignment: 'center',
+        previewMedia: '/ridge-airtag-wallet-exploded-hero.webp',
+        videoUrl: '/ridge-airtag-wallet-exploded.mp4',
+        videoPoster: '/ridge-airtag-wallet-exploded-poster.jpg',
+        detailImages: [
+            '/ridge-airtag-wallet-thumbnail.webp',
+            '/ridge-airtag-wallet-moneyclip.webp',
+            '/ridge-airtag-wallet-colorways.webp',
+            '/ridge-airtag-wallet-exploded-hero.webp',
+            '/ridge-airtag-wallet-cross-sections.webp',
+        ],
+        type: ['Mechanical'],
+        tags: ['3D Printing', 'CadQuery', 'Parametric CAD', 'Blender', 'Bambu Lab P1S', 'PETG', 'Product Design', 'AirTag', 'Compliant Mechanism'],
+        date: '2026',
+        githubUrl: 'https://github.com/ammarjmahmood/ridge-airtag-wallet-3dprint',
+        technicalStack: ['CadQuery', 'Python', 'Blender (Cycles)', 'Bambu Studio CLI', 'Bambu Lab P1S AMS', 'PETG', '3D Printing'],
+        role: 'Mechanical Designer',
+        duration: '2026',
+        scope: 'Parametric CAD + Automated Interference Checks + Cycles Rendering + Bambu P1S Slicing',
+        relatedProjects: ['36', '3'],
+        achievements: [
+            'Engineered a captive watch-bezel AirTag mount (32.70 mm cavity, 26.20 mm chamfered front aperture) with 0.0000 mm³ verified interference.',
+            'Integrated a 100% hidden blind RFID keyfob pocket (5.20 mm deep beneath a 2.50 mm solid outer wall) and a clamped 1.05 mm ribbed elastic T-channel.',
+            'Designed a print-on-side Bambu PETG compliant leaf-spring money clip with an interlocking keyway so spring flexure aligns with continuous filament extrusions rather than layer lines.',
+            'Sliced a single-plate 2-color Bambu P1S AMS print-by-object job (0.12 mm layers, 1 AMS swap, 4h 12m, 63.6 g PETG) with flush 90° M2 countersinks and Voron-style stepped bridge nut pockets.',
+            'Rendered studio views, a 3-colorway Black & White comparison, and a 48-frame 360° exploded assembly animation in Blender Cycles on Apple Silicon.'
+        ],
+        sections: {
+            overview: `This project upgrades a classic 3D-printed Ridge-style wallet into a fully parametric, hardware-verified daily carry with integrated Apple AirTag tracking, a concealed RFID access fob, and interchangeable cash-strap or printed PETG money-clip backplates. Every dimension, screw clearance, and pocket wall thickness is driven from a single CadQuery script with automated boolean interference verification.`,
+            mechanicalDesign: `Seven flush M2×8 flat-head countersunk screws bolt through the outer plates into recessed captive M2 hex nut pockets built with Voron-style stepped double bridges so they print cleanly with zero supports. The inner plates mirror symmetrically around a clamped 1.05 mm ribbed elastic T-channel that eliminates elastic slip. For cash carry, the backplate swaps between a slim profile paired with a chamfered cash-strap plate and a slotted backplate that locks onto a print-on-side PETG compliant spring clip, orienting continuous extrusion walls along the bending plane for long fatigue life.`,
+            results: `Published the complete parametric CadQuery source, production STLs/STEPs, verified Amazon Canada hardware BOM, Blender Cycles renders, 360° exploded animation, and a ready-to-print 1-plate Bambu Lab P1S AMS .3mf profile on GitHub.`
+        }
+    },
+    {
         id: '36',
         slug: 'muse-home',
         title: 'Muse Home — A Smart Speaker for Meta\'s Muse Agent',
