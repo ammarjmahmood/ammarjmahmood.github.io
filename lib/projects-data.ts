@@ -926,30 +926,6 @@ Built with native iOS technologies, HealthSync integrates deeply with the iOS ec
         }
     },
 {
-        id: '27',
-        slug: 'issh',
-        title: 'iSSH - Pro SSH Client',
-        shortDescription: 'Powerful iOS SSH client featuring network scanning, persistent sessions, and integrated AI assistant for developers.',
-        fullDescription: `iSSH is a professional-grade SSH client for iOS, built for developers and system administrators who need reliable remote access on the go. It goes beyond simple terminal emulation by offering built-in network scanning, session persistence with tmux integration, and an innovative AI assistant.
-
-The app supports multiple AI models (Claude, Gemini, OpenAI) to help users debug scripts, generate commands, and manage remote servers more efficiently.`,
-        thumbnail: '/gallery/issh.png',
-        detailImages: ['/gallery/issh.png'],
-        type: ['Software'],
-        tags: ['iOS', 'SSH', 'Networking', 'Developer Tools', 'AI Integration'],
-        date: '2025',
-        liveUrl: 'https://apps.apple.com/ca/app/issh/id6759501444',
-        technicalStack: ['Swift', 'SwiftUI', 'SSH', 'AI APIs', 'tmux'],
-        role: 'Lead Developer',
-        duration: '2025',
-        scope: 'Native Mobile Development + Network Engineering + AI Integration',
-        sections: {
-            overview: `The goal of iSSH was to create the most productive remote management tool for iOS. By integrating essential networking tools like port forwarding and network scanning with modern AI capabilities, iSSH transforms the mobile terminal experience into a powerful dev environment.`,
-            softwareArchitecture: `iSSH features a custom terminal emulator built for low latency and high compatibility. The backend handles encrypted SSH connections and persistent background sessions. The AI integration uses a modular provider system, allowing users to connect their own API keys for various LLM models.`,
-            results: `iSSH has become a top-rated tool in the Developer Tools category on the App Store, praised for its stability and the unique productivity boost provided by the integrated AI assistant.`
-        }
-    },
-{
         id: '19',
         slug: 'smart-safe',
         title: 'Smart Safe with Biometric & Voice Control',
