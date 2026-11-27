@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Globe, CheckCircle2, Award, GraduationCap, FileText, BookOpen, Plane, ArrowDown } from "lucide-react"
+import { Globe, CheckCircle2, Award, FileText, BookOpen, Plane, ArrowDown } from "lucide-react"
 import {
   LinkedinIcon,
   GithubIcon,
@@ -537,13 +537,22 @@ export default function ResumePage() {
               <div className="space-y-4">
                 <Card className="p-6">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-100 dark:bg-yellow-900">
-                      <GraduationCap className="h-6 w-6 text-yellow-700 dark:text-yellow-300" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border p-1.5">
+                      <Image
+                        src="/logos/tmu.svg"
+                        alt="Toronto Metropolitan University"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        className="h-8 w-8 object-contain"
+                      />
                     </div>
                     <div className="flex-1">
                       <div className="mb-3">
                         <h3 className="font-semibold">Bachelor of Science in Mechatronics Engineering</h3>
                         <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                          <span>Toronto Metropolitan University</span>
+                          <span className="text-muted-foreground/50">•</span>
                           <span>In Progress</span>
                         </div>
                       </div>
