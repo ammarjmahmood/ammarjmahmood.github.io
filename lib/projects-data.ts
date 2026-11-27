@@ -1169,40 +1169,6 @@ To overcome these challenges, we introduce a task-aware denoising framework that
         }
     },
 {
-        id: '8',
-        slug: 'job-tracker-extension',
-        title: 'Job Application Tracker - Chrome Extension',
-        shortDescription: 'Chrome extension for tracking job applications with analytics, resume management, and Sankey diagram visualization.',
-        fullDescription: `Created a productivity-focused Chrome extension that helps job seekers organize and track their application process. The extension automatically captures job details from LinkedIn and other job boards, stores application data locally, and provides insightful analytics.
-
-Features include a Sankey diagram for visualizing application flow, resume upload and management, timeline tracking, and statistics dashboard. Built with modern web technologies and integrates with AI for smart job description extraction.`,
-        thumbnail: '/job-tracker.webp',
-        videoUrl: 'https://www.youtube.com/watch?v=4ywUH2kK_Z8',
-        detailImages: ['/job-tracker.webp'],
-        type: ['Software'],
-        tags: ['Chrome Extension', 'JavaScript', 'Data Visualization', 'Productivity'],
-        date: '2024',
-        githubUrl: 'https://github.com/ammarjmahmood/JobTracker',
-        technicalStack: ['JavaScript', 'Chrome Extension API', 'D3.js', 'IndexedDB', 'Gemini API'],
-        role: 'Full-Stack Developer',
-        duration: '2024',
-        scope: 'Chrome Extension + Data Visualization + AI Integration',
-        relatedProjects: ['7', '9'],
-        sections: {
-            overview: `This Chrome extension addresses the common challenge of job application tracking by automating data capture and providing insightful analytics. The tool helps job seekers stay organized, identify application bottlenecks, and optimize their job search strategy.
-
-By integrating AI-powered job description extraction and sophisticated data visualization, the extension transforms job searching from a chaotic process into a data-driven workflow.`,
-            softwareArchitecture: `The extension architecture uses Chrome Extension Manifest V3 with service workers for background processing. Job data is stored locally in IndexedDB for privacy and offline access. The popup interface is built with vanilla JavaScript and modern CSS.
-
-Key features include content scripts that extract job information from LinkedIn and other job boards, background workers that integrate with Gemini API for intelligent job description parsing, and D3.js-powered Sankey diagrams for visualizing application flow through different stages (Applied → Interview → Offer/Rejected).
-
-The resume management feature uses the FileReader API for local file handling, storing resume metadata and associating uploaded resumes with specific applications. All data remains local to the user's machine, ensuring privacy.`,
-            results: `The extension has been successfully deployed and is actively used for tracking 100+ job applications. The Sankey diagram provides instant visual feedback on application success rates and helps identify which types of roles have better response rates. Average time to log a new application reduced from 5 minutes to 30 seconds.
-
-Future improvements include integration with more job boards, automated follow-up reminders, and advanced analytics on optimal application timing.`
-        }
-    },
-{
         id: '9',
         slug: 'autism-communication-tool',
         title: 'Non-Verbal Autism Communication Tool',
@@ -1221,7 +1187,7 @@ The tool allows users to quickly communicate common phrases, needs, and emotions
         role: 'Developer',
         duration: '2024 (24-hour Hackathon)',
         scope: 'Assistive Technology + Accessibility + UX Design',
-        relatedProjects: ['8', '12'],
+        relatedProjects: ['7', '12'],
         sections: {
             overview: `Developed during a 24-hour hackathon, this project addresses the communication challenges faced by non-verbal autistic individuals. The application provides an accessible, customizable communication tool that empowers users to express their needs and emotions through visual interfaces.
 
@@ -1254,7 +1220,7 @@ Features include VR controller support, block placement and destruction, terrain
         role: 'Game Developer',
         duration: '2024',
         scope: 'VR Development + 3D Graphics + WebXR',
-        relatedProjects: ['9', '8'],
+        relatedProjects: ['9', '7'],
         sections: {
             overview: `This project reimagines Minecraft in virtual reality using WebXR technology, making immersive VR gaming accessible directly through web browsers without requiring native applications. The browser-based approach dramatically lowers the barrier to entry for VR gaming, allowing anyone with a VR headset to experience block-building in virtual reality.
 
@@ -1286,7 +1252,7 @@ The project demonstrates data collection, feature engineering, model training, a
         role: 'Data Scientist',
         duration: '2024',
         scope: 'Machine Learning + Data Analysis + Sports Analytics',
-        relatedProjects: ['16', '8'],
+        relatedProjects: ['16', '12'],
         sections: {
             overview: `This project applies machine learning to the exciting domain of sports analytics, specifically predicting NBA game outcomes. By analyzing vast amounts of historical data including team statistics, player performance metrics, and situational variables, the model learns patterns that indicate game outcomes.
 
@@ -1360,7 +1326,7 @@ The platform enables customers to browse menus, place orders, track their order 
         role: 'Full-Stack Developer',
         duration: '2024',
         scope: 'Mobile Development + Backend API + Web Dashboard',
-        relatedProjects: ['8', '9'],
+        relatedProjects: ['12', '9'],
         sections: {
             overview: `CIBO is a comprehensive restaurant technology platform addressing the disconnect between customer ordering and restaurant operations. The project originated from identifying inefficiencies at Eataly (Eaton Center) and evolved into a full-featured ordering and management system.
 
