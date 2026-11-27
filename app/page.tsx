@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Globe, CheckCircle2, Award, GraduationCap, FileText, Briefcase, BookOpen, Plane } from "lucide-react"
+import { Globe, CheckCircle2, Award, GraduationCap, FileText, BookOpen, Plane } from "lucide-react"
 import {
   LinkedinIcon,
   GithubIcon,
@@ -398,8 +398,15 @@ export default function ResumePage() {
               <div className="space-y-4">
                 <Card className="p-6">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-100 dark:bg-red-900 overflow-hidden border border-border">
-                      <Briefcase className="h-6 w-6 text-red-700 dark:text-red-300" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border p-2">
+                      <Image
+                        src="/logos/tesla.svg"
+                        alt="Tesla"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        className="h-7 w-7 object-contain"
+                      />
                     </div>
                     <div className="flex-1">
                       <div className="mb-3">
@@ -419,8 +426,15 @@ export default function ResumePage() {
 
                 <Card className="p-6">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 dark:bg-blue-900 overflow-hidden border border-border">
-                      <Briefcase className="h-6 w-6 text-blue-700 dark:text-blue-300" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border p-2">
+                      <Image
+                        src="/logos/autodesk.svg"
+                        alt="Autodesk"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        className="h-7 w-7 object-contain"
+                      />
                     </div>
                     <div className="flex-1">
                       <div className="mb-3">
@@ -438,8 +452,15 @@ export default function ResumePage() {
 
                 <Card className="p-6">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-100 dark:bg-red-900 overflow-hidden border border-border">
-                      <Briefcase className="h-6 w-6 text-red-700 dark:text-red-300" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border p-1.5">
+                      <Image
+                        src="/logos/kiwi-charge.webp"
+                        alt="Kiwi Charge"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        className="h-8 w-8 object-contain"
+                      />
                     </div>
                     <div className="flex-1">
                       <div className="mb-3">
