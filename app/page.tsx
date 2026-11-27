@@ -517,7 +517,7 @@ export default function ResumePage() {
                         </div>
                       </div>
                       <p className="text-sm leading-relaxed text-muted-foreground">
-                        Developing autonomous systems and machine learning models for EV charging infrastructure.
+                        Founded the development of the autonomous robotic charging arm and stack being deployed at dealerships and partners across North America.
                       </p>
                     </div>
                   </div>
