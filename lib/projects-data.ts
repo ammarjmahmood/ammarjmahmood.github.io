@@ -98,7 +98,7 @@ The entire build—including a print-on-side Bambu PETG leaf-spring money clip w
         role: 'Mechanical Designer',
         duration: '2026',
         scope: 'Parametric CAD + Automated Interference Checks + Cycles Rendering + Bambu P1S Slicing',
-        relatedProjects: ['36', '3'],
+        relatedProjects: ['36', '6'],
         achievements: [
             'Engineered a captive watch-bezel AirTag mount (32.70 mm cavity, 26.20 mm chamfered front aperture) with 0.0000 mm³ verified interference.',
             'Integrated a 100% hidden blind RFID keyfob pocket (5.20 mm deep beneath a 2.50 mm solid outer wall) and a clamped 1.05 mm ribbed elastic T-channel.',
@@ -614,7 +614,7 @@ The project involved extensive CAD design, material selection, electronics integ
         role: 'Robotics Designer',
         duration: '2024',
         scope: 'Mechanical Design + Electronics + Competition',
-        relatedProjects: ['3', '5'],
+        relatedProjects: ['39', '5'],
         sections: {
             overview: `This combat robot project combines extreme weight optimization with maximum destructive capability. Every gram counts when designing within a 1lb weight limit, requiring careful material selection, strategic weight distribution, and innovative manufacturing techniques.
 
@@ -648,7 +648,7 @@ The robot represents a significant engineering challenge in maximizing destructi
         role: 'Lead Designer & Builder',
         duration: '2024',
         scope: 'Mechanical Design + Electronics + Competition',
-        relatedProjects: ['4', '3'],
+        relatedProjects: ['4', '39'],
         sections: {
             overview: `This 30lb combat robot pushes the boundaries of kinetic energy weapons and defensive armor in the heavyweight division. The design philosophy prioritizes weapon power and drive performance while maintaining structural resilience against opponent attacks.
 
@@ -696,7 +696,7 @@ The drone features a custom frame designed for durability and optimal flight cha
         role: 'Drone Builder & Pilot',
         duration: '2023',
         scope: 'Mechanical Design + Electronics + Flight Control',
-        relatedProjects: ['4', '3'],
+        relatedProjects: ['4', '39'],
         sections: {
             overview: `This FPV drone project showcases custom frame design, advanced electronics integration, and aerodynamic optimization for high-performance flight. Sponsored by PCB Way, the build demonstrates professional-grade construction techniques and tuning methodologies.
 
@@ -1077,7 +1077,7 @@ Each attachment is carefully designed to integrate seamlessly with the Skadis sy
         role: 'Product Designer',
         duration: '2023',
         scope: 'CAD Design + 3D Printing + Product Design',
-        relatedProjects: ['3', '4'],
+        relatedProjects: ['39', '4'],
         sections: {
             overview: `This project creates a suite of custom organizational accessories for the IKEA Skadis pegboard system. Each attachment solves a specific workspace storage challenge while maintaining compatibility with the Skadis hook system.
 
@@ -1088,37 +1088,6 @@ The collection includes tool holders, electronics organizers, spool holders, and
             results: `Created over 15 different attachment designs, all successfully printed and tested. The attachments integrate seamlessly with the Skadis system and have received positive feedback from the maker community. Files have been downloaded 500+ times from Thingiverse.
 
 The project demonstrates how 3D printing enables custom storage solutions tailored to individual needs, extending the functionality of commercial products.`
-        }
-    },
-{
-        id: '3',
-        slug: 'ridge-wallet-clone',
-        title: 'Ridge Wallet Clone',
-        shortDescription: 'A 3D-printed clone of the popular Ridge Wallet, designed for durability and minimalism.',
-        fullDescription: `Reverse-engineered and redesigned the popular Ridge Wallet using CAD software and 3D printing technology. The project focused on understanding the mechanical design principles that make the original wallet functional while optimizing for 3D printing manufacturing.
-
-The design incorporates precision tolerances for the sliding mechanism and material selection for durability. This project showcases CAD design skills and understanding of manufacturing constraints.`,
-        thumbnail: '/RidgeClone.webp',
-        previewMedia: '/RidgeClone.webp', // TODO: Replace with GIF/video
-        detailImages: ['/RidgeClone.webp'], // TODO: Add more project images
-        type: ['Mechanical'],
-        tags: ['3D Printing', 'CAD', 'Product Design'],
-        date: '2023',
-        technicalStack: ['SolidWorks', 'Fusion 360', '3D Printing'],
-        role: 'Product Designer',
-        duration: '2023',
-        scope: 'CAD Design + 3D Printing + Product Engineering',
-        relatedProjects: ['4', '6'],
-        sections: {
-            overview: `This reverse-engineering project deconstructs the popular Ridge Wallet to understand its clever mechanical design and recreate it using 3D printing technology. The challenge lies in achieving the same slim profile, smooth sliding action, and robust construction using additive manufacturing instead of the original machined aluminum.
-
-The project demonstrates product design thinking, tolerance analysis, and material science considerations specific to 3D printing.`,
-            mechanicalDesign: `The wallet design features a clever sliding mechanism with precision tolerance requirements. Key mechanisms include card retention clips, money clip integration, and the primary sliding plate mechanism. Each component was redesigned in SolidWorks with 3D printing constraints in mind.
-
-Critical design considerations included layer orientation for strength, living hinge design for the clip, and tolerance compensation for FDM printing (typically +0.2mm clearances). The design uses minimal support structures and can be printed on standard FDM printers. Material choice settled on PLA+ for its strength and smooth surface finish.`,
-            results: `The final 3D-printed wallet successfully replicates the core functionality of the Ridge Wallet at a fraction of the cost. The sliding mechanism operates smoothly, and card retention is secure. Weight is comparable to the aluminum original.
-
-Print time is approximately 4 hours. The project demonstrated that functional product clones are achievable with consumer 3D printing when design principles are properly adapted.`
         }
     },
 {
