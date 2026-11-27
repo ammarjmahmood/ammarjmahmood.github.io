@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Globe, CheckCircle2, Award, GraduationCap, FileText, Briefcase, BookOpen, Plane } from "lucide-react"
+import { Globe, CheckCircle2, Award, GraduationCap, FileText, BookOpen, Plane, ArrowDown } from "lucide-react"
 import {
   LinkedinIcon,
   GithubIcon,
@@ -34,9 +34,36 @@ export default function ResumePage() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 lg:px-12 overflow-x-hidden">
-        <div className="mb-6 flex justify-end">
+        <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <nav aria-label="Page sections" className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <a
+              href="#projects"
+              className="inline-flex min-h-9 items-center rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            >
+              Projects
+            </a>
+            <a
+              href="#publications"
+              className="inline-flex min-h-9 items-center rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            >
+              Publications
+            </a>
+            <a
+              href="#experience"
+              className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-border bg-secondary/70 px-3.5 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              <span>Experience</span>
+              <ArrowDown className="h-3.5 w-3.5 text-muted-foreground" aria-hidden="true" />
+            </a>
+            <a
+              href="#education"
+              className="inline-flex min-h-9 items-center rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            >
+              Education
+            </a>
+          </nav>
           <ThemeToggle />
-        </div>
+        </header>
 
         <div className="grid gap-8 lg:grid-cols-[320px_1fr]">
           {/* Left Sidebar */}
@@ -311,7 +338,11 @@ export default function ResumePage() {
 
             {/* Projects */}
             <section>
-              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              <h2
+                id="projects"
+                tabIndex={-1}
+                className="mb-4 scroll-mt-8 text-xs font-semibold uppercase tracking-wider text-muted-foreground"
+              >
                 Featured Projects
               </h2>
 
@@ -325,8 +356,14 @@ export default function ResumePage() {
             </section>
 
             {/* Publications */}
-            <section id="publications">
-              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Publications</h2>
+            <section>
+              <h2
+                id="publications"
+                tabIndex={-1}
+                className="mb-4 scroll-mt-8 text-xs font-semibold uppercase tracking-wider text-muted-foreground"
+              >
+                Publications
+              </h2>
               <div className="space-y-4">
                 <Card className="p-6">
                   <div className="flex gap-4">
@@ -394,12 +431,53 @@ export default function ResumePage() {
 
             {/* Experience */}
             <section>
-              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Experience</h2>
+              <h2
+                id="experience"
+                tabIndex={-1}
+                className="mb-4 scroll-mt-8 text-xs font-semibold uppercase tracking-wider text-muted-foreground"
+              >
+                Experience
+              </h2>
               <div className="space-y-4">
                 <Card className="p-6">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 dark:bg-blue-900 overflow-hidden border border-border">
-                      <Briefcase className="h-6 w-6 text-blue-700 dark:text-blue-300" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border p-2">
+                      <Image
+                        src="/logos/tesla.svg"
+                        alt="Tesla"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        className="h-7 w-7 object-contain"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <div className="mb-3">
+                        <h3 className="font-semibold">Manufacturing Engineering Intern</h3>
+                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                          <span>Tesla</span>
+                          <span className="text-muted-foreground/50">•</span>
+                          <span>Jan 2027 — Apr 2027 (Incoming · 4 months)</span>
+                        </div>
+                      </div>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        Incoming 4-month Manufacturing Engineering internship at Tesla.
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border p-2">
+                      <Image
+                        src="/logos/autodesk.svg"
+                        alt="Autodesk"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        className="h-7 w-7 object-contain"
+                      />
                     </div>
                     <div className="flex-1">
                       <div className="mb-3">
@@ -417,8 +495,15 @@ export default function ResumePage() {
 
                 <Card className="p-6">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-100 dark:bg-red-900 overflow-hidden border border-border">
-                      <Briefcase className="h-6 w-6 text-red-700 dark:text-red-300" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden border border-border p-1.5">
+                      <Image
+                        src="/logos/kiwi-charge.webp"
+                        alt="Kiwi Charge"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        className="h-8 w-8 object-contain"
+                      />
                     </div>
                     <div className="flex-1">
                       <div className="mb-3">
@@ -440,7 +525,13 @@ export default function ResumePage() {
 
             {/* Education */}
             <section>
-              <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Education</h2>
+              <h2
+                id="education"
+                tabIndex={-1}
+                className="mb-4 scroll-mt-8 text-xs font-semibold uppercase tracking-wider text-muted-foreground"
+              >
+                Education
+              </h2>
               <div className="space-y-4">
                 <Card className="p-6">
                   <div className="flex gap-4">
