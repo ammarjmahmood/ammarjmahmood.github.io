@@ -442,30 +442,30 @@ Early failures included confusing target rings with objects, hand occlusion, and
 {
         id: '30',
         slug: 'vla-training-isaac-lab',
-        title: 'VLA Training on Robot in Isaac Lab',
-        shortDescription: 'Training Vision-Language-Action models on a mobile manipulator robot in NVIDIA Isaac Lab for autonomous retail shelf manipulation tasks.',
-        fullDescription: `Developed a simulation pipeline in NVIDIA Isaac Lab to train Vision-Language-Action (VLA) models on a mobile manipulator robot. The environment simulates a retail grocery store setting where the robot must interpret natural language instructions and execute precise shelf manipulation tasks — picking, placing, and organizing products.
+        title: 'VLA Policy Training in NVIDIA Isaac Lab & Isaac Sim',
+        shortDescription: 'Training Vision-Language-Action (Pi 0 VLA) manipulation policies in NVIDIA Isaac Lab and Isaac Sim across a mobile retail manipulator and SO-ARM101 arms with Meta Quest 3 teleoperation.',
+        fullDescription: `Developed simulation and training pipelines in NVIDIA Isaac Lab and Isaac Sim for Vision-Language-Action (VLA) manipulation policies across two robot setups: a mobile manipulator executing natural-language retail shelf tasks, and SO-ARM101 arms trained with Pi 0 VLA for tabletop pick-and-place.
 
-The project involves environment setup, robot policy training using reinforcement and imitation learning, and domain randomization to improve sim-to-real transfer for future physical deployment.`,
+To collect high-quality demonstrations inside simulation, I built a custom Meta Quest 3 teleoperation bridge into Isaac Sim for real-time control and data logging, paired with imitation learning, reinforcement learning, and domain randomization to improve sim-to-real transfer.`,
         thumbnail: '/kiwi-vla-isaaclab.jpg',
         previewMedia: '/kiwi-vla-isaaclab.jpg',
-        detailImages: ['/kiwi-vla-isaaclab.jpg'],
+        detailImages: ['/kiwi-vla-isaaclab.jpg', '/gallery/so-arm-101.png'],
         type: ['Machine Learning', 'Software'],
-        tags: ['VLA', 'Isaac Lab', 'Isaac Sim', 'NVIDIA', 'Mobile Manipulator', 'Imitation Learning', 'Retail Robotics'],
+        tags: ['VLA', 'Pi 0 VLA', 'Isaac Lab', 'Isaac Sim', 'NVIDIA', 'SO Arm 101', 'Meta Quest 3', 'Teleoperation', 'Mobile Manipulator', 'Imitation Learning', 'Retail Robotics'],
         date: '2025',
-        technicalStack: ['NVIDIA Isaac Lab', 'Python', 'PyTorch', 'VLA Models', 'ROS 2', 'USD', 'Reinforcement Learning'],
+        technicalStack: ['NVIDIA Isaac Lab', 'Isaac Sim', 'Python', 'PyTorch', 'Pi 0 VLA', 'Quest 3 Bridge', 'ROS 2', 'USD', 'Reinforcement Learning'],
         role: 'Robotics ML Engineer',
-        duration: '2025',
-        scope: 'Simulation + VLA Training + Policy Development',
-        relatedProjects: ['29', '2', '11'],
+        duration: '2024 — 2025',
+        scope: 'Simulation + VLA Policy Training + Quest 3 Teleoperation + Data Collection',
+        relatedProjects: ['29', '33', '11'],
         sections: {
-            overview: `This project builds a full training pipeline for Vision-Language-Action models within NVIDIA Isaac Lab. The simulated environment replicates a retail grocery aisle where a mobile manipulator must respond to natural language commands and execute the corresponding manipulation sequence.
+            overview: `This project combines my NVIDIA Isaac Lab and Isaac Sim Vision-Language-Action training work across two manipulation setups: a mobile manipulator responding to open-ended natural-language commands in a simulated retail grocery aisle, and an SO-ARM101 tabletop pick-and-place rig trained with Pi 0 VLA.
 
-VLA models combine vision encoders, language understanding, and action prediction into a unified architecture, enabling generalist robot policies that can follow open-ended instructions.`,
-            softwareArchitecture: `The simulation environment is built in Isaac Lab using USD-based scene composition. The robot model (mobile base + 6-DOF arm with gripper) is imported from URDF and configured with accurate physics properties and articulation drives.
+VLA models unify vision encoders, language understanding, and action prediction into generalist robot policies capable of executing multi-step manipulation tasks directly from observations and instructions.`,
+            softwareArchitecture: `Both simulation environments are composed in USD inside NVIDIA Isaac Lab and Isaac Sim, importing URDF robot models (a mobile base with a 6-DOF arm and gripper, and the SO-ARM101 manipulator) with calibrated physics and articulation drives.
 
-Training uses a combination of imitation learning from teleoperated demonstrations and reinforcement learning for policy refinement. Domain randomization is applied to lighting, object textures, positions, and robot dynamics to improve sim-to-real transfer.`,
-            results: `Ongoing training has demonstrated the robot successfully interpreting shelf manipulation commands and executing pick-and-place sequences in simulation. Domain randomization significantly improved policy robustness across varied object placements. The pipeline is designed for eventual deployment on physical hardware for real-world retail automation tasks.`
+For demonstration collection, a custom Meta Quest 3 bridge streams live VR poses into Isaac Sim for intuitive teleoperation and trajectory logging. Policies are trained using Pi 0 VLA imitation learning from collected demonstrations alongside reinforcement learning refinement, with domain randomization over lighting, textures, object placements, and dynamics for robust sim-to-real transfer.`,
+            results: `Collected hundreds of demonstrations via the Quest 3 Isaac Sim bridge, achieving 90%+ simulated pick-and-place success on SO-ARM101 table-to-box transfers while scaling the Isaac Lab mobile-manipulator pipeline to interpret retail shelf manipulation commands across varied object placements.`
         }
     },
 {
@@ -538,7 +538,7 @@ The modified Roomba features Arduino-based control, ultrasonic and IR sensors fo
         role: 'Hardware Hacker & Developer',
         duration: '2023',
         scope: 'Embedded Systems + Autonomous Navigation + Hardware Modification',
-        relatedProjects: ['2', '13'],
+        relatedProjects: ['30', '13'],
         sections: {
             overview: `This project transformed a commercial iRobot Roomba into a fully programmable autonomous robotics platform. By reverse-engineering the Roomba's communication protocol and replacing its control system, the robot gained enhanced capabilities for research and experimentation.
 
@@ -574,7 +574,7 @@ The system uses a camera to detect hand gestures, processes them through a train
         role: 'Designer & Developer',
         duration: '2024',
         scope: 'Machine Learning + CAD Design + Embedded Systems',
-        relatedProjects: ['2', '10', '11'],
+        relatedProjects: ['30', '10', '11'],
         sections: {
             overview: `This project aimed to create an accessible communication tool for American Sign Language (ASL) by combining mechanical design, machine learning, and embedded systems. The robotic hand translates real-time hand gestures into ASL signs, demonstrating the potential of AI-powered assistive technology.
 
@@ -730,7 +730,7 @@ The project showcases advanced robotics concepts including inverse kinematics, t
         role: 'Robotics Developer',
         duration: '2024',
         scope: 'Computer Vision + Motion Planning + Robot Control',
-        relatedProjects: ['1', '11', '2'],
+        relatedProjects: ['1', '11', '30'],
         sections: {
             overview: `This project demonstrates advanced robotic manipulation through precise liquid pouring using vision-guided control. The system combines computer vision for target detection, inverse kinematics for motion planning, and trajectory optimization for smooth, controlled pouring movements.
 
@@ -763,7 +763,7 @@ Users can command the robot to perform pick-and-place operations, move to specif
         role: 'Robotics Developer',
         duration: '2024',
         scope: 'Voice Recognition + NLP + Robot Control',
-        relatedProjects: ['10', '1', '2'],
+        relatedProjects: ['10', '1', '30'],
         sections: {
             overview: `This project enables hands-free operation of industrial robotic arms through natural language voice commands. By implementing speech recognition and natural language understanding, the system makes robotics more accessible and allows operators to multitask while controlling robotic systems.
 
@@ -815,35 +815,6 @@ Integration with a UFactory xArm required minimal modification, using standard I
         }
     },
 {
-        id: '2',
-        slug: 'isaac-sim-robot',
-        title: 'SO Arm 101 - Isaac Sim Training',
-        shortDescription: 'Training a pick-and-place policy for the SO Arm 101 using Pi 0 VLA and Quest 3 teleoperation in NVIDIA Isaac Sim.',
-        fullDescription: `This project involves the advanced training and simulation of the SO Arm 101 robotic system within NVIDIA's Isaac Sim environment. We utilized a Pi 0 VLA to train robust pick-and-place policies, enabling the robot to handle complex manipulation tasks with high precision.
-
-A key highlight of the project was the integration of Meta Quest 3 for immersive teleoperation. By creating a custom bridge to Isaac Sim, we were able to collect high-quality demonstration data for pick-and-place operations, specifically transitioning objects from a table to a box. This data-driven approach significantly accelerated the learning process for our autonomous policies.`,
-        thumbnail: '/gallery/so-arm-101.png',
-        previewMedia: '/gallery/so-arm-101.png',
-        detailImages: ['/gallery/so-arm-101.png'],
-        type: ['Software', 'Machine Learning'],
-        tags: ['Isaac Sim', 'SO Arm 101', 'Pi 0 VLA', 'Quest 3', 'Teleoperation', 'Reinforcement Learning', 'Robotics'],
-        date: '2024',
-        technicalStack: ['Python', 'Isaac Sim', 'PyTorch', 'ROS', 'Quest 3 Bridge', 'Pi 0 VLA'],
-        role: 'AI Researcher & Developer',
-        duration: '2024',
-        scope: 'Simulation + Reinforcement Learning + Teleoperation + Data Collection',
-        relatedProjects: ['1', '14'],
-        sections: {
-            overview: `This project explores the cutting edge of sim-to-real robotics transfer using the SO Arm 101 platform and NVIDIA's Isaac Sim. By combining powerful simulation tools with immersive teleoperation, we've developed a highly efficient pipeline for training robotic manipulation policies.
-
-The work focuses on pick-and-place tasks, utilizing Pi 0 VLA for policy training and Meta Quest 3 for intuitive data collection.`,
-            softwareArchitecture: `The software stack leverages NVIDIA Isaac Sim's USD-based environment. We developed a custom bridge to interface the Meta Quest 3 with the simulator, allowing for real-time teleoperation and data logging. 
-
-Training uses the Pi 0 VLA architecture to learn pick-and-place behaviors from the collected demonstrations. The system includes domain randomization to improve the robustness of the learned policies for eventual hardware transfer.`,
-            results: `Successfully collected hundreds of demonstrations via Quest 3 teleoperation, leading to a highly reliable pick-and-place policy. The SO Arm 101 demonstrated 90%+ success rates in simulation for table-to-box transfers. The bridge proved to be a powerful tool for rapid data collection and human-in-the-loop training.`
-        }
-    },
-{
         id: '13',
         slug: 'imu-positioning-system',
         title: 'Offline Positioning System using IMU',
@@ -861,7 +832,7 @@ The project addresses the challenge of indoor navigation where GPS signals are u
         role: 'Embedded Systems Developer',
         duration: '2024',
         scope: 'Sensor Fusion + Navigation Algorithms + Embedded Systems',
-        relatedProjects: ['2', '5'],
+        relatedProjects: ['30', '5'],
         sections: {
             overview: `This project tackles the challenge of accurate indoor positioning where GPS signals are unavailable. Using an Inertial Measurement Unit (IMU) with accelerometer, gyroscope, and magnetometer sensors, the system performs dead-reckoning navigation through sensor fusion algorithms.
 
