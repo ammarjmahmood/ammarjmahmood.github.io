@@ -398,6 +398,27 @@ export default function ResumePage() {
               <div className="space-y-4">
                 <Card className="p-6">
                   <div className="flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-100 dark:bg-red-900 overflow-hidden border border-border">
+                      <Briefcase className="h-6 w-6 text-red-700 dark:text-red-300" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="mb-3">
+                        <h3 className="font-semibold">Manufacturing Engineering Intern</h3>
+                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                          <span>Tesla</span>
+                          <span className="text-muted-foreground/50">•</span>
+                          <span>Jan 2027 — Apr 2027 (Incoming · 4 months)</span>
+                        </div>
+                      </div>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        Incoming 4-month Manufacturing Engineering internship at Tesla.
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 dark:bg-blue-900 overflow-hidden border border-border">
                       <Briefcase className="h-6 w-6 text-blue-700 dark:text-blue-300" />
                     </div>
