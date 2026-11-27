@@ -98,7 +98,7 @@ The entire build—including a print-on-side Bambu PETG leaf-spring money clip w
         role: 'Mechanical Designer',
         duration: '2026',
         scope: 'Parametric CAD + Automated Interference Checks + Cycles Rendering + Bambu P1S Slicing',
-        relatedProjects: ['36', '3'],
+        relatedProjects: ['36', '6'],
         achievements: [
             'Engineered a captive watch-bezel AirTag mount (32.70 mm cavity, 26.20 mm chamfered front aperture) with 0.0000 mm³ verified interference.',
             'Integrated a 100% hidden blind RFID keyfob pocket (5.20 mm deep beneath a 2.50 mm solid outer wall) and a clamped 1.05 mm ribbed elastic T-channel.',
@@ -442,30 +442,30 @@ Early failures included confusing target rings with objects, hand occlusion, and
 {
         id: '30',
         slug: 'vla-training-isaac-lab',
-        title: 'VLA Training on Robot in Isaac Lab',
-        shortDescription: 'Training Vision-Language-Action models on a mobile manipulator robot in NVIDIA Isaac Lab for autonomous retail shelf manipulation tasks.',
-        fullDescription: `Developed a simulation pipeline in NVIDIA Isaac Lab to train Vision-Language-Action (VLA) models on a mobile manipulator robot. The environment simulates a retail grocery store setting where the robot must interpret natural language instructions and execute precise shelf manipulation tasks — picking, placing, and organizing products.
+        title: 'VLA Policy Training in NVIDIA Isaac Lab & Isaac Sim',
+        shortDescription: 'Training Vision-Language-Action (Pi 0 VLA) manipulation policies in NVIDIA Isaac Lab and Isaac Sim across a mobile retail manipulator and SO-ARM101 arms with Meta Quest 3 teleoperation.',
+        fullDescription: `Developed simulation and training pipelines in NVIDIA Isaac Lab and Isaac Sim for Vision-Language-Action (VLA) manipulation policies across two robot setups: a mobile manipulator executing natural-language retail shelf tasks, and SO-ARM101 arms trained with Pi 0 VLA for tabletop pick-and-place.
 
-The project involves environment setup, robot policy training using reinforcement and imitation learning, and domain randomization to improve sim-to-real transfer for future physical deployment.`,
+To collect high-quality demonstrations inside simulation, I built a custom Meta Quest 3 teleoperation bridge into Isaac Sim for real-time control and data logging, paired with imitation learning, reinforcement learning, and domain randomization to improve sim-to-real transfer.`,
         thumbnail: '/kiwi-vla-isaaclab.jpg',
         previewMedia: '/kiwi-vla-isaaclab.jpg',
-        detailImages: ['/kiwi-vla-isaaclab.jpg'],
+        detailImages: ['/kiwi-vla-isaaclab.jpg', '/gallery/so-arm-101.png'],
         type: ['Machine Learning', 'Software'],
-        tags: ['VLA', 'Isaac Lab', 'Isaac Sim', 'NVIDIA', 'Mobile Manipulator', 'Imitation Learning', 'Retail Robotics'],
+        tags: ['VLA', 'Pi 0 VLA', 'Isaac Lab', 'Isaac Sim', 'NVIDIA', 'SO Arm 101', 'Meta Quest 3', 'Teleoperation', 'Mobile Manipulator', 'Imitation Learning', 'Retail Robotics'],
         date: '2025',
-        technicalStack: ['NVIDIA Isaac Lab', 'Python', 'PyTorch', 'VLA Models', 'ROS 2', 'USD', 'Reinforcement Learning'],
+        technicalStack: ['NVIDIA Isaac Lab', 'Isaac Sim', 'Python', 'PyTorch', 'Pi 0 VLA', 'Quest 3 Bridge', 'ROS 2', 'USD', 'Reinforcement Learning'],
         role: 'Robotics ML Engineer',
-        duration: '2025',
-        scope: 'Simulation + VLA Training + Policy Development',
-        relatedProjects: ['29', '2', '11'],
+        duration: '2024 — 2025',
+        scope: 'Simulation + VLA Policy Training + Quest 3 Teleoperation + Data Collection',
+        relatedProjects: ['29', '33', '11'],
         sections: {
-            overview: `This project builds a full training pipeline for Vision-Language-Action models within NVIDIA Isaac Lab. The simulated environment replicates a retail grocery aisle where a mobile manipulator must respond to natural language commands and execute the corresponding manipulation sequence.
+            overview: `This project combines my NVIDIA Isaac Lab and Isaac Sim Vision-Language-Action training work across two manipulation setups: a mobile manipulator responding to open-ended natural-language commands in a simulated retail grocery aisle, and an SO-ARM101 tabletop pick-and-place rig trained with Pi 0 VLA.
 
-VLA models combine vision encoders, language understanding, and action prediction into a unified architecture, enabling generalist robot policies that can follow open-ended instructions.`,
-            softwareArchitecture: `The simulation environment is built in Isaac Lab using USD-based scene composition. The robot model (mobile base + 6-DOF arm with gripper) is imported from URDF and configured with accurate physics properties and articulation drives.
+VLA models unify vision encoders, language understanding, and action prediction into generalist robot policies capable of executing multi-step manipulation tasks directly from observations and instructions.`,
+            softwareArchitecture: `Both simulation environments are composed in USD inside NVIDIA Isaac Lab and Isaac Sim, importing URDF robot models (a mobile base with a 6-DOF arm and gripper, and the SO-ARM101 manipulator) with calibrated physics and articulation drives.
 
-Training uses a combination of imitation learning from teleoperated demonstrations and reinforcement learning for policy refinement. Domain randomization is applied to lighting, object textures, positions, and robot dynamics to improve sim-to-real transfer.`,
-            results: `Ongoing training has demonstrated the robot successfully interpreting shelf manipulation commands and executing pick-and-place sequences in simulation. Domain randomization significantly improved policy robustness across varied object placements. The pipeline is designed for eventual deployment on physical hardware for real-world retail automation tasks.`
+For demonstration collection, a custom Meta Quest 3 bridge streams live VR poses into Isaac Sim for intuitive teleoperation and trajectory logging. Policies are trained using Pi 0 VLA imitation learning from collected demonstrations alongside reinforcement learning refinement, with domain randomization over lighting, textures, object placements, and dynamics for robust sim-to-real transfer.`,
+            results: `Collected hundreds of demonstrations via the Quest 3 Isaac Sim bridge, achieving 90%+ simulated pick-and-place success on SO-ARM101 table-to-box transfers while scaling the Isaac Lab mobile-manipulator pipeline to interpret retail shelf manipulation commands across varied object placements.`
         }
     },
 {
@@ -538,7 +538,7 @@ The modified Roomba features Arduino-based control, ultrasonic and IR sensors fo
         role: 'Hardware Hacker & Developer',
         duration: '2023',
         scope: 'Embedded Systems + Autonomous Navigation + Hardware Modification',
-        relatedProjects: ['2', '13'],
+        relatedProjects: ['30', '13'],
         sections: {
             overview: `This project transformed a commercial iRobot Roomba into a fully programmable autonomous robotics platform. By reverse-engineering the Roomba's communication protocol and replacing its control system, the robot gained enhanced capabilities for research and experimentation.
 
@@ -574,7 +574,7 @@ The system uses a camera to detect hand gestures, processes them through a train
         role: 'Designer & Developer',
         duration: '2024',
         scope: 'Machine Learning + CAD Design + Embedded Systems',
-        relatedProjects: ['2', '10', '11'],
+        relatedProjects: ['30', '10', '11'],
         sections: {
             overview: `This project aimed to create an accessible communication tool for American Sign Language (ASL) by combining mechanical design, machine learning, and embedded systems. The robotic hand translates real-time hand gestures into ASL signs, demonstrating the potential of AI-powered assistive technology.
 
@@ -614,7 +614,7 @@ The project involved extensive CAD design, material selection, electronics integ
         role: 'Robotics Designer',
         duration: '2024',
         scope: 'Mechanical Design + Electronics + Competition',
-        relatedProjects: ['3', '5'],
+        relatedProjects: ['39', '5'],
         sections: {
             overview: `This combat robot project combines extreme weight optimization with maximum destructive capability. Every gram counts when designing within a 1lb weight limit, requiring careful material selection, strategic weight distribution, and innovative manufacturing techniques.
 
@@ -648,7 +648,7 @@ The robot represents a significant engineering challenge in maximizing destructi
         role: 'Lead Designer & Builder',
         duration: '2024',
         scope: 'Mechanical Design + Electronics + Competition',
-        relatedProjects: ['4', '3'],
+        relatedProjects: ['4', '39'],
         sections: {
             overview: `This 30lb combat robot pushes the boundaries of kinetic energy weapons and defensive armor in the heavyweight division. The design philosophy prioritizes weapon power and drive performance while maintaining structural resilience against opponent attacks.
 
@@ -696,7 +696,7 @@ The drone features a custom frame designed for durability and optimal flight cha
         role: 'Drone Builder & Pilot',
         duration: '2023',
         scope: 'Mechanical Design + Electronics + Flight Control',
-        relatedProjects: ['4', '3'],
+        relatedProjects: ['4', '39'],
         sections: {
             overview: `This FPV drone project showcases custom frame design, advanced electronics integration, and aerodynamic optimization for high-performance flight. Sponsored by PCB Way, the build demonstrates professional-grade construction techniques and tuning methodologies.
 
@@ -730,7 +730,7 @@ The project showcases advanced robotics concepts including inverse kinematics, t
         role: 'Robotics Developer',
         duration: '2024',
         scope: 'Computer Vision + Motion Planning + Robot Control',
-        relatedProjects: ['1', '11', '2'],
+        relatedProjects: ['1', '11', '30'],
         sections: {
             overview: `This project demonstrates advanced robotic manipulation through precise liquid pouring using vision-guided control. The system combines computer vision for target detection, inverse kinematics for motion planning, and trajectory optimization for smooth, controlled pouring movements.
 
@@ -763,7 +763,7 @@ Users can command the robot to perform pick-and-place operations, move to specif
         role: 'Robotics Developer',
         duration: '2024',
         scope: 'Voice Recognition + NLP + Robot Control',
-        relatedProjects: ['10', '1', '2'],
+        relatedProjects: ['10', '1', '30'],
         sections: {
             overview: `This project enables hands-free operation of industrial robotic arms through natural language voice commands. By implementing speech recognition and natural language understanding, the system makes robotics more accessible and allows operators to multitask while controlling robotic systems.
 
@@ -815,35 +815,6 @@ Integration with a UFactory xArm required minimal modification, using standard I
         }
     },
 {
-        id: '2',
-        slug: 'isaac-sim-robot',
-        title: 'SO Arm 101 - Isaac Sim Training',
-        shortDescription: 'Training a pick-and-place policy for the SO Arm 101 using Pi 0 VLA and Quest 3 teleoperation in NVIDIA Isaac Sim.',
-        fullDescription: `This project involves the advanced training and simulation of the SO Arm 101 robotic system within NVIDIA's Isaac Sim environment. We utilized a Pi 0 VLA to train robust pick-and-place policies, enabling the robot to handle complex manipulation tasks with high precision.
-
-A key highlight of the project was the integration of Meta Quest 3 for immersive teleoperation. By creating a custom bridge to Isaac Sim, we were able to collect high-quality demonstration data for pick-and-place operations, specifically transitioning objects from a table to a box. This data-driven approach significantly accelerated the learning process for our autonomous policies.`,
-        thumbnail: '/gallery/so-arm-101.png',
-        previewMedia: '/gallery/so-arm-101.png',
-        detailImages: ['/gallery/so-arm-101.png'],
-        type: ['Software', 'Machine Learning'],
-        tags: ['Isaac Sim', 'SO Arm 101', 'Pi 0 VLA', 'Quest 3', 'Teleoperation', 'Reinforcement Learning', 'Robotics'],
-        date: '2024',
-        technicalStack: ['Python', 'Isaac Sim', 'PyTorch', 'ROS', 'Quest 3 Bridge', 'Pi 0 VLA'],
-        role: 'AI Researcher & Developer',
-        duration: '2024',
-        scope: 'Simulation + Reinforcement Learning + Teleoperation + Data Collection',
-        relatedProjects: ['1', '14'],
-        sections: {
-            overview: `This project explores the cutting edge of sim-to-real robotics transfer using the SO Arm 101 platform and NVIDIA's Isaac Sim. By combining powerful simulation tools with immersive teleoperation, we've developed a highly efficient pipeline for training robotic manipulation policies.
-
-The work focuses on pick-and-place tasks, utilizing Pi 0 VLA for policy training and Meta Quest 3 for intuitive data collection.`,
-            softwareArchitecture: `The software stack leverages NVIDIA Isaac Sim's USD-based environment. We developed a custom bridge to interface the Meta Quest 3 with the simulator, allowing for real-time teleoperation and data logging. 
-
-Training uses the Pi 0 VLA architecture to learn pick-and-place behaviors from the collected demonstrations. The system includes domain randomization to improve the robustness of the learned policies for eventual hardware transfer.`,
-            results: `Successfully collected hundreds of demonstrations via Quest 3 teleoperation, leading to a highly reliable pick-and-place policy. The SO Arm 101 demonstrated 90%+ success rates in simulation for table-to-box transfers. The bridge proved to be a powerful tool for rapid data collection and human-in-the-loop training.`
-        }
-    },
-{
         id: '13',
         slug: 'imu-positioning-system',
         title: 'Offline Positioning System using IMU',
@@ -861,7 +832,7 @@ The project addresses the challenge of indoor navigation where GPS signals are u
         role: 'Embedded Systems Developer',
         duration: '2024',
         scope: 'Sensor Fusion + Navigation Algorithms + Embedded Systems',
-        relatedProjects: ['2', '5'],
+        relatedProjects: ['30', '5'],
         sections: {
             overview: `This project tackles the challenge of accurate indoor positioning where GPS signals are unavailable. Using an Inertial Measurement Unit (IMU) with accelerometer, gyroscope, and magnetometer sensors, the system performs dead-reckoning navigation through sensor fusion algorithms.
 
@@ -952,30 +923,6 @@ Built with native iOS technologies, HealthSync integrates deeply with the iOS ec
             overview: `HealthSync was developed to provide a unified dashboard for the most critical daily health metrics. By focusing on steps, hydration, and activity, the app helps users maintain a healthy lifestyle through clear visual feedback and goal tracking.`,
             softwareArchitecture: `The app is built using SwiftUI for a modern, reactive user interface. It leverages Apple's HealthKit framework to securely access and contribute to the user's health data. The architecture follows the MVVM pattern, ensuring a clean separation between data logic and UI presentation.`,
             results: `HealthSync successfully launched on the iOS App Store, providing users with a reliable tool for daily health monitoring. The integration of home screen widgets has significantly increased user engagement by making health data accessible without opening the app.`
-        }
-    },
-{
-        id: '27',
-        slug: 'issh',
-        title: 'iSSH - Pro SSH Client',
-        shortDescription: 'Powerful iOS SSH client featuring network scanning, persistent sessions, and integrated AI assistant for developers.',
-        fullDescription: `iSSH is a professional-grade SSH client for iOS, built for developers and system administrators who need reliable remote access on the go. It goes beyond simple terminal emulation by offering built-in network scanning, session persistence with tmux integration, and an innovative AI assistant.
-
-The app supports multiple AI models (Claude, Gemini, OpenAI) to help users debug scripts, generate commands, and manage remote servers more efficiently.`,
-        thumbnail: '/gallery/issh.png',
-        detailImages: ['/gallery/issh.png'],
-        type: ['Software'],
-        tags: ['iOS', 'SSH', 'Networking', 'Developer Tools', 'AI Integration'],
-        date: '2025',
-        liveUrl: 'https://apps.apple.com/ca/app/issh/id6759501444',
-        technicalStack: ['Swift', 'SwiftUI', 'SSH', 'AI APIs', 'tmux'],
-        role: 'Lead Developer',
-        duration: '2025',
-        scope: 'Native Mobile Development + Network Engineering + AI Integration',
-        sections: {
-            overview: `The goal of iSSH was to create the most productive remote management tool for iOS. By integrating essential networking tools like port forwarding and network scanning with modern AI capabilities, iSSH transforms the mobile terminal experience into a powerful dev environment.`,
-            softwareArchitecture: `iSSH features a custom terminal emulator built for low latency and high compatibility. The backend handles encrypted SSH connections and persistent background sessions. The AI integration uses a modular provider system, allowing users to connect their own API keys for various LLM models.`,
-            results: `iSSH has become a top-rated tool in the Developer Tools category on the App Store, praised for its stability and the unique productivity boost provided by the integrated AI assistant.`
         }
     },
 {
@@ -1077,7 +1024,7 @@ Each attachment is carefully designed to integrate seamlessly with the Skadis sy
         role: 'Product Designer',
         duration: '2023',
         scope: 'CAD Design + 3D Printing + Product Design',
-        relatedProjects: ['3', '4'],
+        relatedProjects: ['39', '4'],
         sections: {
             overview: `This project creates a suite of custom organizational accessories for the IKEA Skadis pegboard system. Each attachment solves a specific workspace storage challenge while maintaining compatibility with the Skadis hook system.
 
@@ -1088,37 +1035,6 @@ The collection includes tool holders, electronics organizers, spool holders, and
             results: `Created over 15 different attachment designs, all successfully printed and tested. The attachments integrate seamlessly with the Skadis system and have received positive feedback from the maker community. Files have been downloaded 500+ times from Thingiverse.
 
 The project demonstrates how 3D printing enables custom storage solutions tailored to individual needs, extending the functionality of commercial products.`
-        }
-    },
-{
-        id: '3',
-        slug: 'ridge-wallet-clone',
-        title: 'Ridge Wallet Clone',
-        shortDescription: 'A 3D-printed clone of the popular Ridge Wallet, designed for durability and minimalism.',
-        fullDescription: `Reverse-engineered and redesigned the popular Ridge Wallet using CAD software and 3D printing technology. The project focused on understanding the mechanical design principles that make the original wallet functional while optimizing for 3D printing manufacturing.
-
-The design incorporates precision tolerances for the sliding mechanism and material selection for durability. This project showcases CAD design skills and understanding of manufacturing constraints.`,
-        thumbnail: '/RidgeClone.webp',
-        previewMedia: '/RidgeClone.webp', // TODO: Replace with GIF/video
-        detailImages: ['/RidgeClone.webp'], // TODO: Add more project images
-        type: ['Mechanical'],
-        tags: ['3D Printing', 'CAD', 'Product Design'],
-        date: '2023',
-        technicalStack: ['SolidWorks', 'Fusion 360', '3D Printing'],
-        role: 'Product Designer',
-        duration: '2023',
-        scope: 'CAD Design + 3D Printing + Product Engineering',
-        relatedProjects: ['4', '6'],
-        sections: {
-            overview: `This reverse-engineering project deconstructs the popular Ridge Wallet to understand its clever mechanical design and recreate it using 3D printing technology. The challenge lies in achieving the same slim profile, smooth sliding action, and robust construction using additive manufacturing instead of the original machined aluminum.
-
-The project demonstrates product design thinking, tolerance analysis, and material science considerations specific to 3D printing.`,
-            mechanicalDesign: `The wallet design features a clever sliding mechanism with precision tolerance requirements. Key mechanisms include card retention clips, money clip integration, and the primary sliding plate mechanism. Each component was redesigned in SolidWorks with 3D printing constraints in mind.
-
-Critical design considerations included layer orientation for strength, living hinge design for the clip, and tolerance compensation for FDM printing (typically +0.2mm clearances). The design uses minimal support structures and can be printed on standard FDM printers. Material choice settled on PLA+ for its strength and smooth surface finish.`,
-            results: `The final 3D-printed wallet successfully replicates the core functionality of the Ridge Wallet at a fraction of the cost. The sliding mechanism operates smoothly, and card retention is secure. Weight is comparable to the aluminum original.
-
-Print time is approximately 4 hours. The project demonstrated that functional product clones are achievable with consumer 3D printing when design principles are properly adapted.`
         }
     },
 {
@@ -1200,40 +1116,6 @@ To overcome these challenges, we introduce a task-aware denoising framework that
         }
     },
 {
-        id: '8',
-        slug: 'job-tracker-extension',
-        title: 'Job Application Tracker - Chrome Extension',
-        shortDescription: 'Chrome extension for tracking job applications with analytics, resume management, and Sankey diagram visualization.',
-        fullDescription: `Created a productivity-focused Chrome extension that helps job seekers organize and track their application process. The extension automatically captures job details from LinkedIn and other job boards, stores application data locally, and provides insightful analytics.
-
-Features include a Sankey diagram for visualizing application flow, resume upload and management, timeline tracking, and statistics dashboard. Built with modern web technologies and integrates with AI for smart job description extraction.`,
-        thumbnail: '/job-tracker.webp',
-        videoUrl: 'https://www.youtube.com/watch?v=4ywUH2kK_Z8',
-        detailImages: ['/job-tracker.webp'],
-        type: ['Software'],
-        tags: ['Chrome Extension', 'JavaScript', 'Data Visualization', 'Productivity'],
-        date: '2024',
-        githubUrl: 'https://github.com/ammarjmahmood/JobTracker',
-        technicalStack: ['JavaScript', 'Chrome Extension API', 'D3.js', 'IndexedDB', 'Gemini API'],
-        role: 'Full-Stack Developer',
-        duration: '2024',
-        scope: 'Chrome Extension + Data Visualization + AI Integration',
-        relatedProjects: ['7', '9'],
-        sections: {
-            overview: `This Chrome extension addresses the common challenge of job application tracking by automating data capture and providing insightful analytics. The tool helps job seekers stay organized, identify application bottlenecks, and optimize their job search strategy.
-
-By integrating AI-powered job description extraction and sophisticated data visualization, the extension transforms job searching from a chaotic process into a data-driven workflow.`,
-            softwareArchitecture: `The extension architecture uses Chrome Extension Manifest V3 with service workers for background processing. Job data is stored locally in IndexedDB for privacy and offline access. The popup interface is built with vanilla JavaScript and modern CSS.
-
-Key features include content scripts that extract job information from LinkedIn and other job boards, background workers that integrate with Gemini API for intelligent job description parsing, and D3.js-powered Sankey diagrams for visualizing application flow through different stages (Applied → Interview → Offer/Rejected).
-
-The resume management feature uses the FileReader API for local file handling, storing resume metadata and associating uploaded resumes with specific applications. All data remains local to the user's machine, ensuring privacy.`,
-            results: `The extension has been successfully deployed and is actively used for tracking 100+ job applications. The Sankey diagram provides instant visual feedback on application success rates and helps identify which types of roles have better response rates. Average time to log a new application reduced from 5 minutes to 30 seconds.
-
-Future improvements include integration with more job boards, automated follow-up reminders, and advanced analytics on optimal application timing.`
-        }
-    },
-{
         id: '9',
         slug: 'autism-communication-tool',
         title: 'Non-Verbal Autism Communication Tool',
@@ -1252,7 +1134,7 @@ The tool allows users to quickly communicate common phrases, needs, and emotions
         role: 'Developer',
         duration: '2024 (24-hour Hackathon)',
         scope: 'Assistive Technology + Accessibility + UX Design',
-        relatedProjects: ['8', '12'],
+        relatedProjects: ['12', '25'],
         sections: {
             overview: `Developed during a 24-hour hackathon, this project addresses the communication challenges faced by non-verbal autistic individuals. The application provides an accessible, customizable communication tool that empowers users to express their needs and emotions through visual interfaces.
 
@@ -1285,7 +1167,7 @@ Features include VR controller support, block placement and destruction, terrain
         role: 'Game Developer',
         duration: '2024',
         scope: 'VR Development + 3D Graphics + WebXR',
-        relatedProjects: ['9', '8'],
+        relatedProjects: ['9', '25'],
         sections: {
             overview: `This project reimagines Minecraft in virtual reality using WebXR technology, making immersive VR gaming accessible directly through web browsers without requiring native applications. The browser-based approach dramatically lowers the barrier to entry for VR gaming, allowing anyone with a VR headset to experience block-building in virtual reality.
 
@@ -1317,7 +1199,7 @@ The project demonstrates data collection, feature engineering, model training, a
         role: 'Data Scientist',
         duration: '2024',
         scope: 'Machine Learning + Data Analysis + Sports Analytics',
-        relatedProjects: ['16', '8'],
+        relatedProjects: ['16', '12'],
         sections: {
             overview: `This project applies machine learning to the exciting domain of sports analytics, specifically predicting NBA game outcomes. By analyzing vast amounts of historical data including team statistics, player performance metrics, and situational variables, the model learns patterns that indicate game outcomes.
 
@@ -1373,40 +1255,6 @@ Processing time averages 150ms per image on CPU, making it suitable for real-tim
         }
     },
 {
-        id: '7',
-        slug: 'cibo-restaurant-app',
-        title: 'CIBO - Restaurant Ordering Platform',
-        shortDescription: 'Full-stack restaurant ordering platform with mobile app, web interface, and backend API for seamless food ordering experience.',
-        fullDescription: `Developed CIBO, a comprehensive restaurant ordering platform that bridges the gap between customers and restaurant services. The system features a React Native mobile app for customers, a web-based admin panel for restaurant staff, and a robust Node.js backend API.
-
-The platform enables customers to browse menus, place orders, track their order status in real-time, and make payments. Restaurant staff can manage menus, process orders, and handle table reservations through an intuitive dashboard.`,
-        thumbnail: '/cibo-app.webp',
-        videoUrl: 'https://www.youtube.com/watch?v=ehJRiRirNdg',
-        detailImages: ['/cibo-app.webp'],
-        type: ['Software'],
-        tags: ['Full-Stack', 'React Native', 'Node.js', 'Restaurant Tech', 'Mobile App'],
-        date: '2024',
-        githubUrl: 'https://github.com/ammarjmahmood/CIBO',
-        technicalStack: ['React Native', 'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'Expo'],
-        role: 'Full-Stack Developer',
-        duration: '2024',
-        scope: 'Mobile Development + Backend API + Web Dashboard',
-        relatedProjects: ['8', '9'],
-        sections: {
-            overview: `CIBO is a comprehensive restaurant technology platform addressing the disconnect between customer ordering and restaurant operations. The project originated from identifying inefficiencies at Eataly (Eaton Center) and evolved into a full-featured ordering and management system.
-
-The platform serves dual purposes: customer-facing mobile app for browsing menus and placing orders, and restaurant-facing web dashboard for order management and analytics. Real-time synchronization ensures seamless communication between customers and kitchen staff.`,
-            softwareArchitecture: `The architecture follows a microservices approach with three main components: (1) React Native mobile app built with Expo for cross-platform deployment, (2) Node.js/Express backend API handling business logic and database operations, and (3) React web dashboard for restaurant staff.
-
-The backend uses PostgreSQL for relational data (menus, orders, users) hosted on Supabase, providing real-time subscriptions for live order updates. Authentication uses JWT tokens with refresh token rotation. The API implements RESTful endpoints with comprehensive error handling and validation.
-
-The mobile app features Redux state management, optimistic updates for responsiveness, and offline-first architecture for menu browsing. Push notifications alert customers of order status changes.`,
-            results: `Successfully deployed to test pilot at a local restaurant with positive feedback on ease of use. The system handles concurrent orders efficiently, with real-time updates appearing within 500ms. Average order placement time reduced from 3 minutes (traditional) to under 60 seconds.
-
-The platform demonstrates scalability potential for multi-restaurant deployment. Future enhancements include payment integration, delivery tracking, and customer loyalty programs.`
-        }
-    },
-{
         id: '20',
         slug: 'youth-flight-canada',
         title: 'Youth Flight Canada Website',
@@ -1424,7 +1272,7 @@ Working closely with designers and stakeholders, I architected a scalable cloud 
         role: 'Full-Stack Developer & DevOps Engineer',
         duration: '2024',
         scope: 'Web Development + Cloud Infrastructure + Deployment + Maintenance',
-        relatedProjects: ['21', '7'],
+        relatedProjects: ['21', '22'],
         sections: {
             overview: `This project encompassed the complete lifecycle of professional web development for Youth Flight Canada. From initial domain acquisition through ongoing maintenance, the work demonstrates end-to-end understanding of modern web infrastructure and development practices.
 
@@ -1471,7 +1319,7 @@ Managed the entire technical stack from frontend development to backend infrastr
         role: 'Lead Web Developer',
         duration: '2024',
         scope: 'Full-Stack Development + Designer Collaboration + Hosting + Maintenance',
-        relatedProjects: ['20', '7'],
+        relatedProjects: ['20', '22'],
         sections: {
             overview: `The USS website project required comprehensive web development skills spanning frontend implementation, backend architecture, and production operations. Working directly with student designers, I translated creative visions into functional, performant web applications while maintaining professional coding standards.
 
