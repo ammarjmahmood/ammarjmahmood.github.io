@@ -483,11 +483,13 @@ export default function ResumePage() {
                       <div className="mb-3">
                         <h3 className="font-semibold">Autodesk AI Lab Intern</h3>
                         <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                          <span>Jan 2026 — Present</span>
+                          <span>Autodesk</span>
+                          <span className="text-muted-foreground/50">•</span>
+                          <span>Jan 2026 — Sep 2026 (8 months)</span>
                         </div>
                       </div>
                       <p className="text-sm leading-relaxed text-muted-foreground">
-                        Integrating World Labs spatial AI and Gaussian-splat workflows into Maya, while applying LLMs and multimodal generation models across Autodesk products.
+                        Integrated World Labs spatial AI and Gaussian-splat workflows into Maya, while applying LLMs and multimodal generation models across Autodesk products.
                       </p>
                     </div>
                   </div>

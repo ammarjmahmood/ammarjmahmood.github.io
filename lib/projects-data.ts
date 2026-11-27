@@ -331,7 +331,7 @@ Built an Electron-based desktop application shipped through a Jenkins pipeline t
         date: '2026',
         technicalStack: ['Claude Agent SDK', 'Electron', 'TypeScript', 'Python', 'Agent Orchestration Graphs', 'Jenkins', 'Autodesk Maya', 'World Labs API', 'Gaussian Splatting', 'Autodesk APIs'],
         role: 'AI/ML Developer Intern',
-        duration: 'January 2026 — Present',
+        duration: 'January 2026 — September 2026 (8 months)',
         scope: 'Multi-Agent Systems + Maya Spatial AI Integration + CI/CD + Product Innovation',
         learnMoreUrl: 'https://adsknews.autodesk.com/en/news/autodesk-invests-in-world-labs/',
         achievements: [
