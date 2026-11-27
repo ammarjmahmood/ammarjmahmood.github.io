@@ -1187,7 +1187,7 @@ The tool allows users to quickly communicate common phrases, needs, and emotions
         role: 'Developer',
         duration: '2024 (24-hour Hackathon)',
         scope: 'Assistive Technology + Accessibility + UX Design',
-        relatedProjects: ['7', '12'],
+        relatedProjects: ['12', '25'],
         sections: {
             overview: `Developed during a 24-hour hackathon, this project addresses the communication challenges faced by non-verbal autistic individuals. The application provides an accessible, customizable communication tool that empowers users to express their needs and emotions through visual interfaces.
 
@@ -1220,7 +1220,7 @@ Features include VR controller support, block placement and destruction, terrain
         role: 'Game Developer',
         duration: '2024',
         scope: 'VR Development + 3D Graphics + WebXR',
-        relatedProjects: ['9', '7'],
+        relatedProjects: ['9', '25'],
         sections: {
             overview: `This project reimagines Minecraft in virtual reality using WebXR technology, making immersive VR gaming accessible directly through web browsers without requiring native applications. The browser-based approach dramatically lowers the barrier to entry for VR gaming, allowing anyone with a VR headset to experience block-building in virtual reality.
 
@@ -1308,40 +1308,6 @@ Processing time averages 150ms per image on CPU, making it suitable for real-tim
         }
     },
 {
-        id: '7',
-        slug: 'cibo-restaurant-app',
-        title: 'CIBO - Restaurant Ordering Platform',
-        shortDescription: 'Full-stack restaurant ordering platform with mobile app, web interface, and backend API for seamless food ordering experience.',
-        fullDescription: `Developed CIBO, a comprehensive restaurant ordering platform that bridges the gap between customers and restaurant services. The system features a React Native mobile app for customers, a web-based admin panel for restaurant staff, and a robust Node.js backend API.
-
-The platform enables customers to browse menus, place orders, track their order status in real-time, and make payments. Restaurant staff can manage menus, process orders, and handle table reservations through an intuitive dashboard.`,
-        thumbnail: '/cibo-app.webp',
-        videoUrl: 'https://www.youtube.com/watch?v=ehJRiRirNdg',
-        detailImages: ['/cibo-app.webp'],
-        type: ['Software'],
-        tags: ['Full-Stack', 'React Native', 'Node.js', 'Restaurant Tech', 'Mobile App'],
-        date: '2024',
-        githubUrl: 'https://github.com/ammarjmahmood/CIBO',
-        technicalStack: ['React Native', 'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'Expo'],
-        role: 'Full-Stack Developer',
-        duration: '2024',
-        scope: 'Mobile Development + Backend API + Web Dashboard',
-        relatedProjects: ['12', '9'],
-        sections: {
-            overview: `CIBO is a comprehensive restaurant technology platform addressing the disconnect between customer ordering and restaurant operations. The project originated from identifying inefficiencies at Eataly (Eaton Center) and evolved into a full-featured ordering and management system.
-
-The platform serves dual purposes: customer-facing mobile app for browsing menus and placing orders, and restaurant-facing web dashboard for order management and analytics. Real-time synchronization ensures seamless communication between customers and kitchen staff.`,
-            softwareArchitecture: `The architecture follows a microservices approach with three main components: (1) React Native mobile app built with Expo for cross-platform deployment, (2) Node.js/Express backend API handling business logic and database operations, and (3) React web dashboard for restaurant staff.
-
-The backend uses PostgreSQL for relational data (menus, orders, users) hosted on Supabase, providing real-time subscriptions for live order updates. Authentication uses JWT tokens with refresh token rotation. The API implements RESTful endpoints with comprehensive error handling and validation.
-
-The mobile app features Redux state management, optimistic updates for responsiveness, and offline-first architecture for menu browsing. Push notifications alert customers of order status changes.`,
-            results: `Successfully deployed to test pilot at a local restaurant with positive feedback on ease of use. The system handles concurrent orders efficiently, with real-time updates appearing within 500ms. Average order placement time reduced from 3 minutes (traditional) to under 60 seconds.
-
-The platform demonstrates scalability potential for multi-restaurant deployment. Future enhancements include payment integration, delivery tracking, and customer loyalty programs.`
-        }
-    },
-{
         id: '20',
         slug: 'youth-flight-canada',
         title: 'Youth Flight Canada Website',
@@ -1359,7 +1325,7 @@ Working closely with designers and stakeholders, I architected a scalable cloud 
         role: 'Full-Stack Developer & DevOps Engineer',
         duration: '2024',
         scope: 'Web Development + Cloud Infrastructure + Deployment + Maintenance',
-        relatedProjects: ['21', '7'],
+        relatedProjects: ['21', '22'],
         sections: {
             overview: `This project encompassed the complete lifecycle of professional web development for Youth Flight Canada. From initial domain acquisition through ongoing maintenance, the work demonstrates end-to-end understanding of modern web infrastructure and development practices.
 
@@ -1406,7 +1372,7 @@ Managed the entire technical stack from frontend development to backend infrastr
         role: 'Lead Web Developer',
         duration: '2024',
         scope: 'Full-Stack Development + Designer Collaboration + Hosting + Maintenance',
-        relatedProjects: ['20', '7'],
+        relatedProjects: ['20', '22'],
         sections: {
             overview: `The USS website project required comprehensive web development skills spanning frontend implementation, backend architecture, and production operations. Working directly with student designers, I translated creative visions into functional, performant web applications while maintaining professional coding standards.
 
